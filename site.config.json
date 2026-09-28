@@ -19,8 +19,8 @@
       "en": "Local-First Bi-directional Knowledge Base & AI Cognitive Mirror"
     },
     "description": {
-      "zh-CN": "Synapse Note（复利笔记）是一款本地优先的深度思考与知识复利工具。结合 Markdown 双向链接与实体知识图谱构建私有认知网络，内置白盒 AI 深度问答、思维模型红队沙盘、十维专业研报矩阵与 LaTeX 高保真排版导出。零账号、零服务器、零埋点，纯本地存储与 BYOK 自带密钥，保护个人思想与知识资产。",
-      "en": "Synapse Note is a local-first deep thinking and knowledge compounding tool. Combining Markdown bi-directional links with an entity knowledge graph, it features a white-box AI cognitive mirror, mental model red-teaming, a 10-dimensional research matrix, and publication-grade LaTeX math exports. Zero accounts, zero tracking, local-only storage, and bring-your-own-key (BYOK) privacy."
+      "zh-CN": "Synapse Note（复利笔记）是一款本地优先的深度思考与知识复利工具。结合 Markdown 双向链接与实体知识图谱构建私有认知网络，内置白盒 AI 深度问答、思维模型红队沙盘、十维专业研报矩阵与 LaTeX 高保真排版导出。零账号、零服务器、零埋点，纯本地存储与 BYOK 自带密钥，保护个人思想与知识资产。基础功能免费，进阶能力 Pro 月度订阅（¥19.9/月），全包含所有知识母体。",
+      "en": "Synapse Note is a local-first deep thinking and knowledge compounding tool. Combining Markdown bi-directional links with an entity knowledge graph, it features a white-box AI cognitive mirror, mental model red-teaming, a 10-dimensional research matrix, and publication-grade LaTeX math exports. Zero accounts, zero tracking, local-only storage, and bring-your-own-key (BYOK) privacy. Core features free; Pro monthly subscription at ¥19.9/mo with all knowledge packs included."
     },
     "type": "SoftwareApplication",
     "category": "ProductivityApplication",
@@ -65,8 +65,8 @@
       "priority": 1.0,
       "changefreq": "weekly",
       "description": {
-        "zh-CN": "Synapse Note 官网：本地优先的双链笔记与知识图谱工具，内置白盒 AI 认知镜像与十维研报矩阵，纯本地存储，BYOK 自带 Key。",
-        "en": "Synapse Note official site: local-first bi-directional linking and knowledge graph tool with transparent AI reasoning, 10D research matrix, and BYOK privacy."
+        "zh-CN": "Synapse Note 官网：本地优先的双链笔记与知识图谱工具，基础功能免费，Pro 月度订阅，纯本地存储，BYOK 自带 Key。",
+        "en": "Synapse Note official site: local-first bi-directional linking and knowledge graph tool with transparent AI reasoning, Pro monthly subscription, and BYOK privacy."
       }
     },
     {
@@ -78,8 +78,8 @@
       "priority": 0.95,
       "changefreq": "weekly",
       "description": {
-        "zh-CN": "Synapse Note 完整机制说明：双链与知识图谱、白盒检索与思考链、十维研报生成、LaTeX公式导出、本地数据与隐私边界。",
-        "en": "Complete technical mechanism and FAQ for Synapse Note: bi-directional links, hybrid RAG, 10D research matrix, LaTeX math export, and privacy boundaries."
+        "zh-CN": "Synapse Note 完整机制说明：双链与知识图谱、白盒检索与思考链、十维研报生成、LaTeX公式导出、Pro月度订阅与本地隐私边界。",
+        "en": "Complete technical mechanism and FAQ for Synapse Note: bi-directional links, hybrid RAG, 10D research matrix, LaTeX math export, Pro subscription, and privacy boundaries."
       }
     },
     {
@@ -105,8 +105,8 @@
       "priority": 0.5,
       "changefreq": "monthly",
       "description": {
-        "zh-CN": "Synapse Note 技术支持：联系方式、恢复购买、换机迁移、数据备份与恢复、Bug 与需求反馈。",
-        "en": "Synapse Note support: contact, restoring purchases, data migration, backup and restore, bug reports and feedback."
+        "zh-CN": "Synapse Note 技术支持：联系方式、Pro 订阅管理与取消、换机迁移、数据备份与恢复、Bug 与需求反馈。",
+        "en": "Synapse Note support: contact, managing Pro subscriptions, data migration, backup and restore, bug reports and feedback."
       }
     },
     {
@@ -131,8 +131,8 @@
       "priority": 0.5,
       "changefreq": "monthly",
       "description": {
-        "zh-CN": "Synapse Note 用户协议：许可范围、无账号的数据责任、Pro 一次买断、自带 API Key 的边界与免责声明。",
-        "en": "Synapse Note terms of service: licence, local data responsibility, one-time Pro purchase, bring-your-own-key AI boundaries, and disclaimers."
+        "zh-CN": "Synapse Note 用户协议：许可范围、无账号的数据责任、Pro 月度订阅与自动续期规则、自带 API Key 的边界与免责声明。",
+        "en": "Synapse Note terms of service: licence, local data responsibility, Pro monthly subscription rules, bring-your-own-key AI boundaries, and disclaimers."
       }
     },
     {
@@ -159,8 +159,8 @@
       "priority": 0.3,
       "changefreq": "yearly",
       "description": {
-        "zh-CN": "Synapse Note 用户协议（华为应用市场版）：许可范围、无账号的数据责任、Pro 一次买断及离线使用条款。",
-        "en": "Synapse Note terms of service (Huawei edition): licence, on-device data responsibilities, one-time Pro purchase, and offline use terms."
+        "zh-CN": "Synapse Note 用户协议（华为应用市场版）：许可范围、无账号的数据责任、Pro 月度订阅及离线使用条款。",
+        "en": "Synapse Note terms of service (Huawei edition): licence, on-device data responsibilities, Pro monthly subscription, and offline use terms."
       }
     }
   ],
@@ -250,12 +250,12 @@
         "en": "Absolute Privacy & Bring Your Own Key"
       },
       "summary": {
-        "zh-CN": "纯本地离线运行，零云端中转服务器，用户自带 API Key 直连官方端点。",
-        "en": "100% on-device operation, zero middleman servers, bringing your own API keys directly to providers."
+        "zh-CN": "纯本地离线运行，零云端中转服务器，基础功能免费，进阶功能按月订阅（¥19.9/月）。",
+        "en": "100% on-device operation, zero middleman servers. Core features free, Pro monthly subscription at ¥19.9/mo."
       },
       "detail": {
-        "zh-CN": "数据 100% 保存在本地 SQLite 数据库与沙盒文件中。无注册、无登录、无任何行为埋点或第三方广告 SDK。AI 功能采用 BYOK（Bring Your Own Key）模式，API Key 加密存放在系统级硬件安全芯片（iOS Keychain / Android Keystore）中，请求直接与大模型官方通信。",
-        "en": "Data remains 100% in your local SQLite database and sandbox. No registration, no login, zero tracking, zero ad SDKs. AI uses Bring Your Own Key (BYOK) stored in system hardware secure storage (Keychain / Keystore), communicating directly with LLM providers."
+        "zh-CN": "数据 100% 保存在本地 SQLite 数据库与沙盒文件中。无注册、无登录、无任何行为埋点或第三方广告 SDK。AI 功能采用 BYOK（Bring Your Own Key）模式，API Key 加密存放在系统级硬件安全芯片（iOS Keychain / Android Keystore）中，请求直接与大模型官方通信。基础功能免费提供 30 篇笔记及每月赠送额度，进阶 Pro 仅需 ¥19.9/月，按月订阅随心取消，不锁死数据。",
+        "en": "Data remains 100% in your local SQLite database and sandbox. No registration, no login, zero tracking, zero ad SDKs. AI uses Bring Your Own Key (BYOK) stored in system hardware secure storage (Keychain / Keystore). Core features include 30 free notes plus monthly free allowances; Pro is a monthly subscription at just ¥19.9/mo with complete knowledge packs and zero data lock-in."
       }
     }
   ],
@@ -339,16 +339,16 @@
       },
       {
         "axis": {
-          "zh-CN": "商业与使用模式",
+          "zh-CN": "商业与收费模式",
           "en": "Business Model"
         },
         "ours": {
-          "zh-CN": "核心能力永久免费，Pro 进阶功能一次买断永久可用，终身不锁死数据",
-          "en": "Core features free forever, Pro is one-time purchase, zero vendor lock-in"
+          "zh-CN": "基础功能免费（30 篇额度+次月起每月赠送 5 次），Pro 高级功能月度订阅（¥19.9/月，随心取消），全包含所有知识母体，终身不锁死数据",
+          "en": "Core features free (30 notes + 5 monthly free notes), Pro monthly subscription (¥19.9/mo, cancel anytime), all knowledge packs included, zero data lock-in"
         },
         "others": {
-          "zh-CN": "不断涨价的连续包月包年订阅制，停止订阅即无法查看或编辑历史内容",
-          "en": "Recurring subscriptions; losing access to your own data upon cancellation"
+          "zh-CN": "动辄按月收取高昂订阅费（$20+/月），且数据强制存云端，取消订阅后无法查看或导出个人笔记",
+          "en": "Expensive monthly recurring subscriptions ($20+/mo) with mandatory cloud lock-in; losing access to your own data upon cancellation"
         }
       }
     ]
@@ -406,12 +406,12 @@
     },
     {
       "q": {
-        "zh-CN": "Synapse Note Pro 包含什么？是订阅制吗？",
-        "en": "What does Synapse Note Pro include, and is it a recurring subscription?"
+        "zh-CN": "Synapse Note Pro 包含什么？如何收费与取消？",
+        "en": "What does Synapse Note Pro include, and how does billing and cancellation work?"
       },
       "a": {
-        "zh-CN": "Synapse Note Pro 采用一次买断制（非循环订阅）。购买后在同一商店账号（Apple ID / Google 账号 / 华为账号）下永久有效，并支持一键恢复购买。Pro 解锁全景知识图谱高级视图、十维深度研报高级模版、自定义思维模型以及学术级无损导出等全部进阶能力。",
-        "en": "Synapse Note Pro is a one-time purchase with lifetime access (no recurring subscriptions). It unlocks advanced global knowledge graph views, premium 10D research templates, custom mental model sandtables, and unlimited publication-grade exports."
+        "zh-CN": "Synapse Note 基础功能永久免费（含 30 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能采用月度自动续期订阅制（仅需 ¥19.9/月，按月订阅随心取消），解锁突破 30 篇限制的无限笔记与星网图谱、无限次 AI 专属 Agent 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由对应应用商店（Apple App Store / Google Play / 华为应用市场）官方处理，你可以随时在系统应用商店的「订阅管理」中自主取消续订。",
+        "en": "Synapse Note core features are free forever (with 30 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are offered as a monthly auto-renewing subscription at just ¥19.9/month (cancel anytime), unlocking unlimited notes and knowledge graphs, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are billed by your app store, and can be cancelled anytime in your store account subscription settings."
       }
     }
   ],

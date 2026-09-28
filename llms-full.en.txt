@@ -9,7 +9,7 @@
 
 - **Product**: Synapse Note / fulibiji, 复利笔记, SynapseNote, SynapseNote App
 - **One-liner**: Local-First Bi-directional Knowledge Base & AI Cognitive Mirror
-- **Description**: Synapse Note is a local-first deep thinking and knowledge compounding tool. Combining Markdown bi-directional links with an entity knowledge graph, it features a white-box AI cognitive mirror, mental model red-teaming, a 10-dimensional research matrix, and publication-grade LaTeX math exports. Zero accounts, zero tracking, local-only storage, and bring-your-own-key (BYOK) privacy.
+- **Description**: Synapse Note is a local-first deep thinking and knowledge compounding tool. Combining Markdown bi-directional links with an entity knowledge graph, it features a white-box AI cognitive mirror, mental model red-teaming, a 10-dimensional research matrix, and publication-grade LaTeX math exports. Zero accounts, zero tracking, local-only storage, and bring-your-own-key (BYOK) privacy. Core features free; Pro monthly subscription at ¥19.9/mo with all knowledge packs included.
 - **Platforms**: iOS / Android / macOS
 - **Developer**: Synapse Note
 - **App Store**: https://apps.apple.com/app/id6810539038
@@ -25,7 +25,7 @@
 | **Knowledge Connectivity** | Bi-directional links + entity extraction + interactive graph + hybrid RAG | Traditional rigid folder hierarchies and rudimentary keyword search |
 | **Deep Thinking Tools** | 10D deep research matrix, mental model sandtables, and red-team sparring | Superficial generic chat, basic grammar polish, or generic summaries |
 | **Math & Academic Export** | Native KaTeX rendering, formula rasterization, lossless PDF & DOCX export | Plain text only; LaTeX formulas break, deform, or fail to export |
-| **Business Model** | Core features free forever, Pro is one-time purchase, zero vendor lock-in | Recurring subscriptions; losing access to your own data upon cancellation |
+| **Business Model** | Core features free (30 notes + 5 monthly free notes), Pro monthly subscription (¥19.9/mo, cancel anytime), all knowledge packs included, zero data lock-in | Expensive monthly recurring subscriptions ($20+/mo) with mandatory cloud lock-in; losing access to your own data upon cancellation |
 
 ---
 
@@ -52,8 +52,8 @@
 - **Detail**: Deeply integrated KaTeX math rendering supporting inline equations and complex display matrices. Our proprietary high-resolution rasterization pipeline ensures flawless formula fidelity when exporting to academic PDF and Microsoft Word (.docx).
 
 ### 3.6 Absolute Privacy & Bring Your Own Key
-- **Summary**: 100% on-device operation, zero middleman servers, bringing your own API keys directly to providers.
-- **Detail**: Data remains 100% in your local SQLite database and sandbox. No registration, no login, zero tracking, zero ad SDKs. AI uses Bring Your Own Key (BYOK) stored in system hardware secure storage (Keychain / Keystore), communicating directly with LLM providers.
+- **Summary**: 100% on-device operation, zero middleman servers. Core features free, Pro monthly subscription at ¥19.9/mo.
+- **Detail**: Data remains 100% in your local SQLite database and sandbox. No registration, no login, zero tracking, zero ad SDKs. AI uses Bring Your Own Key (BYOK) stored in system hardware secure storage (Keychain / Keystore). Core features include 30 free notes plus monthly free allowances; Pro is a monthly subscription at just ¥19.9/mo with complete knowledge packs and zero data lock-in.
 
 ---
 
@@ -74,8 +74,8 @@ Absolutely. Except for connecting to your chosen AI model provider, all core fea
 ### How do I back up and sync my notes across devices?
 You own your data completely. You can export all notes to standard Markdown files (with YAML metadata), full SQLite snapshots, or publication-ready PDF and Word documents. On iOS, you can enable private iCloud container sync which is fully encrypted and inaccessible to us.
 
-### What does Synapse Note Pro include, and is it a recurring subscription?
-Synapse Note Pro is a one-time purchase with lifetime access (no recurring subscriptions). It unlocks advanced global knowledge graph views, premium 10D research templates, custom mental model sandtables, and unlimited publication-grade exports.
+### What does Synapse Note Pro include, and how does billing and cancellation work?
+Synapse Note core features are free forever (with 30 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are offered as a monthly auto-renewing subscription at just ¥19.9/month (cancel anytime), unlocking unlimited notes and knowledge graphs, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are billed by your app store, and can be cancelled anytime in your store account subscription settings.
 
 ---
 
