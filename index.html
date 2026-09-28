@@ -493,21 +493,30 @@ function isLightTheme() {
   var canvas = document.getElementById('synapse-canvas');
   if (!canvas) return;
   var ctx = canvas.getContext('2d');
-  var width, height;
+  var width = 0, height = 0;
   var particles = [];
-  var mouse = { x: -1000, y: -1000, radius: 150 };
+  var mouse = { x: -1000, y: -1000, radius: 160 };
+  var lastClientX = -1000, lastClientY = -1000;
   var animId = null;
   var isVisible = true;
 
   function resize() {
-    width = canvas.width = canvas.parentElement.offsetWidth;
-    height = canvas.height = canvas.parentElement.offsetHeight;
+    if (!canvas.parentElement) return;
+    var newW = canvas.parentElement.offsetWidth;
+    var newH = canvas.parentElement.offsetHeight;
+    if (newW === width && Math.abs(newH - height) < 60) {
+      width = canvas.width = newW;
+      height = canvas.height = newH;
+      return;
+    }
+    width = canvas.width = newW;
+    height = canvas.height = newH;
     initParticles();
   }
 
   function initParticles() {
     particles = [];
-    var count = Math.floor((width * height) / 13000);
+    var count = Math.floor((width * height) / 12500);
     count = Math.max(35, Math.min(count, 85));
     for (var i = 0; i < count; i++) {
       particles.push({
@@ -521,8 +530,24 @@ function isLightTheme() {
     }
   }
 
+  function startAnimation() {
+    if (!animId) {
+      animId = requestAnimationFrame(update);
+    }
+  }
+
+  function stopAnimation() {
+    if (animId) {
+      cancelAnimationFrame(animId);
+      animId = null;
+    }
+  }
+
   function update() {
-    if (!isVisible) return;
+    if (!isVisible) {
+      stopAnimation();
+      return;
+    }
     ctx.clearRect(0, 0, width, height);
     var light = isLightTheme();
 
@@ -601,25 +626,90 @@ function isLightTheme() {
     animId = requestAnimationFrame(update);
   }
 
-  window.addEventListener('resize', resize);
-  canvas.addEventListener('mousemove', function(e) {
+  function updateMouse(clientX, clientY) {
+    lastClientX = clientX;
+    lastClientY = clientY;
     var rect = canvas.getBoundingClientRect();
-    mouse.x = e.clientX - rect.left;
-    mouse.y = e.clientY - rect.top;
-  });
-  canvas.addEventListener('mouseleave', function() {
+    if (
+      clientX >= rect.left && clientX <= rect.right &&
+      clientY >= rect.top && clientY <= rect.bottom
+    ) {
+      mouse.x = clientX - rect.left;
+      mouse.y = clientY - rect.top;
+    } else {
+      mouse.x = -1000;
+      mouse.y = -1000;
+    }
+  }
+
+  window.addEventListener('resize', resize);
+
+  window.addEventListener('mousemove', function(e) {
+    updateMouse(e.clientX, e.clientY);
+  }, { passive: true });
+
+  window.addEventListener('scroll', function() {
+    if (lastClientX > -500) {
+      updateMouse(lastClientX, lastClientY);
+    }
+    var rect = canvas.getBoundingClientRect();
+    var inView = rect.bottom > 0 && rect.top < window.innerHeight;
+    if (inView && !animId) {
+      isVisible = true;
+      startAnimation();
+    }
+  }, { passive: true });
+
+  document.addEventListener('mouseleave', function() {
     mouse.x = -1000;
     mouse.y = -1000;
+    lastClientX = -1000;
+    lastClientY = -1000;
   });
 
-  var observer = new IntersectionObserver(function(entries) {
-    isVisible = entries[0].isIntersecting;
-    if (isVisible && !animId) animId = requestAnimationFrame(update);
-  }, { threshold: 0.1 });
-  observer.observe(canvas);
+  window.addEventListener('touchmove', function(e) {
+    if (e.touches && e.touches.length > 0) {
+      updateMouse(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  }, { passive: true });
+
+  window.addEventListener('touchend', function() {
+    mouse.x = -1000;
+    mouse.y = -1000;
+    lastClientX = -1000;
+    lastClientY = -1000;
+  }, { passive: true });
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      var entry = entries[0];
+      isVisible = entry.isIntersecting;
+      if (isVisible) {
+        stopAnimation();
+        startAnimation();
+      } else {
+        stopAnimation();
+      }
+    }, { threshold: 0 });
+    observer.observe(canvas);
+  }
+
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      stopAnimation();
+    } else {
+      var rect = canvas.getBoundingClientRect();
+      var inView = rect.bottom > 0 && rect.top < window.innerHeight;
+      if (inView) {
+        isVisible = true;
+        stopAnimation();
+        startAnimation();
+      }
+    }
+  });
 
   resize();
-  animId = requestAnimationFrame(update);
+  startAnimation();
 })();
 
 // 2. 双链交互雷达卡片数据联动
