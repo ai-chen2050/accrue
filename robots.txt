@@ -51,6 +51,6 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
-Sitemap: https://example.com/llms.txt
-Sitemap: https://example.com/llms.en.txt
+Sitemap: https://fulibiji.top/sitemap.xml
+Sitemap: https://fulibiji.top/llms.txt
+Sitemap: https://fulibiji.top/llms.en.txt

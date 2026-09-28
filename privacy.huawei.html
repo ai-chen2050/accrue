@@ -1,3 +1,4 @@
+<!-- 生成物：tools/make_channel_legal.py 由 privacy.html 生成，不要手改 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -7,17 +8,17 @@
 <link rel="stylesheet" href="style.css">
 
 <!-- GEO:AUTO START -->
-<title>隐私政策 · Synapse Note 复利笔记</title>
-<meta name="description" content="Synapse Note 隐私政策：不收集任何个人信息，数据全量存放在本机，唯一联网是你自带 Key 的 AI 调用且不经任何中间服务器。">
+<title>隐私政策（华为应用市场版） · Synapse Note 复利笔记</title>
+<meta name="description" content="Synapse Note 隐私政策（华为应用市场版）：纯本地运行，不收集个人信息，所有笔记数据只保存在设备本地，无任何数据离开设备。">
 <meta name="keywords" content="双链笔记, 复利笔记, 知识库, 第二大脑, 本地优先, BYOK, 知识图谱, LaTeX公式, 思维模型, Synapse Note">
-<link rel="canonical" href="https://fulibiji.top/privacy.html">
-<link rel="alternate" hreflang="zh-CN" href="https://fulibiji.top/privacy.html">
-<link rel="alternate" hreflang="en" href="https://fulibiji.top/privacy.en.html">
-<link rel="alternate" hreflang="x-default" href="https://fulibiji.top/privacy.html">
+<link rel="canonical" href="https://fulibiji.top/privacy.huawei.html">
+<link rel="alternate" hreflang="zh-CN" href="https://fulibiji.top/privacy.huawei.html">
+<link rel="alternate" hreflang="en" href="https://fulibiji.top/privacy.huawei.en.html">
+<link rel="alternate" hreflang="x-default" href="https://fulibiji.top/privacy.huawei.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="隐私政策 · Synapse Note 复利笔记">
-<meta property="og:description" content="Synapse Note 隐私政策：不收集任何个人信息，数据全量存放在本机，唯一联网是你自带 Key 的 AI 调用且不经任何中间服务器。">
-<meta property="og:url" content="https://fulibiji.top/privacy.html">
+<meta property="og:title" content="隐私政策（华为应用市场版） · Synapse Note 复利笔记">
+<meta property="og:description" content="Synapse Note 隐私政策（华为应用市场版）：纯本地运行，不收集个人信息，所有笔记数据只保存在设备本地，无任何数据离开设备。">
+<meta property="og:url" content="https://fulibiji.top/privacy.huawei.html">
 <meta property="og:image" content="https://fulibiji.top/icon.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#10c877">
@@ -69,12 +70,13 @@
 
 <nav><div class="wrap" style="display:flex;align-items:center;gap:20px;height:60px">
   <a class="brand" href="index.html">Synapse Note 复利笔记</a>
-  <span style="flex:1"></span><a href="index.html">首页</a><a href="terms.html">用户协议</a><a href="support.html">技术支持</a><a href="privacy.en.html">EN</a>
+  <span style="flex:1"></span><a href="index.html">首页</a><a href="terms.huawei.html">用户协议</a><a href="support.html">技术支持</a><a href="privacy.en.html">EN</a>
 </div></nav>
 
 <main class="wrap prose">
 <h1>隐私政策</h1>
 <p class="lead updated">生效日期：2026-09-28 · 适用于 Synapse Note 复利笔记 iOS、Android 与 macOS 版</p>
+<p class="updated">本页是华为应用市场渠道版：该版本没有任何联网分析功能，没有任何数据会离开你的设备。</p>
 
 <p>Synapse Note（复利笔记）是一款纯本地运行的深度思考、双链知识管理与 AI 认知镜像应用。我们坚持<strong>本地优先（Local-First）与数据主权</strong>原则：我们没有用户账号系统，不架设任何中转或采集服务器。下面按「收集什么、存在哪、是否离开设备、你怎么删」四件事向你清晰说明。</p>
 
@@ -89,31 +91,17 @@
 <h2>3. 第三方服务</h2>
 <p>本应用不接入任何第三方广告平台、行为分析平台或第三方账号登录 SDK。Pro 版高级功能的购买与结算完全由 Apple App Store、Google Play 或华为应用市场官方支付渠道处理，交易记录由对应应用市场根据其自身隐私政策管理，我们仅接收「是否已激活权益」的验证收据，不获取你的银行卡号、账单地址或支付密码。</p>
 
-<!-- AI-ONLY -->
-<h2>4. 唯一会有数据离开设备的情形：你自带的 AI 服务</h2>
-<p>应用的 AI 认知镜像、白盒深度问答、思维模型红队沙盘与十维研报功能基于 BYOK（Bring Your Own Key）模式运行。当你主动配置大模型 API Key 并发起深度探讨时，网络请求会<strong>直接从你的设备通过加密 HTTPS 发往你所指定的模型官方服务商端点</strong>（如 OpenAI、Anthropic Claude、DeepSeek、Google Gemini 等），绝对不经过我们的任何中转服务器。离开设备的数据包括：</p>
-<ul>
-  <li>你在对话框中主动输入的提问内容或研报主题；</li>
-  <li>为你选中的笔记片段或由混合检索（向量 Embeddings 与实体图谱）召回的相关笔记上下文摘要；</li>
-  <li>系统预置的结构化思考提示词（System Prompt，例如思维模型规则、研报矩阵结构）。</li>
-</ul>
-<p><strong>完全透明与可控：</strong>每次请求前，你可以清晰查看发往 AI 的上下文引用卡片，并可随时清空上下文或中止请求。服务商如何处理与存储这些数据，由你与该模型提供商之间的服务协议及隐私条款约束；调用所消耗的 Token 费用由你直接在服务商平台结算。</p>
-<!-- /AI-ONLY -->
-
-<h2>5. 权限用途</h2>
+<h2>4. 权限用途</h2>
 <table>
   <thead><tr><th>权限</th><th>用途</th><th>是否必需</th></tr></thead>
   <tbody>
     <tr><td>相册 / 图片库</td><td>在笔记中插入图片、图表或扫描笔记卡片，图片仅保存在本地沙盒目录，绝不上传</td><td>可选</td></tr>
     <tr><td>相机</td><td>拍照记录纸质书摘、白板手稿或随手笔记，照片仅保存在设备私有目录</td><td>可选</td></tr>
     <tr><td>麦克风</td><td>用于语音速记灵感与语音转文字（依赖系统自带本地听写或你的专用配置），音频仅存本地</td><td>可选</td></tr>
-    <!-- AI-ONLY -->
-    <tr><td>网络访问</td><td>仅用于在你配置了 API Key 时，向你指定的 AI 大模型服务商端点发起 HTTPS 通信；未配置时无网络请求</td><td>可选</td></tr>
-    <!-- /AI-ONLY -->
   </tbody>
 </table>
 
-<h2>6. 数据删除与导出</h2>
+<h2>5. 数据删除与导出</h2>
 <p>你的数据完全归你所有，你可以随时自由处置：</p>
 <ul>
   <li><strong>全量导出</strong>：支持随时一键将所有笔记导出为通用 Markdown 文件、高清矢量 PDF 或 DOCX 文档，无任何格式锁定；</li>
@@ -121,17 +109,17 @@
   <li><strong>卸载即删</strong>：卸载应用会立即清除应用私有目录中的全部本地记录。存储在你个人 iCloud 中的备份文件可由你在系统设置中自行删除。由于我们不在任何云端留存数据，因此无需向我们申请注销或删除。</li>
 </ul>
 
-<h2>7. 儿童隐私</h2>
+<h2>6. 儿童隐私</h2>
 <p>本应用面向学生、研究者、专业人士及终身学习者设计，不向未满 14 周岁的未成年人收集任何个人识别信息。所有学习笔记均保留在本地设备上，家长或监护人可完全掌控设备数据。</p>
 
-<h2>8. 政策变更</h2>
+<h2>7. 政策变更</h2>
 <p>如因功能升级或法律法规要求需要修订本隐私政策，我们将在本页面发布更新版本并修改生效日期。重大变更亦将在应用内版本说明中显著提示。</p>
 
-<h2>9. 联系我们</h2>
+<h2>8. 联系我们</h2>
 <p>如对本隐私政策或个人数据安全有任何疑问、意见或建议，请联系：</p>
 <p>邮箱：<a href="mailto:blake.chen94@gmail.com">blake.chen94@gmail.com</a></p>
 </main>
 
-<footer><div class="wrap"><p>© Synapse Note · <a href="terms.html">用户协议</a> · <a href="support.html">技术支持</a></p></div></footer>
+<footer><div class="wrap"><p>© Synapse Note · <a href="terms.huawei.html">用户协议</a> · <a href="support.html">技术支持</a></p></div></footer>
 </body>
 </html>
