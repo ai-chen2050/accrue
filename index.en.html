@@ -130,16 +130,18 @@
     <img src="icon.png" alt="Synapse Note Logo">
     <span>Synapse Note</span>
   </a>
-  <div class="spacer"></div>
-  <a href="#features" class="hide-sm">Features</a>
-  <a href="#playground" class="hide-sm">Playground</a>
-  <a href="#matrix" class="hide-sm">10D Matrix</a>
-  <a href="#math" class="hide-sm">LaTeX Export</a>
-  <a href="devlog.html">Devlog</a>
-  <a href="#faq" class="hide-sm">FAQ</a>
-  <a href="index.html" title="切换到中文">中文</a>
-  <a href="#" id="theme-toggle" title="Toggle Theme">🌓</a>
-  <a class="btn-nav" href="https://apps.apple.com/app/id6810539038" id="nav-dl">Get App</a>
+
+  <div class="nav-actions">
+    <a href="#features" class="hide-sm">Features</a>
+    <a href="#playground" class="hide-sm">Playground</a>
+    <a href="#matrix" class="hide-sm">10D Matrix</a>
+    <a href="#math" class="hide-sm">LaTeX Export</a>
+    <a href="devlog.html" class="hide-sm">Devlog</a>
+    <a href="#faq" class="hide-sm">FAQ</a>
+    <a href="index.html" title="切换到中文">中文</a>
+    <a href="#" id="theme-toggle" title="Toggle Theme">🌓</a>
+    <a class="btn-nav" href="https://apps.apple.com/app/id6810539038" id="nav-dl">Get App</a>
+  </div>
 </div></nav>
 
 <header class="hero">
@@ -158,6 +160,9 @@
       </a>
       <a class="cta-secondary" href="#playground">
         <span>Explore Interactive Demos ↓</span>
+      </a>
+      <a class="cta-secondary" href="devlog.html">
+        <span>📖 Devlog</span>
       </a>
     </div>
 
@@ -482,7 +487,7 @@ function isLightTheme() {
   return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
 }
 
-// 1. Synapse Canvas Animation - High Contrast Redesign
+// 1. Synapse Canvas Animation
 (function() {
   var canvas = document.getElementById('synapse-canvas');
   if (!canvas) return;
@@ -716,7 +721,7 @@ function isLightTheme() {
   });
 })();
 
-// 5. LaTeX Math Showcase (KaTeX + MathML Fallback)
+// 5. LaTeX Math Showcase
 (function() {
   var mathEquations = {
     compound: {

@@ -130,16 +130,18 @@
     <img src="icon.png" alt="Synapse Note Logo">
     <span>Synapse Note</span>
   </a>
-  <div class="spacer"></div>
-  <a href="#features" class="hide-sm">核心能力</a>
-  <a href="#playground" class="hide-sm">交互舱</a>
-  <a href="#matrix" class="hide-sm">十维研报</a>
-  <a href="#math" class="hide-sm">LaTeX导出</a>
-  <a href="devlog.html">开发日记</a>
-  <a href="#faq" class="hide-sm">常见问题</a>
-  <a href="index.en.html" title="Switch to English">EN</a>
-  <a href="#" id="theme-toggle" title="切换模式">🌓</a>
-  <a class="btn-nav" href="https://apps.apple.com/app/id6810539038" id="nav-dl">免费下载</a>
+  
+  <div class="nav-actions">
+    <a href="#features" class="hide-sm">核心能力</a>
+    <a href="#playground" class="hide-sm">交互舱</a>
+    <a href="#matrix" class="hide-sm">十维研报</a>
+    <a href="#math" class="hide-sm">LaTeX导出</a>
+    <a href="devlog.html" class="hide-sm">开发日记</a>
+    <a href="#faq" class="hide-sm">常见问题</a>
+    <a href="index.en.html" title="Switch to English">EN</a>
+    <a href="#" id="theme-toggle" title="切换模式">🌓</a>
+    <a class="btn-nav" href="https://apps.apple.com/app/id6810539038" id="nav-dl">免费下载</a>
+  </div>
 </div></nav>
 
 <header class="hero">
@@ -158,6 +160,9 @@
       </a>
       <a class="cta-secondary" href="#playground">
         <span>体验交互演练舱 ↓</span>
+      </a>
+      <a class="cta-secondary" href="devlog.html">
+        <span>📖 开发日记</span>
       </a>
     </div>
 
@@ -483,7 +488,7 @@ function isLightTheme() {
   return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
 }
 
-// 1. 突触网络 Canvas 动效 (Synapse Canvas) - 高对比度重构
+// 1. 突触网络 Canvas 动效 (Synapse Canvas)
 (function() {
   var canvas = document.getElementById('synapse-canvas');
   if (!canvas) return;
@@ -521,12 +526,10 @@ function isLightTheme() {
     ctx.clearRect(0, 0, width, height);
     var light = isLightTheme();
 
-    // 浅色主题下使用浓郁高对比深墨绿；暗黑主题下使用荧光青绿
     var pRgb = light ? '4, 120, 87' : '46, 230, 160';
     var maxLineAlpha = light ? 0.65 : 0.28;
     var baseLineWidth = light ? 1.4 : 0.9;
 
-    // 鼠标引力光圈
     if (mouse.x > 0 && mouse.y > 0) {
       ctx.beginPath();
       ctx.arc(mouse.x, mouse.y, mouse.radius * 0.8, 0, Math.PI * 2);
@@ -544,7 +547,6 @@ function isLightTheme() {
       if (p.y < 0) p.y = height;
       if (p.y > height) p.y = 0;
 
-      // 鼠标引力与电弧连线
       var dx = mouse.x - p.x;
       var dy = mouse.y - p.y;
       var dist = Math.sqrt(dx * dx + dy * dy);
@@ -553,7 +555,6 @@ function isLightTheme() {
         p.x += dx * force;
         p.y += dy * force;
 
-        // 强电脉冲连线
         ctx.beginPath();
         ctx.moveTo(p.x, p.y);
         ctx.lineTo(mouse.x, mouse.y);
@@ -563,7 +564,6 @@ function isLightTheme() {
         ctx.stroke();
       }
 
-      // 绘制突触粒子节点
       ctx.beginPath();
       ctx.arc(p.x, p.y, light ? p.radius * 1.15 : p.radius, 0, Math.PI * 2);
       ctx.fillStyle = 'rgba(' + pRgb + ', ' + (light ? 0.88 : p.baseAlpha) + ')';
@@ -576,14 +576,12 @@ function isLightTheme() {
       }
       ctx.fill();
 
-      // 浅色模式增加粒子外圈立体轮廓
       if (light) {
         ctx.strokeStyle = 'rgba(4, 120, 87, 0.35)';
         ctx.lineWidth = 0.8;
         ctx.stroke();
       }
 
-      // 突触节点相互连线
       for (var j = i + 1; j < particles.length; j++) {
         var p2 = particles[j];
         var d2 = Math.sqrt((p.x - p2.x)*(p.x - p2.x) + (p.y - p2.y)*(p.y - p2.y));
@@ -758,7 +756,6 @@ function isLightTheme() {
     eqEl.innerHTML = item.mathml;
   }
 
-  // 初始渲染
   function initKaTeX() {
     renderFormula(curType);
   }
