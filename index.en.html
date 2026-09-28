@@ -119,122 +119,619 @@
 </script>
 <!-- GEO:AUTO END -->
 
-<script>
-  (function(){try{var t=localStorage.getItem('theme');
-    if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
-</script>
 </head>
 <body>
 
-<nav><div class="wrap" style="display:flex;align-items:center;gap:20px;height:60px">
-  <a class="brand" href="index.en.html">Synapse Note</a>
-  <span class="spacer" style="flex:1"></span>
-  <a href="geo.en.html" class="hide-sm">FAQ & Geo</a>
-  <a href="devlog.html" class="hide-sm">Devlog</a>
-  <a href="support.en.html">Support</a>
-  <a href="index.html">中文</a>
-  <a href="#" id="theme-toggle" title="Toggle Theme">◐</a>
+<nav><div class="wrap">
+  <a class="brand" href="index.en.html">
+    <img src="icon.png" alt="Synapse Note Logo">
+    <span>Synapse Note</span>
+  </a>
+  <div class="spacer"></div>
+  <a href="#features" class="hide-sm">Features</a>
+  <a href="#playground" class="hide-sm">Playground</a>
+  <a href="#matrix" class="hide-sm">10D Matrix</a>
+  <a href="#math" class="hide-sm">LaTeX Export</a>
+  <a href="devlog.html">Devlog</a>
+  <a href="#faq" class="hide-sm">FAQ</a>
+  <a href="index.html" title="切换到中文">中文</a>
+  <a href="#" id="theme-toggle" title="Toggle Theme">🌓</a>
+  <a class="btn-nav" href="https://apps.apple.com/app/id6810539038" id="nav-dl">Get App</a>
 </div></nav>
 
-<header class="hero"><div class="wrap">
-  <p class="kicker">LOCAL-FIRST · KNOWLEDGE COMPOUNDING · BYOK AI</p>
-  <h1>Local-First Bi-directional Knowledge Base<br>& AI Cognitive Mirror</h1>
-  <p class="lead">Interconnecting fragmented notes like neural synapses. Combining Markdown bi-directional links with an entity knowledge graph, featuring transparent AI reasoning, mental model red-teaming, a 10-dimensional research matrix, and publication-ready LaTeX exports. Zero accounts, zero middleman servers. Core features free; Pro monthly subscription at ¥19.9/mo.</p>
-  <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:24px">
-    <a class="cta" href="https://apps.apple.com/app/id6810539038" id="dl-appstore">Download on App Store</a>
-    <a href="geo.en.html" style="font-weight:700;font-size:15px;padding:12px 20px">Read Full Mechanics & FAQ →</a>
-  </div>
-</div></header>
+<header class="hero">
+  <canvas id="synapse-canvas"></canvas>
+  <div class="wrap hero-content">
+    <div class="pulse-badge">
+      <span class="pulse-dot"></span>
+      <span>Local-First · White-Box Reasoning · Knowledge Compounding</span>
+    </div>
+    <h1>Turn Fragmented Notes into a Lifelong <br><span class="gradient-text">Cognitive Mirror Network</span></h1>
+    <p class="lead">Far more than bi-directional links. Built upon local SQLite and on-device knowledge graphs, paired with white-box AI reasoning and a 10-dimensional research matrix to forge an impregnable Second Brain.</p>
+    
+    <div class="cta-group">
+      <a class="cta" href="https://apps.apple.com/app/id6810539038" id="dl-appstore">
+        <span>⚡️ Download on App Store</span>
+      </a>
+      <a class="cta-secondary" href="#playground">
+        <span>Explore Interactive Demos ↓</span>
+      </a>
+    </div>
 
-<section><div class="wrap">
-  <h2>Core Capabilities</h2>
-  <p class="section-lead">Transform isolated thoughts into an interconnected, compounding second brain</p>
+    <div class="hero-trust-badges">
+      <div class="trust-item">
+        <span>🔒</span> <span><strong>100% Local Storage</strong>: Never uploaded</span>
+      </div>
+      <div class="trust-item">
+        <span>⚡️</span> <span><strong>BYOK Zero Markup</strong>: Direct provider keys</span>
+      </div>
+      <div class="trust-item">
+        <span>💎</span> <span><strong>Flexible Model</strong>: Free tier / Pro ¥19.9/mo</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Features Grid -->
+<section id="features" class="reveal"><div class="wrap">
+  <div class="section-header">
+    <h2>Break Knowledge Silos, Let Insights Emerge</h2>
+    <p class="section-lead">Reinventing the deep thinker's workflow through local-first architecture and cognitive compounding</p>
+  </div>
   <div class="grid">
     <div class="card">
-      <h3>Local-First Bi-directional Linking</h3>
-      <p>Seamless Markdown and <code>[[wiki-style links]]</code> with instant autocompletion. Real-time backlink indexing and dynamic graph visualization transform notes into an active cognitive network.</p>
+      <div class="icon-box">🕸</div>
+      <h3>Local-First & Bi-directional Synapses</h3>
+      <p>Native Markdown support with smart <code>[[bi-directional linking]]</code>. Sub-millisecond backlink tracking and interactive stellar knowledge graphs illustrate the organic emergence of thoughts.</p>
     </div>
     <div class="card">
-      <h3>AI Cognitive Mirror & White-box Q&A</h3>
-      <p>Hybrid RAG merging semantic vector embeddings with knowledge graph entities. Inspect transparent thinking chains and verbatim reference citation cards that jump directly to source notes.</p>
+      <div class="icon-box">🧠</div>
+      <h3>AI Cognitive Mirror & White-Box Q&A</h3>
+      <p>Vector Embeddings blended with entity graphs (Hybrid RAG). Inspect transparent, collapsible thinking chains (Thinking Process) and verifiable note citations to banish hallucinations.</p>
     </div>
     <div class="card">
-      <h3>10-Dimensional Deep Research Matrix</h3>
-      <p>Synthesize fragmented thoughts into comprehensive analytical reports: concept lineages, contradiction mapping, counter-intuitive insights, first-principles deduction, and actionable checklists.</p>
+      <div class="icon-box">📊</div>
+      <h3>10D Deep Research Report Matrix</h3>
+      <p>Distill knowledge at the touch of a button. From empirical facts and evolutionary paths to conflict diagnosis and counter-intuitive breakthroughs, turn notes into decision-grade reports.</p>
     </div>
     <div class="card">
-      <h3>Mental Models & Red Team Sparring</h3>
-      <p>Built-in sandtables for First Principles, Inversion, Occam's Razor, and Feynman Technique. Red Team mode actively challenges your assumptions to eliminate blind spots.</p>
+      <div class="icon-box">🛡</div>
+      <h3>Mental Models & Red Team Challenge</h3>
+      <p>Preloaded with First Principles, Inversion, Occam's Razor, and more. Activate "Red Team" mode: AI transforms into a fierce sparring adversary to challenge blind spots.</p>
     </div>
     <div class="card">
-      <h3>LaTeX Formula & Academic Export</h3>
-      <p>Pixel-perfect KaTeX equation rendering for inline and block equations. Features a high-resolution formula rasterization pipeline exporting flawless academic PDF and Word (.docx) files.</p>
+      <div class="icon-box">📐</div>
+      <h3>LaTeX Math Rigor & Lossless Export</h3>
+      <p>Deep KaTeX integration supporting inline expressions and complex matrices. Revolutionary vector rasterization pipeline enables pristine PDF and Word (.docx) academic exports.</p>
     </div>
     <div class="card">
-      <h3>Absolute Privacy & BYOK</h3>
-      <p>100% on-device SQLite storage, zero middleman servers, zero tracking. Bring Your Own Key (BYOK) direct to providers. Core free; Pro monthly subscription at ¥19.9/mo.</p>
+      <div class="icon-box">🔐</div>
+      <h3>Absolute Privacy & Bring Your Own Key</h3>
+      <p>100% on-device SQLite storage, zero intermediary servers, zero forced logins. Direct official AI API connections. Core free; Pro monthly subscription at ¥19.9/mo.</p>
     </div>
   </div>
 </div></section>
 
-<section style="background:var(--bg2)"><div class="wrap">
-  <h2>How We Differ From Others</h2>
-  <p class="section-lead">A paradigm shift built on true user data sovereignty and deep cognition</p>
+<!-- Playground 1: Bi-directional Links -->
+<section id="playground" class="reveal" style="background:var(--bg2)"><div class="wrap">
+  <div class="section-header">
+    <h2>Bi-directional Synapses: Organic Idea Emergence</h2>
+    <p class="section-lead">Click highlighted wiki-links below to witness instant backlink lookups and knowledge graph updates</p>
+  </div>
+
+  <div class="showcase-container">
+    <div class="mockup-window">
+      <div class="window-header">
+        <span class="window-dot r"></span>
+        <span class="window-dot y"></span>
+        <span class="window-dot g"></span>
+        <span class="window-title">notes/Cognitive_Compounding_Systems.md</span>
+      </div>
+      <div class="editor-body">
+        <h4>Cognitive Compounding & System Dynamics</h4>
+        <p>Effective thinking is never linear accumulation, but breaking problems down to fundamental truths via <span class="wiki-link active" data-id="fp">[[First Principles]]</span>.</p>
+        <p style="margin-top:14px">When paired with continuous <span class="wiki-link" data-id="bayes">[[Bayesian Updating]]</span> to calibrate beliefs against new evidence, our knowledge network develops resilient <span class="wiki-link" data-id="antifragile">[[Antifragile Systems]]</span> characteristics...</p>
+        <div style="margin-top:20px;padding:12px;background:rgba(0,0,0,0.2);border-radius:8px;font-size:13px;color:var(--sub)">
+          💡 <strong>Interactive Hint</strong>: Click any green <code>[[wiki-link]]</code> above to inspect real-time radar shifts and backlinks on the right.
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-panel radar-panel">
+      <div>
+        <span class="radar-meta-badge">Synapse Radar · Entity Graph</span>
+        <div class="radar-card-preview" id="radarPreview">
+          <h5 id="radarTitle">🔍 First Principles (Reasoning from Axioms)</h5>
+          <p id="radarDesc">Boiling things down to their fundamental truths and reasoning upward from there, avoiding analogies that inherit legacy assumptions.</p>
+          <div class="radar-backlinks-list">
+            <div class="item">🔗 <strong>3 notes</strong> linked bi-directionally</div>
+            <div class="item">📌 Upstream: <em>Reductionism in Physics</em></div>
+            <div class="item">⚡️ Derived: <em>Inversion · Cross-Domain Transfer</em></div>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:12px;color:var(--sub-light);margin-top:16px">
+        ⚡️ On-device SQLite graph, sub-millisecond offline querying
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- Playground 2: White-Box AI Reasoning -->
+<section id="whitebox" class="reveal"><div class="wrap">
+  <div class="section-header">
+    <h2>White-Box Reasoning: Banish AI Hallucinations</h2>
+    <p class="section-lead">Every AI revelation is auditable. Hybrid RAG combined with collapsible reasoning traces lets you verify every cognitive leap</p>
+  </div>
+
+  <div class="ai-console">
+    <div class="chat-bubble-user">
+      <span style="font-size:20px">🧑‍💻</span>
+      <div>
+        <div style="font-size:12px;color:var(--sub);margin-bottom:4px">User Query</div>
+        <div>Based on my personal notes, how can I use Inversion to overcome my current plateau in personal growth?</div>
+      </div>
+    </div>
+
+    <div class="chat-bubble-ai">
+      <div class="ai-hybrid-pill">
+        <span>⚡️ Hybrid RAG</span>
+        <span>• 3 Private Notes Matched</span>
+        <span>• 2 Graph Entities</span>
+        <span>• Latency 2.4s</span>
+      </div>
+
+      <div class="thinking-box" id="thinkingBox">
+        <div class="thinking-header" id="thinkingHeader">
+          <span>🧠 Transparent Reasoning Chain (Thinking Process) · Completed</span>
+          <span class="thinking-chevron">▼</span>
+        </div>
+        <div class="thinking-body">
+          <div class="thinking-step"><span class="step-idx">[01. Retrieval]</span> Querying "04-mental-models.md" and "quarterly-review.md". Key bottleneck identified: "diminishing marginal returns on hours worked".</div>
+          <div class="thinking-step"><span class="step-idx">[02. Pruning]</span> Discard conventional advice to "work longer hours" (which causes cognitive burnout and increases single points of failure).</div>
+          <div class="thinking-step"><span class="step-idx">[03. Inversion]</span> Apply Charlie Munger's inversion: "What would guarantee my growth remains permanently stagnant?" (Answer: drowning in low-leverage tasks, ignoring feedback loops, zero asset compounding).</div>
+          <div class="thinking-step"><span class="step-idx">[04. Convergence]</span> Invert the failure checklist to build an antifragile knowledge engine with subtraction strategies.</div>
+        </div>
+      </div>
+
+      <div style="font-size:15px;line-height:1.8;color:var(--ink)">
+        <p>Synthesizing insights from your notes on <em>Mental Models</em> and <em>Knowledge Compounding Systems</em>, here are 3 inverted levers:</p>
+        <ol style="padding-left:20px;margin-top:10px">
+          <li><strong>Build a Destructive Checklist</strong>: Stop seeking new inputs; eliminate 3 low-leverage tasks depleting your cognitive bandwidth;</li>
+          <li><strong>Compound Process into Knowledge Matrices</strong>: Solidify fragmented lessons into re-usable templates;</li>
+          <li><strong>Institutionalize Red-Teaming</strong>: Seek vulnerability tests before betting on ambitious expansion.</li>
+        </ol>
+      </div>
+
+      <div class="ref-quotes">
+        <div class="ref-pill">📄 Ref 1: 04-mental-models-and-red-teaming.md #L42</div>
+        <div class="ref-pill">📄 Ref 2: bayesian-updating-notes.md #L18</div>
+        <div class="ref-pill">🏷 Entity: [[Inversion Principle]]</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- Playground 3: 10D Research Matrix -->
+<section id="matrix" class="reveal" style="background:var(--bg2)"><div class="wrap">
+  <div class="section-header">
+    <h2>10-Dimensional Deep Research Matrix</h2>
+    <p class="section-lead">Transform chaotic notes into executive-grade structured intelligence across 10 critical analytical dimensions</p>
+  </div>
+
+  <div class="report-tabs-nav" id="reportTabs">
+    <button class="report-pill-btn active" data-dim="0">01 Empirical</button>
+    <button class="report-pill-btn" data-dim="1">02 Evolution</button>
+    <button class="report-pill-btn" data-dim="2">03 Conflict</button>
+    <button class="report-pill-btn" data-dim="3">04 Counter-Intuition</button>
+    <button class="report-pill-btn" data-dim="4">05 Breakthrough</button>
+    <button class="report-pill-btn" data-dim="5">06 Distillation</button>
+    <button class="report-pill-btn" data-dim="6">07 First Principles</button>
+    <button class="report-pill-btn" data-dim="7">08 Actionable Plan</button>
+    <button class="report-pill-btn" data-dim="8">09 Metaphors</button>
+    <button class="report-pill-btn" data-dim="9">10 Socratic Qs</button>
+  </div>
+
+  <div class="report-card-view" id="reportCard">
+    <span class="report-dim-badge" id="reportDimNum">DIMENSION 01 · EMPIRICAL ANCHORING</span>
+    <h4 id="reportDimTitle">Empirical Anchoring: Strip subjective anxiety, retain immutable facts</h4>
+    <p class="dim-desc" id="reportDimDesc">Filters speculation and emotional turbulence from historical notes, anchoring insights in verified timestamps, concrete metrics, and observable causal links.</p>
+    <div class="insight-box" id="reportDimInsight">
+      💡 <strong>Sample Matrix Extraction</strong>: Across 142 retrospectives logged over 6 months, critical decision latency fell from 45 min to 18 min, while high-value knowledge template re-use reached 68.4%.
+    </div>
+  </div>
+</div></section>
+
+<!-- Playground 4: LaTeX Math -->
+<section id="math" class="reveal"><div class="wrap">
+  <div class="section-header">
+    <h2>Academic LaTeX: Native Typesetting & Lossless Export</h2>
+    <p class="section-lead">Solve formula rendering bugs on mobile. High-speed KaTeX paired with vector rasterization for flawless PDF and Word documents</p>
+  </div>
+
+  <div class="math-playground">
+    <div class="math-selector" id="mathSelector">
+      <button class="math-tab active" data-math="compound">📈 Continuous Compounding Equation</button>
+      <button class="math-tab" data-math="bayes">🎲 Bayesian Posterior Inference</button>
+      <button class="math-tab" data-math="schrodinger">⚛️ Schrödinger Wave Mechanics</button>
+    </div>
+
+    <div class="math-display-stage">
+      <div class="math-equation" id="mathEquation">
+        $$rac{dK}{dt} = r \cdot K(t) + lpha \cdot 	ext{Insight}(t) - \delta \cdot K(t)$$
+      </div>
+    </div>
+
+    <div class="math-actions">
+      <div class="export-tags">
+        <span class="export-tag-item">✓ Native KaTeX Engine</span>
+        <span class="export-tag-item">✓ 300+ DPI Vector Rasterization</span>
+        <span class="export-tag-item">✓ Academic-Grade DOCX / PDF Ready</span>
+      </div>
+      <div>
+        <button class="cta-secondary" id="copyMathBtn" style="padding:10px 20px;font-size:13px">
+          📋 Copy LaTeX Code
+        </button>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- Playground 5: Red-Teaming Sandbox -->
+<section id="redteam" class="reveal" style="background:var(--bg2)"><div class="wrap">
+  <div class="section-header">
+    <h2>Mental Model Sandboxing: Reject Yes-Man AI</h2>
+    <p class="section-lead">Sycophantic chatbots only reinforce cognitive blind spots. Red-teaming turns AI into a rigorous adversary to stress-test ideas</p>
+  </div>
+
+  <div class="sandbox-deck">
+    <div class="sandbox-column bad">
+      <span class="sandbox-tag">❌ Typical Sycophantic AI (Yes-Man)</span>
+      <p style="font-weight:700;color:var(--ink-heading);margin-bottom:10px">When given a bold assumption: "I believe if we build an exceptional niche product, zero marketing will still lead to explosive viral growth."</p>
+      <div style="font-size:14px;color:var(--sub);line-height:1.7">
+        "What an inspiring philosophy! Great products naturally sell themselves. Keep polishing features and word of mouth will do the rest!"
+      </div>
+      <div style="margin-top:14px;font-size:12px;color:#f87171">
+        ⚠️ Result: Reinforces survivorship bias and overlooks critical cold-start realities.
+      </div>
+    </div>
+
+    <div class="sandbox-column good">
+      <span class="sandbox-tag">🛡 Synapse Note Red Team (Challenger)</span>
+      <p style="font-weight:700;color:var(--ink-heading);margin-bottom:10px">The same assumption under Synapse Note's Red-Teaming mode:</p>
+      <div style="font-size:14px;color:var(--ink);line-height:1.7">
+        "Beware of <strong>survivorship bias</strong> and <strong>attribution fallacy</strong>. Answer 3 critical inquiries:<br>
+        1. What is your verified distribution channel for the initial 100 core users?<br>
+        2. Without distribution leverage, how does quality pierce modern algorithmic noise?<br>
+        3. Are your defensibility moats symmetric or asymmetric against well-funded incumbents?"
+      </div>
+      <div style="margin-top:14px;font-size:12px;color:var(--brand)">
+        ✓ Result: Exposes fragility prior to execution, building true antifragile advantages.
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- Comparison Table -->
+<section class="reveal"><div class="wrap">
+  <div class="section-header">
+    <h2>How Synapse Note Differs</h2>
+    <p class="section-lead">Architectural breakthroughs focused on user sovereignty, deep inquiry, and lifelong compounding</p>
+  </div>
   <div class="table-wrap"><table>
-    <thead><tr><th>Dimension</th><th>Synapse Note</th><th>Traditional Cloud / Common AI Notes</th></tr></thead>
+    <thead><tr><th>Comparison Dimension</th><th>Synapse Note</th><th>Legacy Cloud Notes / Generic AI Apps</th></tr></thead>
     <tbody>
-      <tr><td><strong>Data Privacy & Storage</strong></td><td>100% on-device (SQLite + Markdown), zero middleman servers, no login</td><td>Mandatory sign-in, notes stored on cloud servers with data leakage risks</td></tr>
-      <tr><td><strong>AI Architecture & Pricing</strong></td><td>BYOK directly to official APIs, transparent reasoning, pennies per query</td><td>Expensive monthly recurring subscriptions ($20+/mo) with black-box models</td></tr>
-      <tr><td><strong>Knowledge Connectivity</strong></td><td>Bi-directional links + entity extraction + interactive graph + hybrid RAG</td><td>Traditional rigid folder hierarchies and rudimentary keyword search</td></tr>
-      <tr><td><strong>Deep Thinking Tools</strong></td><td>10D deep research matrix, mental model sandtables, and red-team sparring</td><td>Superficial generic chat, basic grammar polish, or generic summaries</td></tr>
-      <tr><td><strong>Math & Academic Export</strong></td><td>Native KaTeX rendering, formula rasterization, lossless PDF & DOCX export</td><td>Plain text only; LaTeX formulas break, deform, or fail to export</td></tr>
-      <tr><td><strong>Business Model</strong></td><td>Core features free (30 notes + 5 monthly free notes), Pro monthly subscription (¥19.9/mo, cancel anytime), all knowledge packs included, zero data lock-in</td><td>Expensive monthly recurring subscriptions ($20+/mo) with mandatory cloud lock-in; losing access to your own data upon cancellation</td></tr>
+      <tr><td><strong>Privacy & Storage</strong></td><td><span class="check-icon">✓</span> 100% on-device SQLite + Markdown, zero intermediary servers, no account required</td><td><span class="cross-icon">✕</span> Mandatory login; notes stored in proprietary cloud databases with data breach risks</td></tr>
+      <tr><td><strong>AI Costs & Transparency</strong></td><td><span class="check-icon">✓</span> BYOK (Bring Your Own Key) direct connection; transparent reasoning traces; cents per query</td><td><span class="cross-icon">✕</span> Expensive monthly subscriptions ($20+/mo) with opaque black-box models and rate limits</td></tr>
+      <tr><td><strong>Connection Depth</strong></td><td><span class="check-icon">✓</span> Bi-directional links + automated entity graphs + hybrid vector/semantic search</td><td><span class="cross-icon">✕</span> Rigid hierarchical folders or primitive keyword-matching search engines</td></tr>
+      <tr><td><strong>Thinking Assistance</strong></td><td><span class="check-icon">✓</span> 10D deep research matrix, mental model sandboxes, and critical red-teaming</td><td><span class="cross-icon">✕</span> Superficial generic conversational chat, basic spelling fixes, or shallow summaries</td></tr>
+      <tr><td><strong>Academic LaTeX Export</strong></td><td><span class="check-icon">✓</span> KaTeX pixel-accurate math rendering and vector pipeline for lossless PDF/Word exports</td><td><span class="cross-icon">✕</span> Plain text only; formulas fail to render or become garbled and missing upon export</td></tr>
+      <tr><td><strong>Business Model</strong></td><td><span class="check-icon">✓</span> Core free (30 notes + 5 bonus notes every month); Pro monthly subscription at ¥19.9/mo with cancel-anytime freedom; data never locked</td><td><span class="cross-icon">✕</span> Heavy recurring fees with cloud lock-in; cancellation locks you out of reading or exporting your own notes</td></tr>
     </tbody>
   </table></div>
 </div></section>
 
-<section class="faq"><div class="wrap">
-  <h2>Frequently Asked Questions</h2>
-  <p class="section-lead">Clear answers to how we protect your thinking assets and privacy</p>
-  <details open>
-    <summary>What is Synapse Note, and how is it different from traditional note-taking apps?</summary>
-    <p>Synapse Note is a local-first bi-directional knowledge base and AI cognitive mirror crafted for lifelong learners, researchers, and thinkers. It weaves notes through [[bi-directional links]] and knowledge graphs, combined with BYOK white-box AI Q&A, mental model red-teaming, and a 10D research matrix to compound your knowledge into lifelong cognitive assets.</p>
-  </details>
-  <details>
-    <summary>Where is my data stored, and how is my privacy protected?</summary>
-    <p>All your notes, attachments, entities, and vector indexes remain 100% on your local device (SQLite and sandbox documents). There is zero registration or user tracking. AI calls connect directly to your chosen provider with keys encrypted in hardware security (iOS Keychain / Android Keystore).</p>
-  </details>
-  <details>
-    <summary>What is BYOK, and how are AI features billed?</summary>
-    <p>BYOK stands for Bring Your Own Key. You can use your own API key from OpenAI, Anthropic Claude, DeepSeek, Google Gemini, and more. Usage is billed directly by your chosen provider based on token consumption (usually fractions of a cent per query). Synapse Note adds no markup or subscription fee.</p>
-  </details>
-  <details>
-    <summary>Can I use Synapse Note without an internet connection?</summary>
-    <p>Absolutely. Except for connecting to your chosen AI model provider, all core features—Markdown editing, bi-directional linking, knowledge graph browsing, full-text search, KaTeX rendering, and PDF/Word exports—run entirely offline.</p>
-  </details>
-  <details>
-    <summary>How do I back up and sync my notes across devices?</summary>
-    <p>You own your data completely. You can export all notes to standard Markdown files (with YAML metadata), full SQLite snapshots, or publication-ready PDF and Word documents. On iOS, you can enable private iCloud container sync which is fully encrypted and inaccessible to us.</p>
-  </details>
-  <details>
-    <summary>What does Synapse Note Pro include, and how does billing and cancellation work?</summary>
-    <p>Synapse Note core features are free forever (with 30 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are offered as a monthly auto-renewing subscription at just ¥19.9/month (cancel anytime), unlocking unlimited notes and knowledge graphs, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are billed by your app store, and can be cancelled anytime in your store account subscription settings.</p>
-  </details>
-  <p style="margin-top:22px"><a href="geo.en.html">View Full Mechanics & Technical Details →</a></p>
+<!-- FAQ -->
+<section id="faq" class="faq reveal" style="background:var(--bg2)"><div class="wrap">
+  <div class="section-header">
+    <h2>Frequently Asked Questions</h2>
+    <p class="section-lead">Learn how we protect your intellectual sovereignty and personal data</p>
+  </div>
+  <div class="faq-list">
+    <details open>
+      <summary>What is Synapse Note, and how is it different from traditional note-taking apps?</summary>
+      <p>Synapse Note is a local-first bi-directional knowledge base and AI cognitive mirror crafted for lifelong learners, researchers, and thinkers. It weaves notes through [[bi-directional links]] and knowledge graphs, combined with BYOK white-box AI Q&A, mental model red-teaming, and a 10D research matrix to compound your knowledge into lifelong cognitive assets.</p>
+    </details>
+    <details>
+      <summary>Where is my data stored, and how is my privacy protected?</summary>
+      <p>All your notes, attachments, entities, and vector indexes remain 100% on your local device (SQLite and sandbox documents). There is zero registration or user tracking. AI calls connect directly to your chosen provider with keys encrypted in hardware security (iOS Keychain / Android Keystore).</p>
+    </details>
+    <details>
+      <summary>What is BYOK, and how does AI billing work?</summary>
+      <p>BYOK stands for "Bring Your Own Key". You can input API keys from OpenAI, Anthropic Claude, DeepSeek, Google Gemini, and more. Charges are billed directly by your model provider based on exact token usage (typically mere pennies per deep inquiry). Synapse Note adds zero markup or middleman fees.</p>
+    </details>
+    <details>
+      <summary>Can I take notes completely offline without an internet connection?</summary>
+      <p>Absolutely. Except for streaming queries to your configured cloud AI models, all features—Markdown editing, bi-directional linking, entity graph browsing, local full-text search, math rendering, and PDF/Word exporting—run 100% locally and offline.</p>
+    </details>
+    <details>
+      <summary>How can I backup and sync my notes across multiple devices?</summary>
+      <p>Your notes belong entirely to you. You can export all notes as standard Markdown with YAML frontmatter at any time, or back up the complete SQLite database snapshot, high-res PDF, or Word files. Seamless multi-device sync is supported via your private Apple iCloud container, to which we have zero access.</p>
+    </details>
+    <details>
+      <summary>What is included in Synapse Note Pro, and how can I subscribe or cancel?</summary>
+      <p>The core features of Synapse Note are free forever (includes 30 baseline notes; after that, you receive 5 complimentary notes every month). Pro features operate on an auto-renewing monthly subscription for only ¥19.9/month (cancel anytime), unlocking unlimited notes and star-graph connections, unlimited deep AI Agent consultations, all 6 curated knowledge packs, private cloud backup/sync, and academic-grade lossless exports. All subscriptions are processed directly through official app stores (Apple App Store / Google Play / Huawei AppGallery), where you can easily cancel anytime in your account settings.</p>
+    </details>
+  </div>
+  <p style="margin-top:28px;text-align:center"><a href="geo.en.html" style="font-weight:700">Detailed Knowledge Architecture & FAQ →</a></p>
 </div></section>
 
-<footer><div class="wrap">
-  <p>© Synapse Note · <a href="privacy.en.html">Privacy Policy</a> · <a href="terms.en.html">Terms of Service</a> · <a href="support.en.html">Support</a> · <a href="geo.en.html">GEO Guide</a> · <a href="llms.en.txt">llms.txt</a></p>
+<footer><div class="wrap" style="text-align:center">
+  <p>© Synapse Note · <a href="privacy.en.html">Privacy Policy</a> · <a href="terms.en.html">Terms of Service</a> · <a href="support.en.html">Support</a> · <a href="devlog.html">Devlog</a> · <a href="geo.en.html">GEO Specification</a> · <a href="llms.en.txt">llms.txt</a></p>
 </div></footer>
 
 <script>
-  document.getElementById('theme-toggle').addEventListener('click', function (e) {
-    e.preventDefault();
-    var cur = document.documentElement.getAttribute('data-theme');
-    var next = cur === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    try { localStorage.setItem('theme', next); } catch (err) {}
+// 1. Synapse Canvas Animation
+(function() {
+  var canvas = document.getElementById('synapse-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var width, height;
+  var particles = [];
+  var mouse = { x: -1000, y: -1000, radius: 140 };
+  var animId = null;
+  var isVisible = true;
+
+  function resize() {
+    width = canvas.width = canvas.parentElement.offsetWidth;
+    height = canvas.height = canvas.parentElement.offsetHeight;
+    initParticles();
+  }
+
+  function initParticles() {
+    particles = [];
+    var count = Math.floor((width * height) / 14000);
+    count = Math.max(30, Math.min(count, 85));
+    for (var i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.7,
+        vy: (Math.random() - 0.5) * 0.7,
+        radius: Math.random() * 2 + 1.2,
+        baseAlpha: Math.random() * 0.5 + 0.2
+      });
+    }
+  }
+
+  function update() {
+    if (!isVisible) return;
+    ctx.clearRect(0, 0, width, height);
+
+    for (var i = 0; i < particles.length; i++) {
+      var p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+
+      if (p.x < 0) p.x = width;
+      if (p.x > width) p.x = 0;
+      if (p.y < 0) p.y = height;
+      if (p.y > height) p.y = 0;
+
+      var dx = mouse.x - p.x;
+      var dy = mouse.y - p.y;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < mouse.radius) {
+        var force = (1 - dist / mouse.radius) * 0.04;
+        p.x += dx * force;
+        p.y += dy * force;
+      }
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(46, 230, 160, ' + p.baseAlpha + ')';
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = '#2ee6a0';
+      ctx.fill();
+
+      for (var j = i + 1; j < particles.length; j++) {
+        var p2 = particles[j];
+        var d2 = Math.sqrt((p.x - p2.x)*(p.x - p2.x) + (p.y - p2.y)*(p.y - p2.y));
+        if (d2 < 115) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          var lineAlpha = (1 - d2 / 115) * 0.22;
+          ctx.strokeStyle = 'rgba(46, 230, 160, ' + lineAlpha + ')';
+          ctx.lineWidth = 0.9;
+          ctx.shadowBlur = 0;
+          ctx.stroke();
+        }
+      }
+    }
+    animId = requestAnimationFrame(update);
+  }
+
+  window.addEventListener('resize', resize);
+  canvas.addEventListener('mousemove', function(e) {
+    var rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
   });
+  canvas.addEventListener('mouseleave', function() {
+    mouse.x = -1000;
+    mouse.y = -1000;
+  });
+
+  var observer = new IntersectionObserver(function(entries) {
+    isVisible = entries[0].isIntersecting;
+    if (isVisible && !animId) animId = requestAnimationFrame(update);
+  }, { threshold: 0.1 });
+  observer.observe(canvas);
+
+  resize();
+  animId = requestAnimationFrame(update);
+})();
+
+// 2. Interactive Wiki-link Radar
+(function() {
+  var wikiData = {
+    fp: {
+      title: "🔍 First Principles (Reasoning from Axioms)",
+      desc: "Boiling things down to fundamental truths and reasoning upward from there, avoiding analogies that inherit legacy assumptions.",
+      backlinks: "🔗 3 notes linked bi-directionally",
+      base: "📌 Upstream: Reductionism in Physics",
+      derived: "⚡️ Derived: Inversion · Cross-Domain Transfer"
+    },
+    bayes: {
+      title: "🎲 Bayesian Updating (Probabilistic Beliefs)",
+      desc: "Updating prior probabilities in light of fresh evidence. Treating beliefs as malleable probability distributions rather than static dogma.",
+      backlinks: "🔗 5 notes linked bi-directionally",
+      base: "📌 Upstream: Conditional Probability",
+      derived: "⚡️ Derived: Antifragile Decisions · Confidence Intervals"
+    },
+    antifragile: {
+      title: "🛡 Antifragile Systems (Growth via Stress)",
+      desc: "Beyond resilience: resilient systems withstand shocks and remain unchanged, while antifragile systems actively gain strength from volatility.",
+      backlinks: "🔗 4 notes linked bi-directionally",
+      base: "📌 Upstream: Complex Adaptive Systems",
+      derived: "⚡️ Derived: Convex Payoffs · Barbell Strategy"
+    }
+  };
+
+  var links = document.querySelectorAll('.wiki-link');
+  var radar = document.getElementById('radarPreview');
+  links.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      links.forEach(function(l) { l.classList.remove('active'); });
+      this.classList.add('active');
+      var id = this.getAttribute('data-id');
+      var item = wikiData[id];
+      if (item && radar) {
+        radar.style.opacity = '0';
+        setTimeout(function() {
+          radar.innerHTML = '<h5>' + item.title + '</h5><p>' + item.desc + '</p><div class="radar-backlinks-list"><div class="item">' + item.backlinks + '</div><div class="item">' + item.base + '</div><div class="item">' + item.derived + '</div></div>';
+          radar.style.opacity = '1';
+        }, 150);
+      }
+    });
+  });
+})();
+
+// 3. Whitebox Thinking Drawer
+(function() {
+  var box = document.getElementById('thinkingBox');
+  var header = document.getElementById('thinkingHeader');
+  if (box && header) {
+    header.addEventListener('click', function() {
+      box.classList.toggle('collapsed');
+    });
+  }
+})();
+
+// 4. 10D Research Matrix Pill Switch
+(function() {
+  var matrixData = [
+    { num: "01", name: "EMPIRICAL ANCHORING", title: "Empirical Anchoring: Strip subjective anxiety, retain immutable facts", desc: "Filters speculation and emotional turbulence from historical notes, anchoring insights in verified timestamps, concrete metrics, and observable causal links.", insight: "💡 Sample Matrix Extraction: Across 142 retrospectives logged over 6 months, critical decision latency fell from 45 min to 18 min, while high-value knowledge template re-use reached 68.4%." },
+    { num: "02", name: "EVOLUTIONARY TRACING", title: "Evolutionary Tracing: Chronological map of emerging insights", desc: "Follows note timestamps to chart the developmental arc of insights, pinpointing breakthrough inflection points and lingering roadblocks.", insight: "💡 Evolutionary Arc: March 2026 'offline notes' → May 'on-device graph hybrid RAG' → Sept 'academic LaTeX exports and local cognitive mirror'." },
+    { num: "03", name: "CONFLICT DIAGNOSIS", title: "Conflict Diagnosis: Uncover hidden contradictions across notes", desc: "Scours diverse notes to flag mutually incompatible assumptions (e.g. demanding complete zero-cloud privacy while expecting instant cross-device sharing without private iCloud setup).", insight: "💡 Conflict Spotted: Reconciled latency assumptions between native on-device WASM memory footprint and immediate preview rendering." },
+    { num: "04", name: "COUNTER-INTUITION", title: "Counter-Intuitive Insights: Piercing common cognitive traps", desc: "Applies multi-disciplinary mental lattices to identify counter-productive 'common-sense' practices and unearth nonlinear leverage.", insight: "💡 Paradox Revealed: Rigid folder taxonomies actually reduce recall by 42%. Shifting to bi-directional synapses and vector recall elevated serendipitous connections by 310%." },
+    { num: "05", name: "COGNITIVE BREAKTHROUGH", title: "Cognitive Breakthrough: High-leverage interventions", desc: "Identifies systemic bottlenecks to escape local optima traps and unlock compounding growth.", insight: "💡 Leverage Shift: Shift from logging isolated logs to authoring 'reusable knowledge modules' that compound future reasoning." },
+    { num: "06", name: "CONCEPT DISTILLATION", title: "Concept Distillation: Compressing complexity into core lexicon", desc: "Synthesizes thousands of words into precise, axiomatic terminology for frictionless long-term mental recall.", insight: "💡 Distilled Term: 'Synaptic Graph' — autonomous nodes representing atomized thoughts bound by weighted semantic citations." },
+    { num: "07", name: "FIRST PRINCIPLES", title: "First Principles: Reconstructing from elemental axioms", desc: "Strips away industry dogmas to reason strictly upward from fundamental physical constraints.", insight: "💡 Axiom Rebuilt: A personal note app is not a 'storage bucket', but an 'external coprocessor for deep cognitive calculations'." },
+    { num: "08", name: "ACTIONABLE ROADMAP", title: "Actionable Roadmap: Translating philosophy into concrete steps", desc: "Produces high-clarity, procrastination-resistant action checklists with strict falsifiability criteria.", insight: "💡 Next Actions: 1. Conduct a Red-Team review on Q3 strategic assumptions tonight; 2. Test vector PDF export on 3 math notes; 3. Run a complete local SQLite backup." },
+    { num: "09", name: "METAPHORICAL TRANSFER", title: "Metaphorical Transfer: Cross-pollinating mental models", desc: "Employs metaphors from biology, statistical physics, and thermodynamics to spark creative epiphanies.", insight: "💡 Physical Metaphor: Treating knowledge bases as 'dissipative thermodynamic structures' requiring continuous negative entropy via deliberate reflection." },
+    { num: "10", name: "SOCRATIC QUESTIONING", title: "Socratic Questioning: Illuminating the uncharted with inquiry", desc: "Rather than offering facile answers, poses 3 incisive, long-term questions to guide future investigation.", insight: "💡 Core Inquiry: If all cloud LLMs disconnected tomorrow, would your local personal knowledge system still empower you to make high-conviction decisions?" }
+  ];
+
+  var tabBtns = document.querySelectorAll('.report-pill-btn');
+  var cardView = document.getElementById('reportCard');
+  var numEl = document.getElementById('reportDimNum');
+  var titleEl = document.getElementById('reportDimTitle');
+  var descEl = document.getElementById('reportDimDesc');
+  var insightEl = document.getElementById('reportDimInsight');
+
+  tabBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      tabBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      var dim = parseInt(this.getAttribute('data-dim'));
+      var data = matrixData[dim];
+      if (data && cardView) {
+        cardView.style.opacity = '0';
+        cardView.style.transform = 'translateY(8px)';
+        setTimeout(function() {
+          numEl.textContent = 'DIMENSION ' + data.num + ' · ' + data.name;
+          titleEl.textContent = data.title;
+          descEl.textContent = data.desc;
+          insightEl.innerHTML = data.insight;
+          cardView.style.opacity = '1';
+          cardView.style.transform = 'translateY(0)';
+        }, 150);
+      }
+    });
+  });
+})();
+
+// 5. LaTeX Math Showcase
+(function() {
+  var mathEquations = {
+    compound: "$$\frac{dK}{dt} = r \cdot K(t) + \alpha \cdot \text{Insight}(t) - \delta \cdot K(t)$$",
+    bayes: "$$P(\theta \mid D) = \frac{P(D \mid \theta) \, P(\theta)}{\int P(D \mid \theta') \, P(\theta') \, d\theta'}$$",
+    schrodinger: "$$i\hbar \frac{\partial}{\partial t} \Psi(\mathbf{r}, t) = \left[ -\frac{\hbar^2}{2m} \nabla^2 + V(\mathbf{r}, t) \right] \Psi(\mathbf{r}, t)$$"
+  };
+
+  var tabs = document.querySelectorAll('.math-tab');
+  var eqEl = document.getElementById('mathEquation');
+  var copyBtn = document.getElementById('copyMathBtn');
+
+  tabs.forEach(function(t) {
+    t.addEventListener('click', function() {
+      tabs.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      var type = this.getAttribute('data-math');
+      if (eqEl && mathEquations[type]) {
+        eqEl.textContent = mathEquations[type];
+      }
+    });
+  });
+
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function() {
+      var text = eqEl.textContent.trim();
+      navigator.clipboard.writeText(text).then(function() {
+        var origin = copyBtn.innerHTML;
+        copyBtn.innerHTML = '✓ Copied LaTeX Code';
+        copyBtn.style.borderColor = 'var(--brand)';
+        setTimeout(function() { copyBtn.innerHTML = origin; copyBtn.style.borderColor = ''; }, 2000);
+      });
+    });
+  }
+})();
+
+// 6. Scroll Reveal & Theme Toggle
+(function() {
+  var reveals = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(function(el) { observer.observe(el); });
+
+  var themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      var cur = document.documentElement.getAttribute('data-theme');
+      var next = cur === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (err) {}
+    });
+  }
+})();
 </script>
 </body>
 </html>

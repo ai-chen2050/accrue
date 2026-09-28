@@ -119,122 +119,631 @@
 </script>
 <!-- GEO:AUTO END -->
 
-<script>
-  (function(){try{var t=localStorage.getItem('theme');
-    if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
-</script>
 </head>
 <body>
 
-<nav><div class="wrap" style="display:flex;align-items:center;gap:20px;height:60px">
-  <a class="brand" href="index.html">Synapse Note 复利笔记</a>
-  <span class="spacer" style="flex:1"></span>
-  <a href="geo.html" class="hide-sm">功能与问答</a>
-  <a href="devlog.html" class="hide-sm">开发日记</a>
-  <a href="support.html">支持</a>
-  <a href="index.en.html">EN</a>
-  <a href="#" id="theme-toggle" title="切换主题">◐</a>
+<nav><div class="wrap">
+  <a class="brand" href="index.html">
+    <img src="icon.png" alt="Synapse Note Logo">
+    <span>Synapse Note</span>
+  </a>
+  <div class="spacer"></div>
+  <a href="#features" class="hide-sm">核心能力</a>
+  <a href="#playground" class="hide-sm">交互舱</a>
+  <a href="#matrix" class="hide-sm">十维研报</a>
+  <a href="#math" class="hide-sm">LaTeX导出</a>
+  <a href="devlog.html">开发日记</a>
+  <a href="#faq" class="hide-sm">常见问题</a>
+  <a href="index.en.html" title="Switch to English">EN</a>
+  <a href="#" id="theme-toggle" title="切换模式">🌓</a>
+  <a class="btn-nav" href="https://apps.apple.com/app/id6810539038" id="nav-dl">免费下载</a>
 </div></nav>
 
-<header class="hero"><div class="wrap">
-  <p class="kicker">LOCAL-FIRST · KNOWLEDGE COMPOUNDING · BYOK AI</p>
-  <h1>本地优先的双链知识库<br>与 AI 认知镜像</h1>
-  <p class="lead">像人类大脑突触一样自发互联。结合 Markdown 双链网络与实体知识图谱，内置白盒 AI 深度问答、思维模型红队沙盘、十维专业深度研报与 LaTeX 高保真排版导出。零账号、零服务器、零追踪，基础功能免费，进阶能力 Pro 月度订阅（¥19.9/月）。</p>
-  <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:24px">
-    <a class="cta" href="https://apps.apple.com/app/id6810539038" id="dl-appstore">App Store 下载</a>
-    <a href="geo.html" style="font-weight:700;font-size:15px;padding:12px 20px">了解完整机制与常见问题 →</a>
-  </div>
-</div></header>
+<header class="hero">
+  <canvas id="synapse-canvas"></canvas>
+  <div class="wrap hero-content">
+    <div class="pulse-badge">
+      <span class="pulse-dot"></span>
+      <span>本地优先 · 白盒思考 · 知识复利</span>
+    </div>
+    <h1>将碎片散乱记录<br>沉淀为终身复利的 <span class="gradient-text">认知镜像网络</span></h1>
+    <p class="lead">不只是双链笔记。基于本地 SQLite 与设备端知识图谱，结合白盒思考推理与十维研报矩阵，助你在信息洪流中构筑坚不可摧的第二大脑。</p>
+    
+    <div class="cta-group">
+      <a class="cta" href="https://apps.apple.com/app/id6810539038" id="dl-appstore">
+        <span>⚡️ App Store 官方下载</span>
+      </a>
+      <a class="cta-secondary" href="#playground">
+        <span>体验交互演练舱 ↓</span>
+      </a>
+    </div>
 
-<section><div class="wrap">
-  <h2>核心能力</h2>
-  <p class="section-lead">打破碎片笔记的孤岛状态，让每一条知识在互联中自发生长</p>
+    <div class="hero-trust-badges">
+      <div class="trust-item">
+        <span>🔒</span> <span><strong>100% 本地存储</strong>：数据绝不上云</span>
+      </div>
+      <div class="trust-item">
+        <span>⚡️</span> <span><strong>BYOK 零加价</strong>：自带 Key 每次仅分厘</span>
+      </div>
+      <div class="trust-item">
+        <span>💎</span> <span><strong>自由订阅</strong>：基础免费 / Pro ¥19.9/月</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 核心特性卡片网格 -->
+<section id="features" class="reveal"><div class="wrap">
+  <div class="section-header">
+    <h2>打破碎片孤岛，让知识自发生长</h2>
+    <p class="section-lead">以本地优先与认知复利为底层架构，重新定义深度思考者的工具链</p>
+  </div>
   <div class="grid">
     <div class="card">
+      <div class="icon-box">🕸</div>
       <h3>本地优先与双链突触网络</h3>
-      <p>原生支持 Markdown 语法与 <code>[[双链]]</code> 智能联想。反向链接毫秒级回溯，配合交互式星系知识图谱，直观呈现思想脉络的有机衍生。</p>
+      <p>原生支持 Markdown 与 <code>[[双链]]</code> 智能联想。反向链接毫秒级回溯，配合交互式星系知识图谱，直观呈现思想脉络的有机衍生。</p>
     </div>
     <div class="card">
+      <div class="icon-box">🧠</div>
       <h3>AI 认知镜像与白盒对话</h3>
       <p>向量 Embeddings 与实体知识图谱混合检索（Hybrid RAG）。清晰呈现可展开的思考推理链（Thinking Process）与源笔记溯源引文，告别幻觉。</p>
     </div>
     <div class="card">
+      <div class="icon-box">📊</div>
       <h3>十维专业深度研报矩阵</h3>
       <p>一键萃取知识库精华。从事实沉淀、演化脉络、矛盾识别到反直觉洞见与行动清单，将散乱笔记一键提炼为系统级决策研报。</p>
     </div>
     <div class="card">
+      <div class="icon-box">🛡</div>
       <h3>思维模型沙盘与红队对抗</h3>
-      <p>内置第一性原理、逆向思考、奥卡姆剃刀等经典思维格栅。开启「红队对抗」模式，AI 化身辩论对手，针对盲区展开批判性质询。</p>
+      <p>内置第一性原理、逆向思考、奥卡姆剃刀等经典思维格栅。开启「红队对抗」模式，AI 化身辩论对手，针对认知盲区展开批判性质询。</p>
     </div>
     <div class="card">
+      <div class="icon-box">📐</div>
       <h3>LaTeX 严谨数学公式与导出</h3>
       <p>深度集成 KaTeX 渲染引擎，支持行内公式与复杂矩阵。独创高保真公式光栅化管道，一键无损导出期刊级 PDF 与 Word (.docx) 文档。</p>
     </div>
     <div class="card">
+      <div class="icon-box">🔐</div>
       <h3>绝对隐私与 BYOK 自带密钥</h3>
       <p>100% 本地 SQLite 存储，零云端中转服务器，无账号登录。用户自带 API Key 直连官方端点；基础功能免费，进阶 Pro 仅 ¥19.9/月。</p>
     </div>
   </div>
 </div></section>
 
-<section style="background:var(--bg2)"><div class="wrap">
-  <h2>和别的产品有什么不同</h2>
-  <p class="section-lead">以用户数据主权与深度思考为核心的全新架构</p>
+<!-- 交互演示舱 1: 双链突触互动演练舱 -->
+<section id="playground" class="reveal" style="background:var(--bg2)"><div class="wrap">
+  <div class="section-header">
+    <h2>双链突触：思想在互联中自发涌现</h2>
+    <p class="section-lead">轻点下方笔记中的高亮双链，感受毫秒级反向链接回溯与实体知识雷达联动</p>
+  </div>
+
+  <div class="showcase-container">
+    <!-- 左侧编辑器模拟 -->
+    <div class="mockup-window">
+      <div class="window-header">
+        <span class="window-dot r"></span>
+        <span class="window-dot y"></span>
+        <span class="window-dot g"></span>
+        <span class="window-title">notes/认知复利与系统动力学.md</span>
+      </div>
+      <div class="editor-body">
+        <h4>认知复利与非线性成长</h4>
+        <p>真正的高效思考，绝非单篇笔记的线性累加，而是通过 <span class="wiki-link active" data-id="fp">[[第一性原理]]</span> 拆解事物底层规律。</p>
+        <p style="margin-top:14px">当我们结合 <span class="wiki-link" data-id="bayes">[[贝叶斯更新]]</span> 持续利用新证据校准已有信念时，整个个人知识网络便具备了面对波动自修复的 <span class="wiki-link" data-id="antifragile">[[反脆弱系统]]</span> 属性。思想由此产生复利。</p>
+        <div style="margin-top:20px;padding:12px;background:rgba(0,0,0,0.2);border-radius:8px;font-size:13px;color:var(--sub)">
+          💡 <strong>交互提示</strong>：点击上方任意绿色的 <code>[[双链关键词]]</code>，观察右侧雷达与反向关联的实时响应。
+        </div>
+      </div>
+    </div>
+
+    <!-- 右侧图谱雷达与关联抽屉 -->
+    <div class="glass-panel radar-panel">
+      <div>
+        <span class="radar-meta-badge">Synapse Radar · 实体知识雷达</span>
+        <div class="radar-card-preview" id="radarPreview">
+          <h5 id="radarTitle">🔍 第一性原理 (First Principles)</h5>
+          <p id="radarDesc">将系统回溯到最基本的真理与不可推导的基本事实，再由底向上重新推导，避免从类比或既有经验中陷入惯性陷阱。</p>
+          <div class="radar-backlinks-list">
+            <div class="item">🔗 <strong>3 篇笔记</strong> 双向引用此概念</div>
+            <div class="item">📌 上游基石：<em>物理学还原论</em></div>
+            <div class="item">⚡️ 衍生概念：<em>逆向思考 · 跨学科迁移</em></div>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:12px;color:var(--sub-light);margin-top:16px">
+        ⚡️ 本地设备端 SQLite 图谱毫秒级关联，离线秒级查询
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 交互演示舱 2: 白盒 AI 思考流演播舱 -->
+<section id="whitebox" class="reveal"><div class="wrap">
+  <div class="section-header">
+    <h2>白盒思考链：告别黑盒与幻觉</h2>
+    <p class="section-lead">每一次 AI 洞察皆有源可循。混合检索结合可折叠的真实推理链路，让你审视机器的每一步推演</p>
+  </div>
+
+  <div class="ai-console">
+    <!-- 用户提问气泡 -->
+    <div class="chat-bubble-user">
+      <span style="font-size:20px">🧑‍💻</span>
+      <div>
+        <div style="font-size:12px;color:var(--sub);margin-bottom:4px">用户探寻</div>
+        <div>根据我的知识库笔记，如何用逆向思维突破当下的个人增长瓶颈？</div>
+      </div>
+    </div>
+
+    <!-- AI 回答与思考流卡片 -->
+    <div class="chat-bubble-ai">
+      <div class="ai-hybrid-pill">
+        <span>⚡️ Hybrid RAG</span>
+        <span>• 命中 3 篇私有笔记</span>
+        <span>• 2 个图谱实体</span>
+        <span>• 耗时 2.4s</span>
+      </div>
+
+      <!-- 可折叠思考链 -->
+      <div class="thinking-box" id="thinkingBox">
+        <div class="thinking-header" id="thinkingHeader">
+          <span>🧠 深度思考推理过程 (Thinking Process) · 已就绪</span>
+          <span class="thinking-chevron">▼</span>
+        </div>
+        <div class="thinking-body">
+          <div class="thinking-step"><span class="step-idx">[01. 检索聚合]</span> 检索《04-思维模型日记.md》与《季度复盘.md》，用户记录的瓶颈核心为“时间投入边际效应递减”。</div>
+          <div class="thinking-step"><span class="step-idx">[02. 假设排查]</span> 排除简单“增加工作时长”的常规解，该方案会导致认知带宽枯竭并增加单点故障概率。</div>
+          <div class="thinking-step"><span class="step-idx">[03. 逆向推演]</span> 运用查理·芒格逆向法：“如果我想让增长彻底停滞甚至倒退，需要做什么？”（答案：深陷低杠杆事务、切断外部高质量反馈、不做知识沉淀）。</div>
+          <div class="thinking-step"><span class="step-idx">[04. 逻辑收敛]</span> 反转上述破坏清单，构建反脆弱知识母体，建议实施减法策略。</div>
+        </div>
+      </div>
+
+      <!-- 正式回答 -->
+      <div style="font-size:15px;line-height:1.8;color:var(--ink)">
+        <p>结合你的笔记《04-思维模型与红队对抗》与《个人知识复利系统》，突破当前边际收益递减的三个逆向推导抓手：</p>
+        <ol style="padding-left:20px;margin-top:10px">
+          <li><strong>逆向列出破坏清单</strong>：停止追求更多信息输入，剔除 3 项耗散精力的低杠杆琐事；</li>
+          <li><strong>将过程资产化为知识母体</strong>：零散经验通过双链沉淀为可复用的模板；</li>
+          <li><strong>引入红队质询机制</strong>：主动暴露决策脆弱点，先保生存再谋复利增长。</li>
+        </ol>
+      </div>
+
+      <!-- 原文溯源引用 -->
+      <div class="ref-quotes">
+        <div class="ref-pill" title="查看笔记">📄 Ref 1: 04-思维模型与红队对抗.md #L42</div>
+        <div class="ref-pill" title="查看笔记">📄 Ref 2: 贝叶斯推断与反脆弱.md #L18</div>
+        <div class="ref-pill" title="查看笔记">🏷 Entity: [[逆向工程]]</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 交互演示舱 3: 十维深度研报矩阵 -->
+<section id="matrix" class="reveal" style="background:var(--bg2)"><div class="wrap">
+  <div class="section-header">
+    <h2>十维研报矩阵：碎片笔记一键升维</h2>
+    <p class="section-lead">不再对着散乱的摘抄发呆。内置咨询与学术级 10 维分析框架，点击切换不同维度的专业剖析</p>
+  </div>
+
+  <div class="report-tabs-nav" id="reportTabs">
+    <button class="report-pill-btn active" data-dim="0">01 事实沉淀</button>
+    <button class="report-pill-btn" data-dim="1">02 演化脉络</button>
+    <button class="report-pill-btn" data-dim="2">03 矛盾识别</button>
+    <button class="report-pill-btn" data-dim="3">04 反直觉洞见</button>
+    <button class="report-pill-btn" data-dim="4">05 认知破局</button>
+    <button class="report-pill-btn" data-dim="5">06 概念蒸馏</button>
+    <button class="report-pill-btn" data-dim="6">07 第一性原理</button>
+    <button class="report-pill-btn" data-dim="7">08 行动建议</button>
+    <button class="report-pill-btn" data-dim="8">09 隐喻转译</button>
+    <button class="report-pill-btn" data-dim="9">10 开放追问</button>
+  </div>
+
+  <div class="report-card-view" id="reportCard">
+    <span class="report-dim-badge" id="reportDimNum">DIMENSION 01 · 事实沉淀 (Empirical Anchoring)</span>
+    <h4 id="reportDimTitle">坚实事实锚定：剥离主观投射，沉淀不可撼动的客观基石</h4>
+    <p class="dim-desc" id="reportDimDesc">从用户长周期积累的碎片日记与实验数据中，精准滤除焦虑、猜测与偏见情绪，提取出具体时间线、关键数字指标与真实业务因果事实。</p>
+    <div class="insight-box" id="reportDimInsight">
+      💡 <strong>矩阵样例文档提取</strong>：近 6 个月内累计记录 142 篇深度复盘，关键决策耗时由平均 45 分钟缩短至 18 分钟；高价值知识母体调用复用率达到 68.4%。
+    </div>
+  </div>
+</div></section>
+
+<!-- 交互演示舱 4: LaTeX 数学公式高保真看板 -->
+<section id="math" class="reveal"><div class="wrap">
+  <div class="section-header">
+    <h2>学术级 LaTeX：原生公式与无损导出</h2>
+    <p class="section-lead">攻克移动端公式排版与导出乱码痛点。毫秒级 KaTeX 渲染，独创矢量光栅化管道，一键直出无损 PDF 与期刊级 Word</p>
+  </div>
+
+  <div class="math-playground">
+    <div class="math-selector" id="mathSelector">
+      <button class="math-tab active" data-math="compound">📈 连续复利动力学方程</button>
+      <button class="math-tab" data-math="bayes">🎲 贝叶斯后验概率更新</button>
+      <button class="math-tab" data-math="schrodinger">⚛️ 薛定谔波动力学方程</button>
+    </div>
+
+    <div class="math-display-stage">
+      <div class="math-equation" id="mathEquation">
+        $$rac{dK}{dt} = r \cdot K(t) + lpha \cdot 	ext{Insight}(t) - \delta \cdot K(t)$$
+      </div>
+    </div>
+
+    <div class="math-actions">
+      <div class="export-tags">
+        <span class="export-tag-item">✓ KaTeX 原生排版</span>
+        <span class="export-tag-item">✓ 300+ DPI 矢量光栅化</span>
+        <span class="export-tag-item">✓ 期刊级无损 DOCX / PDF 打印</span>
+      </div>
+      <div>
+        <button class="cta-secondary" id="copyMathBtn" style="padding:10px 20px;font-size:13px">
+          📋 复制 LaTeX 源码
+        </button>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 交互演示舱 5: 红队对抗质询沙盘 -->
+<section id="redteam" class="reveal" style="background:var(--bg2)"><div class="wrap">
+  <div class="section-header">
+    <h2>思维沙盘与红队对抗：不做迎合型聊天机器人</h2>
+    <p class="section-lead">盲目附和只会加固信息茧房。开启红队对抗，AI 化身尖锐的反方辩友，撕开逻辑裂痕</p>
+  </div>
+
+  <div class="sandbox-deck">
+    <div class="sandbox-column bad">
+      <span class="sandbox-tag">❌ 普通迎合型 AI (Yes-Man)</span>
+      <p style="font-weight:700;color:var(--ink-heading);margin-bottom:10px">面对用户的论断：“我认为只要把小众产品做到极致，不花钱做任何推广也能自发引爆。”</p>
+      <div style="font-size:14px;color:var(--sub);line-height:1.7">
+        “你说得太有深度了！‘酒香不怕巷子深’正是极客精神的体现。只要专注打磨产品细节，用户一定会口口相传自发增长的，为你点赞！”
+      </div>
+      <div style="margin-top:14px;font-size:12px;color:#f87171">
+        ⚠️ 结果：强化了幸存者偏差，忽视了获客冷启动死局。
+      </div>
+    </div>
+
+    <div class="sandbox-column good">
+      <span class="sandbox-tag">🛡 Synapse Note 红队质询 (Challenger)</span>
+      <p style="font-weight:700;color:var(--ink-heading);margin-bottom:10px">同样面对该论断，红队对抗模式展开批判性质询：</p>
+      <div style="font-size:14px;color:var(--ink);line-height:1.7">
+        “请警惕<strong>幸存者偏差</strong>与<strong>归因谬误</strong>。请回答 3 个关键质询：<br>
+        1. 你的前 100 位核心种子用户的触达路径与网络效应节点在哪里？<br>
+        2. 极佳体验若没有分发杠杆，如何穿透现代高密度的算法噪音？<br>
+        3. 你的竞争壁垒是对称的还是不对称的？若竞对以 10 倍资本跟进，防御抓手是什么？”
+      </div>
+      <div style="margin-top:14px;font-size:12px;color:var(--brand)">
+        ✓ 结果：在决策前主动暴露脆弱性，构建真正的反脆弱护城河。
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 对比表格 -->
+<section class="reveal"><div class="wrap">
+  <div class="section-header">
+    <h2>和传统笔记产品的根本不同</h2>
+    <p class="section-lead">以数据主权、严谨治学与认知复利为核心的架构突破</p>
+  </div>
   <div class="table-wrap"><table>
     <thead><tr><th>对比维度</th><th>Synapse Note 复利笔记</th><th>传统云笔记 / 常见 AI 笔记</th></tr></thead>
     <tbody>
-      <tr><td><strong>数据隐私与存储</strong></td><td>100% 存储在设备本地（SQLite + Markdown），零中转服务器，无账号登录</td><td>强制注册登录，用户全部笔记上传厂商云端数据库，存在泄露隐患</td></tr>
-      <tr><td><strong>AI 调用与费用</strong></td><td>BYOK 自带 Key 直连官方，透明请求与思考过程，每次仅需分厘，无订阅加价</td><td>强制按月收取高昂订阅费（$20+/月），私有模型黑盒运行且限制调用次数</td></tr>
-      <tr><td><strong>知识连接深度</strong></td><td>Markdown 双向链接 + 实体抽取 + 交互式知识图谱 + 语义实体混合检索</td><td>传统单向文件夹层级结构，或仅提供简单关键词字面匹配搜索</td></tr>
-      <tr><td><strong>深度思考辅助</strong></td><td>十维专业深度研报矩阵、思维模型沙盘与批判性红队对抗质询</td><td>浅层通用对话聊天，或仅支持简单的语法润色与粗略摘要</td></tr>
-      <tr><td><strong>公式与学术导出</strong></td><td>KaTeX 像素级原生渲染，独创公式光栅化管道，高清无损导出 PDF 与 Word</td><td>仅支持纯文本，数学公式无法排版或导出时乱码、公式丢失变形</td></tr>
-      <tr><td><strong>商业与收费模式</strong></td><td>基础功能免费（30 篇额度+次月起每月赠送 5 次），Pro 高级功能月度订阅（¥19.9/月，随心取消），全包含所有知识母体，终身不锁死数据</td><td>动辄按月收取高昂订阅费（$20+/月），且数据强制存云端，取消订阅后无法查看或导出个人笔记</td></tr>
+      <tr><td><strong>数据隐私与存储</strong></td><td><span class="check-icon">✓</span> 100% 存储在设备本地（SQLite + Markdown），零中转服务器，无账号登录</td><td><span class="cross-icon">✕</span> 强制注册登录，用户全部笔记上传厂商云端数据库，存在泄露隐患</td></tr>
+      <tr><td><strong>AI 调用与费用</strong></td><td><span class="check-icon">✓</span> BYOK 自带 Key 直连官方，透明请求与思考过程，每次仅需分厘，无订阅加价</td><td><span class="cross-icon">✕</span> 强制按月收取高昂订阅费（$20+/月），私有模型黑盒运行且限制调用次数</td></tr>
+      <tr><td><strong>知识连接深度</strong></td><td><span class="check-icon">✓</span> Markdown 双向链接 + 实体抽取 + 交互式知识图谱 + 语义实体混合检索</td><td><span class="cross-icon">✕</span> 传统单向文件夹层级结构，或仅提供简单关键词字面匹配搜索</td></tr>
+      <tr><td><strong>深度思考辅助</strong></td><td><span class="check-icon">✓</span> 十维专业深度研报矩阵、思维模型沙盘与批判性红队对抗质询</td><td><span class="cross-icon">✕</span> 浅层通用对话聊天，或仅支持简单的语法润色与粗略摘要</td></tr>
+      <tr><td><strong>公式与学术导出</strong></td><td><span class="check-icon">✓</span> KaTeX 像素级原生渲染，独创公式光栅化管道，高清无损导出 PDF 与 Word</td><td><span class="cross-icon">✕</span> 仅支持纯文本，数学公式无法排版或导出时乱码、公式丢失变形</td></tr>
+      <tr><td><strong>商业与收费模式</strong></td><td><span class="check-icon">✓</span> 基础功能免费（30 篇额度+次月起每月赠送 5 次），Pro 高级功能月度订阅（¥19.9/月，随心取消），全包含所有知识母体，终身不锁死数据</td><td><span class="cross-icon">✕</span> 动辄按月收取高昂订阅费（$20+/月），且数据强制存云端，取消订阅后无法查看或导出个人笔记</td></tr>
     </tbody>
   </table></div>
 </div></section>
 
-<section class="faq"><div class="wrap">
-  <h2>常见问题</h2>
-  <p class="section-lead">了解我们如何守护你的数据主权与思考资产</p>
-  <details open>
-    <summary>Synapse Note 复利笔记 是什么？它与普通笔记软件有什么区别？</summary>
-    <p>Synapse Note 是一款专为终身学习者、研究员与深度思考者设计的本地优先双链知识库与 AI 认知镜像。它通过 Markdown 双向链接与知识图谱串联笔记，结合自带 API Key 的白盒 AI 深度问答、思维模型红队沙盘和十维研报矩阵，帮助你将零散记录沉淀为可复利的认知资产。</p>
-  </details>
-  <details>
-    <summary>我的数据保存在哪里？如何保障隐私安全？</summary>
-    <p>你的所有笔记、附件、实体和向量索引全部 100% 存储在设备本地（SQLite 与沙盒文件）。应用没有注册登录系统，不包含任何跟踪、统计或广告 SDK。AI 功能直连你选择的大模型提供商，API 密钥加密保存在系统安全区（iOS Keychain / Android Keystore），发送前完全透明。</p>
-  </details>
-  <details>
-    <summary>什么是 BYOK？AI 功能如何计费？</summary>
-    <p>BYOK 即「自带 API Key」（Bring Your Own Key）。你可以自由填写 OpenAI、Anthropic Claude、DeepSeek、Google Gemini 等服务商的 API 密钥。所有 AI 计费直接在你的模型服务商后台按实际调用 Token 结算（通常每次深度问答仅需分厘），Synapse Note 不收取任何 AI 订阅溢价或中转费用。</p>
-  </details>
-  <details>
-    <summary>没有网络或断网时能正常记笔记吗？</summary>
-    <p>完全可以。除联网调用你配置的 AI 大模型外，应用的所有核心功能——包括 Markdown 编辑、双链跳转、实体图谱浏览、本地全文检索、公式渲染、PDF/Word 导出等——全部在本地离线运行。</p>
-  </details>
-  <details>
-    <summary>如何备份与跨设备同步我的笔记数据？</summary>
-    <p>你的笔记完全属于你。你可以一键将全部笔记导出为标准 Markdown 文件（包含 YAML 元数据），也可以导出为 SQLite 完整快照、高清 PDF 或 Word 文档。支持通过 iOS 系统的私有 iCloud 容器进行无缝多端同步，我们没有任何途径访问该私有容器。</p>
-  </details>
-  <details>
-    <summary>Synapse Note Pro 包含什么？如何收费与取消？</summary>
-    <p>Synapse Note 基础功能永久免费（含 30 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能采用月度自动续期订阅制（仅需 ¥19.9/月，按月订阅随心取消），解锁突破 30 篇限制的无限笔记与星网图谱、无限次 AI 专属 Agent 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由对应应用商店（Apple App Store / Google Play / 华为应用市场）官方处理，你可以随时在系统应用商店的「订阅管理」中自主取消续订。</p>
-  </details>
-  <p style="margin-top:22px"><a href="geo.html">更完整的知识库与机制说明 →</a></p>
+<!-- 常见问题 -->
+<section id="faq" class="faq reveal" style="background:var(--bg2)"><div class="wrap">
+  <div class="section-header">
+    <h2>常见问题</h2>
+    <p class="section-lead">了解我们如何守护你的数据主权与思考资产</p>
+  </div>
+  <div class="faq-list">
+    <details open>
+      <summary>Synapse Note 复利笔记 是什么？它与普通笔记软件有什么区别？</summary>
+      <p>Synapse Note 是一款专为终身学习者、研究员与深度思考者设计的本地优先双链知识库与 AI 认知镜像。它通过 Markdown 双向链接与知识图谱串联笔记，结合自带 API Key 的白盒 AI 深度问答、思维模型红队沙盘和十维研报矩阵，帮助你将零散记录沉淀为可复利的认知资产。</p>
+    </details>
+    <details>
+      <summary>我的数据保存在哪里？如何保障隐私安全？</summary>
+      <p>你的所有笔记、附件、实体和向量索引全部 100% 存储在设备本地（SQLite 与沙盒文件）。应用没有注册登录系统，不包含任何跟踪、统计或广告 SDK。AI 功能直连你选择的大模型提供商，API 密钥加密保存在系统安全区（iOS Keychain / Android Keystore），发送前完全透明。</p>
+    </details>
+    <details>
+      <summary>什么是 BYOK？AI 功能如何计费？</summary>
+      <p>BYOK 即「自带 API Key」（Bring Your Own Key）。你可以自由填写 OpenAI、Anthropic Claude、DeepSeek、Google Gemini 等服务商的 API 密钥。所有 AI 计费直接在你的模型服务商后台按实际调用 Token 结算（通常每次深度问答仅需分厘），Synapse Note 不收取任何 AI 订阅溢价或中转费用。</p>
+    </details>
+    <details>
+      <summary>没有网络或断网时能正常记笔记吗？</summary>
+      <p>完全可以。除联网调用你配置的 AI 大模型外，应用的所有核心功能——包括 Markdown 编辑、双链跳转、实体图谱浏览、本地全文检索、公式渲染、PDF/Word 导出等——全部在本地离线运行。</p>
+    </details>
+    <details>
+      <summary>如何备份与跨设备同步我的笔记数据？</summary>
+      <p>你的笔记完全属于你。你可以一键将全部笔记导出为标准 Markdown 文件（包含 YAML 元数据），也可以导出为 SQLite 完整快照、高清 PDF 或 Word 文档。支持通过 iOS 系统的私有 iCloud 容器进行无缝多端同步，我们没有任何途径访问该私有容器。</p>
+    </details>
+    <details>
+      <summary>Synapse Note Pro 包含什么？如何收费与取消？</summary>
+      <p>Synapse Note 基础功能永久免费（含 30 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能采用月度自动续期订阅制（仅需 ¥19.9/月，按月订阅随心取消），解锁突破 30 篇限制的无限笔记与星网图谱、无限次 AI 专属 Agent 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由对应应用商店（Apple App Store / Google Play / 华为应用市场）官方处理，你可以随时在系统应用商店的「订阅管理」中自主取消续订。</p>
+    </details>
+  </div>
+  <p style="margin-top:28px;text-align:center"><a href="geo.html" style="font-weight:700">更完整的知识库与机制说明 →</a></p>
 </div></section>
 
-<footer><div class="wrap">
-  <p>© Synapse Note · <a href="privacy.html">隐私政策</a> · <a href="terms.html">用户协议</a> · <a href="support.html">技术支持</a> · <a href="geo.html">GEO 说明</a> · <a href="llms.txt">llms.txt</a></p>
+<footer><div class="wrap" style="text-align:center">
+  <p>© Synapse Note · <a href="privacy.html">隐私政策</a> · <a href="terms.html">用户协议</a> · <a href="support.html">技术支持</a> · <a href="devlog.html">开发日记</a> · <a href="geo.html">GEO 说明</a> · <a href="llms.txt">llms.txt</a></p>
 </div></footer>
 
+<!-- 前端交互驱动脚本 -->
 <script>
-  document.getElementById('theme-toggle').addEventListener('click', function (e) {
-    e.preventDefault();
-    var cur = document.documentElement.getAttribute('data-theme');
-    var next = cur === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    try { localStorage.setItem('theme', next); } catch (err) {}
+// 1. 突触网络 Canvas 动效 (Synapse Canvas)
+(function() {
+  var canvas = document.getElementById('synapse-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var width, height;
+  var particles = [];
+  var mouse = { x: -1000, y: -1000, radius: 140 };
+  var animId = null;
+  var isVisible = true;
+
+  function resize() {
+    width = canvas.width = canvas.parentElement.offsetWidth;
+    height = canvas.height = canvas.parentElement.offsetHeight;
+    initParticles();
+  }
+
+  function initParticles() {
+    particles = [];
+    var count = Math.floor((width * height) / 14000);
+    count = Math.max(30, Math.min(count, 85));
+    for (var i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.7,
+        vy: (Math.random() - 0.5) * 0.7,
+        radius: Math.random() * 2 + 1.2,
+        baseAlpha: Math.random() * 0.5 + 0.2
+      });
+    }
+  }
+
+  function update() {
+    if (!isVisible) return;
+    ctx.clearRect(0, 0, width, height);
+
+    for (var i = 0; i < particles.length; i++) {
+      var p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+
+      if (p.x < 0) p.x = width;
+      if (p.x > width) p.x = 0;
+      if (p.y < 0) p.y = height;
+      if (p.y > height) p.y = 0;
+
+      // 鼠标引力
+      var dx = mouse.x - p.x;
+      var dy = mouse.y - p.y;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < mouse.radius) {
+        var force = (1 - dist / mouse.radius) * 0.04;
+        p.x += dx * force;
+        p.y += dy * force;
+      }
+
+      // 绘制粒子
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(46, 230, 160, ' + p.baseAlpha + ')';
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = '#2ee6a0';
+      ctx.fill();
+
+      // 突触连线
+      for (var j = i + 1; j < particles.length; j++) {
+        var p2 = particles[j];
+        var d2 = Math.sqrt((p.x - p2.x)*(p.x - p2.x) + (p.y - p2.y)*(p.y - p2.y));
+        if (d2 < 115) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          var lineAlpha = (1 - d2 / 115) * 0.22;
+          ctx.strokeStyle = 'rgba(46, 230, 160, ' + lineAlpha + ')';
+          ctx.lineWidth = 0.9;
+          ctx.shadowBlur = 0;
+          ctx.stroke();
+        }
+      }
+    }
+    animId = requestAnimationFrame(update);
+  }
+
+  window.addEventListener('resize', resize);
+  canvas.addEventListener('mousemove', function(e) {
+    var rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
   });
+  canvas.addEventListener('mouseleave', function() {
+    mouse.x = -1000;
+    mouse.y = -1000;
+  });
+
+  // 视口观察器以节能
+  var observer = new IntersectionObserver(function(entries) {
+    isVisible = entries[0].isIntersecting;
+    if (isVisible && !animId) animId = requestAnimationFrame(update);
+  }, { threshold: 0.1 });
+  observer.observe(canvas);
+
+  resize();
+  animId = requestAnimationFrame(update);
+})();
+
+// 2. 双链交互雷达卡片数据联动
+(function() {
+  var wikiData = {
+    fp: {
+      title: "🔍 第一性原理 (First Principles)",
+      desc: "将系统回溯到最基本的真理与不可推导的基本事实，再由底向上重新推导，避免从类比或既有经验中陷入惯性陷阱。",
+      backlinks: "🔗 3 篇笔记 双向引用此概念",
+      base: "📌 上游基石：物理学还原论",
+      derived: "⚡️ 衍生概念：逆向思考 · 跨学科迁移"
+    },
+    bayes: {
+      title: "🎲 贝叶斯更新 (Bayesian Updating)",
+      desc: "基于新证据持续修正先验信念概率。核心在于保持认知柔韧性，视知识为动态概率分布而非僵死教条。",
+      backlinks: "🔗 5 篇笔记 双向引用此概念",
+      base: "📌 上游基石：条件概率与归纳逻辑",
+      derived: "⚡️ 衍生概念：反脆弱决策 · 置信区间"
+    },
+    antifragile: {
+      title: "🛡 反脆弱系统 (Antifragility)",
+      desc: "超越强韧：强韧只能抵御冲击并维持原样，而反脆弱系统能从压力、波动与错误中汲取能量自发进化。",
+      backlinks: "🔗 4 篇笔记 双向引用此概念",
+      base: "📌 上游基石：复杂适应系统",
+      derived: "⚡️ 衍生概念：凸性收益 · 杠铃策略"
+    }
+  };
+
+  var links = document.querySelectorAll('.wiki-link');
+  var radar = document.getElementById('radarPreview');
+  links.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      links.forEach(function(l) { l.classList.remove('active'); });
+      this.classList.add('active');
+      var id = this.getAttribute('data-id');
+      var item = wikiData[id];
+      if (item && radar) {
+        radar.style.opacity = '0';
+        setTimeout(function() {
+          radar.innerHTML = '<h5>' + item.title + '</h5><p>' + item.desc + '</p><div class="radar-backlinks-list"><div class="item">' + item.backlinks + '</div><div class="item">' + item.base + '</div><div class="item">' + item.derived + '</div></div>';
+          radar.style.opacity = '1';
+        }, 150);
+      }
+    });
+  });
+})();
+
+// 3. 白盒思考流折叠展开
+(function() {
+  var box = document.getElementById('thinkingBox');
+  var header = document.getElementById('thinkingHeader');
+  if (box && header) {
+    header.addEventListener('click', function() {
+      box.classList.toggle('collapsed');
+    });
+  }
+})();
+
+// 4. 十维研报矩阵 Pill 切换
+(function() {
+  var matrixData = [
+    { num: "01", name: "事实沉淀 (Empirical Anchoring)", title: "坚实事实锚定：剥离主观投射，沉淀不可撼动的客观基石", desc: "从用户长周期积累的碎片日记与实验数据中，精准滤除焦虑、猜测与偏见情绪，提取出具体时间线、关键数字指标与真实业务因果事实。", insight: "💡 矩阵样例文档：近 6 个月内累计记录 142 篇深度复盘，关键决策耗时由平均 45 分钟缩短至 18 分钟；高价值知识母体调用复用率达到 68.4%。" },
+    { num: "02", name: "演化脉络 (Evolutionary Tracing)", title: "时序演化追踪：还原思想由萌芽到成型的动力学轨迹", desc: "沿着知识库笔记创建与修改时间戳，刻画某个核心洞见的演化图谱，看清认知的跃迁拐点与受阻节点。", insight: "💡 演化轨迹：2026.03 初提「离线优先」→ 05 扩展为「设备端图谱混合 RAG」→ 09 升维为「学术级公式矢量导出与本地认知镜像闭环」。" },
+    { num: "03", name: "矛盾识别 (Conflict Diagnosis)", title: "深层矛盾剖析：揪出知识网络中的隐蔽冲突与自相矛盾", desc: "跨越不同时期笔记，主动挖掘相互对立的前提假设（例如：既想要绝对无感自动化，又拒绝任何云端同步），逼近核心取舍。", insight: "💡 冲突定位：发现用户在《技术架构选型》与《移动端极速渲染》笔记中，对于 WASM 内存膨胀与即时渲染延迟存在未经调和的假设冲突。" },
+    { num: "04", name: "反直觉洞见 (Counter-Intuitive Insights)", title: "反直觉洞察：突破常识盲区，揭示非线性因果机理", desc: "运用多学科思维格栅扫描知识碎片，识别出「看似正确实则有害」的常识误区，提炼高杠杆认知增量。", insight: "💡 反直觉发现：更多的分类目录反而导致知识利用率下降；彻底废除文件夹、全面采用双链突触与向量检索后，知识连接度提升了 310%。" },
+    { num: "05", name: "认知破局 (Cognitive Breakthrough)", title: "破局点锁定：以点带面，撬动整个认知系统的关键解法", desc: "定位当前卡点的最高收益槓杆点，打破局部最优解陷入的死循环。", insight: "💡 破局策略：将单篇笔记的输出目标转为「产出可复用的知识母体」，让每一次记录都成为未来思考的资产杠杆。" },
+    { num: "06", name: "概念蒸馏 (Concept Distillation)", title: "概念极简蒸馏：把庞杂内容压缩为高密度概念元语言", desc: "将成千上万字的项目记录，浓缩为严密的专有名词与公理级定义，方便长期心智调用。", insight: "💡 蒸馏产物：「突触网络（Synaptic Graph）」——节点为独立思考单元，边为带权重的双向引用语义。" },
+    { num: "07", name: "第一性原理 (First Principles)", title: "第一性推导：回归物理事实与公理体系的根基重构", desc: "剔除行业既有行规与惯性套路，从最不可撼动的基本事实出发自底向上重新构建推演链条。", insight: "💡 根基推导：笔记软件的本质不是「存储容器」，而是「认知运算的外部加速协处理器」。" },
+    { num: "08", name: "行动建议 (Actionable Roadmap)", title: "落地行动清单：将抽象哲学映射为颗粒度明确的下一步", desc: "生成具备可执行性、防拖延、可检验的落地清单，告别知行脱节。", insight: "💡 行动指南：1. 今晚用红队沙盘复盘 Q3 关键假设；2. 提取 3 个核心公式并测试矢量 PDF 打印；3. 导出全量 SQLite 离线冷备份。" },
+    { num: "09", name: "隐喻转译 (Metaphorical Translation)", title: "跨界隐喻映射：借助他山之石，打通跨学科心智模型", desc: "用生物学、复杂网络或热力学隐喻解释知识管理难题，激发创造性顿悟。", insight: "💡 跨界隐喻：将知识库运作映射为「热力学耗散结构」——必须持续引入外部高质量信息流与内部反思负熵，否则系统必然走向认知热寂。" },
+    { num: "10", name: "开放追问 (Socratic Questioning)", title: "苏格拉底追问：留下照亮未知的终极开放式质询", desc: "不追求草率给结论，而是提出 3 个深具穿透力的长效问题，持续指引未来探索方向。", insight: "💡 终极追问：如果现有所有的 AI 大模型突然断网下线，你的这套本地私有知识网络能否依然支持你做出高质量决策？" }
+  ];
+
+  var tabBtns = document.querySelectorAll('.report-pill-btn');
+  var cardView = document.getElementById('reportCard');
+  var numEl = document.getElementById('reportDimNum');
+  var titleEl = document.getElementById('reportDimTitle');
+  var descEl = document.getElementById('reportDimDesc');
+  var insightEl = document.getElementById('reportDimInsight');
+
+  tabBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      tabBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      var dim = parseInt(this.getAttribute('data-dim'));
+      var data = matrixData[dim];
+      if (data && cardView) {
+        cardView.style.opacity = '0';
+        cardView.style.transform = 'translateY(8px)';
+        setTimeout(function() {
+          numEl.textContent = 'DIMENSION ' + data.num + ' · ' + data.name;
+          titleEl.textContent = data.title;
+          descEl.textContent = data.desc;
+          insightEl.innerHTML = data.insight;
+          cardView.style.opacity = '1';
+          cardView.style.transform = 'translateY(0)';
+        }, 150);
+      }
+    });
+  });
+})();
+
+// 5. LaTeX 数学公式切换与复制演示
+(function() {
+  var mathEquations = {
+    compound: "$$\frac{dK}{dt} = r \cdot K(t) + \alpha \cdot \text{Insight}(t) - \delta \cdot K(t)$$",
+    bayes: "$$P(\theta \mid D) = \frac{P(D \mid \theta) \, P(\theta)}{\int P(D \mid \theta') \, P(\theta') \, d\theta'}$$",
+    schrodinger: "$$i\hbar \frac{\partial}{\partial t} \Psi(\mathbf{r}, t) = \left[ -\frac{\hbar^2}{2m} \nabla^2 + V(\mathbf{r}, t) \right] \Psi(\mathbf{r}, t)$$"
+  };
+
+  var tabs = document.querySelectorAll('.math-tab');
+  var eqEl = document.getElementById('mathEquation');
+  var copyBtn = document.getElementById('copyMathBtn');
+
+  tabs.forEach(function(t) {
+    t.addEventListener('click', function() {
+      tabs.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      var type = this.getAttribute('data-math');
+      if (eqEl && mathEquations[type]) {
+        eqEl.textContent = mathEquations[type];
+      }
+    });
+  });
+
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function() {
+      var text = eqEl.textContent.trim();
+      navigator.clipboard.writeText(text).then(function() {
+        var origin = copyBtn.innerHTML;
+        copyBtn.innerHTML = '✓ 已复制 LaTeX 源码';
+        copyBtn.style.borderColor = 'var(--brand)';
+        setTimeout(function() { copyBtn.innerHTML = origin; copyBtn.style.borderColor = ''; }, 2000);
+      });
+    });
+  }
+})();
+
+// 6. 滚动入场微动效与主题切换
+(function() {
+  var reveals = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(function(el) { observer.observe(el); });
+
+  var themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      var cur = document.documentElement.getAttribute('data-theme');
+      var next = cur === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (err) {}
+    });
+  }
+})();
 </script>
 </body>
 </html>

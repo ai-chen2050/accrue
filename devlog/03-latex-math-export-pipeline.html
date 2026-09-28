@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../icon.png">
+<title>攻克公式导出的终极痛点：移动端 KaTeX 矢量光栅化与无损导出 · Synapse Note 复利笔记</title>
+<meta name="description" content="传统 Markdown 工具在导出 PDF 或 Word 时，LaTeX 公式往往变成乱码或低清失真。本文介绍我们如何在 Flutter 移动端实现 KaTeX 高分辨率矢量光栅化渲染，并精准注入 PDF 与 Word OpenXML 架构。">
+<link rel="canonical" href="https://fulibiji.top/devlog/03-latex-math-export-pipeline.html">
+<link rel="alternate" hreflang="zh-CN" href="https://fulibiji.top/devlog/03-latex-math-export-pipeline.html">
+<link rel="alternate" hreflang="x-default" href="https://fulibiji.top/devlog/03-latex-math-export-pipeline.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="攻克公式导出的终极痛点：移动端 KaTeX 矢量光栅化与无损导出">
+<meta property="og:description" content="传统 Markdown 工具在导出 PDF 或 Word 时，LaTeX 公式往往变成乱码或低清失真。本文介绍我们如何在 Flutter 移动端实现 KaTeX 高分辨率矢量光栅化渲染，并精准注入 PDF 与 Word OpenXML 架构。">
+<meta property="og:url" content="https://fulibiji.top/devlog/03-latex-math-export-pipeline.html">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "攻克公式导出的终极痛点：移动端 KaTeX 矢量光栅化与无损导出",
+  "description": "传统 Markdown 工具在导出 PDF 或 Word 时，LaTeX 公式往往变成乱码或低清失真。本文介绍我们如何在 Flutter 移动端实现 KaTeX 高分辨率矢量光栅化渲染，并精准注入 PDF 与 Word OpenXML 架构。",
+  "url": "https://fulibiji.top/devlog/03-latex-math-export-pipeline.html",
+  "inLanguage": "zh-CN",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Synapse Note 复利笔记"
+  },
+  "datePublished": "2026-09-26",
+  "keywords": "LaTeX, KaTeX, 导出, PDF, Word, 渲染引擎"
+}
+</script>
+</head>
+<body>
+<nav class="wrap"><a class="brand" href="../index.html">Synapse Note 复利笔记</a>
+  <a href="../devlog.html">开发日记</a></nav>
+<main class="wrap prose">
+<p class="kicker">开发日记 · 2026-09-26</p><h1>攻克公式导出的终极痛点：移动端 KaTeX 矢量光栅化与无损导出</h1><p class="lead">传统 Markdown 工具在导出 PDF 或 Word 时，LaTeX 公式往往变成乱码或低清失真。本文介绍我们如何在 Flutter 移动端实现 KaTeX 高分辨率矢量光栅化渲染，并精准注入 PDF 与 Word OpenXML 架构。</p><h2 id="结论先说">结论先说</h2>
+<p>学术与数学公式是严谨思考不可或缺的基石。在市面大多数笔记软件中，LaTeX 公式在屏幕上看着正常，但一旦点击“导出为 PDF”或“导出为 Word”，公式就会变成难以辨认的低像素截图、乱码符号甚至直接消失。我们在 Synapse Note 中研发了一整套<strong>公式矢量光栅化与 OpenXML 结构无损映射流水线</strong>，让导出的文档达到学术期刊级出版标准。</p>
+<h2 id="核心挑战">核心挑战</h2>
+<ol><li><strong>移动端跨平台排版引擎限制</strong>：Flutter 原生并不自带 MathML 或 TeX 矢量排版引擎；</li><li><strong>PDF 矢量文本嵌入痛点</strong>：PDF 渲染流中若缺少专用数学字体字形（如 AMS 符号），导出的公式字符会全部变成方块问号；</li><li><strong>Word (.docx) 的复杂 XML 嵌套</strong>：Word 要求行内图片或公式必须精确计算 baseline 对齐偏移量，否则公式会漂浮在文字行上方或遮挡下行文本。</li></ol>
+<h2 id="架构实现-双通道光栅化流水线">架构实现：双通道光栅化流水线</h2>
+<p>我们在底层集成高性能 KaTeX 引擎，并在用户点击导出时启动无头渲染管道：</p>
+<pre><code class="lang-text">Markdown 正文
+  ├── 行内公式: $E=mc^2$
+  └── 块级公式: $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$
+       │
+       ▼
+[KaTeX 抽象语法树解析 &amp; 布局测量]
+       │
+       ├──► 计算精确公式宽高与基线深度 (Baseline Descent)
+       │
+       ▼
+[4x 超采样高分辨率离屏光栅化 (High-DPI Rasterizer)]
+       │
+       ├──► 导出 PDF: 转换为高清透明通道图片，按物理点阵缩放嵌入矢量流
+       │
+       └──► 导出 Word: 生成 docx 内联图形，写入 wp:inline 及基线偏移量</code></pre>
+<h2 id="成果验证">成果验证</h2>
+<p>经过优化后，包含 50+ 复杂矩阵与微积分公式的研报文档，导出 PDF 仅需不到 1.2 秒。在 Retina 高清屏与高精度打印机下放大 400%，公式边缘依旧锋利平滑，与正文字符自然对齐。</p><p class="pager"><a href="02-hybrid-rag-and-whitebox-reasoning.html">← 上一篇</a> · <a href="04-mental-models-and-red-teaming.html">下一篇 →</a></p><p><a href="../devlog.html">← 全部开发日记</a></p>
+</main>
+<footer class="wrap"><p>© Synapse Note</p></footer>
+</body>
+</html>

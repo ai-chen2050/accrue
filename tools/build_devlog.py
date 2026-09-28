@@ -192,6 +192,8 @@ def shell(lang, title, desc, canonical, body, extra_ld=None):
 <title>{_html.escape(title)} · {_html.escape(t(SITE['name'], lang))}</title>
 <meta name="description" content="{_html.escape(desc)}">
 <link rel="canonical" href="{canonical}">
+<link rel="alternate" hreflang="zh-CN" href="{canonical}">
+<link rel="alternate" hreflang="x-default" href="{canonical}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{_html.escape(title)}">
 <meta property="og:description" content="{_html.escape(desc)}">
