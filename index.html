@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="icon.png">
 <link rel="stylesheet" href="style.css">
+<!-- KaTeX 数学公式渲染器 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
 
 <!-- GEO:AUTO START -->
 <title>Synapse Note 复利笔记 · 本地优先的双链知识库与 AI 认知镜像</title>
@@ -220,7 +223,6 @@
   </div>
 
   <div class="showcase-container">
-    <!-- 左侧编辑器模拟 -->
     <div class="mockup-window">
       <div class="window-header">
         <span class="window-dot r"></span>
@@ -232,13 +234,12 @@
         <h4>认知复利与非线性成长</h4>
         <p>真正的高效思考，绝非单篇笔记的线性累加，而是通过 <span class="wiki-link active" data-id="fp">[[第一性原理]]</span> 拆解事物底层规律。</p>
         <p style="margin-top:14px">当我们结合 <span class="wiki-link" data-id="bayes">[[贝叶斯更新]]</span> 持续利用新证据校准已有信念时，整个个人知识网络便具备了面对波动自修复的 <span class="wiki-link" data-id="antifragile">[[反脆弱系统]]</span> 属性。思想由此产生复利。</p>
-        <div style="margin-top:20px;padding:12px;background:rgba(0,0,0,0.2);border-radius:8px;font-size:13px;color:var(--sub)">
+        <div class="editor-tip">
           💡 <strong>交互提示</strong>：点击上方任意绿色的 <code>[[双链关键词]]</code>，观察右侧雷达与反向关联的实时响应。
         </div>
       </div>
     </div>
 
-    <!-- 右侧图谱雷达与关联抽屉 -->
     <div class="glass-panel radar-panel">
       <div>
         <span class="radar-meta-badge">Synapse Radar · 实体知识雷达</span>
@@ -252,7 +253,7 @@
           </div>
         </div>
       </div>
-      <div style="font-size:12px;color:var(--sub-light);margin-top:16px">
+      <div style="font-size:12px;color:var(--sub);margin-top:16px">
         ⚡️ 本地设备端 SQLite 图谱毫秒级关联，离线秒级查询
       </div>
     </div>
@@ -267,7 +268,6 @@
   </div>
 
   <div class="ai-console">
-    <!-- 用户提问气泡 -->
     <div class="chat-bubble-user">
       <span style="font-size:20px">🧑‍💻</span>
       <div>
@@ -276,7 +276,6 @@
       </div>
     </div>
 
-    <!-- AI 回答与思考流卡片 -->
     <div class="chat-bubble-ai">
       <div class="ai-hybrid-pill">
         <span>⚡️ Hybrid RAG</span>
@@ -285,7 +284,6 @@
         <span>• 耗时 2.4s</span>
       </div>
 
-      <!-- 可折叠思考链 -->
       <div class="thinking-box" id="thinkingBox">
         <div class="thinking-header" id="thinkingHeader">
           <span>🧠 深度思考推理过程 (Thinking Process) · 已就绪</span>
@@ -299,7 +297,6 @@
         </div>
       </div>
 
-      <!-- 正式回答 -->
       <div style="font-size:15px;line-height:1.8;color:var(--ink)">
         <p>结合你的笔记《04-思维模型与红队对抗》与《个人知识复利系统》，突破当前边际收益递减的三个逆向推导抓手：</p>
         <ol style="padding-left:20px;margin-top:10px">
@@ -309,7 +306,6 @@
         </ol>
       </div>
 
-      <!-- 原文溯源引用 -->
       <div class="ref-quotes">
         <div class="ref-pill" title="查看笔记">📄 Ref 1: 04-思维模型与红队对抗.md #L42</div>
         <div class="ref-pill" title="查看笔记">📄 Ref 2: 贝叶斯推断与反脆弱.md #L18</div>
@@ -365,7 +361,8 @@
 
     <div class="math-display-stage">
       <div class="math-equation" id="mathEquation">
-        $$rac{dK}{dt} = r \cdot K(t) + lpha \cdot 	ext{Insight}(t) - \delta \cdot K(t)$$
+        <!-- 默认 MathML 兜底渲染 -->
+        <math display="block" class="katex-math"><mfrac><mrow><mi>d</mi><mi>K</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>r</mi><mo>·</mo><mi>K</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>+</mo><mi>α</mi><mo>·</mo><mtext>Insight</mtext><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>−</mo><mi>δ</mi><mo>·</mo><mi>K</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></math>
       </div>
     </div>
 
@@ -398,7 +395,7 @@
       <div style="font-size:14px;color:var(--sub);line-height:1.7">
         “你说得太有深度了！‘酒香不怕巷子深’正是极客精神的体现。只要专注打磨产品细节，用户一定会口口相传自发增长的，为你点赞！”
       </div>
-      <div style="margin-top:14px;font-size:12px;color:#f87171">
+      <div class="sandbox-alert-bad">
         ⚠️ 结果：强化了幸存者偏差，忽视了获客冷启动死局。
       </div>
     </div>
@@ -412,7 +409,7 @@
         2. 极佳体验若没有分发杠杆，如何穿透现代高密度的算法噪音？<br>
         3. 你的竞争壁垒是对称的还是不对称的？若竞对以 10 倍资本跟进，防御抓手是什么？”
       </div>
-      <div style="margin-top:14px;font-size:12px;color:var(--brand)">
+      <div class="sandbox-alert-good">
         ✓ 结果：在决策前主动暴露脆弱性，构建真正的反脆弱护城河。
       </div>
     </div>
@@ -479,14 +476,21 @@
 
 <!-- 前端交互驱动脚本 -->
 <script>
-// 1. 突触网络 Canvas 动效 (Synapse Canvas)
+function isLightTheme() {
+  var t = document.documentElement.getAttribute('data-theme');
+  if (t === 'light') return true;
+  if (t === 'dark') return false;
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+}
+
+// 1. 突触网络 Canvas 动效 (Synapse Canvas) - 高对比度重构
 (function() {
   var canvas = document.getElementById('synapse-canvas');
   if (!canvas) return;
   var ctx = canvas.getContext('2d');
   var width, height;
   var particles = [];
-  var mouse = { x: -1000, y: -1000, radius: 140 };
+  var mouse = { x: -1000, y: -1000, radius: 150 };
   var animId = null;
   var isVisible = true;
 
@@ -498,16 +502,16 @@
 
   function initParticles() {
     particles = [];
-    var count = Math.floor((width * height) / 14000);
-    count = Math.max(30, Math.min(count, 85));
+    var count = Math.floor((width * height) / 13000);
+    count = Math.max(35, Math.min(count, 85));
     for (var i = 0; i < count; i++) {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.7,
-        vy: (Math.random() - 0.5) * 0.7,
-        radius: Math.random() * 2 + 1.2,
-        baseAlpha: Math.random() * 0.5 + 0.2
+        vx: (Math.random() - 0.5) * 0.75,
+        vy: (Math.random() - 0.5) * 0.75,
+        radius: Math.random() * 2.2 + 1.4,
+        baseAlpha: Math.random() * 0.35 + 0.65
       });
     }
   }
@@ -515,6 +519,20 @@
   function update() {
     if (!isVisible) return;
     ctx.clearRect(0, 0, width, height);
+    var light = isLightTheme();
+
+    // 浅色主题下使用浓郁高对比深墨绿；暗黑主题下使用荧光青绿
+    var pRgb = light ? '4, 120, 87' : '46, 230, 160';
+    var maxLineAlpha = light ? 0.65 : 0.28;
+    var baseLineWidth = light ? 1.4 : 0.9;
+
+    // 鼠标引力光圈
+    if (mouse.x > 0 && mouse.y > 0) {
+      ctx.beginPath();
+      ctx.arc(mouse.x, mouse.y, mouse.radius * 0.8, 0, Math.PI * 2);
+      ctx.fillStyle = light ? 'rgba(4, 120, 87, 0.05)' : 'rgba(46, 230, 160, 0.04)';
+      ctx.fill();
+    }
 
     for (var i = 0; i < particles.length; i++) {
       var p = particles[i];
@@ -526,35 +544,57 @@
       if (p.y < 0) p.y = height;
       if (p.y > height) p.y = 0;
 
-      // 鼠标引力
+      // 鼠标引力与电弧连线
       var dx = mouse.x - p.x;
       var dy = mouse.y - p.y;
       var dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < mouse.radius) {
-        var force = (1 - dist / mouse.radius) * 0.04;
+        var force = (1 - dist / mouse.radius) * 0.045;
         p.x += dx * force;
         p.y += dy * force;
+
+        // 强电脉冲连线
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(mouse.x, mouse.y);
+        var mAlpha = (1 - dist / mouse.radius) * (light ? 0.75 : 0.45);
+        ctx.strokeStyle = 'rgba(' + pRgb + ', ' + mAlpha + ')';
+        ctx.lineWidth = light ? 1.8 : 1.2;
+        ctx.stroke();
       }
 
-      // 绘制粒子
+      // 绘制突触粒子节点
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(46, 230, 160, ' + p.baseAlpha + ')';
-      ctx.shadowBlur = 8;
-      ctx.shadowColor = '#2ee6a0';
+      ctx.arc(p.x, p.y, light ? p.radius * 1.15 : p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + pRgb + ', ' + (light ? 0.88 : p.baseAlpha) + ')';
+      if (!light) {
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = '#2ee6a0';
+      } else {
+        ctx.shadowBlur = 3;
+        ctx.shadowColor = 'rgba(4, 120, 87, 0.4)';
+      }
       ctx.fill();
 
-      // 突触连线
+      // 浅色模式增加粒子外圈立体轮廓
+      if (light) {
+        ctx.strokeStyle = 'rgba(4, 120, 87, 0.35)';
+        ctx.lineWidth = 0.8;
+        ctx.stroke();
+      }
+
+      // 突触节点相互连线
       for (var j = i + 1; j < particles.length; j++) {
         var p2 = particles[j];
         var d2 = Math.sqrt((p.x - p2.x)*(p.x - p2.x) + (p.y - p2.y)*(p.y - p2.y));
-        if (d2 < 115) {
+        if (d2 < 125) {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
-          var lineAlpha = (1 - d2 / 115) * 0.22;
-          ctx.strokeStyle = 'rgba(46, 230, 160, ' + lineAlpha + ')';
-          ctx.lineWidth = 0.9;
+          var lineRatio = 1 - d2 / 125;
+          var lineAlpha = lineRatio * maxLineAlpha;
+          ctx.strokeStyle = 'rgba(' + pRgb + ', ' + lineAlpha + ')';
+          ctx.lineWidth = baseLineWidth;
           ctx.shadowBlur = 0;
           ctx.stroke();
         }
@@ -574,7 +614,6 @@
     mouse.y = -1000;
   });
 
-  // 视口观察器以节能
   var observer = new IntersectionObserver(function(entries) {
     isVisible = entries[0].isIntersecting;
     if (isVisible && !animId) animId = requestAnimationFrame(update);
@@ -685,33 +724,67 @@
   });
 })();
 
-// 5. LaTeX 数学公式切换与复制演示
+// 5. LaTeX 数学公式渲染与切换 (KaTeX + MathML 备选)
 (function() {
   var mathEquations = {
-    compound: "$$\frac{dK}{dt} = r \cdot K(t) + \alpha \cdot \text{Insight}(t) - \delta \cdot K(t)$$",
-    bayes: "$$P(\theta \mid D) = \frac{P(D \mid \theta) \, P(\theta)}{\int P(D \mid \theta') \, P(\theta') \, d\theta'}$$",
-    schrodinger: "$$i\hbar \frac{\partial}{\partial t} \Psi(\mathbf{r}, t) = \left[ -\frac{\hbar^2}{2m} \nabla^2 + V(\mathbf{r}, t) \right] \Psi(\mathbf{r}, t)$$"
+    compound: {
+      tex: "\\frac{dK}{dt} = r \\cdot K(t) + \\alpha \\cdot \\text{Insight}(t) - \\delta \\cdot K(t)",
+      mathml: '<math display="block" class="katex-math"><mfrac><mrow><mi>d</mi><mi>K</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>r</mi><mo>·</mo><mi>K</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>+</mo><mi>α</mi><mo>·</mo><mtext>Insight</mtext><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>−</mo><mi>δ</mi><mo>·</mo><mi>K</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></math>'
+    },
+    bayes: {
+      tex: "P(\\theta \\mid D) = \\frac{P(D \\mid \\theta) \\, P(\\theta)}{\\int P(D \\mid \\theta') \\, P(\\theta') \\, d\\theta'}",
+      mathml: '<math display="block" class="katex-math"><mi>P</mi><mo stretchy="false">(</mo><mi>θ</mi><mo>∣</mo><mi>D</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>D</mi><mo>∣</mo><mi>θ</mi><mo stretchy="false">)</mo><mspace width="0.167em"></mspace><mi>P</mi><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mrow><mo>∫</mo><mi>P</mi><mo stretchy="false">(</mo><mi>D</mi><mo>∣</mo><msup><mi>θ</mi><mo>′</mo></msup><mo stretchy="false">)</mo><mspace width="0.167em"></mspace><mi>P</mi><mo stretchy="false">(</mo><msup><mi>θ</mi><mo>′</mo></msup><mo stretchy="false">)</mo><mspace width="0.167em"></mspace><mi>d</mi><msup><mi>θ</mi><mo>′</mo></msup></mrow></mfrac></math>'
+    },
+    schrodinger: {
+      tex: "i\\hbar \\frac{\\partial}{\\partial t} \\Psi(\\mathbf{r}, t) = \\left[ -\\frac{\\hbar^2}{2m} \\nabla^2 + V(\\mathbf{r}, t) \\right] \\Psi(\\mathbf{r}, t)",
+      mathml: '<math display="block" class="katex-math"><mi>i</mi><mi>ℏ</mi><mfrac><mrow><mi>∂</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mi>Ψ</mi><mo stretchy="false">(</mo><mi mathvariant="bold">r</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>[</mo><mo>−</mo><mfrac><msup><mi>ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><msup><mi>∇</mi><mn>2</mn></msup><mo>+</mo><mi>V</mi><mo stretchy="false">(</mo><mi mathvariant="bold">r</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo><mo>]</mo></mrow><mi>Ψ</mi><mo stretchy="false">(</mo><mi mathvariant="bold">r</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></math>'
+    }
   };
 
-  var tabs = document.querySelectorAll('.math-tab');
+  var curType = 'compound';
   var eqEl = document.getElementById('mathEquation');
   var copyBtn = document.getElementById('copyMathBtn');
 
+  function renderFormula(type) {
+    curType = type;
+    var item = mathEquations[type];
+    if (!item || !eqEl) return;
+    if (window.katex && window.katex.render) {
+      try {
+        katex.render(item.tex, eqEl, { displayMode: true, throwOnError: false });
+        return;
+      } catch (err) {}
+    }
+    eqEl.innerHTML = item.mathml;
+  }
+
+  // 初始渲染
+  function initKaTeX() {
+    renderFormula(curType);
+  }
+  if (window.katex) {
+    initKaTeX();
+  } else {
+    window.addEventListener('load', initKaTeX);
+    setTimeout(initKaTeX, 300);
+    setTimeout(initKaTeX, 1000);
+  }
+
+  var tabs = document.querySelectorAll('.math-tab');
   tabs.forEach(function(t) {
     t.addEventListener('click', function() {
       tabs.forEach(function(b) { b.classList.remove('active'); });
       this.classList.add('active');
       var type = this.getAttribute('data-math');
-      if (eqEl && mathEquations[type]) {
-        eqEl.textContent = mathEquations[type];
-      }
+      renderFormula(type);
     });
   });
 
   if (copyBtn) {
     copyBtn.addEventListener('click', function() {
-      var text = eqEl.textContent.trim();
-      navigator.clipboard.writeText(text).then(function() {
+      var item = mathEquations[curType];
+      var texSource = item ? item.tex : '';
+      navigator.clipboard.writeText(texSource).then(function() {
         var origin = copyBtn.innerHTML;
         copyBtn.innerHTML = '✓ 已复制 LaTeX 源码';
         copyBtn.style.borderColor = 'var(--brand)';
@@ -738,7 +811,8 @@
     themeToggle.addEventListener('click', function(e) {
       e.preventDefault();
       var cur = document.documentElement.getAttribute('data-theme');
-      var next = cur === 'light' ? 'dark' : 'light';
+      var isCurLight = cur === 'light' || (!cur && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
+      var next = isCurLight ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', next);
       try { localStorage.setItem('theme', next); } catch (err) {}
     });

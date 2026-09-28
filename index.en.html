@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="icon.png">
 <link rel="stylesheet" href="style.css">
+<!-- KaTeX Mathematics Renderer -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
 
 <!-- GEO:AUTO START -->
 <title>Synapse Note · Local-First Bi-directional Knowledge Base & AI Cognitive Mirror</title>
@@ -231,7 +234,7 @@
         <h4>Cognitive Compounding & System Dynamics</h4>
         <p>Effective thinking is never linear accumulation, but breaking problems down to fundamental truths via <span class="wiki-link active" data-id="fp">[[First Principles]]</span>.</p>
         <p style="margin-top:14px">When paired with continuous <span class="wiki-link" data-id="bayes">[[Bayesian Updating]]</span> to calibrate beliefs against new evidence, our knowledge network develops resilient <span class="wiki-link" data-id="antifragile">[[Antifragile Systems]]</span> characteristics...</p>
-        <div style="margin-top:20px;padding:12px;background:rgba(0,0,0,0.2);border-radius:8px;font-size:13px;color:var(--sub)">
+        <div class="editor-tip">
           💡 <strong>Interactive Hint</strong>: Click any green <code>[[wiki-link]]</code> above to inspect real-time radar shifts and backlinks on the right.
         </div>
       </div>
@@ -242,7 +245,7 @@
         <span class="radar-meta-badge">Synapse Radar · Entity Graph</span>
         <div class="radar-card-preview" id="radarPreview">
           <h5 id="radarTitle">🔍 First Principles (Reasoning from Axioms)</h5>
-          <p id="radarDesc">Boiling things down to their fundamental truths and reasoning upward from there, avoiding analogies that inherit legacy assumptions.</p>
+          <p id="radarDesc">Boiling things down to fundamental truths and reasoning upward from there, avoiding analogies that inherit legacy assumptions.</p>
           <div class="radar-backlinks-list">
             <div class="item">🔗 <strong>3 notes</strong> linked bi-directionally</div>
             <div class="item">📌 Upstream: <em>Reductionism in Physics</em></div>
@@ -250,7 +253,7 @@
           </div>
         </div>
       </div>
-      <div style="font-size:12px;color:var(--sub-light);margin-top:16px">
+      <div style="font-size:12px;color:var(--sub);margin-top:16px">
         ⚡️ On-device SQLite graph, sub-millisecond offline querying
       </div>
     </div>
@@ -358,7 +361,8 @@
 
     <div class="math-display-stage">
       <div class="math-equation" id="mathEquation">
-        $$rac{dK}{dt} = r \cdot K(t) + lpha \cdot 	ext{Insight}(t) - \delta \cdot K(t)$$
+        <!-- Default MathML Fallback -->
+        <math display="block" class="katex-math"><mfrac><mrow><mi>d</mi><mi>K</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>r</mi><mo>·</mo><mi>K</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>+</mo><mi>α</mi><mo>·</mo><mtext>Insight</mtext><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>−</mo><mi>δ</mi><mo>·</mo><mi>K</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></math>
       </div>
     </div>
 
@@ -391,7 +395,7 @@
       <div style="font-size:14px;color:var(--sub);line-height:1.7">
         "What an inspiring philosophy! Great products naturally sell themselves. Keep polishing features and word of mouth will do the rest!"
       </div>
-      <div style="margin-top:14px;font-size:12px;color:#f87171">
+      <div class="sandbox-alert-bad">
         ⚠️ Result: Reinforces survivorship bias and overlooks critical cold-start realities.
       </div>
     </div>
@@ -405,7 +409,7 @@
         2. Without distribution leverage, how does quality pierce modern algorithmic noise?<br>
         3. Are your defensibility moats symmetric or asymmetric against well-funded incumbents?"
       </div>
-      <div style="margin-top:14px;font-size:12px;color:var(--brand)">
+      <div class="sandbox-alert-good">
         ✓ Result: Exposes fragility prior to execution, building true antifragile advantages.
       </div>
     </div>
@@ -471,14 +475,21 @@
 </div></footer>
 
 <script>
-// 1. Synapse Canvas Animation
+function isLightTheme() {
+  var t = document.documentElement.getAttribute('data-theme');
+  if (t === 'light') return true;
+  if (t === 'dark') return false;
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+}
+
+// 1. Synapse Canvas Animation - High Contrast Redesign
 (function() {
   var canvas = document.getElementById('synapse-canvas');
   if (!canvas) return;
   var ctx = canvas.getContext('2d');
   var width, height;
   var particles = [];
-  var mouse = { x: -1000, y: -1000, radius: 140 };
+  var mouse = { x: -1000, y: -1000, radius: 150 };
   var animId = null;
   var isVisible = true;
 
@@ -490,16 +501,16 @@
 
   function initParticles() {
     particles = [];
-    var count = Math.floor((width * height) / 14000);
-    count = Math.max(30, Math.min(count, 85));
+    var count = Math.floor((width * height) / 13000);
+    count = Math.max(35, Math.min(count, 85));
     for (var i = 0; i < count; i++) {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.7,
-        vy: (Math.random() - 0.5) * 0.7,
-        radius: Math.random() * 2 + 1.2,
-        baseAlpha: Math.random() * 0.5 + 0.2
+        vx: (Math.random() - 0.5) * 0.75,
+        vy: (Math.random() - 0.5) * 0.75,
+        radius: Math.random() * 2.2 + 1.4,
+        baseAlpha: Math.random() * 0.35 + 0.65
       });
     }
   }
@@ -507,6 +518,18 @@
   function update() {
     if (!isVisible) return;
     ctx.clearRect(0, 0, width, height);
+    var light = isLightTheme();
+
+    var pRgb = light ? '4, 120, 87' : '46, 230, 160';
+    var maxLineAlpha = light ? 0.65 : 0.28;
+    var baseLineWidth = light ? 1.4 : 0.9;
+
+    if (mouse.x > 0 && mouse.y > 0) {
+      ctx.beginPath();
+      ctx.arc(mouse.x, mouse.y, mouse.radius * 0.8, 0, Math.PI * 2);
+      ctx.fillStyle = light ? 'rgba(4, 120, 87, 0.05)' : 'rgba(46, 230, 160, 0.04)';
+      ctx.fill();
+    }
 
     for (var i = 0; i < particles.length; i++) {
       var p = particles[i];
@@ -522,28 +545,48 @@
       var dy = mouse.y - p.y;
       var dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < mouse.radius) {
-        var force = (1 - dist / mouse.radius) * 0.04;
+        var force = (1 - dist / mouse.radius) * 0.045;
         p.x += dx * force;
         p.y += dy * force;
+
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(mouse.x, mouse.y);
+        var mAlpha = (1 - dist / mouse.radius) * (light ? 0.75 : 0.45);
+        ctx.strokeStyle = 'rgba(' + pRgb + ', ' + mAlpha + ')';
+        ctx.lineWidth = light ? 1.8 : 1.2;
+        ctx.stroke();
       }
 
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(46, 230, 160, ' + p.baseAlpha + ')';
-      ctx.shadowBlur = 8;
-      ctx.shadowColor = '#2ee6a0';
+      ctx.arc(p.x, p.y, light ? p.radius * 1.15 : p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + pRgb + ', ' + (light ? 0.88 : p.baseAlpha) + ')';
+      if (!light) {
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = '#2ee6a0';
+      } else {
+        ctx.shadowBlur = 3;
+        ctx.shadowColor = 'rgba(4, 120, 87, 0.4)';
+      }
       ctx.fill();
+
+      if (light) {
+        ctx.strokeStyle = 'rgba(4, 120, 87, 0.35)';
+        ctx.lineWidth = 0.8;
+        ctx.stroke();
+      }
 
       for (var j = i + 1; j < particles.length; j++) {
         var p2 = particles[j];
         var d2 = Math.sqrt((p.x - p2.x)*(p.x - p2.x) + (p.y - p2.y)*(p.y - p2.y));
-        if (d2 < 115) {
+        if (d2 < 125) {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
-          var lineAlpha = (1 - d2 / 115) * 0.22;
-          ctx.strokeStyle = 'rgba(46, 230, 160, ' + lineAlpha + ')';
-          ctx.lineWidth = 0.9;
+          var lineRatio = 1 - d2 / 125;
+          var lineAlpha = lineRatio * maxLineAlpha;
+          ctx.strokeStyle = 'rgba(' + pRgb + ', ' + lineAlpha + ')';
+          ctx.lineWidth = baseLineWidth;
           ctx.shadowBlur = 0;
           ctx.stroke();
         }
@@ -673,33 +716,66 @@
   });
 })();
 
-// 5. LaTeX Math Showcase
+// 5. LaTeX Math Showcase (KaTeX + MathML Fallback)
 (function() {
   var mathEquations = {
-    compound: "$$\frac{dK}{dt} = r \cdot K(t) + \alpha \cdot \text{Insight}(t) - \delta \cdot K(t)$$",
-    bayes: "$$P(\theta \mid D) = \frac{P(D \mid \theta) \, P(\theta)}{\int P(D \mid \theta') \, P(\theta') \, d\theta'}$$",
-    schrodinger: "$$i\hbar \frac{\partial}{\partial t} \Psi(\mathbf{r}, t) = \left[ -\frac{\hbar^2}{2m} \nabla^2 + V(\mathbf{r}, t) \right] \Psi(\mathbf{r}, t)$$"
+    compound: {
+      tex: "\\frac{dK}{dt} = r \\cdot K(t) + \\alpha \\cdot \\text{Insight}(t) - \\delta \\cdot K(t)",
+      mathml: '<math display="block" class="katex-math"><mfrac><mrow><mi>d</mi><mi>K</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>r</mi><mo>·</mo><mi>K</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>+</mo><mi>α</mi><mo>·</mo><mtext>Insight</mtext><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>−</mo><mi>δ</mi><mo>·</mo><mi>K</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></math>'
+    },
+    bayes: {
+      tex: "P(\\theta \\mid D) = \\frac{P(D \\mid \\theta) \\, P(\\theta)}{\\int P(D \\mid \\theta') \\, P(\\theta') \\, d\\theta'}",
+      mathml: '<math display="block" class="katex-math"><mi>P</mi><mo stretchy="false">(</mo><mi>θ</mi><mo>∣</mo><mi>D</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>D</mi><mo>∣</mo><mi>θ</mi><mo stretchy="false">)</mo><mspace width="0.167em"></mspace><mi>P</mi><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mrow><mo>∫</mo><mi>P</mi><mo stretchy="false">(</mo><mi>D</mi><mo>∣</mo><msup><mi>θ</mi><mo>′</mo></msup><mo stretchy="false">)</mo><mspace width="0.167em"></mspace><mi>P</mi><mo stretchy="false">(</mo><msup><mi>θ</mi><mo>′</mo></msup><mo stretchy="false">)</mo><mspace width="0.167em"></mspace><mi>d</mi><msup><mi>θ</mi><mo>′</mo></msup></mrow></mfrac></math>'
+    },
+    schrodinger: {
+      tex: "i\\hbar \\frac{\\partial}{\\partial t} \\Psi(\\mathbf{r}, t) = \\left[ -\\frac{\\hbar^2}{2m} \\nabla^2 + V(\\mathbf{r}, t) \\right] \\Psi(\\mathbf{r}, t)",
+      mathml: '<math display="block" class="katex-math"><mi>i</mi><mi>ℏ</mi><mfrac><mrow><mi>∂</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mi>Ψ</mi><mo stretchy="false">(</mo><mi mathvariant="bold">r</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>[</mo><mo>−</mo><mfrac><msup><mi>ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><msup><mi>∇</mi><mn>2</mn></msup><mo>+</mo><mi>V</mi><mo stretchy="false">(</mo><mi mathvariant="bold">r</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo><mo>]</mo></mrow><mi>Ψ</mi><mo stretchy="false">(</mo><mi mathvariant="bold">r</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></math>'
+    }
   };
 
-  var tabs = document.querySelectorAll('.math-tab');
+  var curType = 'compound';
   var eqEl = document.getElementById('mathEquation');
   var copyBtn = document.getElementById('copyMathBtn');
 
+  function renderFormula(type) {
+    curType = type;
+    var item = mathEquations[type];
+    if (!item || !eqEl) return;
+    if (window.katex && window.katex.render) {
+      try {
+        katex.render(item.tex, eqEl, { displayMode: true, throwOnError: false });
+        return;
+      } catch (err) {}
+    }
+    eqEl.innerHTML = item.mathml;
+  }
+
+  function initKaTeX() {
+    renderFormula(curType);
+  }
+  if (window.katex) {
+    initKaTeX();
+  } else {
+    window.addEventListener('load', initKaTeX);
+    setTimeout(initKaTeX, 300);
+    setTimeout(initKaTeX, 1000);
+  }
+
+  var tabs = document.querySelectorAll('.math-tab');
   tabs.forEach(function(t) {
     t.addEventListener('click', function() {
       tabs.forEach(function(b) { b.classList.remove('active'); });
       this.classList.add('active');
       var type = this.getAttribute('data-math');
-      if (eqEl && mathEquations[type]) {
-        eqEl.textContent = mathEquations[type];
-      }
+      renderFormula(type);
     });
   });
 
   if (copyBtn) {
     copyBtn.addEventListener('click', function() {
-      var text = eqEl.textContent.trim();
-      navigator.clipboard.writeText(text).then(function() {
+      var item = mathEquations[curType];
+      var texSource = item ? item.tex : '';
+      navigator.clipboard.writeText(texSource).then(function() {
         var origin = copyBtn.innerHTML;
         copyBtn.innerHTML = '✓ Copied LaTeX Code';
         copyBtn.style.borderColor = 'var(--brand)';
@@ -726,7 +802,8 @@
     themeToggle.addEventListener('click', function(e) {
       e.preventDefault();
       var cur = document.documentElement.getAttribute('data-theme');
-      var next = cur === 'light' ? 'dark' : 'light';
+      var isCurLight = cur === 'light' || (!cur && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
+      var next = isCurLight ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', next);
       try { localStorage.setItem('theme', next); } catch (err) {}
     });
