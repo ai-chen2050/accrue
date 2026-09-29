@@ -205,7 +205,9 @@ def shell(lang, title, desc, canonical, body, extra_ld=None):
 </head>
 <body>
 <nav class="wrap"><a class="brand" href="../index{suffix_of(lang)}.html">{_html.escape(t(SITE['name'], lang))}</a>
-  <a href="../devlog{suffix_of(lang)}.html">{s(lang, 'kicker')}</a></nav>
+  <a href="../devlog{suffix_of(lang)}.html">{s(lang, 'kicker')}</a>
+  <a href="../devlog{'html' if lang == 'en' else '.en.html'}" onclick="try{{localStorage.setItem('synapse_lang', '{'zh' if lang == 'en' else 'en'}');}}catch(e){{}}">{'中文' if lang == 'en' else 'EN'}</a>
+</nav>
 <main class="wrap prose">
 {body}
 </main>

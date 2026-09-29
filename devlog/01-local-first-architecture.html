@@ -33,7 +33,9 @@
 </head>
 <body>
 <nav class="wrap"><a class="brand" href="../index.html">Synapse Note 复利笔记</a>
-  <a href="../devlog.html">开发日记</a></nav>
+  <a href="../devlog.html">开发日记</a>
+  <a href="../devlog.en.html" onclick="try{localStorage.setItem('synapse_lang', 'en');}catch(e){}">EN</a>
+</nav>
 <main class="wrap prose">
 <p class="kicker">开发日记 · 2026-09-20</p><h1>为什么坚守本地优先与设备端 SQLite：在大模型时代捍卫数据主权</h1><p class="lead">绝大多数现代笔记软件将数据推向中心化云端，而我们选择 SQLite + 本地 Markdown 的纯设备端架构。本文记录我们在本地离线环境下实现高吞吐双链查询、实体关系图谱和零成本数据主权的工程选型与权衡。</p><h2 id="结论先说">结论先说</h2>
 <p><strong>思想与知识资产是不可再生的个人数字资产。</strong>我们从第一天起就决定：Synapse Note（复利笔记）不设立任何中心化用户数据库，不架设中转后端，所有笔记、双向链接拓扑、实体索引与向量缓存 100% 存放在用户设备本地的 SQLite 数据库与 Markdown 沙盒中。大模型能力通过 BYOK（自带 API Key）直连官方端点，中间没有任何黑盒拦截。</p>

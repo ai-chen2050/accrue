@@ -33,7 +33,9 @@
 </head>
 <body>
 <nav class="wrap"><a class="brand" href="../index.html">Synapse Note 复利笔记</a>
-  <a href="../devlog.html">开发日记</a></nav>
+  <a href="../devlog.html">开发日记</a>
+  <a href="../devlog.en.html" onclick="try{localStorage.setItem('synapse_lang', 'en');}catch(e){}">EN</a>
+</nav>
 <main class="wrap prose">
 <p class="kicker">开发日记 · 2026-09-28</p><h1>思维沙盘与红队对抗：为什么你的认知镜像不该是一个迎合型 Chatbot</h1><p class="lead">为什么认知镜像不应该只是一个唯唯诺诺的文本生成器？本文探讨我们将第一性原理、逆向思维等经典思维模型工程化，并引入「红队质询」机制让 AI 扮演批判性思想对手的交互设计思路。</p><h2 id="结论先说">结论先说</h2>
 <p><strong>大多数 AI 助手的通病是过度迎合（Sycophancy）。</strong>当你输入一个充满漏洞的商业假设或认知偏见时，常规 AI 会礼貌地说：“这个想法太棒了！我们可以从以下三点展开…”，这实际上在加剧你的认知盲区。在 Synapse Note 中，我们设计了「思维模型沙盘」与「红队对抗（Red Teaming）」模式，让 AI 主动寻找你论点中的薄弱环节，逼近思考的本质。</p>

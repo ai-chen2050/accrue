@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../icon.png">
+<title>Solving Math Formula Exports: High-DPI KaTeX Rasterization and Lossless Document Injection · Synapse Note</title>
+<meta name="description" content="Traditional Markdown tools often turn LaTeX formulas into blurry pixelated images or corrupted glyphs during PDF and Word exports. Here is how we engineered a 4x supersampled vector rasterization and OpenXML structure injection pipeline on Flutter mobile.">
+<link rel="canonical" href="https://fulibiji.top/devlog/03-latex-math-export-pipeline.en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://fulibiji.top/devlog/03-latex-math-export-pipeline.en.html">
+<link rel="alternate" hreflang="x-default" href="https://fulibiji.top/devlog/03-latex-math-export-pipeline.en.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Solving Math Formula Exports: High-DPI KaTeX Rasterization and Lossless Document Injection">
+<meta property="og:description" content="Traditional Markdown tools often turn LaTeX formulas into blurry pixelated images or corrupted glyphs during PDF and Word exports. Here is how we engineered a 4x supersampled vector rasterization and OpenXML structure injection pipeline on Flutter mobile.">
+<meta property="og:url" content="https://fulibiji.top/devlog/03-latex-math-export-pipeline.en.html">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Solving Math Formula Exports: High-DPI KaTeX Rasterization and Lossless Document Injection",
+  "description": "Traditional Markdown tools often turn LaTeX formulas into blurry pixelated images or corrupted glyphs during PDF and Word exports. Here is how we engineered a 4x supersampled vector rasterization and OpenXML structure injection pipeline on Flutter mobile.",
+  "url": "https://fulibiji.top/devlog/03-latex-math-export-pipeline.en.html",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Synapse Note"
+  },
+  "datePublished": "2026-09-26",
+  "keywords": "LaTeX, KaTeX, Export, PDF, Word, Rendering Pipeline"
+}
+</script>
+</head>
+<body>
+<nav class="wrap"><a class="brand" href="../index.en.html">Synapse Note</a>
+  <a href="../devlog.en.html">Devlog</a>
+  <a href="../devloghtml" onclick="try{localStorage.setItem('synapse_lang', 'zh');}catch(e){}">中文</a>
+</nav>
+<main class="wrap prose">
+<p class="kicker">Devlog · 2026-09-26</p><h1>Solving Math Formula Exports: High-DPI KaTeX Rasterization and Lossless Document Injection</h1><p class="lead">Traditional Markdown tools often turn LaTeX formulas into blurry pixelated images or corrupted glyphs during PDF and Word exports. Here is how we engineered a 4x supersampled vector rasterization and OpenXML structure injection pipeline on Flutter mobile.</p><h2 id="key-takeaway">Key Takeaway</h2>
+<p>Academic formulas and mathematical rigor are foundational to serious inquiry. In most note apps, LaTeX formulas look sharp on display, but when exported to PDF or Word (.docx), they degrade into unreadable low-res bitmaps or vanish completely. In Synapse Note, we designed a <strong>vector rasterization and OpenXML lossless mapping pipeline</strong> that elevates document exports to journal-grade publishing standards.</p>
+<h2 id="the-core-challenges">The Core Challenges</h2>
+<ol><li><strong>Mobile Platform Layout Engine Limits</strong>: Mobile frameworks lack built-in MathML or TeX vector layout engines;</li><li><strong>Missing Font Glyphs in PDF</strong>: If standard PDF rendering streams lack specialized AMS math symbols, characters render as broken question mark boxes;</li><li><strong>Word (.docx) XML Alignment Nuances</strong>: Microsoft Word requires precise baseline descent offsets for inline graphics; otherwise, formulas float uncomfortably above text lines or obscure surrounding words.</li></ol>
+<h2 id="architecture-dual-channel-rasterization-pipeline">Architecture: Dual-Channel Rasterization Pipeline</h2>
+<p>We integrated a headless KaTeX engine that triggers an offscreen rendering pass during document generation:</p>
+<pre><code class="lang-text">Markdown Source
+  ├── Inline Math: $E=mc^2$
+  └── Display Math: $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$
+       │
+       ▼
+[KaTeX Abstract Syntax Tree (AST) &amp; Layout Geometry Measurement]
+       │
+       ├──► Calculate exact bounding boxes and baseline descent
+       │
+       ▼
+[4x Supersampled High-DPI Offscreen Rasterizer]
+       │
+       ├──► PDF Export: Generate crisp alpha-channel images scaled to exact point dimensions
+       │
+       └──► Word Export: Insert native docx inline shapes with wp:inline and baseline shifts</code></pre>
+<h2 id="performance-verification">Performance Verification</h2>
+<p>With this pipeline, a 15-page research report containing over 50 complex matrix and calculus equations compiles to PDF in under 1.2 seconds. Even zoomed to 400% on Retina displays or exported to high-DPI print sheets, formula strokes remain razor-sharp and align harmoniously with running text.</p><p class="pager"><a href="02-hybrid-rag-and-whitebox-reasoning.en.html">← Previous</a> · <a href="04-mental-models-and-red-teaming.en.html">Next →</a></p><p><a href="../devlog.en.html">← All posts</a></p>
+</main>
+<footer class="wrap"><p>© Synapse Note</p></footer>
+</body>
+</html>

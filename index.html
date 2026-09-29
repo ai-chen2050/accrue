@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+<script>
+(function() {
+  try {
+    var stored = localStorage.getItem('synapse_lang');
+    if (stored === 'en') { location.replace('index.en.html' + location.hash); return; }
+    if (!stored) {
+      var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (nav && !nav.startsWith('zh')) { location.replace('index.en.html' + location.hash); }
+    }
+  } catch (e) {}
+})();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="icon.png">
@@ -112,7 +124,7 @@
           "name": "Synapse Note Pro 包含什么？年度与月度订阅如何收费与取消？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Synapse Note 基础功能永久免费（含 30 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能提供两种灵活的订阅选项：超值年度订阅（¥168/年，折合仅 ¥14/月，立省 >30%，最受欢迎）与灵活月度订阅（¥19.9/月）。订阅即可解锁突破 30 篇限制的无限笔记、3D 全景心智星网、无限次 AI 专属 Agent 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由对应应用商店（Apple App Store / Google Play / 华为应用市场）官方安全扣费，你可以随时在系统应用商店的「订阅管理」中自主取消续订，已有数据永久属于你，终身不锁死。"
+            "text": "Synapse Note 基础功能永久免费（含 50 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能提供两种灵活的订阅选项：超值年度订阅（¥168/年，折合仅 ¥14/月，立省 >30%，最受欢迎）与灵活月度订阅（¥19.9/月）。订阅即可解锁突破 50 篇限制的无限笔记、3D 全景心智星网、无限次 AI 专属 Agent 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由对应应用商店（Apple App Store / Google Play / 华为应用市场）官方安全扣费，你可以随时在系统应用商店的「订阅管理」中自主取消续订，已有数据永久属于你，终身不锁死。"
           }
         }
       ]
@@ -138,7 +150,7 @@
     <a href="#pricing" class="hide-sm">方案定价</a>
     <a href="devlog.html" class="hide-sm">开发日记</a>
     <a href="#faq" class="hide-sm">常见问题</a>
-    <a href="index.en.html" title="Switch to English">EN</a>
+    <a href="index.en.html" id="lang-toggle" onclick="try{localStorage.setItem('synapse_lang','en');}catch(e){}" title="Switch to English">EN</a>
     <a href="#" id="theme-toggle" title="切换模式">🌓</a>
     <a class="btn-nav" href="https://apps.apple.com/app/id6810539038" id="nav-dl">免费下载</a>
   </div>
@@ -177,7 +189,7 @@
         <span>🌌</span> <span><strong>3D 全景星网</strong>：立体知识拓扑</span>
       </div>
       <div class="trust-item">
-        <span>💎</span> <span><strong>超值自由订阅</strong>：基础免费 · 年付省 30% (¥168/年)</span>
+        <span>💎</span> <span><strong>超值自由订阅</strong>：基础免费 · 月付 19.9/月 · 年付省 30%</span>
       </div>
     </div>
   </div>
@@ -523,7 +535,7 @@
       <tr><td><strong>知识连接深度</strong></td><td><span class="check-icon">✓</span> Markdown 双向链接 + 实体抽取 + 交互式知识图谱 + 语义实体混合检索</td><td><span class="cross-icon">✕</span> 传统单向文件夹层级结构，或仅提供简单关键词字面匹配搜索</td></tr>
       <tr><td><strong>深度思考辅助</strong></td><td><span class="check-icon">✓</span> 十维专业深度研报矩阵、思维模型沙盘与批判性红队对抗质询</td><td><span class="cross-icon">✕</span> 浅层通用对话聊天，或仅支持简单的语法润色与粗略摘要</td></tr>
       <tr><td><strong>公式与学术导出</strong></td><td><span class="check-icon">✓</span> KaTeX 像素级原生渲染，独创公式光栅化管道，高清无损导出 PDF 与 Word</td><td><span class="cross-icon">✕</span> 仅支持纯文本，数学公式无法排版或导出时乱码、公式丢失变形</td></tr>
-      <tr><td><strong>商业与收费模式</strong></td><td><span class="check-icon">✓</span> 基础功能免费（30 篇额度+次月起每月赠送 5 次），Pro 高级功能提供超值年付（¥168/年，立省 >30%）与灵活月付（¥19.9/月），全包含所有知识母体，终身不锁死数据</td><td><span class="cross-icon">✕</span> 动辄按月收取高昂订阅费（$20+/月），且数据强制存云端，取消订阅后无法查看或导出个人笔记</td></tr>
+      <tr><td><strong>商业与收费模式</strong></td><td><span class="check-icon">✓</span> 基础功能免费（50 篇额度+次月起每月赠送 5 次），Pro 高级功能提供超值年付（¥168/年，立省 >30%）与灵活月付（¥19.9/月），全包含所有知识母体，终身不锁死数据</td><td><span class="cross-icon">✕</span> 动辄按月收取高昂订阅费（$20+/月），且数据强制存云端，取消订阅后无法查看或导出个人笔记</td></tr>
     </tbody>
   </table></div>
 </div></section>
@@ -563,13 +575,13 @@
         <div class="pricing-subtext" style="color:var(--sub)">零门槛启动 · 终身可用</div>
       </div>
       <ul class="pricing-features-list">
-        <li><span class="check">✓</span> <span><strong>30 篇基础笔记额度</strong>（次月起每月赠送 5 次）</span></li>
+        <li><span class="check">✓</span> <span><strong>50 篇基础笔记额度</strong>（次月起每月赠送 5 次）</span></li>
         <li><span class="check">✓</span> <span>纯本地 SQLite 存储，数据绝不上云</span></li>
         <li><span class="check">✓</span> <span>Markdown 编辑与基础 <code>[[双链]]</code> 联想</span></li>
         <li><span class="check">✓</span> <span>BYOK 自带 Key 白盒 AI 对话</span></li>
         <li><span class="check">✓</span> <span>局部知识图谱与全文语义检索</span></li>
         <li><span class="check">✓</span> <span>标准 Markdown 格式无损导出</span></li>
-        <li class="dim"><span>✕</span> <span>突破 30 篇限制的无限笔记库</span></li>
+        <li class="dim"><span>✕</span> <span>突破 50 篇限制的无限笔记库</span></li>
         <li class="dim"><span>✕</span> <span>3D 全景心智星网拓扑漫游</span></li>
         <li class="dim"><span>✕</span> <span>全部 6 套精选高价值知识母体</span></li>
         <li class="dim"><span>✕</span> <span>KaTeX 像素级公式渲染与 PDF/Word 导出</span></li>
@@ -592,7 +604,7 @@
         <div class="pricing-subtext">折合约 ¥14/月 · 相比月付立省 >30%</div>
       </div>
       <ul class="pricing-features-list">
-        <li><span class="check">✓</span> <span><strong>无限笔记篇数</strong>：彻底破除 30 篇额度限制</span></li>
+        <li><span class="check">✓</span> <span><strong>无限笔记篇数</strong>：彻底破除 50 篇额度限制</span></li>
         <li><span class="check">✓</span> <span><strong>3D 全景心智星网</strong>：全局三维漫游与聚类</span></li>
         <li><span class="check">✓</span> <span><strong>全套 6 大专业知识母体</strong>（商业/芒格/产品/投资等）</span></li>
         <li><span class="check">✓</span> <span><strong>十维专业深度研报矩阵</strong>：一键全景综述</span></li>
@@ -680,7 +692,7 @@
     </details>
     <details>
       <summary>Synapse Note Pro 包含什么？年度与月度订阅如何收费与取消？</summary>
-      <p>Synapse Note 基础功能永久免费（含 30 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能提供两种灵活选择：超值年度订阅（¥168/年，折合仅 ¥14/月，立省 >30%，最受欢迎）与灵活月度订阅（¥19.9/月）。订阅即可解锁突破 30 篇限制的无限笔记、3D 全景心智星网、无限次 AI 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由应用商店官方安全处理，可在系统设置中随时自主取消，终身不锁死任何数据。</p>
+      <p>Synapse Note 基础功能永久免费（含 50 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能提供两种灵活选择：超值年度订阅（¥168/年，折合仅 ¥14/月，立省 >30%，最受欢迎）与灵活月度订阅（¥19.9/月）。订阅即可解锁突破 50 篇限制的无限笔记、3D 全景心智星网、无限次 AI 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由应用商店官方安全处理，可在系统设置中随时自主取消，终身不锁死任何数据。</p>
     </details>
   </div>
   <p style="margin-top:28px;text-align:center"><a href="geo.html" style="font-weight:700">更完整的知识库与机制说明 →</a></p>
@@ -1200,7 +1212,7 @@ function isLightTheme() {
     ctx.scale(dpr, dpr);
     ctx.clearRect(0, 0, w, h);
 
-    var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    var isLight = document.documentElement.getAttribute('data-theme') === 'light' || (!document.documentElement.getAttribute('data-theme') && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
     var cx = w / 2, cy = h / 2;
     var radiusScale = Math.min(w, h) / 300;
 
@@ -1230,11 +1242,11 @@ function isLightTheme() {
       ctx.moveTo(p1.x, p1.y);
       ctx.lineTo(p2.x, p2.y);
       if (isHighlight) {
-        ctx.strokeStyle = isLight ? 'rgba(4, 120, 87, 0.75)' : 'rgba(46, 230, 160, 0.85)';
-        ctx.lineWidth = 2.0;
+        ctx.strokeStyle = isLight ? '#047857' : 'rgba(46, 230, 160, 0.95)';
+        ctx.lineWidth = isLight ? 2.5 : 2.0;
       } else {
-        ctx.strokeStyle = isLight ? 'rgba(4, 120, 87, ' + (avgAlpha * 0.22) + ')' : 'rgba(46, 230, 160, ' + (avgAlpha * 0.18) + ')';
-        ctx.lineWidth = 1.0;
+        ctx.strokeStyle = isLight ? 'rgba(7, 121, 67, ' + Math.max(0.35, avgAlpha * 0.55) + ')' : 'rgba(46, 230, 160, ' + (avgAlpha * 0.2) + ')';
+        ctx.lineWidth = isLight ? 1.4 : 1.0;
       }
       ctx.stroke();
     });
@@ -1293,10 +1305,18 @@ function isLightTheme() {
       // 标签文字
       var showLabel = isSel || isHov || p.z > -40;
       if (showLabel) {
-        ctx.font = (isSel ? 'bold 12px' : '11px') + ' -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
-        ctx.fillStyle = isLight ? (isSel ? '#047857' : '#051810') : (isSel ? '#2ee6a0' : 'rgba(255, 255, 255, ' + Math.max(0.4, p.alpha) + ')');
+        ctx.font = (isSel ? 'bold 12.5px' : '11.5px') + ' -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
         ctx.textAlign = 'center';
-        ctx.fillText(n.name, p.x, p.y + r + 13);
+        if (isLight) {
+          ctx.lineWidth = 3.5;
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.95)';
+          ctx.strokeText(n.name, p.x, p.y + r + 14);
+          ctx.fillStyle = isSel ? '#047857' : '#051810';
+          ctx.fillText(n.name, p.x, p.y + r + 14);
+        } else {
+          ctx.fillStyle = isSel ? '#2ee6a0' : 'rgba(255, 255, 255, ' + Math.max(0.4, p.alpha) + ')';
+          ctx.fillText(n.name, p.x, p.y + r + 13);
+        }
       }
     });
 

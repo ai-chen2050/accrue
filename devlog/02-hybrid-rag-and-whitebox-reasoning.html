@@ -33,7 +33,9 @@
 </head>
 <body>
 <nav class="wrap"><a class="brand" href="../index.html">Synapse Note 复利笔记</a>
-  <a href="../devlog.html">开发日记</a></nav>
+  <a href="../devlog.html">开发日记</a>
+  <a href="../devlog.en.html" onclick="try{localStorage.setItem('synapse_lang', 'en');}catch(e){}">EN</a>
+</nav>
 <main class="wrap prose">
 <p class="kicker">开发日记 · 2026-09-24</p><h1>混合检索（Hybrid RAG）实践：当语义向量遇上知识图谱实体</h1><p class="lead">单纯依靠语义向量容易忽略精确的实体定义，单纯依靠关键词则丧失语意发散能力。本文记录 Synapse Note 如何在移动端实现向量与图拓扑的混合打分，以及为何必须将 AI 思考过程完整白盒化。</p><h2 id="结论先说">结论先说</h2>
 <p><strong>黑盒 Chatbot 是个人深度思考的天敌。</strong>在知识对话中，我们拒绝任何“假装知道”的生成式幻觉。Synapse Note 采用自研的 <strong>Hybrid RAG（语义向量 + 实体图谱拓扑）</strong>混合检索算法，并将 AI 思考过程（Thinking Process）与源笔记引用卡片（Ref Quotes）完全暴露给用户，让每次推演清晰可溯源。</p>

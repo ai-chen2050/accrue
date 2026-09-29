@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(function() {
+  try { localStorage.setItem('synapse_lang', 'en'); } catch (e) {}
+})();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="icon.png">
@@ -112,7 +117,7 @@
           "name": "What does Synapse Note Pro include, and how does Annual vs Monthly billing and cancellation work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Synapse Note core features are free forever (with 30 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are available in two flexible options: the best-value Annual Plan at ¥168/year (~¥14/month, save >30%, most popular) and the flexible Monthly Plan at ¥19.9/month. Pro unlocks unlimited notes, the 3D mindscape constellation, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are securely processed by official app stores (Apple App Store / Google Play / Huawei AppGallery) and can be cancelled anytime in your store account settings with zero data lock-in."
+            "text": "Synapse Note core features are free forever (with 50 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are available in two flexible options: the best-value Annual Plan at ¥168/year (~¥14/month, save >30%, most popular) and the flexible Monthly Plan at ¥19.9/month. Pro unlocks unlimited notes, the 3D mindscape constellation, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are securely processed by official app stores (Apple App Store / Google Play / Huawei AppGallery) and can be cancelled anytime in your store account settings with zero data lock-in."
           }
         }
       ]
@@ -136,9 +141,9 @@
     <a href="#playground" class="hide-sm">Playground</a>
     <a href="#matrix" class="hide-sm">10D Matrix</a>
     <a href="#math" class="hide-sm">LaTeX Export</a>
-    <a href="devlog.html" class="hide-sm">Devlog</a>
+    <a href="devlog.en.html" class="hide-sm">Devlog</a>
     <a href="#faq" class="hide-sm">FAQ</a>
-    <a href="index.html" title="切换到中文">中文</a>
+    <a href="index.html" id="lang-toggle" onclick="try{localStorage.setItem('synapse_lang','zh');}catch(e){}" title="切换到中文">中文</a>
     <a href="#" id="theme-toggle" title="Toggle Theme">🌓</a>
     <a class="btn-nav" href="https://apps.apple.com/app/id6810539038" id="nav-dl">Get App</a>
   </div>
@@ -161,7 +166,7 @@
       <a class="cta-secondary" href="#playground">
         <span>Explore Interactive Demos ↓</span>
       </a>
-      <a class="cta-secondary" href="devlog.html">
+      <a class="cta-secondary" href="devlog.en.html">
         <span>📖 Devlog</span>
       </a>
     </div>
@@ -520,7 +525,7 @@
       <tr><td><strong>Connection Depth</strong></td><td><span class="check-icon">✓</span> Bi-directional links + automated entity graphs + hybrid vector/semantic search</td><td><span class="cross-icon">✕</span> Rigid hierarchical folders or primitive keyword-matching search engines</td></tr>
       <tr><td><strong>Thinking Assistance</strong></td><td><span class="check-icon">✓</span> 10D deep research matrix, mental model sandboxes, and critical red-teaming</td><td><span class="cross-icon">✕</span> Superficial generic conversational chat, basic spelling fixes, or shallow summaries</td></tr>
       <tr><td><strong>Academic LaTeX Export</strong></td><td><span class="check-icon">✓</span> KaTeX pixel-accurate math rendering and vector pipeline for lossless PDF/Word exports</td><td><span class="cross-icon">✕</span> Plain text only; formulas fail to render or become garbled and missing upon export</td></tr>
-      <tr><td><strong>Business Model</strong></td><td><span class="check-icon">✓</span> Core free (30 notes + 5 bonus notes every month); Pro monthly subscription at ¥19.9/mo with cancel-anytime freedom; data never locked</td><td><span class="cross-icon">✕</span> Heavy recurring fees with cloud lock-in; cancellation locks you out of reading or exporting your own notes</td></tr>
+      <tr><td><strong>Business Model</strong></td><td><span class="check-icon">✓</span> Core free (50 notes + 5 bonus notes every month); Pro monthly subscription at ¥19.9/mo with cancel-anytime freedom; data never locked</td><td><span class="cross-icon">✕</span> Heavy recurring fees with cloud lock-in; cancellation locks you out of reading or exporting your own notes</td></tr>
     </tbody>
   </table></div>
 </div></section>
@@ -560,13 +565,13 @@
         <div class="pricing-subtext" style="color:var(--sub)">Zero barrier · Lifelong usable</div>
       </div>
       <ul class="pricing-features-list">
-        <li><span class="check">✓</span> <span><strong>30 free notes</strong> (plus 5 free monthly notes thereafter)</span></li>
+        <li><span class="check">✓</span> <span><strong>50 free notes</strong> (plus 5 free monthly notes thereafter)</span></li>
         <li><span class="check">✓</span> <span>100% on-device SQLite storage, zero cloud middleman</span></li>
         <li><span class="check">✓</span> <span>Standard Markdown & <code>[[bi-directional links]]</code></span></li>
         <li><span class="check">✓</span> <span>BYOK Bring Your Own Key white-box AI Q&A</span></li>
         <li><span class="check">✓</span> <span>Local graph visualization & full-text search</span></li>
         <li><span class="check">✓</span> <span>Standard Markdown lossless export</span></li>
-        <li class="dim"><span>✕</span> <span>Unlimited notes beyond 30 limit</span></li>
+        <li class="dim"><span>✕</span> <span>Unlimited notes beyond 50 limit</span></li>
         <li class="dim"><span>✕</span> <span>3D Mindscape Cosmos roaming</span></li>
         <li class="dim"><span>✕</span> <span>All 6 pre-loaded professional knowledge packs</span></li>
         <li class="dim"><span>✕</span> <span>KaTeX math formula rendering & PDF/Word export</span></li>
@@ -677,14 +682,14 @@
     </details>
     <details>
       <summary>What is included in Synapse Note Pro, and how can I subscribe or cancel?</summary>
-      <p>The core features of Synapse Note are free forever (includes 30 baseline notes; after that, you receive 5 complimentary notes every month). Pro features operate on an auto-renewing monthly subscription for only ¥19.9/month (cancel anytime), unlocking unlimited notes and star-graph connections, unlimited deep AI Agent consultations, all 6 curated knowledge packs, private cloud backup/sync, and academic-grade lossless exports. All subscriptions are processed directly through official app stores (Apple App Store / Google Play / Huawei AppGallery), where you can easily cancel anytime in your account settings.</p>
+      <p>The core features of Synapse Note are free forever (includes 50 baseline notes; after that, you receive 5 complimentary notes every month). Pro features operate on an auto-renewing monthly subscription for only ¥19.9/month (cancel anytime), unlocking unlimited notes and star-graph connections, unlimited deep AI Agent consultations, all 6 curated knowledge packs, private cloud backup/sync, and academic-grade lossless exports. All subscriptions are processed directly through official app stores (Apple App Store / Google Play / Huawei AppGallery), where you can easily cancel anytime in your account settings.</p>
     </details>
   </div>
   <p style="margin-top:28px;text-align:center"><a href="geo.en.html" style="font-weight:700">Detailed Knowledge Architecture & FAQ →</a></p>
 </div></section>
 
 <footer><div class="wrap" style="text-align:center">
-  <p>© Synapse Note · <a href="privacy.en.html">Privacy Policy</a> · <a href="terms.en.html">Terms of Service</a> · <a href="support.en.html">Support</a> · <a href="devlog.html">Devlog</a> · <a href="geo.en.html">GEO Specification</a> · <a href="llms.en.txt">llms.txt</a></p>
+  <p>© Synapse Note · <a href="privacy.en.html">Privacy Policy</a> · <a href="terms.en.html">Terms of Service</a> · <a href="support.en.html">Support</a> · <a href="devlog.en.html">Devlog</a> · <a href="geo.en.html">GEO Specification</a> · <a href="llms.en.txt">llms.txt</a></p>
 </div></footer>
 
 <script>
@@ -1119,19 +1124,19 @@ function isLightTheme() {
   if (!canvas) return;
   var ctx = canvas.getContext('2d');
 
-  var nodes = [
-    { id: 'munger', name: '芒格格栅思维', en: 'Munger Latticework', tag: '决策模型 · 跨学科格栅', x: 75, y: -30, z: 90, size: 7.5, color: '#a855f7', degree: '8 条强关联突触', centrality: '0.96 (高阶核心)', cluster: '跨学科决策与自省', quote: '“你必须知道重要学科的重要理论，并经常使用它们——要全部都用上，而不是只用几种。大多数人试图用一种方法解决所有问题。”', src: '源自私有笔记：《穷查理宝典精读与决策红队沙盘 #12》', neighbors: ['反脆弱机制', '第二层思考', '逆向思考法', '第一性原理', '复利效应'] },
-    { id: 'compound', name: '复利效应', en: 'Compounding Effect', tag: '核心规律 · 动力学', x: -85, y: -45, z: 80, size: 7.5, color: '#10c877', degree: '9 条强关联突触', centrality: '0.98 (超枢纽节点)', cluster: '非线性长期成长', quote: '“理解复利的人赚取复利，不理解的人支付复利。知识的积累遵循完全相同的复利微分方程。”', src: '源自私有笔记：《系统动力学与知识资产复利模型 #01》', neighbors: ['增长飞轮效应', '第一性原理', '芒格格栅思维', '边际成本为零'] },
-    { id: 'fp', name: '第一性原理', en: 'First Principles', tag: '思考底座 · 物理学', x: -20, y: 85, z: 70, size: 7.0, color: '#38bdf8', degree: '7 条强关联突触', centrality: '0.92 (底层公理)', cluster: '物理学还原论', quote: '“将事情剥离至最基本的真相与公理，然后从那里开始往上推导，而不是盲目类比他人。”', src: '源自私有笔记：《第一性原理推演实操清单 #04》', neighbors: ['奥卡姆剃刀', '香农信息熵', '贝叶斯先验', '芒格格栅思维'] },
-    { id: 'bayes', name: '贝叶斯先验', en: 'Bayesian Updating', tag: '概率科学 · 认知校准', x: 95, y: 65, z: -20, size: 6.5, color: '#06b6d4', degree: '6 条强关联突触', centrality: '0.88', cluster: '信念概率论', quote: '“依据新出现的证据持续动态修正先验概率。理性不是永不犯错，而是以最快的速度逼近客观真相。”', src: '源自私有笔记：《贝叶斯推理与决策置信度矩阵 #08》', neighbors: ['第一性原理', '第二层思考', '香农信息熵'] },
-    { id: 'antifragile', name: '反脆弱机制', en: 'Antifragility', tag: '复杂系统 · 塔勒布', x: 25, y: -95, z: 40, size: 6.5, color: '#fbbf24', degree: '6 条强关联突触', centrality: '0.85', cluster: '波动受益结构', quote: '“反脆弱超越了坚韧。坚韧只是抵御冲击并保持原状，而反脆弱是在波动、压力与随机性中变得更好。”', src: '源自私有笔记：《反脆弱决策架构与凸性偏好 #07》', neighbors: ['芒格格栅思维', '第二层思考', '逆向思考法'] },
-    { id: 'entropy', name: '香农信息熵', en: 'Information Entropy', tag: '信息科学 · 不确定性', x: -110, y: 40, z: -40, size: 6.0, color: '#2dd4bf', degree: '5 条强关联突触', centrality: '0.82', cluster: '信息量与消除不确定', quote: '“信息是用来消除不确定性的度量。冗余记录是噪音，唯有形成突触互联的实体方能对抗熵增。”', src: '源自私有笔记：《香农信息论与笔记精萃之道 #03》', neighbors: ['第一性原理', '贝叶斯先验', '边际成本为零'] },
-    { id: 'second_order', name: '第二层思考', en: 'Second-Order Thinking', tag: '投资心智 · 霍华德·马克斯', x: 120, y: -40, z: -50, size: 6.2, color: '#f43f5e', degree: '5 条强关联突触', centrality: '0.84', cluster: '深阶后果推演', quote: '“第一层思考说：‘这是一家好公司，买它吧。’第二层思考说：‘这是一家好公司，但人人以为它更好，估值过高，卖出它。’', src: '源自私有笔记：《投资最重要的事：第二层思考框架 #15》', neighbors: ['芒格格栅思维', '反脆弱机制', '逆向思考法'] },
-    { id: 'inversion', name: '逆向思考法', en: 'Inversion Thinking', tag: '决策工具 · 雅可比公理', x: -50, y: -105, z: -60, size: 6.0, color: '#f97316', degree: '5 条强关联突触', centrality: '0.81', cluster: '逆向推演与排除', quote: '“反过来想，总是反过来想。如果想帮助印度发展，不要问‘怎样帮助印度？’，而要问‘什么会让印度崩溃？然后尽量避开它。’', src: '源自私有笔记：《查理·芒格逆向思考实践清单 #19》', neighbors: ['芒格格栅思维', '第二层思考', '反脆弱机制'] },
-    { id: 'flywheel', name: '增长飞轮效应', en: 'Flywheel Effect', tag: '商业模式 · 协同系统', x: -70, y: 70, z: -90, size: 6.2, color: '#eab308', degree: '5 条强关联突触', centrality: '0.83', cluster: '正向反馈闭环', quote: '“无论最终的成就有多巨大，飞轮的转动绝不是由一次神奇的推力完成的，而是由持续向同一个方向积攒的微小力量推动。”', src: '源自私有笔记：《从优秀到卓越：飞轮模型拆解 #06》', neighbors: ['复利效应', '边际成本为零', '纳什均衡'] },
-    { id: 'zero_cost', name: '边际成本为零', en: 'Zero Marginal Cost', tag: '数字经济 · 里夫金', x: 60, y: 100, z: -70, size: 5.8, color: '#10b981', degree: '4 条强关联突触', centrality: '0.78', cluster: '规模经济与数字资产', quote: '“在比特世界中，第 N 次复制分发边际成本趋近于零。知识资产的数字化沉淀具备天然的无限延展杠杆。”', src: '源自私有笔记：《零边际成本社会与数字资产复利 #11》', neighbors: ['复利效应', '增长飞轮效应', '香农信息熵'] },
-    { id: 'razor', name: '奥卡姆剃刀', en: 'Occam\'s Razor', tag: '哲学逻辑 · 简练法则', x: 10, y: -40, z: -110, size: 5.8, color: '#8b5cf6', degree: '4 条强关联突触', centrality: '0.79', cluster: '实体无须增设', quote: '“如无必要，勿增实体。在解释相同现象的多种假说中，假设最少、最简洁的模型往往更接近真相。”', src: '源自私有笔记：《奥卡姆剃刀与知识极简化修剪 #09》', neighbors: ['第一性原理', '贝叶斯先验'] },
-    { id: 'nash', name: '纳什均衡', en: 'Nash Equilibrium', tag: '博弈论 · 战略互动', x: -100, y: -60, z: 20, size: 5.8, color: '#3b82f6', degree: '4 条强关联突触', centrality: '0.77', cluster: '多方稳态解', quote: '“在各方均选定最优策略的前提下，没有任何人可以通过单方面改变自己的策略而获得更多收益的稳态。”', src: '源自私有笔记：《博弈论在商业竞争与定价中的应用 #16》', neighbors: ['增长飞轮效应', '第二层思考'] }
+      var nodes = [
+    { id: 'munger', name: 'Munger Latticework', en: 'Munger Latticework of Mental Models', tag: 'Decision Model · Interdisciplinary Latticework', x: 75, y: -30, z: 90, size: 7.5, color: '#a855f7', degree: '8 Strong Synaptic Bonds', centrality: '0.96 (High-Tier Hub)', cluster: 'Decision Science & Reflection', quote: '“You must know the big ideas in the big disciplines and use them routinely — all of them, not just a few. Most people are trained in one model and try to solve all problems using that one model.”', src: 'From Private Note: “Poor Charlie’s Almanack & Red Team Sparring #12”', neighbors: ['Antifragility', 'Second-Order Thinking', 'Inversion Thinking', 'First Principles', 'Compounding'] },
+    { id: 'compound', name: 'Compounding', en: 'Compounding Effect & System Dynamics', tag: 'Core Dynamics · Long-Term Growth', x: -85, y: -45, z: 80, size: 7.5, color: '#10c877', degree: '9 Strong Synaptic Bonds', centrality: '0.98 (Primary Nexus)', cluster: 'Nonlinear Compounding', quote: '“Understand compounding and you earn it; fail to understand it and you pay it. Knowledge accumulation obeys the exact same compound differential equation.”', src: 'From Private Note: “System Dynamics & Knowledge Compounding #01”', neighbors: ['Growth Flywheel', 'First Principles', 'Munger Latticework', 'Zero Marginal Cost'] },
+    { id: 'fp', name: 'First Principles', en: 'First Principles Thinking', tag: 'Cognitive Bedrock · Physics', x: -20, y: 85, z: 70, size: 7.0, color: '#38bdf8', degree: '7 Strong Synaptic Bonds', centrality: '0.92 (Foundational Axiom)', cluster: 'Physical Reductionism', quote: '“Boil things down to the most fundamental truths and reason up from there, rather than reasoning by analogy.”', src: 'From Private Note: “First Principles Deduction Checklist #04”', neighbors: ['Occam’s Razor', 'Information Entropy', 'Bayesian Updating', 'Munger Latticework'] },
+    { id: 'bayes', name: 'Bayesian Updating', en: 'Bayesian Prior & Probability', tag: 'Probability Science · Calibration', x: 95, y: 65, z: -20, size: 6.5, color: '#06b6d4', degree: '6 Strong Synaptic Bonds', centrality: '0.88', cluster: 'Probabilistic Beliefs', quote: '“Update prior beliefs dynamically as new evidence emerges. Rationality is not about never being wrong; it is about converging toward truth at the fastest possible rate.”', src: 'From Private Note: “Bayesian Reasoning & Confidence Matrix #08”', neighbors: ['First Principles', 'Second-Order Thinking', 'Information Entropy'] },
+    { id: 'antifragile', name: 'Antifragility', en: 'Antifragile Systems', tag: 'Complex Systems · N. Taleb', x: 25, y: -95, z: 40, size: 6.5, color: '#fbbf24', degree: '6 Strong Synaptic Bonds', centrality: '0.85', cluster: 'Volatility-Benefiting Payoffs', quote: '“Antifragility is beyond resilience or robustness. The resilient resists shocks and stays the same; the antifragile gets better.”', src: 'From Private Note: “Antifragile Decision Architecture #07”', neighbors: ['Munger Latticework', 'Second-Order Thinking', 'Inversion Thinking'] },
+    { id: 'entropy', name: 'Information Entropy', en: 'Shannon Information Entropy', tag: 'Information Theory · Uncertainty', x: -110, y: 40, z: -40, size: 6.0, color: '#2dd4bf', degree: '5 Strong Synaptic Bonds', centrality: '0.82', cluster: 'Information & Uncertainty Reduction', quote: '“Information is a measure of the reduction of uncertainty. Raw redundant notes are pure noise; only synaptically interconnected entities resist cognitive entropy.”', src: 'From Private Note: “Shannon Information Theory & Note Distillation #03”', neighbors: ['First Principles', 'Bayesian Updating', 'Zero Marginal Cost'] },
+    { id: 'second_order', name: 'Second-Order Thinking', en: 'Second-Order Thinking Framework', tag: 'Investment Mindset · H. Marks', x: 120, y: -40, z: -50, size: 6.2, color: '#f43f5e', degree: '5 Strong Synaptic Bonds', centrality: '0.84', cluster: 'Higher-Order Consequence Analysis', quote: '“First-level thinking says: ‘It’s a good company, let’s buy the stock.’ Second-level thinking says: ‘It’s a good company, but everyone thinks it’s great, so it’s overvalued. Let’s sell.’”', src: 'From Private Note: “The Most Important Thing: Second-Order Thinking #15”', neighbors: ['Munger Latticework', 'Antifragility', 'Inversion Thinking'] },
+    { id: 'inversion', name: 'Inversion Thinking', en: 'Inversion & Reverse Elimination', tag: 'Decision Tool · Jacobi', x: -50, y: -105, z: -60, size: 6.0, color: '#f97316', degree: '5 Strong Synaptic Bonds', centrality: '0.81', cluster: 'Reverse Deduction & Elimination', quote: '“Invert, always invert. If you want to help India, don’t ask ‘How can I help India?’ Ask ‘What would hurt India most, and how do I avoid that?’”', src: 'From Private Note: “Charlie Munger Inversion Practice Checklist #19”', neighbors: ['Munger Latticework', 'Second-Order Thinking', 'Antifragility'] },
+    { id: 'flywheel', name: 'Growth Flywheel', en: 'Flywheel Effect & Compounding Loops', tag: 'Business Dynamics · System Cohesion', x: -70, y: 70, z: -90, size: 6.2, color: '#eab308', degree: '5 Strong Synaptic Bonds', centrality: '0.83', cluster: 'Positive Feedback Loops', quote: '“No matter how dramatic the end result, good-to-great transformations never happen in one fell swoop. The flywheel turns through relentless compound pushes in one coherent direction.”', src: 'From Private Note: “Good to Great: Flywheel Model Deconstruction #06”', neighbors: ['Compounding', 'Zero Marginal Cost', 'Nash Equilibrium'] },
+    { id: 'zero_cost', name: 'Zero Marginal Cost', en: 'Zero Marginal Cost Leverage', tag: 'Digital Economics · J. Rifkin', x: 60, y: 100, z: -70, size: 5.8, color: '#10b981', degree: '4 Strong Synaptic Bonds', centrality: '0.78', cluster: 'Scale Economics & Digital Leverage', quote: '“In the world of bits, the marginal cost of reproducing and distributing the N-th copy drops toward zero. Digitized cognitive assets possess infinite operating leverage.”', src: 'From Private Note: “The Zero Marginal Cost Society & Asset Compounding #11”', neighbors: ['Compounding', 'Growth Flywheel', 'Information Entropy'] },
+    { id: 'razor', name: 'Occam’s Razor', en: 'Occam’s Razor & Parsimony', tag: 'Philosophical Logic · Parsimony', x: 10, y: -40, z: -110, size: 5.8, color: '#8b5cf6', degree: '4 Strong Synaptic Bonds', centrality: '0.79', cluster: 'Law of Parsimony', quote: '“Entities must not be multiplied beyond necessity. Among competing hypotheses that explain the facts equally well, the simplest one with the fewest assumptions is most likely true.”', src: 'From Private Note: “Occam’s Razor & Knowledge Pruning #09”', neighbors: ['First Principles', 'Bayesian Updating'] },
+    { id: 'nash', name: 'Nash Equilibrium', en: 'Nash Equilibrium & Strategic Game', tag: 'Game Theory · Strategic Interaction', x: -100, y: -60, z: 20, size: 5.8, color: '#3b82f6', degree: '4 Strong Synaptic Bonds', centrality: '0.77', cluster: 'Multi-Agent Equilibrium', quote: '“A state where no player has an incentive to deviate unilaterally from their chosen strategy after considering the choices of all opponents.”', src: 'From Private Note: “Game Theory in Strategic Competition & Pricing #16”', neighbors: ['Growth Flywheel', 'Second-Order Thinking'] }
   ];
 
   var links = [
@@ -1196,7 +1201,7 @@ function isLightTheme() {
     ctx.scale(dpr, dpr);
     ctx.clearRect(0, 0, w, h);
 
-    var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    var isLight = document.documentElement.getAttribute('data-theme') === 'light' || (!document.documentElement.getAttribute('data-theme') && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
     var cx = w / 2, cy = h / 2;
     var radiusScale = Math.min(w, h) / 300;
 
@@ -1226,11 +1231,11 @@ function isLightTheme() {
       ctx.moveTo(p1.x, p1.y);
       ctx.lineTo(p2.x, p2.y);
       if (isHighlight) {
-        ctx.strokeStyle = isLight ? 'rgba(4, 120, 87, 0.75)' : 'rgba(46, 230, 160, 0.85)';
-        ctx.lineWidth = 2.0;
+        ctx.strokeStyle = isLight ? '#047857' : 'rgba(46, 230, 160, 0.95)';
+        ctx.lineWidth = isLight ? 2.5 : 2.0;
       } else {
-        ctx.strokeStyle = isLight ? 'rgba(4, 120, 87, ' + (avgAlpha * 0.22) + ')' : 'rgba(46, 230, 160, ' + (avgAlpha * 0.18) + ')';
-        ctx.lineWidth = 1.0;
+        ctx.strokeStyle = isLight ? 'rgba(7, 121, 67, ' + Math.max(0.35, avgAlpha * 0.55) + ')' : 'rgba(46, 230, 160, ' + (avgAlpha * 0.2) + ')';
+        ctx.lineWidth = isLight ? 1.4 : 1.0;
       }
       ctx.stroke();
     });
@@ -1289,10 +1294,18 @@ function isLightTheme() {
       // 标签文字
       var showLabel = isSel || isHov || p.z > -40;
       if (showLabel) {
-        ctx.font = (isSel ? 'bold 12px' : '11px') + ' -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
-        ctx.fillStyle = isLight ? (isSel ? '#047857' : '#051810') : (isSel ? '#2ee6a0' : 'rgba(255, 255, 255, ' + Math.max(0.4, p.alpha) + ')');
+        ctx.font = (isSel ? 'bold 12.5px' : '11.5px') + ' -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
         ctx.textAlign = 'center';
-        ctx.fillText(n.name, p.x, p.y + r + 13);
+        if (isLight) {
+          ctx.lineWidth = 3.5;
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.95)';
+          ctx.strokeText(n.name, p.x, p.y + r + 14);
+          ctx.fillStyle = isSel ? '#047857' : '#051810';
+          ctx.fillText(n.name, p.x, p.y + r + 14);
+        } else {
+          ctx.fillStyle = isSel ? '#2ee6a0' : 'rgba(255, 255, 255, ' + Math.max(0.4, p.alpha) + ')';
+          ctx.fillText(n.name, p.x, p.y + r + 13);
+        }
       }
     });
 

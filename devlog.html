@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="icon.png">
 <title>开发日记 · Synapse Note 复利笔记</title>
-<meta name="description" content="Synapse Note（复利笔记）是一款本地优先的深度思考与知识复利工具。结合 Markdown 双向链接与实体知识图谱构建私有认知网络，内置白盒 AI 深度问答、思维模型红队沙盘、十维专业研报矩阵与 LaTeX 高保真排版导出。零账号、零服务器、零埋点，纯本地存储与 BYOK 自带密钥，保护个人思想与知识资产。基础功能免费，进阶能力 Pro 月度订阅（¥19.9/月），全包含所有知识母体。">
+<meta name="description" content="Synapse Note（复利笔记）是一款本地优先的深度思考与知识复利工具。结合 Markdown 双向链接与实体知识图谱构建私有认知网络，内置 3D 全景心智星网、白盒 AI 深度问答、思维模型红队沙盘、十维专业研报矩阵与 LaTeX 高保真排版导出。零账号、零服务器、零埋点，纯本地存储与 BYOK 自带密钥，保护个人思想与知识资产。基础功能免费，进阶能力 Pro 支持超值年度订阅（¥168/年 · 约 ¥14/月）与月度订阅（¥19.9/月），全包含所有知识母体与进阶特权。">
 <link rel="canonical" href="https://fulibiji.top/devlog.html">
 <link rel="alternate" hreflang="zh-CN" href="https://fulibiji.top/devlog.html">
 <link rel="alternate" hreflang="x-default" href="https://fulibiji.top/devlog.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="开发日记">
-<meta property="og:description" content="Synapse Note（复利笔记）是一款本地优先的深度思考与知识复利工具。结合 Markdown 双向链接与实体知识图谱构建私有认知网络，内置白盒 AI 深度问答、思维模型红队沙盘、十维专业研报矩阵与 LaTeX 高保真排版导出。零账号、零服务器、零埋点，纯本地存储与 BYOK 自带密钥，保护个人思想与知识资产。基础功能免费，进阶能力 Pro 月度订阅（¥19.9/月），全包含所有知识母体。">
+<meta property="og:description" content="Synapse Note（复利笔记）是一款本地优先的深度思考与知识复利工具。结合 Markdown 双向链接与实体知识图谱构建私有认知网络，内置 3D 全景心智星网、白盒 AI 深度问答、思维模型红队沙盘、十维专业研报矩阵与 LaTeX 高保真排版导出。零账号、零服务器、零埋点，纯本地存储与 BYOK 自带密钥，保护个人思想与知识资产。基础功能免费，进阶能力 Pro 支持超值年度订阅（¥168/年 · 约 ¥14/月）与月度订阅（¥19.9/月），全包含所有知识母体与进阶特权。">
 <meta property="og:url" content="https://fulibiji.top/devlog.html">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
@@ -19,7 +19,7 @@
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "headline": "开发日记",
-  "description": "Synapse Note（复利笔记）是一款本地优先的深度思考与知识复利工具。结合 Markdown 双向链接与实体知识图谱构建私有认知网络，内置白盒 AI 深度问答、思维模型红队沙盘、十维专业研报矩阵与 LaTeX 高保真排版导出。零账号、零服务器、零埋点，纯本地存储与 BYOK 自带密钥，保护个人思想与知识资产。基础功能免费，进阶能力 Pro 月度订阅（¥19.9/月），全包含所有知识母体。",
+  "description": "Synapse Note（复利笔记）是一款本地优先的深度思考与知识复利工具。结合 Markdown 双向链接与实体知识图谱构建私有认知网络，内置 3D 全景心智星网、白盒 AI 深度问答、思维模型红队沙盘、十维专业研报矩阵与 LaTeX 高保真排版导出。零账号、零服务器、零埋点，纯本地存储与 BYOK 自带密钥，保护个人思想与知识资产。基础功能免费，进阶能力 Pro 支持超值年度订阅（¥168/年 · 约 ¥14/月）与月度订阅（¥19.9/月），全包含所有知识母体与进阶特权。",
   "url": "https://fulibiji.top/devlog.html",
   "inLanguage": "zh-CN",
   "publisher": {
@@ -31,7 +31,9 @@
 </head>
 <body>
 <nav class="wrap"><a class="brand" href="index.html">Synapse Note 复利笔记</a>
-  <a href="devlog.html">开发日记</a></nav>
+  <a href="devlog.html">开发日记</a>
+  <a href="devlog.en.html" onclick="try{localStorage.setItem('synapse_lang', 'en');}catch(e){}">EN</a>
+</nav>
 <main class="wrap prose">
 <h1>开发日记</h1><ul class="postlist"><li><a href="devlog/01-local-first-architecture.html"><span class="d">2026-09-20</span><strong>为什么坚守本地优先与设备端 SQLite：在大模型时代捍卫数据主权</strong><span class="s">绝大多数现代笔记软件将数据推向中心化云端，而我们选择 SQLite + 本地 Markdown 的纯设备端架构。本文记录我们在本地离线环境下实现高吞吐双链查询、实体关系图谱和零成本数据主权的工程选型与权衡。</span></a></li><li><a href="devlog/02-hybrid-rag-and-whitebox-reasoning.html"><span class="d">2026-09-24</span><strong>混合检索（Hybrid RAG）实践：当语义向量遇上知识图谱实体</strong><span class="s">单纯依靠语义向量容易忽略精确的实体定义，单纯依靠关键词则丧失语意发散能力。本文记录 Synapse Note 如何在移动端实现向量与图拓扑的混合打分，以及为何必须将 AI 思考过程完整白盒化。</span></a></li><li><a href="devlog/03-latex-math-export-pipeline.html"><span class="d">2026-09-26</span><strong>攻克公式导出的终极痛点：移动端 KaTeX 矢量光栅化与无损导出</strong><span class="s">传统 Markdown 工具在导出 PDF 或 Word 时，LaTeX 公式往往变成乱码或低清失真。本文介绍我们如何在 Flutter 移动端实现 KaTeX 高分辨率矢量光栅化渲染，并精准注入 PDF 与 Word OpenXML 架构。</span></a></li><li><a href="devlog/04-mental-models-and-red-teaming.html"><span class="d">2026-09-28</span><strong>思维沙盘与红队对抗：为什么你的认知镜像不该是一个迎合型 Chatbot</strong><span class="s">为什么认知镜像不应该只是一个唯唯诺诺的文本生成器？本文探讨我们将第一性原理、逆向思维等经典思维模型工程化，并引入「红队质询」机制让 AI 扮演批判性思想对手的交互设计思路。</span></a></li></ul>
 </main>

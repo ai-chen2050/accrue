@@ -33,7 +33,9 @@
 </head>
 <body>
 <nav class="wrap"><a class="brand" href="../index.html">Synapse Note 复利笔记</a>
-  <a href="../devlog.html">开发日记</a></nav>
+  <a href="../devlog.html">开发日记</a>
+  <a href="../devlog.en.html" onclick="try{localStorage.setItem('synapse_lang', 'en');}catch(e){}">EN</a>
+</nav>
 <main class="wrap prose">
 <p class="kicker">开发日记 · 2026-09-26</p><h1>攻克公式导出的终极痛点：移动端 KaTeX 矢量光栅化与无损导出</h1><p class="lead">传统 Markdown 工具在导出 PDF 或 Word 时，LaTeX 公式往往变成乱码或低清失真。本文介绍我们如何在 Flutter 移动端实现 KaTeX 高分辨率矢量光栅化渲染，并精准注入 PDF 与 Word OpenXML 架构。</p><h2 id="结论先说">结论先说</h2>
 <p>学术与数学公式是严谨思考不可或缺的基石。在市面大多数笔记软件中，LaTeX 公式在屏幕上看着正常，但一旦点击“导出为 PDF”或“导出为 Word”，公式就会变成难以辨认的低像素截图、乱码符号甚至直接消失。我们在 Synapse Note 中研发了一整套<strong>公式矢量光栅化与 OpenXML 结构无损映射流水线</strong>，让导出的文档达到学术期刊级出版标准。</p>

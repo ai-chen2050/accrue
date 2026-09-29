@@ -38,6 +38,7 @@
 - [功能说明与常见问题 (中文)](https://fulibiji.top/geo.html)
 - [How it works & FAQ (English)](https://fulibiji.top/geo.en.html)
 - [开发日记 (中文)](https://fulibiji.top/devlog.html)
+- [Devlog (English)](https://fulibiji.top/devlog.en.html)
 - [技术支持 (中文)](https://fulibiji.top/support.html)
 - [Support (English)](https://fulibiji.top/support.en.html)
 - [隐私政策 (中文)](https://fulibiji.top/privacy.html)

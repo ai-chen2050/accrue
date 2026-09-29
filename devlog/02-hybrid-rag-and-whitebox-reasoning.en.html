@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../icon.png">
+<title>Engineering Hybrid RAG: When Semantic Vectors Meet Knowledge Graph Entities · Synapse Note</title>
+<meta name="description" content="Relying solely on vector embeddings overlooks precise entity definitions, while simple keyword matching lacks semantic intuition. Here is how Synapse Note implements hybrid graph-vector scoring on mobile devices, and why white-box AI reasoning is non-negotiable.">
+<link rel="canonical" href="https://fulibiji.top/devlog/02-hybrid-rag-and-whitebox-reasoning.en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://fulibiji.top/devlog/02-hybrid-rag-and-whitebox-reasoning.en.html">
+<link rel="alternate" hreflang="x-default" href="https://fulibiji.top/devlog/02-hybrid-rag-and-whitebox-reasoning.en.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Engineering Hybrid RAG: When Semantic Vectors Meet Knowledge Graph Entities">
+<meta property="og:description" content="Relying solely on vector embeddings overlooks precise entity definitions, while simple keyword matching lacks semantic intuition. Here is how Synapse Note implements hybrid graph-vector scoring on mobile devices, and why white-box AI reasoning is non-negotiable.">
+<meta property="og:url" content="https://fulibiji.top/devlog/02-hybrid-rag-and-whitebox-reasoning.en.html">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Engineering Hybrid RAG: When Semantic Vectors Meet Knowledge Graph Entities",
+  "description": "Relying solely on vector embeddings overlooks precise entity definitions, while simple keyword matching lacks semantic intuition. Here is how Synapse Note implements hybrid graph-vector scoring on mobile devices, and why white-box AI reasoning is non-negotiable.",
+  "url": "https://fulibiji.top/devlog/02-hybrid-rag-and-whitebox-reasoning.en.html",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Synapse Note"
+  },
+  "datePublished": "2026-09-24",
+  "keywords": "Hybrid RAG, Knowledge Graph, Vector Search, Thinking Models, White-Box AI"
+}
+</script>
+</head>
+<body>
+<nav class="wrap"><a class="brand" href="../index.en.html">Synapse Note</a>
+  <a href="../devlog.en.html">Devlog</a>
+  <a href="../devloghtml" onclick="try{localStorage.setItem('synapse_lang', 'zh');}catch(e){}">中文</a>
+</nav>
+<main class="wrap prose">
+<p class="kicker">Devlog · 2026-09-24</p><h1>Engineering Hybrid RAG: When Semantic Vectors Meet Knowledge Graph Entities</h1><p class="lead">Relying solely on vector embeddings overlooks precise entity definitions, while simple keyword matching lacks semantic intuition. Here is how Synapse Note implements hybrid graph-vector scoring on mobile devices, and why white-box AI reasoning is non-negotiable.</p><h2 id="key-takeaway">Key Takeaway</h2>
+<p><strong>Black-box chatbots are the antithesis of rigorous thinking.</strong> In knowledge inquiries, we refuse to accept generative hallucinations that pretend to know the answer. Synapse Note employs a custom <strong>Hybrid RAG (Semantic Vectors + Entity Graph Topology)</strong> pipeline, exposing the complete AI thinking process and source citation quotes directly to the user.</p>
+<h2 id="the-pitfalls-of-naive-vector-search">The Pitfalls of Naive Vector Search</h2>
+<p>Most conventional AI note tools simply run generic vector embeddings across text chunks and dump the top results into an LLM context window:</p>
+<ol><li><strong>Entity Blindness</strong>: When notes link <code>[[Occam&#x27;s Razor]]</code> with <code>[[First Principles]]</code>, vector search often retrieves paragraphs sharing superficial vocabulary while missing the exact canonical definition;</li><li><strong>Lack of Logical Auditability</strong>: When asked a strategic multi-hop question, standard models return plausible-sounding generalities. Users cannot verify which specific notes were referenced, making hallucinations dangerous in decision-making.</li></ol>
+<h2 id="our-approach-dual-engine-hybrid-retrieval">Our Approach: Dual-Engine Hybrid Retrieval</h2>
+<pre><code class="lang-text">[User Inquiry / Research Report Topic]
+       │
+       ├──► Vector Engine: Local embedding cosine similarity recall (Top-K)
+       │
+       └──► Graph Engine: Extract [[Entities]], traverse 1st &amp; 2nd-degree bi-directional links
+               │
+               ▼
+       [Reranking &amp; Context Filter with Graph-Topology Weighting]
+               │
+               ▼
+       [White-Box Prompt: Enforce &lt;thinking&gt; chain-of-thought &amp; [Ref] quotes]
+               │
+               ▼
+       [Streaming UI: Real-time collapsible thinking pill + verifiable citations]</code></pre>
+<h2 id="why-white-box-thinking-matters">Why White-Box Thinking Matters</h2>
+<p>In our latest release, the knowledge QA pipeline makes reasoning steps fully auditable. As the model synthesizes your knowledge base, every deduction step— <em>&quot;First extracting Taleb&#x27;s definition of payoff convexity from [[Antifragility Notes]]...&quot;</em> <em>&quot;Next cross-referencing inverted arguments in [[Munger Latticework]]...&quot;</em> streams live inside a collapsible <code>[🧠 Explored in Depth]</code> capsule. Once complete, it folds neatly into a clean, authoritative executive summary that you can inspect at any level of depth.</p><p class="pager"><a href="01-local-first-architecture.en.html">← Previous</a> · <a href="03-latex-math-export-pipeline.en.html">Next →</a></p><p><a href="../devlog.en.html">← All posts</a></p>
+</main>
+<footer class="wrap"><p>© Synapse Note</p></footer>
+</body>
+</html>

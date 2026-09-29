@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../icon.png">
+<title>Why Local-First and On-Device SQLite: Defending Data Sovereignty in the Age of LLMs · Synapse Note</title>
+<meta name="description" content="While most modern note-taking apps push user data to centralized clouds, we chose a pure on-device architecture powered by SQLite and local Markdown. Here is our engineering rationale for achieving millisecond bi-directional link lookups, entity graph traversals, and zero-cost privacy in an offline-first environment.">
+<link rel="canonical" href="https://fulibiji.top/devlog/01-local-first-architecture.en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://fulibiji.top/devlog/01-local-first-architecture.en.html">
+<link rel="alternate" hreflang="x-default" href="https://fulibiji.top/devlog/01-local-first-architecture.en.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why Local-First and On-Device SQLite: Defending Data Sovereignty in the Age of LLMs">
+<meta property="og:description" content="While most modern note-taking apps push user data to centralized clouds, we chose a pure on-device architecture powered by SQLite and local Markdown. Here is our engineering rationale for achieving millisecond bi-directional link lookups, entity graph traversals, and zero-cost privacy in an offline-first environment.">
+<meta property="og:url" content="https://fulibiji.top/devlog/01-local-first-architecture.en.html">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why Local-First and On-Device SQLite: Defending Data Sovereignty in the Age of LLMs",
+  "description": "While most modern note-taking apps push user data to centralized clouds, we chose a pure on-device architecture powered by SQLite and local Markdown. Here is our engineering rationale for achieving millisecond bi-directional link lookups, entity graph traversals, and zero-cost privacy in an offline-first environment.",
+  "url": "https://fulibiji.top/devlog/01-local-first-architecture.en.html",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Synapse Note"
+  },
+  "datePublished": "2026-09-20",
+  "keywords": "Local-First, Architecture, SQLite, Bi-directional Notes, Privacy"
+}
+</script>
+</head>
+<body>
+<nav class="wrap"><a class="brand" href="../index.en.html">Synapse Note</a>
+  <a href="../devlog.en.html">Devlog</a>
+  <a href="../devloghtml" onclick="try{localStorage.setItem('synapse_lang', 'zh');}catch(e){}">中文</a>
+</nav>
+<main class="wrap prose">
+<p class="kicker">Devlog · 2026-09-20</p><h1>Why Local-First and On-Device SQLite: Defending Data Sovereignty in the Age of LLMs</h1><p class="lead">While most modern note-taking apps push user data to centralized clouds, we chose a pure on-device architecture powered by SQLite and local Markdown. Here is our engineering rationale for achieving millisecond bi-directional link lookups, entity graph traversals, and zero-cost privacy in an offline-first environment.</p><h2 id="key-takeaway">Key Takeaway</h2>
+<p><strong>Thoughts and cognitive assets are irreplaceable digital possessions.</strong> From day one, Synapse Note made an uncompromising commitment: no centralized user databases, no proxy relay backends. All notes, bi-directional link topologies, entity indexes, and vector embeddings are stored 100% on your local device within SQLite and Markdown files. Cloud LLMs are accessed directly via BYOK (Bring Your Own API Key), ensuring complete transparency with zero telemetry intermediaries.</p>
+<h2 id="the-problem-with-cloud-centric-note-tools">The Problem with Cloud-Centric Note Tools</h2>
+<p>When architecting Synapse Note, we scrutinized prevailing market solutions:</p>
+<ol><li><strong>Vulnerability of Centralized Services</strong>: Server outages or sudden policy pivots can lock your thoughts away overnight. When subscriptions lapse, users often face paywalled exports or proprietary format lock-ins;</li><li><strong>Severe Privacy Hazards</strong>: Mainstream &quot;AI notes&quot; demand that users upload personal journals, research briefs, and confidential memos to multi-tenant cloud clusters. Even with promised encryption, internal mishandling or unauthorized training on user data remains an ongoing risk;</li><li><strong>Latency and Offline Breakdowns</strong>: High-speed trains, flights, or flaky Wi-Fi leave cloud notes frozen in infinite loading spinners or trigger corrupted sync merge conflicts, derailing deep focus.</li></ol>
+<h2 id="architectural-trade-off-sqlite-engine-markdown-mirror">Architectural Trade-Off: SQLite Engine + Markdown Mirror</h2>
+<p>We evaluated three architectural paths:</p>
+<div class='table-wrap'><table><thead><tr><th>Approach</th><th>Advantages</th><th>Disadvantages</th><th>Decision</th></tr></thead><tbody><tr><td><strong>Pure Loose Markdown Files</strong></td><td>Human-readable, directly editable by external editors</td><td>Bi-directional lookups and graph traversals become painfully slow beyond 5,000 notes</td><td>Used strictly for export &amp; multi-device sync</td></tr><tr><td><strong>Single Local SQLite Database</strong></td><td>Millisecond SQL indexing, ACID transactions, instant graph walks</td><td>Difficult for everyday users to inspect single notes in file managers</td><td>Core runtime storage engine</td></tr><tr><td><strong>SQLite Engine + Markdown Mirror Sync</strong></td><td><strong>Combines SQLite&#x27;s sub-millisecond query speed with open portability</strong></td><td>Requires atomic writes and dual persistence state synchronization</td><td><strong>Selected Architecture</strong></td></tr></tbody></table></div>
+<p>With this dual-layer design, SQLite maintains optimized virtual tables for <code>notes</code>, <code>entities</code>, <code>links</code>, and <code>backlinks</code>, augmented by FTS5 full-text indexing and vector caches. Even with collections exceeding 10,000 notes, <code>[[WikiLink]]</code> auto-completions respond in under 3 milliseconds.</p>
+<h2 id="lessons-learned-private-conflict-free-sync">Lessons Learned: Private Conflict-Free Sync</h2>
+<p>Our greatest engineering hurdle was multi-device synchronization without centralized servers. Rather than running a costly, privacy-compromising WebSocket server, we leveraged native private iCloud Drive containers and WebDAV. To resolve offline parallel edits without duplicate copies, we implemented a lightweight diff-based patching mechanism based on logical clocks and paragraph-level hashes, achieving seamless silent reconciliation.</p>
+<h2 id="what-s-next">What&#x27;s Next</h2>
+<p>We are optimizing vector quantization to compress multi-million-word knowledge embeddings into under 50MB of local smartphone storage.</p><p class="pager"><a href="02-hybrid-rag-and-whitebox-reasoning.en.html">Next →</a></p><p><a href="../devlog.en.html">← All posts</a></p>
+</main>
+<footer class="wrap"><p>© Synapse Note</p></footer>
+</body>
+</html>
