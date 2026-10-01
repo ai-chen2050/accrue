@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="../icon.png">
-<title>为什么坚守本地优先与设备端 SQLite：在大模型时代捍卫数据主权 · Synapse Note 复利笔记</title>
+<title>为什么坚守本地优先与设备端 SQLite：在大模型时代捍卫数据主权 · 复利笔记</title>
 <meta name="description" content="绝大多数现代笔记软件将数据推向中心化云端，而我们选择 SQLite + 本地 Markdown 的纯设备端架构。本文记录我们在本地离线环境下实现高吞吐双链查询、实体关系图谱和零成本数据主权的工程选型与权衡。">
 <link rel="canonical" href="https://fulibiji.top/devlog/01-local-first-architecture.html">
 <link rel="alternate" hreflang="zh-CN" href="https://fulibiji.top/devlog/01-local-first-architecture.html">
@@ -24,7 +24,7 @@
   "inLanguage": "zh-CN",
   "publisher": {
     "@type": "Organization",
-    "name": "Synapse Note 复利笔记"
+    "name": "复利笔记"
   },
   "datePublished": "2026-09-20",
   "keywords": "本地优先, 架构, SQLite, 双链笔记, 隐私"
@@ -32,13 +32,13 @@
 </script>
 </head>
 <body>
-<nav class="wrap"><a class="brand" href="../index.html">Synapse Note 复利笔记</a>
+<nav class="wrap"><a class="brand" href="../index.html">复利笔记</a>
   <a href="../devlog.html">开发日记</a>
-  <a href="../devlog.en.html" onclick="try{localStorage.setItem('synapse_lang', 'en');}catch(e){}">EN</a>
+  <a href="../devlog.en.html" onclick="try{localStorage.setItem('accrue_lang', 'en');}catch(e){}">EN</a>
 </nav>
 <main class="wrap prose">
 <p class="kicker">开发日记 · 2026-09-20</p><h1>为什么坚守本地优先与设备端 SQLite：在大模型时代捍卫数据主权</h1><p class="lead">绝大多数现代笔记软件将数据推向中心化云端，而我们选择 SQLite + 本地 Markdown 的纯设备端架构。本文记录我们在本地离线环境下实现高吞吐双链查询、实体关系图谱和零成本数据主权的工程选型与权衡。</p><h2 id="结论先说">结论先说</h2>
-<p><strong>思想与知识资产是不可再生的个人数字资产。</strong>我们从第一天起就决定：Synapse Note（复利笔记）不设立任何中心化用户数据库，不架设中转后端，所有笔记、双向链接拓扑、实体索引与向量缓存 100% 存放在用户设备本地的 SQLite 数据库与 Markdown 沙盒中。大模型能力通过 BYOK（自带 API Key）直连官方端点，中间没有任何黑盒拦截。</p>
+<p><strong>思想与知识资产是不可再生的个人数字资产。</strong>我们从第一天起就决定：Accrue Notes（复利笔记）不设立任何中心化用户数据库，不架设中转后端，所有笔记、双向链接拓扑、实体索引与向量缓存 100% 存放在用户设备本地的 SQLite 数据库与 Markdown 沙盒中。大模型能力通过 BYOK（自带 API Key）直连官方端点，中间没有任何黑盒拦截。</p>
 <h2 id="背景与痛点">背景与痛点</h2>
 <p>在立项之初，我们调研了市面上几乎所有主流笔记与知识库软件：</p>
 <ol><li><strong>中心化云笔记的脆弱性</strong>：厂商服务器宕机或政策调整时，知识库瞬间不可用；当停止订阅时，用户的历史笔记甚至被格式锁定或限制导出；</li><li><strong>严重的隐私隐患</strong>：AI 笔记普遍要求用户将个人工作总结、读书札记和私人灵感上传至云端服务器；哪怕厂商宣称加密，在多租户服务器环境下，数据被内部人员误读或被用作未经授权的模型微调已屡见不鲜；</li><li><strong>延迟与离线断点</strong>：在高铁、飞机或弱网环境下，云端笔记常常卡在“加载中…”或出现冲突合并覆写，打断心流。</li></ol>
@@ -51,6 +51,6 @@
 <h2 id="下一步">下一步</h2>
 <p>我们正在进一步压缩本地向量索引的存储体积，使长达数百万字的知识库在本地手机存储中占用不超过 50MB。</p><p class="pager"><a href="02-hybrid-rag-and-whitebox-reasoning.html">下一篇 →</a></p><p><a href="../devlog.html">← 全部开发日记</a></p>
 </main>
-<footer class="wrap"><p>© Synapse Note</p></footer>
+<footer class="wrap"><p>© Accrue Notes</p></footer>
 </body>
 </html>

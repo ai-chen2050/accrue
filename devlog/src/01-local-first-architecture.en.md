@@ -10,11 +10,11 @@ status: published
 
 ## Key Takeaway
 
-**Thoughts and cognitive assets are irreplaceable digital possessions.** From day one, Synapse Note made an uncompromising commitment: no centralized user databases, no proxy relay backends. All notes, bi-directional link topologies, entity indexes, and vector embeddings are stored 100% on your local device within SQLite and Markdown files. Cloud LLMs are accessed directly via BYOK (Bring Your Own API Key), ensuring complete transparency with zero telemetry intermediaries.
+**Thoughts and cognitive assets are irreplaceable digital possessions.** From day one, Accrue Notes made an uncompromising commitment: no centralized user databases, no proxy relay backends. All notes, bi-directional link topologies, entity indexes, and vector embeddings are stored 100% on your local device within SQLite and Markdown files. Cloud LLMs are accessed directly via BYOK (Bring Your Own API Key), ensuring complete transparency with zero telemetry intermediaries.
 
 ## The Problem with Cloud-Centric Note Tools
 
-When architecting Synapse Note, we scrutinized prevailing market solutions:
+When architecting Accrue Notes, we scrutinized prevailing market solutions:
 
 1. **Vulnerability of Centralized Services**: Server outages or sudden policy pivots can lock your thoughts away overnight. When subscriptions lapse, users often face paywalled exports or proprietary format lock-ins;
 2. **Severe Privacy Hazards**: Mainstream "AI notes" demand that users upload personal journals, research briefs, and confidential memos to multi-tenant cloud clusters. Even with promised encryption, internal mishandling or unauthorized training on user data remains an ongoing risk;

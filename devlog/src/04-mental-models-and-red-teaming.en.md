@@ -10,7 +10,7 @@ status: published
 
 ## Key Takeaway
 
-**The fatal flaw of most modern AI assistants is sycophancy.** When you propose a flawed business assumption or confirm a cognitive bias, typical chatbots cheerlead: *"That's a brilliant thought! Here are three ways to proceed..."* This amplifies your blind spots. In Synapse Note, we created an active **Mental Model Sandbox** and **Red Teaming Mode** where AI vigorously interrogates your assumptions to sharpen your intellect.
+**The fatal flaw of most modern AI assistants is sycophancy.** When you propose a flawed business assumption or confirm a cognitive bias, typical chatbots cheerlead: *"That's a brilliant thought! Here are three ways to proceed..."* This amplifies your blind spots. In Accrue Notes, we created an active **Mental Model Sandbox** and **Red Teaming Mode** where AI vigorously interrogates your assumptions to sharpen your intellect.
 
 ## Engineering the Munger Latticework
 
@@ -29,4 +29,4 @@ When users activate the **Red Team Sparring** toggle, the AI transforms from an 
 2. **Stress-Testing Arguments**: Poses edge-case scenarios where your proposed thesis breaks down;
 3. **Devil's Advocate Perspective**: Restructures the entire argument from the viewpoint of your fiercest competitor or skeptic.
 
-This transforms Synapse Note from a static repository of notes into a high-intensity cognitive gymnasium.
+This transforms Accrue Notes from a static repository of notes into a high-intensity cognitive gymnasium.

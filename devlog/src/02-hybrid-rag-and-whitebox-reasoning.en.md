@@ -1,7 +1,7 @@
 ---
 title: Engineering Hybrid RAG: When Semantic Vectors Meet Knowledge Graph Entities
 date: 2026-09-24
-summary: Relying solely on vector embeddings overlooks precise entity definitions, while simple keyword matching lacks semantic intuition. Here is how Synapse Note implements hybrid graph-vector scoring on mobile devices, and why white-box AI reasoning is non-negotiable.
+summary: Relying solely on vector embeddings overlooks precise entity definitions, while simple keyword matching lacks semantic intuition. Here is how Accrue Notes implements hybrid graph-vector scoring on mobile devices, and why white-box AI reasoning is non-negotiable.
 tags: Hybrid RAG, Knowledge Graph, Vector Search, Thinking Models, White-Box AI
 lang: en
 order: 2
@@ -10,7 +10,7 @@ status: published
 
 ## Key Takeaway
 
-**Black-box chatbots are the antithesis of rigorous thinking.** In knowledge inquiries, we refuse to accept generative hallucinations that pretend to know the answer. Synapse Note employs a custom **Hybrid RAG (Semantic Vectors + Entity Graph Topology)** pipeline, exposing the complete AI thinking process and source citation quotes directly to the user.
+**Black-box chatbots are the antithesis of rigorous thinking.** In knowledge inquiries, we refuse to accept generative hallucinations that pretend to know the answer. Accrue Notes employs a custom **Hybrid RAG (Semantic Vectors + Entity Graph Topology)** pipeline, exposing the complete AI thinking process and source citation quotes directly to the user.
 
 ## The Pitfalls of Naive Vector Search
 

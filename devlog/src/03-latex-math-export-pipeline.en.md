@@ -10,7 +10,7 @@ status: published
 
 ## Key Takeaway
 
-Academic formulas and mathematical rigor are foundational to serious inquiry. In most note apps, LaTeX formulas look sharp on display, but when exported to PDF or Word (.docx), they degrade into unreadable low-res bitmaps or vanish completely. In Synapse Note, we designed a **vector rasterization and OpenXML lossless mapping pipeline** that elevates document exports to journal-grade publishing standards.
+Academic formulas and mathematical rigor are foundational to serious inquiry. In most note apps, LaTeX formulas look sharp on display, but when exported to PDF or Word (.docx), they degrade into unreadable low-res bitmaps or vanish completely. In Accrue Notes, we designed a **vector rasterization and OpenXML lossless mapping pipeline** that elevates document exports to journal-grade publishing standards.
 
 ## The Core Challenges
 

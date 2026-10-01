@@ -1,7 +1,7 @@
 ---
 title: 混合检索（Hybrid RAG）实践：当语义向量遇上知识图谱实体
 date: 2026-09-24
-summary: 单纯依靠语义向量容易忽略精确的实体定义，单纯依靠关键词则丧失语意发散能力。本文记录 Synapse Note 如何在移动端实现向量与图拓扑的混合打分，以及为何必须将 AI 思考过程完整白盒化。
+summary: 单纯依靠语义向量容易忽略精确的实体定义，单纯依靠关键词则丧失语意发散能力。本文记录 Accrue Notes 如何在移动端实现向量与图拓扑的混合打分，以及为何必须将 AI 思考过程完整白盒化。
 tags: Hybrid RAG, 知识图谱, 向量检索, Thinking 模型, 白盒 AI
 lang: zh-CN
 order: 2
@@ -10,7 +10,7 @@ status: published
 
 ## 结论先说
 
-**黑盒 Chatbot 是个人深度思考的天敌。**在知识对话中，我们拒绝任何“假装知道”的生成式幻觉。Synapse Note 采用自研的 **Hybrid RAG（语义向量 + 实体图谱拓扑）**混合检索算法，并将 AI 思考过程（Thinking Process）与源笔记引用卡片（Ref Quotes）完全暴露给用户，让每次推演清晰可溯源。
+**黑盒 Chatbot 是个人深度思考的天敌。**在知识对话中，我们拒绝任何“假装知道”的生成式幻觉。Accrue Notes 采用自研的 **Hybrid RAG（语义向量 + 实体图谱拓扑）**混合检索算法，并将 AI 思考过程（Thinking Process）与源笔记引用卡片（Ref Quotes）完全暴露给用户，让每次推演清晰可溯源。
 
 ## 传统单一检索的死穴
 

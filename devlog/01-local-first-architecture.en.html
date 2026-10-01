@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="../icon.png">
-<title>Why Local-First and On-Device SQLite: Defending Data Sovereignty in the Age of LLMs · Synapse Note</title>
+<title>Why Local-First and On-Device SQLite: Defending Data Sovereignty in the Age of LLMs · Accrue</title>
 <meta name="description" content="While most modern note-taking apps push user data to centralized clouds, we chose a pure on-device architecture powered by SQLite and local Markdown. Here is our engineering rationale for achieving millisecond bi-directional link lookups, entity graph traversals, and zero-cost privacy in an offline-first environment.">
 <link rel="canonical" href="https://fulibiji.top/devlog/01-local-first-architecture.en.html">
 <link rel="alternate" hreflang="zh-CN" href="https://fulibiji.top/devlog/01-local-first-architecture.en.html">
@@ -24,7 +24,7 @@
   "inLanguage": "en",
   "publisher": {
     "@type": "Organization",
-    "name": "Synapse Note"
+    "name": "Accrue"
   },
   "datePublished": "2026-09-20",
   "keywords": "Local-First, Architecture, SQLite, Bi-directional Notes, Privacy"
@@ -32,15 +32,15 @@
 </script>
 </head>
 <body>
-<nav class="wrap"><a class="brand" href="../index.en.html">Synapse Note</a>
+<nav class="wrap"><a class="brand" href="../index.en.html">Accrue</a>
   <a href="../devlog.en.html">Devlog</a>
-  <a href="../devloghtml" onclick="try{localStorage.setItem('synapse_lang', 'zh');}catch(e){}">中文</a>
+  <a href="../devloghtml" onclick="try{localStorage.setItem('accrue_lang', 'zh');}catch(e){}">中文</a>
 </nav>
 <main class="wrap prose">
 <p class="kicker">Devlog · 2026-09-20</p><h1>Why Local-First and On-Device SQLite: Defending Data Sovereignty in the Age of LLMs</h1><p class="lead">While most modern note-taking apps push user data to centralized clouds, we chose a pure on-device architecture powered by SQLite and local Markdown. Here is our engineering rationale for achieving millisecond bi-directional link lookups, entity graph traversals, and zero-cost privacy in an offline-first environment.</p><h2 id="key-takeaway">Key Takeaway</h2>
-<p><strong>Thoughts and cognitive assets are irreplaceable digital possessions.</strong> From day one, Synapse Note made an uncompromising commitment: no centralized user databases, no proxy relay backends. All notes, bi-directional link topologies, entity indexes, and vector embeddings are stored 100% on your local device within SQLite and Markdown files. Cloud LLMs are accessed directly via BYOK (Bring Your Own API Key), ensuring complete transparency with zero telemetry intermediaries.</p>
+<p><strong>Thoughts and cognitive assets are irreplaceable digital possessions.</strong> From day one, Accrue Notes made an uncompromising commitment: no centralized user databases, no proxy relay backends. All notes, bi-directional link topologies, entity indexes, and vector embeddings are stored 100% on your local device within SQLite and Markdown files. Cloud LLMs are accessed directly via BYOK (Bring Your Own API Key), ensuring complete transparency with zero telemetry intermediaries.</p>
 <h2 id="the-problem-with-cloud-centric-note-tools">The Problem with Cloud-Centric Note Tools</h2>
-<p>When architecting Synapse Note, we scrutinized prevailing market solutions:</p>
+<p>When architecting Accrue Notes, we scrutinized prevailing market solutions:</p>
 <ol><li><strong>Vulnerability of Centralized Services</strong>: Server outages or sudden policy pivots can lock your thoughts away overnight. When subscriptions lapse, users often face paywalled exports or proprietary format lock-ins;</li><li><strong>Severe Privacy Hazards</strong>: Mainstream &quot;AI notes&quot; demand that users upload personal journals, research briefs, and confidential memos to multi-tenant cloud clusters. Even with promised encryption, internal mishandling or unauthorized training on user data remains an ongoing risk;</li><li><strong>Latency and Offline Breakdowns</strong>: High-speed trains, flights, or flaky Wi-Fi leave cloud notes frozen in infinite loading spinners or trigger corrupted sync merge conflicts, derailing deep focus.</li></ol>
 <h2 id="architectural-trade-off-sqlite-engine-markdown-mirror">Architectural Trade-Off: SQLite Engine + Markdown Mirror</h2>
 <p>We evaluated three architectural paths:</p>
@@ -51,6 +51,6 @@
 <h2 id="what-s-next">What&#x27;s Next</h2>
 <p>We are optimizing vector quantization to compress multi-million-word knowledge embeddings into under 50MB of local smartphone storage.</p><p class="pager"><a href="02-hybrid-rag-and-whitebox-reasoning.en.html">Next →</a></p><p><a href="../devlog.en.html">← All posts</a></p>
 </main>
-<footer class="wrap"><p>© Synapse Note</p></footer>
+<footer class="wrap"><p>© Accrue Notes</p></footer>
 </body>
 </html>

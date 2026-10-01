@@ -3,24 +3,25 @@
   "//i18n": "面向用户的文本写成 {\"zh-CN\": \"…\", \"en\": \"…\"}；取不到当前语言时退回第一门语言。",
   "site": {
     "name": {
-      "zh-CN": "Synapse Note 复利笔记",
-      "en": "Synapse Note"
+      "zh-CN": "复利笔记",
+      "en": "Accrue"
     },
     "altNames": [
       "fulibiji",
-      "Synapse Note",
+      "Accrue",
+      "Accrue Notes",
       "复利笔记",
-      "SynapseNote",
-      "SynapseNote App"
+      "AccrueNotes",
+      "Accrue App"
     ],
     "domain": "https://fulibiji.top",
     "tagline": {
-      "zh-CN": "本地优先的双链知识库与 AI 认知镜像",
-      "en": "Local-First Bi-directional Knowledge Base & AI Cognitive Mirror"
+      "zh-CN": "知识随时间产生复利。本地优先的双链知识库与 AI 认知镜像",
+      "en": "Accrue Notes — Where knowledge accrues over time."
     },
     "description": {
-      "zh-CN": "Synapse Note（复利笔记）是一款本地优先的深度思考与知识复利工具。结合 Markdown 双向链接与实体知识图谱构建私有认知网络，内置 3D 全景心智星网、白盒 AI 深度问答、思维模型红队沙盘、十维专业研报矩阵与 LaTeX 高保真排版导出。零账号、零服务器、零埋点，纯本地存储与 BYOK 自带密钥，保护个人思想与知识资产。基础功能免费，进阶能力 Pro 支持超值年度订阅（¥168/年 · 约 ¥14/月）与月度订阅（¥19.9/月），全包含所有知识母体与进阶特权。",
-      "en": "Synapse Note is a local-first deep thinking and knowledge compounding tool. Combining Markdown bi-directional links with an entity knowledge graph, it features a 3D interactive mindscape constellation, a white-box AI cognitive mirror, mental model red-teaming, a 10-dimensional research matrix, and publication-grade LaTeX math exports. Zero accounts, zero tracking, local-only storage, and bring-your-own-key (BYOK) privacy. Core features free; Pro subscription available in discounted Annual (¥168/yr · ~¥14/mo) and flexible Monthly (¥19.9/mo) plans with all knowledge packs included."
+      "zh-CN": "Accrue Notes（复利笔记）是一款本地优先的深度思考与知识复利工具。结合 Markdown 双向链接与实体知识图谱构建私有认知网络，内置 3D 全景心智星网、白盒 AI 深度问答、思维模型红队沙盘、十维专业研报矩阵与 LaTeX 高保真排版导出。零账号、零服务器、零埋点，纯本地存储与 BYOK 自带密钥，保护个人思想与知识资产。基础功能免费，进阶能力 Pro 支持超值年度订阅（¥168/年 · 约 ¥14/月）与月度订阅（¥19.9/月），全包含所有知识母体与进阶特权。",
+      "en": "Accrue Notes is a local-first deep thinking and knowledge compounding tool. Combining Markdown bi-directional links with an entity knowledge graph, it features a 3D interactive mindscape constellation, a white-box AI cognitive mirror, mental model red-teaming, a 10-dimensional research matrix, and publication-grade LaTeX math exports. Zero accounts, zero tracking, local-only storage, and bring-your-own-key (BYOK) privacy. Core features free; Pro subscription available in discounted Annual (¥168/yr · ~¥14/mo) and flexible Monthly (¥19.9/mo) plans with all knowledge packs included."
     },
     "type": "SoftwareApplication",
     "category": "ProductivityApplication",
@@ -32,7 +33,7 @@
     "price": "0",
     "currency": "CNY",
     "author": {
-      "name": "Synapse Note",
+      "name": "Accrue Notes",
       "email": "blake.chen94@gmail.com"
     },
     "icon": "icon.png",
@@ -65,8 +66,8 @@
       "priority": 1.0,
       "changefreq": "weekly",
       "description": {
-        "zh-CN": "Synapse Note 官网：本地优先的双链笔记与知识图谱工具，基础功能免费，Pro 月度订阅，纯本地存储，BYOK 自带 Key。",
-        "en": "Synapse Note official site: local-first bi-directional linking and knowledge graph tool with transparent AI reasoning, Pro monthly subscription, and BYOK privacy."
+        "zh-CN": "Accrue Notes 官网：本地优先的双链笔记与知识图谱工具，基础功能免费，Pro 月度订阅，纯本地存储，BYOK 自带 Key。",
+        "en": "Accrue Notes official site: local-first bi-directional linking and knowledge graph tool with transparent AI reasoning, Pro monthly subscription, and BYOK privacy."
       }
     },
     {
@@ -78,8 +79,8 @@
       "priority": 0.95,
       "changefreq": "weekly",
       "description": {
-        "zh-CN": "Synapse Note 完整机制说明：双链与知识图谱、白盒检索与思考链、十维研报生成、LaTeX公式导出、Pro月度订阅与本地隐私边界。",
-        "en": "Complete technical mechanism and FAQ for Synapse Note: bi-directional links, hybrid RAG, 10D research matrix, LaTeX math export, Pro subscription, and privacy boundaries."
+        "zh-CN": "Accrue Notes 完整机制说明：双链与知识图谱、白盒检索与思考链、十维研报生成、LaTeX公式导出、Pro月度订阅与本地隐私边界。",
+        "en": "Complete technical mechanism and FAQ for Accrue Notes: bi-directional links, hybrid RAG, 10D research matrix, LaTeX math export, Pro subscription, and privacy boundaries."
       }
     },
     {
@@ -92,8 +93,8 @@
       "changefreq": "weekly",
       "generated": true,
       "description": {
-        "zh-CN": "Synapse Note 开发日记：架构选型、本地优先与向量检索的取舍、LaTeX 渲染管道与性能优化记录。",
-        "en": "Synapse Note devlog: engineering trade-offs, local-first hybrid RAG, LaTeX rasterization pipeline, and performance benchmarks."
+        "zh-CN": "Accrue Notes 开发日记：架构选型、本地优先与向量检索的取舍、LaTeX 渲染管道与性能优化记录。",
+        "en": "Accrue Notes devlog: engineering trade-offs, local-first hybrid RAG, LaTeX rasterization pipeline, and performance benchmarks."
       }
     },
     {
@@ -105,8 +106,8 @@
       "priority": 0.5,
       "changefreq": "monthly",
       "description": {
-        "zh-CN": "Synapse Note 技术支持：联系方式、Pro 订阅管理与取消、换机迁移、数据备份与恢复、Bug 与需求反馈。",
-        "en": "Synapse Note support: contact, managing Pro subscriptions, data migration, backup and restore, bug reports and feedback."
+        "zh-CN": "Accrue Notes 技术支持：联系方式、Pro 订阅管理与取消、换机迁移、数据备份与恢复、Bug 与需求反馈。",
+        "en": "Accrue Notes support: contact, managing Pro subscriptions, data migration, backup and restore, bug reports and feedback."
       }
     },
     {
@@ -118,8 +119,8 @@
       "priority": 0.5,
       "changefreq": "monthly",
       "description": {
-        "zh-CN": "Synapse Note 隐私政策：不收集任何个人信息，数据全量存放在本机，唯一联网是你自带 Key 的 AI 调用且不经任何中间服务器。",
-        "en": "Synapse Note privacy policy: zero personal data collected, everything stored on-device, only connecting directly to your chosen AI provider."
+        "zh-CN": "Accrue Notes 隐私政策：不收集任何个人信息，数据全量存放在本机，唯一联网是你自带 Key 的 AI 调用且不经任何中间服务器。",
+        "en": "Accrue Notes privacy policy: zero personal data collected, everything stored on-device, only connecting directly to your chosen AI provider."
       }
     },
     {
@@ -131,8 +132,8 @@
       "priority": 0.5,
       "changefreq": "monthly",
       "description": {
-        "zh-CN": "Synapse Note 用户协议：许可范围、无账号的数据责任、Pro 月度订阅与自动续期规则、自带 API Key 的边界与免责声明。",
-        "en": "Synapse Note terms of service: licence, local data responsibility, Pro monthly subscription rules, bring-your-own-key AI boundaries, and disclaimers."
+        "zh-CN": "Accrue Notes 用户协议：许可范围、无账号的数据责任、Pro 月度订阅与自动续期规则、自带 API Key 的边界与免责声明。",
+        "en": "Accrue Notes terms of service: licence, local data responsibility, Pro monthly subscription rules, bring-your-own-key AI boundaries, and disclaimers."
       }
     },
     {
@@ -145,8 +146,8 @@
       "priority": 0.3,
       "changefreq": "yearly",
       "description": {
-        "zh-CN": "Synapse Note 隐私政策（华为应用市场版）：纯本地运行，不收集个人信息，所有笔记数据只保存在设备本地，无任何数据离开设备。",
-        "en": "Synapse Note privacy policy (Huawei edition): strictly on-device, zero personal data collected, all notes remain on your phone with zero network transfer."
+        "zh-CN": "Accrue Notes 隐私政策（华为应用市场版）：纯本地运行，不收集个人信息，所有笔记数据只保存在设备本地，无任何数据离开设备。",
+        "en": "Accrue Notes privacy policy (Huawei edition): strictly on-device, zero personal data collected, all notes remain on your phone with zero network transfer."
       }
     },
     {
@@ -159,8 +160,8 @@
       "priority": 0.3,
       "changefreq": "yearly",
       "description": {
-        "zh-CN": "Synapse Note 用户协议（华为应用市场版）：许可范围、无账号的数据责任、Pro 月度订阅及离线使用条款。",
-        "en": "Synapse Note terms of service (Huawei edition): licence, on-device data responsibilities, Pro monthly subscription, and offline use terms."
+        "zh-CN": "Accrue Notes 用户协议（华为应用市场版）：许可范围、无账号的数据责任、Pro 月度订阅及离线使用条款。",
+        "en": "Accrue Notes terms of service (Huawei edition): licence, on-device data responsibilities, Pro monthly subscription, and offline use terms."
       }
     }
   ],
@@ -356,12 +357,12 @@
   "faq": [
     {
       "q": {
-        "zh-CN": "Synapse Note 复利笔记 是什么？它与普通笔记软件有什么区别？",
-        "en": "What is Synapse Note, and how is it different from traditional note-taking apps?"
+        "zh-CN": "Accrue 复利笔记 是什么？它与普通笔记软件有什么区别？",
+        "en": "What is Accrue Notes, and how is it different from traditional note-taking apps?"
       },
       "a": {
-        "zh-CN": "Synapse Note 是一款专为终身学习者、研究员与深度思考者设计的本地优先双链知识库与 AI 认知镜像。它通过 Markdown 双向链接与知识图谱串联笔记，结合自带 API Key 的白盒 AI 深度问答、思维模型红队沙盘和十维研报矩阵，帮助你将零散记录沉淀为可复利的认知资产。",
-        "en": "Synapse Note is a local-first bi-directional knowledge base and AI cognitive mirror crafted for lifelong learners, researchers, and thinkers. It weaves notes through [[bi-directional links]] and knowledge graphs, combined with BYOK white-box AI Q&A, mental model red-teaming, and a 10D research matrix to compound your knowledge into lifelong cognitive assets."
+        "zh-CN": "Accrue Notes 是一款专为终身学习者、研究员与深度思考者设计的本地优先双链知识库与 AI 认知镜像。它通过 Markdown 双向链接与知识图谱串联笔记，结合自带 API Key 的白盒 AI 深度问答、思维模型红队沙盘和十维研报矩阵，帮助你将零散记录沉淀为可复利的认知资产。",
+        "en": "Accrue Notes is a local-first bi-directional knowledge base and AI cognitive mirror crafted for lifelong learners, researchers, and thinkers. It weaves notes through [[bi-directional links]] and knowledge graphs, combined with BYOK white-box AI Q&A, mental model red-teaming, and a 10D research matrix to compound your knowledge into lifelong cognitive assets."
       }
     },
     {
@@ -380,14 +381,14 @@
         "en": "What is BYOK, and how are AI features billed?"
       },
       "a": {
-        "zh-CN": "BYOK 即「自带 API Key」（Bring Your Own Key）。你可以自由填写 OpenAI、Anthropic Claude、DeepSeek、Google Gemini 等服务商的 API 密钥。所有 AI 计费直接在你的模型服务商后台按实际调用 Token 结算（通常每次深度问答仅需分厘），Synapse Note 不收取任何 AI 订阅溢价或中转费用。",
-        "en": "BYOK stands for Bring Your Own Key. You can use your own API key from OpenAI, Anthropic Claude, DeepSeek, Google Gemini, and more. Usage is billed directly by your chosen provider based on token consumption (usually fractions of a cent per query). Synapse Note adds no markup or subscription fee."
+        "zh-CN": "BYOK 即「自带 API Key」（Bring Your Own Key）。你可以自由填写 OpenAI、Anthropic Claude、DeepSeek、Google Gemini 等服务商的 API 密钥。所有 AI 计费直接在你的模型服务商后台按实际调用 Token 结算（通常每次深度问答仅需分厘），Accrue Notes 不收取任何 AI 订阅溢价或中转费用。",
+        "en": "BYOK stands for Bring Your Own Key. You can use your own API key from OpenAI, Anthropic Claude, DeepSeek, Google Gemini, and more. Usage is billed directly by your chosen provider based on token consumption (usually fractions of a cent per query). Accrue Notes adds no markup or subscription fee."
       }
     },
     {
       "q": {
         "zh-CN": "没有网络或断网时能正常记笔记吗？",
-        "en": "Can I use Synapse Note without an internet connection?"
+        "en": "Can I use Accrue Notes without an internet connection?"
       },
       "a": {
         "zh-CN": "完全可以。除联网调用你配置的 AI 大模型外，应用的所有核心功能——包括 Markdown 编辑、双链跳转、实体图谱浏览、本地全文检索、公式渲染、PDF/Word 导出等——全部在本地离线运行。",
@@ -406,12 +407,12 @@
     },
     {
       "q": {
-        "zh-CN": "Synapse Note Pro 包含什么？年度与月度订阅如何收费与取消？",
-        "en": "What does Synapse Note Pro include, and how does Annual vs Monthly billing and cancellation work?"
+        "zh-CN": "Accrue Notes Pro 包含什么？年度与月度订阅如何收费与取消？",
+        "en": "What does Accrue Notes Pro include, and how does Annual vs Monthly billing and cancellation work?"
       },
       "a": {
-        "zh-CN": "Synapse Note 基础功能永久免费（含 50 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能提供两种灵活的订阅选项：超值年度订阅（¥168/年，折合仅 ¥14/月，立省 >30%，最受欢迎）与灵活月度订阅（¥19.9/月）。订阅即可解锁突破 50 篇限制的无限笔记、3D 全景心智星网、无限次 AI 专属 Agent 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由对应应用商店（Apple App Store / Google Play / 华为应用市场）官方安全扣费，你可以随时在系统应用商店的「订阅管理」中自主取消续订，已有数据永久属于你，终身不锁死。",
-        "en": "Synapse Note core features are free forever (with 50 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are available in two flexible options: the best-value Annual Plan at ¥168/year (~¥14/month, save >30%, most popular) and the flexible Monthly Plan at ¥19.9/month. Pro unlocks unlimited notes, the 3D mindscape constellation, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are securely processed by official app stores (Apple App Store / Google Play / Huawei AppGallery) and can be cancelled anytime in your store account settings with zero data lock-in."
+        "zh-CN": "Accrue Notes 基础功能永久免费（含 50 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能提供两种灵活的订阅选项：超值年度订阅（¥168/年，折合仅 ¥14/月，立省 >30%，最受欢迎）与灵活月度订阅（¥19.9/月）。订阅即可解锁突破 50 篇限制的无限笔记、3D 全景心智星网、无限次 AI 专属 Agent 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由对应应用商店（Apple App Store / Google Play / 华为应用市场）官方安全扣费，你可以随时在系统应用商店的「订阅管理」中自主取消续订，已有数据永久属于你，终身不锁死。",
+        "en": "Accrue Notes core features are free forever (with 50 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are available in two flexible options: the best-value Annual Plan at ¥168/year (~¥14/month, save >30%, most popular) and the flexible Monthly Plan at ¥19.9/month. Pro unlocks unlimited notes, the 3D mindscape constellation, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are securely processed by official app stores (Apple App Store / Google Play / Huawei AppGallery) and can be cancelled anytime in your store account settings with zero data lock-in."
       }
     }
   ],
@@ -446,10 +447,10 @@
       "知识图谱",
       "LaTeX公式",
       "思维模型",
-      "Synapse Note"
+      "Accrue Notes"
     ],
     "en": [
-      "Synapse Note",
+      "Accrue Notes",
       "bi-directional linking",
       "second brain",
       "local-first",

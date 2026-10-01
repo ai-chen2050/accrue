@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="../icon.png">
-<title>混合检索（Hybrid RAG）实践：当语义向量遇上知识图谱实体 · Synapse Note 复利笔记</title>
-<meta name="description" content="单纯依靠语义向量容易忽略精确的实体定义，单纯依靠关键词则丧失语意发散能力。本文记录 Synapse Note 如何在移动端实现向量与图拓扑的混合打分，以及为何必须将 AI 思考过程完整白盒化。">
+<title>混合检索（Hybrid RAG）实践：当语义向量遇上知识图谱实体 · 复利笔记</title>
+<meta name="description" content="单纯依靠语义向量容易忽略精确的实体定义，单纯依靠关键词则丧失语意发散能力。本文记录 Accrue Notes 如何在移动端实现向量与图拓扑的混合打分，以及为何必须将 AI 思考过程完整白盒化。">
 <link rel="canonical" href="https://fulibiji.top/devlog/02-hybrid-rag-and-whitebox-reasoning.html">
 <link rel="alternate" hreflang="zh-CN" href="https://fulibiji.top/devlog/02-hybrid-rag-and-whitebox-reasoning.html">
 <link rel="alternate" hreflang="x-default" href="https://fulibiji.top/devlog/02-hybrid-rag-and-whitebox-reasoning.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="混合检索（Hybrid RAG）实践：当语义向量遇上知识图谱实体">
-<meta property="og:description" content="单纯依靠语义向量容易忽略精确的实体定义，单纯依靠关键词则丧失语意发散能力。本文记录 Synapse Note 如何在移动端实现向量与图拓扑的混合打分，以及为何必须将 AI 思考过程完整白盒化。">
+<meta property="og:description" content="单纯依靠语义向量容易忽略精确的实体定义，单纯依靠关键词则丧失语意发散能力。本文记录 Accrue Notes 如何在移动端实现向量与图拓扑的混合打分，以及为何必须将 AI 思考过程完整白盒化。">
 <meta property="og:url" content="https://fulibiji.top/devlog/02-hybrid-rag-and-whitebox-reasoning.html">
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">
@@ -19,12 +19,12 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "混合检索（Hybrid RAG）实践：当语义向量遇上知识图谱实体",
-  "description": "单纯依靠语义向量容易忽略精确的实体定义，单纯依靠关键词则丧失语意发散能力。本文记录 Synapse Note 如何在移动端实现向量与图拓扑的混合打分，以及为何必须将 AI 思考过程完整白盒化。",
+  "description": "单纯依靠语义向量容易忽略精确的实体定义，单纯依靠关键词则丧失语意发散能力。本文记录 Accrue Notes 如何在移动端实现向量与图拓扑的混合打分，以及为何必须将 AI 思考过程完整白盒化。",
   "url": "https://fulibiji.top/devlog/02-hybrid-rag-and-whitebox-reasoning.html",
   "inLanguage": "zh-CN",
   "publisher": {
     "@type": "Organization",
-    "name": "Synapse Note 复利笔记"
+    "name": "复利笔记"
   },
   "datePublished": "2026-09-24",
   "keywords": "Hybrid RAG, 知识图谱, 向量检索, Thinking 模型, 白盒 AI"
@@ -32,13 +32,13 @@
 </script>
 </head>
 <body>
-<nav class="wrap"><a class="brand" href="../index.html">Synapse Note 复利笔记</a>
+<nav class="wrap"><a class="brand" href="../index.html">复利笔记</a>
   <a href="../devlog.html">开发日记</a>
-  <a href="../devlog.en.html" onclick="try{localStorage.setItem('synapse_lang', 'en');}catch(e){}">EN</a>
+  <a href="../devlog.en.html" onclick="try{localStorage.setItem('accrue_lang', 'en');}catch(e){}">EN</a>
 </nav>
 <main class="wrap prose">
-<p class="kicker">开发日记 · 2026-09-24</p><h1>混合检索（Hybrid RAG）实践：当语义向量遇上知识图谱实体</h1><p class="lead">单纯依靠语义向量容易忽略精确的实体定义，单纯依靠关键词则丧失语意发散能力。本文记录 Synapse Note 如何在移动端实现向量与图拓扑的混合打分，以及为何必须将 AI 思考过程完整白盒化。</p><h2 id="结论先说">结论先说</h2>
-<p><strong>黑盒 Chatbot 是个人深度思考的天敌。</strong>在知识对话中，我们拒绝任何“假装知道”的生成式幻觉。Synapse Note 采用自研的 <strong>Hybrid RAG（语义向量 + 实体图谱拓扑）</strong>混合检索算法，并将 AI 思考过程（Thinking Process）与源笔记引用卡片（Ref Quotes）完全暴露给用户，让每次推演清晰可溯源。</p>
+<p class="kicker">开发日记 · 2026-09-24</p><h1>混合检索（Hybrid RAG）实践：当语义向量遇上知识图谱实体</h1><p class="lead">单纯依靠语义向量容易忽略精确的实体定义，单纯依靠关键词则丧失语意发散能力。本文记录 Accrue Notes 如何在移动端实现向量与图拓扑的混合打分，以及为何必须将 AI 思考过程完整白盒化。</p><h2 id="结论先说">结论先说</h2>
+<p><strong>黑盒 Chatbot 是个人深度思考的天敌。</strong>在知识对话中，我们拒绝任何“假装知道”的生成式幻觉。Accrue Notes 采用自研的 <strong>Hybrid RAG（语义向量 + 实体图谱拓扑）</strong>混合检索算法，并将 AI 思考过程（Thinking Process）与源笔记引用卡片（Ref Quotes）完全暴露给用户，让每次推演清晰可溯源。</p>
 <h2 id="传统单一检索的死穴">传统单一检索的死穴</h2>
 <p>许多所谓的“AI 笔记”只是在文本上跑一次通用的 Vector Embedding，然后塞进 LLM 的上下文窗口：</p>
 <ol><li><strong>实体丢失（Entity Blindness）</strong>：比如笔记中记录了 <code>[[奥卡姆剃刀]]</code> 和 <code>[[第一性原理]]</code> 的具体派生关系，向量检索在计算余弦相似度时，往往召回了包含相似修饰词的无关段落，而漏掉了真正核心的概念定义；</li><li><strong>缺乏逻辑推演链</strong>：用户问一个跨笔记的深度战略问题，普通模型直接吐出一段似是而非的空话，用户根本不知道它依据了哪几篇笔记、经过了怎样的推演，一旦出现幻觉危害极大。</li></ol>
@@ -60,6 +60,6 @@
 <h2 id="为什么要坚持白盒思考链">为什么要坚持白盒思考链？</h2>
 <p>在最新版本中，我们将最外层的知识问答全面升级为 Thinking 推理过程透明化。当大模型在分析你的知识库时，它的每一个推导步骤—— <em>“首先从笔记《反脆弱笔记》中提取塔勒布对非对称性的定义…”</em> <em>“接着对比笔记《芒格逆向思维》中的矛盾论点…”</em> 都会实时展现在前端可收起的 <code>[🧠 已深度思考]</code> 胶囊卡片中。思考完毕后自动收拢，用户既能获得干净精炼的最终结论，又能随时展开复盘底层的逻辑全景。</p><p class="pager"><a href="01-local-first-architecture.html">← 上一篇</a> · <a href="03-latex-math-export-pipeline.html">下一篇 →</a></p><p><a href="../devlog.html">← 全部开发日记</a></p>
 </main>
-<footer class="wrap"><p>© Synapse Note</p></footer>
+<footer class="wrap"><p>© Accrue Notes</p></footer>
 </body>
 </html>
