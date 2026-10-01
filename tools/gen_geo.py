@@ -39,7 +39,36 @@ AI_AGENTS = [
     "Amazonbot", "Bytespider", "YouBot", "cohere-ai", "Meta-ExternalAgent",
 ]
 
-TODAY = date.today().isoformat()
+def get_today() -> str:
+    """获取 GEO 层（sitemap / llms-full）使用的更新日期。
+
+    规则：
+    1. 环境变量 GEO_DATE：支持外部显式指定
+    2. CI 检查环境（CI=true 或 GITHUB_ACTIONS=true）：
+       优先从已提交的 sitemap.xml 提取已有 <lastmod> 日期，
+       避免因 Actions 运行环境（如 UTC 默认时区 vs 本地东八区 UTC+8）
+       或者在跨日触发流水线时导致日期 diff 误报而阻塞部署。
+    3. 本地环境：取当前本地日期 (YYYY-MM-DD)
+    """
+    if os.environ.get("GEO_DATE"):
+        return os.environ["GEO_DATE"]
+
+    if os.environ.get("CI") or os.environ.get("GITHUB_ACTIONS"):
+        sitemap_path = os.path.join(ROOT, "sitemap.xml")
+        if os.path.exists(sitemap_path):
+            try:
+                with open(sitemap_path, encoding="utf-8") as f:
+                    content = f.read()
+                m = re.search(r"<lastmod>(\d{4}-\d{2}-\d{2})</lastmod>", content)
+                if m:
+                    return m.group(1)
+            except Exception:
+                pass
+
+    return date.today().isoformat()
+
+
+TODAY = get_today()
 
 
 def load_conf() -> dict:
