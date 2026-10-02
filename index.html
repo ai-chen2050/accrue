@@ -1661,42 +1661,40 @@ function isLightTheme() {
       title: '固态铁镍内地核',
       num: '6',
       en: 'Solid Iron-Nickel Inner Core',
-      metaK: ['深度范围', '核心温度', '物质晶相', '压强量级'],
-      metaV: ['5150 - 6371 km', '5500 - 6000 K', '六方密排 (hcp) 固态铁', '330 - 360 万大气压'],
-      annotation: '深度 5150-6371km 的地球几何物理重心，半径约 1220km。尽管中心温度高达 5500-6000K，但在 330-360 万个大气压下结晶为固态六方密排 (hcp) 铁晶核，具有微弱超速自转与地磁发电机锚定效应。',
-      source: '🌐 ORIGINAL ANNOTATION (USGS / NASA Geodynamics / Sketchfab)',
-      chips: ['[[地球动力学]]', '[[地磁发电机假说]]', '[[核幔边界]]', '[[地震波各向异性]]'],
+      metaK: ['深度区间', '核心温度', '物质结晶相', '压强极值'],
+      metaV: ['5150 - 6371 km', '5500 - 6000 K', 'hcp 密排六方铁镍晶体', '330 - 360 GPa'],
+      annotation: '位于地表下 5,150 至 6,371 公里处，半径约 1,220 公里的固态铁镍球体。尽管温度高达 5,500–6,000 K，但在超过 330 万个大气压的超高压下保持固态密排六方 (hcp) 晶体结构，并存在微弱的超自转速率。',
+      source: '🌐 原作三维标注与剖面参考 (USGS / NASA Geodynamics / Sketchfab)',
+      chips: ['[[地球物理动力学]]', '[[地磁发电机假说]]', '[[核幔边界]]', '[[地震波各向异性]]'],
       hotspots: [
-        { num: 1, name: '岩石圈与地壳', en: 'Lithosphere & Crust', x: 0.88, y: 0.22, z: 0.05, color: '#38bdf8', meta: ['0 - 100 km', '室温 - 800 ℃', '硅铝质固态岩石圈', '0 - 3 GPa'], desc: '由刚性岩石构成的地球最外表层，包含硅铝质大陆地壳与硅镁质大洋地壳。', chips: ['[[板块构造论]]', '[[莫霍界面]]', '[[岩石圈增厚]]'] },
-        { num: 2, name: '软流圈与上地幔', en: 'Asthenosphere & Upper Mantle', x: 0.70, y: 0.18, z: 0.04, color: '#f59e0b', meta: ['100 - 410 km', '1000 - 1400 ℃', '橄榄岩部分熔融塑性体', '3 - 14 GPa'], desc: '岩石处于部分熔融塑性状态的软流圈，具有流变特性，是全球板块运移俯冲的动力学滑脱层。', chips: ['[[地幔柱假说]]', '[[软流圈流变]]', '[[俯冲带]]'] },
-        { num: 3, name: '下地幔对流区', en: 'Lower Mantle Convection', x: 0.52, y: 0.13, z: 0.03, color: '#d97706', meta: ['660 - 2900 km', '1500 - 3000 K', '布氏岩与铁方镁石', '24 - 136 GPa'], desc: '占地球总体积约55%的主体深部地幔，在高压下结晶为钙钛矿相（布氏岩），驱动全地幔对流。', chips: ['[[全地幔对流]]', '[[下地幔剪切波]]', '[[相变界面]]'] },
-        { num: 4, name: '古登堡面与D"层', en: 'Gutenberg & D" Layer', x: 0.38, y: 0.09, z: 0.02, color: '#ea580c', meta: ['2700 - 2900 km', '2800 - 3800 K', '超低速带 (ULVZ)', '130 - 136 GPa'], desc: '地幔固态硅酸盐与地核液态铁镍的强热边界层，存在剧烈热交换与地震波超低速带。', chips: ['[[古登堡界面]]', '[[热边界层]]', '[[地核散热]]'] },
-        { num: 5, name: '液态铁镍外地核', en: 'Liquid Iron-Nickel Outer Core', x: 0.25, y: 0.06, z: 0.01, color: '#dc2626', meta: ['2900 - 5150 km', '4000 - 5500 K', '低粘度液态铁镍流体', '136 - 330 GPa'], desc: '剧烈涡流对流的导电液态金属流体，在科里奥利力作用下形成自激地磁自生发电机。', chips: ['[[地磁场]]', '[[磁流体动力学]]', '[[科氏力导电]]'] },
-        { num: 6, name: '固态铁镍内地核', en: 'Solid Iron-Nickel Inner Core', x: 0.0, y: 0.0, z: 0.0, color: '#fbbf24', meta: ['5150 - 6371 km', '5500 - 6000 K', '六方密排 (hcp) 固态铁晶核', '330 - 360 GPa'], desc: '深度 5150-6371km 的地球几何物理重心，尽管中心温度高达 5500-6000K，但在极高压下结晶为固态，具有微弱超速自转与地磁发电机锚定效应。', chips: ['[[地球动力学]]', '[[地磁发电机假说]]', '[[超速自转]]'] }
+        { num: 1, name: '岩石圈与地壳', en: 'Lithosphere & Crust', x: 0.88, y: 0.22, z: 0.05, color: '#38bdf8', meta: ['0 - 100 km', '常温 - 800 ℃', '硅铝/硅镁质刚性岩石', '0 - 3 GPa'], desc: '地球最外层的刚性坚硬岩石外壳，由大陆地壳与大洋地壳构成，板块在此漂移俯冲。', chips: ['[[板块构造学说]]', '[[莫霍不连续面]]', '[[造山带]]'] },
+        { num: 2, name: '软流圈与上地幔', en: 'Asthenosphere & Upper Mantle', x: 0.70, y: 0.18, z: 0.04, color: '#f59e0b', meta: ['100 - 410 km', '1000 - 1400 ℃', '半熔融橄榄岩塑性流体', '3 - 14 GPa'], desc: '具有流变塑性的半熔融低速层，是地幔热柱上升与板块水平漂移的关键润滑滑移面。', chips: ['[[地幔柱]]', '[[软流圈流变学]]', '[[俯冲带]]'] },
+        { num: 3, name: '下地幔对流层', en: 'Lower Mantle Convection', x: 0.52, y: 0.13, z: 0.03, color: '#d97706', meta: ['660 - 2900 km', '1500 - 3000 K', '钙钛矿相布里奇曼石', '24 - 136 GPa'], desc: '占据地球总体积约 55% 的巨大固态岩石圈层，在高压下结晶致密化并主导全地幔大尺度热对流。', chips: ['[[全地幔对流]]', '[[下地幔S波异常]]', '[[相变边界]]'] },
+        { num: 4, name: '古登堡面与 D" 层', en: 'Gutenberg Discontinuity & D" Layer', x: 0.38, y: 0.09, z: 0.02, color: '#ea580c', meta: ['2700 - 2900 km', '2800 - 3800 K', '超低速带 (ULVZ)', '约 136 GPa'], desc: '核幔边界极其剧烈的物理与化学过渡带，横波 (S波) 在此完全消失，是地核热量向上逃逸的喷口。', chips: ['[[核幔边界]]', '[[古登堡面]]', '[[超低速带]]'] },
+        { num: 5, name: '外地核液态金属海', en: 'Liquid Iron-Nickel Outer Core', x: 0.24, y: 0.05, z: 0.01, color: '#dc2626', meta: ['2900 - 5150 km', '4000 - 5500 K', '低黏度液态铁硫硅合金', '136 - 330 GPa'], desc: '处于剧烈热对流与科里奥利力偏转中的低黏度导电金属流体海，正是地球磁场的发电机诞生地。', chips: ['[[地磁发电机效应]]', '[[地磁倒转]]', '[[科里奥利力]]'] },
+        { num: 6, name: '固态铁镍内地核', en: 'Solid Iron-Nickel Inner Core', x: 0.08, y: 0.02, z: 0, color: '#fbbf24', meta: ['5150 - 6371 km', '5500 - 6000 K', '密排六方 hcp 铁晶格', '330 - 360 GPa'], desc: '在超高压极端环境下结晶的固态铁镍单晶核，不仅维持着地球自转惯性，更具有东西半球地震波各向异性。', chips: ['[[地球物理动力学]]', '[[地核超自转]]', '[[各向异性]]'] }
       ]
     },
     dna: {
-      tag: '分子生物学 · 染色质微观解剖',
-      proBadge: 'PRO 教学精选',
+      tag: '分子遗传学 · 染色质超微结构',
+      proBadge: 'PRO 空间剖析',
       title: '组蛋白八聚体核心',
-      num: '1',
+      num: '3',
       en: 'Histone Octamer Core Complex',
-      metaK: ['缠绕长度', '圆柱直径', '八聚体亚基', '超螺旋手性'],
-      metaV: ['147 碱基对环绕', '2.5 nm 直径圆柱', '8 亚基 (2xH2A/B/H3/H4)', '1.65 圈左手超螺旋'],
-      annotation: '染色质的基本重复亚基结构（核小体核心粒子）。由两个 H2A-H2B 二聚体与一个 H3-H4 四聚体组装成圆柱状八聚体核心，147bp 的双螺旋 DNA 紧密缠绕 1.65 圈，实现基因组的第一级紧凑折叠。',
-      source: '🌐 PDB ID: 1AOI / RCSB Protein Data Bank / NIH 3D Print Exchange',
-      chips: ['[[核小体装配]]', '[[表观遗传修饰]]', '[[染色质重塑]]', '[[组蛋白密码]]'],
+      metaK: ['超螺旋周长', '结合碱基对', '核心蛋白质', '空间直径'],
+      metaV: ['1.67 圈左手螺旋', '147 bp 核心 DNA', 'H2A/H2B/H3/H4 各双聚体', '11 nm 染色质小珠'],
+      annotation: '真核生物基因组打包的基础结构单位。147 个碱基对的双螺旋 DNA 紧密缠绕在由 H2A、H2B、H3、H4 各两个分子构成的组蛋白八聚体盘状核心上，通过赖氨酸乙酰化与甲基化等表观遗传修饰精确调控转录活性。',
+      source: '🌐 RCSB PDB 1AOI / NIH 3D Print Exchange',
+      chips: ['[[核小体]]', '[[组蛋白修饰]]', '[[染色质重塑]]', '[[表观遗传学]]'],
       hotspots: [
-        { num: 1, name: '组蛋白八聚体核心', en: 'Histone Octamer Core', x: 0, y: 0, z: 0, color: '#ec4899', meta: ['2.5 nm 核心', '生理微环境', '碱性八聚体球蛋白', '分子间范德华力'], desc: '由两套 H2A、H2B、H3、H4 构成的正电荷圆柱核心，静电吸附带负电荷的磷酸骨架。', chips: ['[[组蛋白折叠]]', '[[核小体核心]]'] },
-        { num: 2, name: 'DNA 双螺旋大沟', en: 'DNA Major Groove', x: 0.65, y: 0.1, z: 0.35, color: '#10b981', meta: ['宽 2.2 nm', '生理微环境', '右手 B-DNA 双螺旋', '双链氢键稳定'], desc: '蛋白质识别特定碱基序列的主要相互作用结合位点，暴露丰富的氢键供体与受体原子。', chips: ['[[转录因子识别]]', '[[大沟结合]]'] },
-        { num: 3, name: 'DNA 双螺旋小沟', en: 'DNA Minor Groove', x: -0.32, y: -0.45, z: -0.35, color: '#38bdf8', meta: ['宽 1.2 nm', '生理微环境', '右手 B-DNA 双螺旋', '双链氢键稳定'], desc: '富含 AT 序列的紧窄小沟区域，组蛋白精氨酸残基（Arg hook）插入小沟锚定八聚体。', chips: ['[[小沟结合]]', '[[精氨酸锚定]]'] },
-        { num: 4, name: '互补碱基对阶梯', en: 'Complementary Base Pairs', x: 0.1, y: 0.62, z: -0.38, color: '#f59e0b', meta: ['0.34 nm 堆积层距', '生理微环境', 'A-T / G-C 碱基对', 'π-π 芳香堆积力'], desc: '双螺旋内部嘌呤与嘧啶的沃森-克里克配对阶梯，紧密的碱基芳香环疏水堆积稳定双链。', chips: ['[[沃森-克里克配对]]', '[[碱基堆积]]'] },
-        { num: 5, name: 'N端柔性组蛋白尾', en: 'N-terminal Histone Tails', x: -0.72, y: 0.40, z: -0.22, color: '#a855f7', meta: ['无规卷曲多肽', '生理微环境', '高电荷富赖氨酸尾', '构象动态涨落'], desc: '从核小体圆柱侧向伸出的非结构化柔性肽段，乙酰化与甲基化等表观遗传修饰的关键靶点。', chips: ['[[组蛋白乙酰化]]', '[[表观遗传锁]]'] },
-        { num: 6, name: '连接区DNA与H1', en: 'Linker DNA & Histone H1', x: 0.88, y: -0.46, z: -0.15, color: '#6366f1', meta: ['约 20-80 bp', '生理微环境', '接头双链复合体', '高级折叠力'], desc: '连接相邻两个核小体的暴露 DNA 片段，与连接组蛋白 H1 结合促进 30nm 染色质高级纤维折叠。', chips: ['[[连接组蛋白H1]]', '[[染色质纤维]]'] }
+        { num: 1, name: '主沟与次沟 (Major/Minor Grooves)', en: 'Major & Minor Grooves', x: 0.65, y: -0.25, z: 0.18, color: '#38bdf8', meta: ['2.2 nm / 1.2 nm 槽宽', 'B-DNA 经典构型', '转录因子特异识别位点', '氢键暴露模式'], desc: '双螺旋几何不对称形成的两个凹槽，主沟暴露丰富的特异性氢键供体与受体，是调控蛋白识别 DNA 序列的物理窗口。', chips: ['[[转录因子结合]]', '[[B型DNA构象]]'] },
+        { num: 2, name: '互补碱基对 (A-T / G-C Rungs)', en: 'Complementary Base Pairs', x: 0.28, y: -0.15, z: -0.12, color: '#10b981', meta: ['0.34 nm 碱基间距', '2 / 3 氢键配对', '嘌呤-嘧啶沃森克里克互补', '芳香环π-π堆积'], desc: '双链核心依靠氢键与碱基对芳香环间的疏水堆积力紧密连接，确保遗传信息百万年尺度的保真复制。', chips: ['[[沃森-克里克配对]]', '[[碱基堆积力]]'] },
+        { num: 3, name: '组蛋白八聚体核心 (Octamer Core)', en: 'Histone Octamer Core', x: 0, y: 0, z: 0, color: '#f59e0b', meta: ['11 nm 盘状复合体', '(H3-H4)2 异源四聚体', '2 × (H2A-H2B) 二聚体', '富含碱性 Arg/Lys'], desc: '带高度正电荷的圆盘状蛋白质八聚体，通过静电相互作用与带负电的 DNA 磷酸二酯骨架牢固结合。', chips: ['[[组蛋白]]', '[[表观遗传标记]]'] },
+        { num: 4, name: '连接组蛋白 H1 (Linker Histone)', en: 'Linker Histone H1', x: -0.55, y: 0.35, z: 0.15, color: '#ec4899', meta: ['封印入出端 DNA', '锁定 168 bp 长度', '诱导 30 nm 螺线管折叠', '球状结构域'], desc: '结合在核小体入端与出端的 DNA 交叉处，像门闩一样锁定 DNA 走向，驱动染色质向更高级的 30nm 纤维折叠。', chips: ['[[染色质折叠]]', '[[螺线管模型]]'] }
       ]
     },
     neuron: {
-      tag: '神经科学 · 细胞微观解剖',
+      tag: '认知神经生物学 · 细胞超微解剖',
       proBadge: '随包赠送 · 免费体验',
       title: '神经元胞体与细胞核',
       num: '1',
@@ -1707,11 +1705,13 @@ function isLightTheme() {
       source: '🌐 Versal Neuroscience 3D / Allen Brain Institute',
       chips: ['[[神经元动作电位]]', '[[膜电位动力学]]', '[[突触可塑性]]', '[[赫布定律]]'],
       hotspots: [
-        { num: 1, name: '胞体与细胞核', en: 'Soma & Nucleus', x: 0, y: 0, z: 0, color: '#38bdf8', meta: ['20 μm 核心', '37 ℃ 生理温标', '细胞质网与胞核', '渗透压平稳'], desc: '神经元代谢与基因转录调控中枢，高密度分布粗面内质网与尼氏体。', chips: ['[[胞体]]', '[[尼氏体]]'] },
-        { num: 2, name: '神经轴突主干', en: 'Axon Shaft', x: 0.45, y: -0.18, z: 0.1, color: '#f59e0b', meta: ['可达 1 米长', '37 ℃ 生理温标', '微管定向运输管道', '轴浆流输送'], desc: '单向高效传递高频动作电位冲动的轴突通道，也是轴浆顺行与逆行运输的主干线。', chips: ['[[动作电位传导]]', '[[轴突]]'] },
-        { num: 3, name: '树突复杂网络', en: 'Dendritic Arbor', x: -0.55, y: 0.35, z: -0.15, color: '#10b981', meta: ['高密度分枝', '37 ℃ 生理温标', '棘突微囊泡突触', '突触受体开放'], desc: '茂密分枝的树突棘网络，富含谷氨酸受体（AMPA/NMDA），是学习记忆突触可塑性的物理载体。', chips: ['[[长时程增强LTP]]', '[[树突棘]]'] },
-        { num: 4, name: '髓鞘绝缘节段', en: 'Myelin Sheaths', x: 0.82, y: -0.38, z: 0.2, color: '#ec4899', meta: ['寡突胶质细胞包裹', '37 ℃ 生理温标', '高电阻多层脂膜', '跳跃式传导'], desc: '高阻抗同心脂质绝缘层，极大降低轴突膜电容，使冲动传导速率提升数十倍（达 120 m/s）。', chips: ['[[髓鞘化]]', '[[跳跃式传导]]'] },
-        { num: 5, name: '郎飞氏结', en: 'Node of Ranvier', x: 0.64, y: -0.28, z: 0.15, color: '#fbbf24', meta: ['1 μm 无髓裸露段', '37 ℃ 生理温标', '超密集电压门控Na+', '毫秒级离子泵'], desc: '髓鞘节段之间的微小间隙，密集排列电压门控钠通道（>1000/μm²），实现动作电位的跳跃中继再生。', chips: ['[[郎飞结]]', '[[钠通道]]'] }
+        { num: 1, name: '胞体与细胞核', en: 'Soma & Nucleus', x: -0.40, y: 0.05, z: 0, color: '#38bdf8', meta: ['20 μm 核心胞体', '37 ℃ 生理温标', '粗面内质网与尼氏体', '静息电位 -70 mV'], desc: '神经元代谢与基因转录调控中枢，高密度分布粗面内质网与合成神经递质前体的细胞器。', chips: ['[[胞体]]', '[[尼氏体]]', '[[转录调控]]'] },
+        { num: 2, name: '轴突丘与始段 (AIS)', en: 'Axon Hillock & AIS', x: -0.22, y: 0.025, z: 0.005, color: '#60a5fa', meta: ['锥形漏斗结构', 'Nav1.6 超高密度', '代数代和判定阈值', '动作电位发生器'], desc: '连接胞体与轴突的锥形起始段。树突输入的突触电位在此代数总和，越过阈值即点燃动作电位。', chips: ['[[轴突起始段]]', '[[动作电位触发]]'] },
+        { num: 3, name: '树突网络与树突棘', en: 'Dendritic Arbor & Spines', x: -0.72, y: 0.32, z: 0.12, color: '#10b981', meta: ['茂密分支丛林', '万级微米树突棘', 'AMPA/NMDA 受体', '突触可塑性 (LTP)'], desc: '茂密分枝的受体纤维网络，表面密布成千上万个微米级树突棘，是长时程增强 (LTP) 与记忆形成的物理载体。', chips: ['[[长时程增强LTP]]', '[[树突棘]]', '[[突触可塑性]]'] },
+        { num: 4, name: '神经轴突主干导轨', en: 'Axon Shaft Cable', x: 0.12, y: -0.01, z: 0.015, color: '#f59e0b', meta: ['长程生物光缆', '微管骨架轨道', '顺行/逆行轴浆流', '毫秒级高保真导轨'], desc: '单向高效传递高频动作电位冲动的管状通道，由顺行与逆行马达蛋白高速运输囊泡及递质。', chips: ['[[轴突传导]]', '[[轴浆运输]]'] },
+        { num: 5, name: '髓鞘绝缘鞘节段', en: 'Myelin Sheaths', x: 0.42, y: -0.035, z: 0.02, color: '#ec4899', meta: ['寡突胶质细胞包裹', '同心多层脂质膜', '超低膜电容高阻抗', '绝缘屏蔽能量损耗'], desc: '胶质细胞多层同心紧密包裹的高电阻绝缘层，阻止离子跨膜泄漏，使神经电信号能量耗散降至最低。', chips: ['[[髓鞘化]]', '[[绝缘层]]', '[[白质通路]]'] },
+        { num: 6, name: '朗飞氏结 (跳跃传导)', en: 'Node of Ranvier (Saltatory)', x: 0.28, y: -0.02, z: 0.018, color: '#facc15', meta: ['1 μm 裸露轴突间隙', '富集电压门控钠通道', '中继充电再生电位', '速率达 120 m/s'], desc: '髓鞘节段之间的微小间隙，密集排列电压门控钠通道，驱动动作电位以跃升百倍的跳跃式传导飞速传播。', chips: ['[[朗飞结]]', '[[跳跃式传导]]', '[[钠通道]]'] },
+        { num: 7, name: '突触终扣与间隙囊泡', en: 'Synaptic Boutons & Cleft', x: 0.98, y: -0.12, z: 0.04, color: '#f43f5e', meta: ['40 nm 神经递质囊泡', '钙内流驱动出胞胞吐', '20 nm 物理突触间隙', '递质特异性受体通道'], desc: '轴突微分支终末的纽扣状突触小体。动作电位触发电压门控钙通道，使突触小泡出胞将递质释放入间隙。', chips: ['[[突触小体]]', '[[神经递质]]', '[[胞吐作用]]'] }
       ]
     },
     math: {
@@ -1727,9 +1727,9 @@ function isLightTheme() {
       chips: ['[[多变量微积分]]', '[[鞍点与海森矩阵]]', '[[直纹曲面]]', '[[梯度下降法]]'],
       hotspots: [
         { num: 1, name: '临界鞍点 (Saddle Point)', en: 'Critical Saddle Point', x: 0, y: 0, z: 0, color: '#38bdf8', meta: ['(0, 0, 0) 原点', '梯度 ∇f = (0, 0)', '不定海森矩阵', 'Det(H) = -4 < 0'], desc: '沿 X 方向为局部极小值，沿 Y 方向为局部极大值。一阶导数为零，二阶海森矩阵行列式为负。', chips: ['[[海森矩阵]]', '[[鞍点]]'] },
-        { num: 2, name: '正曲率抛物线切弧', en: 'Positive Curvature Parabola', x: 0.55, y: 0, z: 0.32, color: '#10b981', meta: ['Y=0 切面', 'd²z/dx² = +2 > 0', '凹向上抛物线', '局部极小方向'], desc: '取 y=0 切面得到 z = x²，沿 x 轴方向呈现向上的极小值势阱。', chips: ['[[方向导数]]', '[[主曲率]]'] },
-        { num: 3, name: '负曲率抛物线切弧', en: 'Negative Curvature Parabola', x: 0, y: 0.55, z: -0.32, color: '#ef4444', meta: ['X=0 切面', 'd²z/dy² = -2 < 0', '凸向下抛物线', '局部极大方向'], desc: '取 x=0 切面得到 z = -y²，沿 y 轴方向呈现向下的极大值坡度。', chips: ['[[高斯曲率]]', '[[双曲几何]]'] },
-        { num: 4, name: '渐近直线直纹轨线', en: 'Ruling Generator Lines', x: 0.45, y: 0.45, z: 0, color: '#f59e0b', meta: ['z = 0 等高截线', 'x = ±y 直线对', '退化双曲线渐近线', '直纹生成元'], desc: '虽然曲面整体弯曲，但在其上存在完全由直线构成的族群（直纹曲面），建筑工程学常借此构建高强度薄壳。', chips: ['[[直纹面]]', '[[建筑空间拓扑]]'] }
+        { num: 2, name: '正曲率抛物线方向', en: 'Positive Curvature Parabola', x: 0.55, y: 0.32, z: 0.32, color: '#10b981', meta: ['Y=0 纵截面', 'd²z/dx² = +2 > 0', '向上凹抛物线', '局部极小能量阱'], desc: '沿 Y=0 切割得到截线 z = x²，代表沿 X 轴向上的正曲率极小值走向。', chips: ['[[方向导数]]', '[[主曲率]]'] },
+        { num: 3, name: '负曲率抛物线方向', en: 'Negative Curvature Parabola', x: 0.55, y: 0.55, z: -0.32, color: '#ef4444', meta: ['X=0 横截面', 'd²z/dy² = -2 < 0', '向下凹抛物线', '局部极大山脊'], desc: '沿 X=0 切割得到截线 z = -y²，代表沿 Y 轴向下的负曲率极大值走向。', chips: ['[[高斯曲率]]', '[[双曲几何]]'] },
+        { num: 4, name: '双重直纹母线系', en: 'Ruled Generator Lines', x: 0.45, y: 0.45, z: 0, color: '#f59e0b', meta: ['z = 0 等高线', 'x = ±y 两条相交直线', '双重直纹族', '曲面由直线编织'], desc: '看似弯曲的马鞍曲面，其表面每一点都存在两条完全落于曲面上的直线母线，呈现极高的建筑结构美学。', chips: ['[[直纹曲面]]', '[[建筑薄壳结构]]'] }
       ]
     }
   };
@@ -1749,37 +1749,43 @@ function isLightTheme() {
   function resize() {
     var rect = canvas.getBoundingClientRect();
     var dpr = window.devicePixelRatio || 1;
-    canvas.width = rect.width * dpr;
-    canvas.height = rect.height * dpr;
+    if (rect.width > 0 && rect.height > 0) {
+      canvas.width = Math.floor(rect.width * dpr);
+      canvas.height = Math.floor(rect.height * dpr);
+    }
   }
   window.addEventListener('resize', resize);
   resize();
 
-  function project(p, cx, cy, scale, rX, rY) {
-    // 3D 欧拉旋转 (Yaw & Pitch)
-    var cosY = Math.cos(rY), sinY = Math.sin(rY);
-    var x1 = p.x * cosY - p.z * sinY;
-    var z1 = p.x * sinY + p.z * cosY;
+  // 3D 空间透视投影计算 (保证 pers 和 scale 永不为 undefined/NaN)
+  function project(node, cx, cy, radiusScale) {
+    var cosY = Math.cos(rotY), sinY = Math.sin(rotY);
+    var cosX = Math.cos(rotX), sinX = Math.sin(rotX);
 
-    var cosX = Math.cos(rX), sinX = Math.sin(rX);
-    var y2 = p.y * cosX - z1 * sinX;
-    var z2 = p.y * sinX + z1 * cosX;
+    var x1 = node.x * cosY + node.z * sinY;
+    var z1 = -node.x * sinY + node.z * cosY;
 
-    var fov = 3.2;
-    var pers = fov / (fov + z2);
+    var y1 = node.y * cosX - z1 * sinX;
+    var z2 = node.y * sinX + z1 * cosX;
+
+    var focal = 380;
+    var pers = focal / (focal + z2 + 220);
+    var pScale = pers * radiusScale;
     return {
-      x: cx + x1 * scale * pers,
-      y: cy - y2 * scale * pers,
+      x: cx + x1 * pScale,
+      y: cy + y1 * pScale,
       z: z2,
-      pers: pers
+      pers: pers,
+      scale: pScale,
+      alpha: Math.max(0.2, Math.min(1.0, (z2 + 220) / 360))
     };
   }
 
-  // 1. 全息深空背景
+  // 1. 深空科学雷达背景渲染
   function drawBackground(ctx, w, h, cx, cy) {
-    var grad = ctx.createRadialGradient(cx, cy, 20, cx, cy, Math.max(w, h) * 0.7);
-    grad.addColorStop(0, '#0d172a');
-    grad.addColorStop(0.5, '#070b14');
+    var grad = ctx.createRadialGradient(cx, cy, 20, cx, cy, Math.max(w, h) * 0.72);
+    grad.addColorStop(0, '#0f172a');
+    grad.addColorStop(0.5, '#070b16');
     grad.addColorStop(1, '#020408');
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, w, h);
@@ -1790,7 +1796,7 @@ function isLightTheme() {
     [0.35, 0.65, 0.95, 1.18].forEach(function(rf) {
       ctx.beginPath();
       ctx.arc(cx, cy, baseR * rf, 0, Math.PI * 2);
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.09)';
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.08)';
       ctx.stroke();
     });
 
@@ -1798,10 +1804,10 @@ function isLightTheme() {
     ctx.beginPath();
     ctx.moveTo(cx - baseR * 1.25, cy); ctx.lineTo(cx + baseR * 1.25, cy);
     ctx.moveTo(cx, cy - baseR * 1.25); ctx.lineTo(cx, cy + baseR * 1.25);
-    ctx.strokeStyle = 'rgba(56, 189, 248, 0.05)';
+    ctx.strokeStyle = 'rgba(56, 189, 248, 0.04)';
     ctx.stroke();
 
-    // 45°/135° 标尺刻度
+    // 标尺刻度
     [Math.PI / 4, 3 * Math.PI / 4, 5 * Math.PI / 4, 7 * Math.PI / 4].forEach(function(ang) {
       var r1 = baseR * 0.92, r2 = baseR * 0.98;
       ctx.beginPath();
@@ -1824,15 +1830,14 @@ function isLightTheme() {
     ];
 
     layers.forEach(function(l, i) {
-      var expOffset = (5 - i) * exp * 0.12;
+      var expOffset = (5 - i) * exp * 0.14;
       var offsetVector = { x: expOffset * 0.8, y: expOffset * 0.4, z: 0 };
-      var centerProj = project(offsetVector, cx, cy, scale, rX, rY);
+      var centerProj = project(offsetVector, cx, cy, scale);
       var radius = l.r * scale * centerProj.pers;
 
-      // 绘制球体线框圆环与截面
       ctx.save();
       ctx.beginPath();
-      ctx.arc(centerProj.x, centerProj.y, radius, 0, Math.PI * 2);
+      ctx.arc(centerProj.x, centerProj.y, Math.max(1, radius), 0, Math.PI * 2);
       ctx.fillStyle = l.color;
       ctx.fill();
       ctx.strokeStyle = l.stroke;
@@ -1851,7 +1856,7 @@ function isLightTheme() {
 
       // 爆炸导引虚线
       if (exp > 0.05 && i < 5) {
-        var originProj = project({ x: 0, y: 0, z: 0 }, cx, cy, scale, rX, rY);
+        var originProj = project({ x: 0, y: 0, z: 0 }, cx, cy, scale);
         ctx.beginPath();
         ctx.setLineDash([3, 3]);
         ctx.moveTo(originProj.x, originProj.y);
@@ -1865,63 +1870,68 @@ function isLightTheme() {
 
   // 3. DNA 组蛋白超螺旋渲染
   function drawDna(ctx, cx, cy, scale, rX, rY, exp) {
-    // 组蛋白八聚体核心圆柱
-    var coreRadius = 0.38 + exp * 0.08;
-    var coreHeight = 0.48;
-    for (var a = 0; a < 8; a++) {
-      var ang1 = (a / 8) * Math.PI * 2;
-      var ang2 = ((a + 1) / 8) * Math.PI * 2;
-      var pTop1 = project({ x: Math.cos(ang1) * coreRadius, y: coreHeight / 2, z: Math.sin(ang1) * coreRadius }, cx, cy, scale, rX, rY);
-      var pTop2 = project({ x: Math.cos(ang2) * coreRadius, y: coreHeight / 2, z: Math.sin(ang2) * coreRadius }, cx, cy, scale, rX, rY);
-      var pBot1 = project({ x: Math.cos(ang1) * coreRadius, y: -coreHeight / 2, z: Math.sin(ang1) * coreRadius }, cx, cy, scale, rX, rY);
-      var pBot2 = project({ x: Math.cos(ang2) * coreRadius, y: -coreHeight / 2, z: Math.sin(ang2) * coreRadius }, cx, cy, scale, rX, rY);
+    var pHistone = project({ x: 0, y: 0, z: 0 }, cx, cy, scale);
+    var hR = (46 - exp * 8) * pHistone.pers;
 
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(pHistone.x, pHistone.y, Math.max(1, hR), 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(245, 158, 11, 0.35)';
+    ctx.fill();
+    ctx.strokeStyle = '#f59e0b';
+    ctx.lineWidth = 2.5;
+    ctx.stroke();
+
+    for (var sub = 0; sub < 8; sub++) {
+      var sAng = (sub / 8) * Math.PI * 2;
+      var sX = pHistone.x + Math.cos(sAng) * hR * 0.55;
+      var sY = pHistone.y + Math.sin(sAng) * hR * 0.55;
       ctx.beginPath();
-      ctx.moveTo(pTop1.x, pTop1.y);
-      ctx.lineTo(pTop2.x, pTop2.y);
-      ctx.lineTo(pBot2.x, pBot2.y);
-      ctx.lineTo(pBot1.x, pBot1.y);
-      ctx.closePath();
-      ctx.fillStyle = a % 2 === 0 ? 'rgba(236, 72, 153, 0.45)' : 'rgba(219, 39, 119, 0.35)';
+      ctx.arc(sX, sY, Math.max(1, hR * 0.28), 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(251, 191, 36, 0.45)';
       ctx.fill();
-      ctx.strokeStyle = '#ec4899';
+      ctx.strokeStyle = 'rgba(251, 191, 36, 0.8)';
       ctx.lineWidth = 1;
       ctx.stroke();
     }
+    ctx.restore();
 
-    // DNA 双螺旋环绕带
-    var helixRadius = 0.65 + exp * 0.35;
-    var steps = 40;
-    var strand1 = [];
-    var strand2 = [];
-    for (var i = 0; i <= steps; i++) {
-      var t = (i / steps) * (Math.PI * 3.3);
-      var y = -0.45 + (i / steps) * 0.9;
-      var p1 = project({ x: Math.cos(t) * helixRadius, y: y + Math.sin(t * 3) * 0.08, z: Math.sin(t) * helixRadius }, cx, cy, scale, rX, rY);
-      var p2 = project({ x: Math.cos(t + 0.5) * helixRadius, y: y + Math.sin(t * 3 + 0.5) * 0.08, z: Math.sin(t + 0.5) * helixRadius }, cx, cy, scale, rX, rY);
-      strand1.push(p1);
-      strand2.push(p2);
+    var points = 44;
+    var strand1 = [], strand2 = [];
+    var radius1 = (0.75 + exp * 0.35);
+    var radius2 = (0.65 + exp * 0.35);
 
-      // 碱基对横档
-      if (i % 3 === 0) {
+    for (var i = 0; i <= points; i++) {
+      var t = (i / points) * Math.PI * 3.5;
+      var y = ((i / points) - 0.5) * 1.5;
+
+      var xA = Math.cos(t) * radius1;
+      var zA = Math.sin(t) * radius1;
+      strand1.push(project({ x: xA, y: y, z: zA }, cx, cy, scale));
+
+      var xB = Math.cos(t + Math.PI) * radius2;
+      var zB = Math.sin(t + Math.PI) * radius2;
+      strand2.push(project({ x: xB, y: y, z: zB }, cx, cy, scale));
+
+      if (i % 2 === 0) {
+        var pA = strand1[strand1.length - 1];
+        var pB = strand2[strand2.length - 1];
         ctx.beginPath();
-        ctx.moveTo(p1.x, p1.y);
-        ctx.lineTo(p2.x, p2.y);
-        ctx.strokeStyle = '#f59e0b';
-        ctx.lineWidth = 2;
+        ctx.moveTo(pA.x, pA.y);
+        ctx.lineTo(pB.x, pB.y);
+        ctx.strokeStyle = i % 4 === 0 ? 'rgba(56, 189, 248, 0.7)' : 'rgba(16, 185, 129, 0.7)';
+        ctx.lineWidth = 1.6;
         ctx.stroke();
       }
     }
 
-    // 绘制链 1
     ctx.beginPath();
     ctx.moveTo(strand1[0].x, strand1[0].y);
     for (var j = 1; j < strand1.length; j++) ctx.lineTo(strand1[j].x, strand1[j].y);
-    ctx.strokeStyle = '#10b981';
-    ctx.lineWidth = 3;
+    ctx.strokeStyle = '#ec4899';
+    ctx.lineWidth = 2.5;
     ctx.stroke();
 
-    // 绘制链 2
     ctx.beginPath();
     ctx.moveTo(strand2[0].x, strand2[0].y);
     for (var k = 1; k < strand2.length; k++) ctx.lineTo(strand2[k].x, strand2[k].y);
@@ -1930,55 +1940,395 @@ function isLightTheme() {
     ctx.stroke();
   }
 
-  // 4. 神经元突触模型渲染
+  // 4. 超高精 3D 生物神经元与突触引擎 (树突网络·棘突·轴突丘·3D髓鞘解构·朗飞结·突触终扣·动作电位脉冲传导)
   function drawNeuron(ctx, cx, cy, scale, rX, rY, exp) {
-    var pSoma = project({ x: 0, y: 0, z: 0 }, cx, cy, scale, rX, rY);
-    var somaR = 26 * pSoma.pers;
+    var now = Date.now();
+    var pulseCycle = (now * 0.0006) % 1.0; // 0.0 ~ 1.0 动作电位传导周期
+    var somaPos = { x: -0.40, y: 0.05, z: 0.0 };
+    var pSoma = project(somaPos, cx, cy, scale);
+    var basePers = pSoma.pers;
 
-    // 胞体
-    ctx.beginPath();
-    ctx.arc(pSoma.x, pSoma.y, somaR, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(56, 189, 248, 0.4)';
-    ctx.fill();
-    ctx.strokeStyle = '#38bdf8';
-    ctx.lineWidth = 2.5;
-    ctx.stroke();
+    // A. 树突丛林网络 (6 条主干树突，树状二级与三级分枝，包含树突棘)
+    var dendriteTrunks = [
+      { end: { x: -0.68, y: 0.38, z: 0.18 }, sub: [{ x: -0.84, y: 0.48, z: 0.25 }, { x: -0.76, y: 0.24, z: 0.10 }] },
+      { end: { x: -0.78, y: 0.12, z: -0.22 }, sub: [{ x: -0.92, y: 0.22, z: -0.30 }, { x: -0.86, y: -0.04, z: -0.15 }] },
+      { end: { x: -0.70, y: -0.26, z: 0.24 }, sub: [{ x: -0.85, y: -0.36, z: 0.32 }, { x: -0.74, y: -0.42, z: 0.12 }] },
+      { end: { x: -0.52, y: 0.58, z: -0.16 }, sub: [{ x: -0.66, y: 0.74, z: -0.24 }, { x: -0.40, y: 0.68, z: -0.08 }] },
+      { end: { x: -0.46, y: -0.48, z: -0.22 }, sub: [{ x: -0.58, y: -0.64, z: -0.30 }, { x: -0.34, y: -0.56, z: -0.14 }] },
+      { end: { x: -0.60, y: -0.08, z: -0.36 }, sub: [{ x: -0.78, y: -0.16, z: -0.48 }] }
+    ];
 
-    // 细胞核
-    ctx.beginPath();
-    ctx.arc(pSoma.x, pSoma.y, somaR * 0.4, 0, Math.PI * 2);
-    ctx.fillStyle = '#f59e0b';
-    ctx.fill();
+    ctx.save();
+    dendriteTrunks.forEach(function(trunk, tIdx) {
+      // 爆炸模式下树突向外微展
+      var expDend = 1.0 + exp * 0.25;
+      var tEnd = { x: somaPos.x + (trunk.end.x - somaPos.x) * expDend, y: somaPos.y + (trunk.end.y - somaPos.y) * expDend, z: trunk.end.z * expDend };
+      var pEnd = project(tEnd, cx, cy, scale);
 
-    // 树突分枝
-    for (var d = 0; d < 6; d++) {
-      var dAng = (d / 6) * Math.PI * 2 + 0.3;
-      var dEndX = Math.cos(dAng) * (0.6 + exp * 0.2);
-      var dEndY = Math.sin(dAng) * (0.6 + exp * 0.2);
-      var pDend = project({ x: dEndX, y: dEndY, z: Math.sin(dAng * 2) * 0.15 }, cx, cy, scale, rX, rY);
+      // 主干树突粗纤维
       ctx.beginPath();
       ctx.moveTo(pSoma.x, pSoma.y);
-      ctx.lineTo(pDend.x, pDend.y);
+      var midX = (pSoma.x + pEnd.x) * 0.5 + Math.sin(tIdx) * 6;
+      var midY = (pSoma.y + pEnd.y) * 0.5 + Math.cos(tIdx) * 6;
+      ctx.quadraticCurveTo(midX, midY, pEnd.x, pEnd.y);
       ctx.strokeStyle = '#10b981';
-      ctx.lineWidth = 2;
+      ctx.lineWidth = Math.max(1.5, 3.2 * pEnd.pers);
       ctx.stroke();
+
+      // 二级分枝
+      trunk.sub.forEach(function(subPt, sIdx) {
+        var sTarget = { x: somaPos.x + (subPt.x - somaPos.x) * expDend, y: somaPos.y + (subPt.y - somaPos.y) * expDend, z: subPt.z * expDend };
+        var pSub = project(sTarget, cx, cy, scale);
+        ctx.beginPath();
+        ctx.moveTo(pEnd.x, pEnd.y);
+        ctx.lineTo(pSub.x, pSub.y);
+        ctx.strokeStyle = 'rgba(52, 211, 153, 0.85)';
+        ctx.lineWidth = Math.max(1.0, 1.8 * pSub.pers);
+        ctx.stroke();
+
+        // 树突棘 (Dendritic Spines) 细密突触接收纽扣
+        for (var sp = 1; sp <= 4; sp++) {
+          var spRatio = sp / 5.0;
+          var spBaseX = pEnd.x + (pSub.x - pEnd.x) * spRatio;
+          var spBaseY = pEnd.y + (pSub.y - pEnd.y) * spRatio;
+          var normAng = Math.atan2(pSub.y - pEnd.y, pSub.x - pEnd.x) + (sp % 2 === 0 ? Math.PI / 2 : -Math.PI / 2);
+          var spLen = 7 * pSub.pers;
+          var spHeadX = spBaseX + Math.cos(normAng) * spLen;
+          var spHeadY = spBaseY + Math.sin(normAng) * spLen;
+
+          ctx.beginPath();
+          ctx.moveTo(spBaseX, spBaseY);
+          ctx.lineTo(spHeadX, spHeadY);
+          ctx.strokeStyle = 'rgba(16, 185, 129, 0.6)';
+          ctx.lineWidth = 1;
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.arc(spHeadX, spHeadY, Math.max(1.2, 2.2 * pSub.pers), 0, Math.PI * 2);
+          ctx.fillStyle = '#34d399';
+          ctx.fill();
+        }
+      });
+    });
+    ctx.restore();
+
+    // B. 神经元胞体 (Soma) 与细胞核 (多角星形轮廓 + 细胞器 + 尼氏体)
+    var somaR = 30 * basePers;
+    ctx.save();
+    // 胞体放射状星形底座
+    ctx.beginPath();
+    for (var a = 0; a <= 12; a++) {
+      var angle = (a / 12) * Math.PI * 2;
+      var rOffset = Math.sin(angle * 4 + 1.2) * 4 * basePers;
+      var px = pSoma.x + Math.cos(angle) * (somaR + rOffset);
+      var py = pSoma.y + Math.sin(angle) * (somaR + rOffset);
+      if (a === 0) ctx.moveTo(px, py);
+      else ctx.lineTo(px, py);
+    }
+    ctx.closePath();
+    var somaGrad = ctx.createRadialGradient(pSoma.x - 4, pSoma.y - 4, 3, pSoma.x, pSoma.y, somaR * 1.2);
+    somaGrad.addColorStop(0, 'rgba(56, 189, 248, 0.85)');
+    somaGrad.addColorStop(0.6, 'rgba(14, 116, 144, 0.65)');
+    somaGrad.addColorStop(1, 'rgba(8, 47, 73, 0.4)');
+    ctx.fillStyle = somaGrad;
+    ctx.fill();
+    ctx.strokeStyle = '#38bdf8';
+    ctx.lineWidth = 2.2;
+    ctx.stroke();
+
+    // 内部微管与尼氏体颗粒
+    for (var ng = 0; ng < 7; ng++) {
+      var gAng = ng * 0.9 + 0.4;
+      var gDist = somaR * (0.45 + (ng % 3) * 0.15);
+      ctx.beginPath();
+      ctx.arc(pSoma.x + Math.cos(gAng) * gDist, pSoma.y + Math.sin(gAng) * gDist, Math.max(1, 2.2 * basePers), 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(125, 211, 252, 0.7)';
+      ctx.fill();
     }
 
-    // 轴突主干与髓鞘节段
-    var axonSegments = 4;
-    for (var s = 1; s <= axonSegments; s++) {
-      var axX = (s / axonSegments) * (1.2 + exp * 0.3);
-      var axY = -(s / axonSegments) * 0.6;
-      var pAx = project({ x: axX, y: axY, z: 0.1 }, cx, cy, scale, rX, rY);
+    // 3D 细胞核 (Nucleus) 与核仁
+    var nucleusR = somaR * 0.44;
+    var nucGrad = ctx.createRadialGradient(pSoma.x - 3, pSoma.y - 3, 2, pSoma.x, pSoma.y, nucleusR);
+    nucGrad.addColorStop(0, '#fef08a');
+    nucGrad.addColorStop(0.5, '#f59e0b');
+    nucGrad.addColorStop(1, '#b45309');
+    ctx.beginPath();
+    ctx.arc(pSoma.x, pSoma.y, Math.max(1, nucleusR), 0, Math.PI * 2);
+    ctx.fillStyle = nucGrad;
+    ctx.fill();
+    ctx.strokeStyle = '#fbbf24';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
 
-      // 髓鞘胶囊
+    // 核仁暗斑
+    ctx.beginPath();
+    ctx.arc(pSoma.x + 2 * basePers, pSoma.y - 2 * basePers, Math.max(1, nucleusR * 0.32), 0, Math.PI * 2);
+    ctx.fillStyle = '#78350f';
+    ctx.fill();
+    ctx.restore();
+
+    // C. 轴突丘与始段 (Axon Hillock & AIS) - 锥形漏斗结构
+    var aisStart = { x: -0.28, y: 0.035, z: 0.005 };
+    var aisEnd = { x: -0.16, y: 0.02, z: 0.01 };
+    var pAis1 = project(aisStart, cx, cy, scale);
+    var pAis2 = project(aisEnd, cx, cy, scale);
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(pSoma.x + Math.cos(0.0) * somaR * 0.8, pSoma.y + Math.sin(0.0) * somaR * 0.8);
+    ctx.lineTo(pAis2.x, pAis2.y - 3.5 * pAis2.pers);
+    ctx.lineTo(pAis2.x, pAis2.y + 3.5 * pAis2.pers);
+    ctx.closePath();
+    ctx.fillStyle = 'rgba(96, 165, 250, 0.45)';
+    ctx.fill();
+    ctx.strokeStyle = '#60a5fa';
+    ctx.lineWidth = 1.6;
+    ctx.stroke();
+    ctx.restore();
+
+    // D. 神经轴突主干光缆轨迹 (从始段延伸至末梢)
+    var axonStart = aisEnd;
+    var axonDistal = { x: 0.75, y: -0.06, z: 0.02 };
+    var axonPoints = [];
+    var axonSegCount = 36;
+    for (var seg = 0; seg <= axonSegCount; seg++) {
+      var at = seg / axonSegCount;
+      var curX = axonStart.x + (axonDistal.x - axonStart.x) * at;
+      var curY = axonStart.y + (axonDistal.y - axonStart.y) * at + Math.sin(at * Math.PI) * 0.03;
+      var curZ = axonStart.z + (axonDistal.z - axonStart.z) * at + Math.cos(at * Math.PI * 1.5) * 0.02;
+      axonPoints.push(project({ x: curX, y: curY, z: curZ }, cx, cy, scale));
+    }
+
+    // 绘制核心轴突微管纤维管 (金琥珀色发光导轨)
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(axonPoints[0].x, axonPoints[0].y);
+    for (var ap = 1; ap < axonPoints.length; ap++) {
+      ctx.lineTo(axonPoints[ap].x, axonPoints[ap].y);
+    }
+    ctx.strokeStyle = '#f59e0b';
+    ctx.lineWidth = Math.max(1.8, 3.8 * basePers);
+    ctx.stroke();
+
+    // 内芯超高亮白金流
+    ctx.beginPath();
+    ctx.moveTo(axonPoints[0].x, axonPoints[0].y);
+    for (var ap2 = 1; ap2 < axonPoints.length; ap2++) {
+      ctx.lineTo(axonPoints[ap2].x, axonPoints[ap2].y);
+    }
+    ctx.strokeStyle = 'rgba(254, 243, 199, 0.85)';
+    ctx.lineWidth = Math.max(0.8, 1.4 * basePers);
+    ctx.stroke();
+    ctx.restore();
+
+    // E. 3D 髓鞘绝缘鞘胶囊节段 (4 大同心脂质节段，立体圆柱管体，爆炸视图下径向解构脱出)
+    var sheaths = [
+      { tStart: 0.08, tEnd: 0.25 },
+      { tStart: 0.32, tEnd: 0.49 },
+      { tStart: 0.56, tEnd: 0.73 },
+      { tStart: 0.80, tEnd: 0.97 }
+    ];
+
+    sheaths.forEach(function(sh, sIdx) {
+      var idx1 = Math.floor(sh.tStart * axonSegCount);
+      var idx2 = Math.floor(sh.tEnd * axonSegCount);
+      var pStart = axonPoints[idx1];
+      var pEnd = axonPoints[idx2];
+
+      // 爆炸模式：髓鞘节段上下交替径向分离，彻底暴露内部轴突纤维！
+      var expDist = ((sIdx % 2 === 0 ? 1 : -1) * 32 * exp * basePers);
+      var p1x = pStart.x, p1y = pStart.y + expDist;
+      var p2x = pEnd.x, p2y = pEnd.y + expDist;
+
+      var sheathR = Math.max(5, 11 * pStart.pers);
+      var dx = p2x - p1x, dy = p2y - p1y;
+      var len = Math.hypot(dx, dy);
+      var nx = -dy / len * sheathR;
+      var ny = dx / len * sheathR;
+
+      ctx.save();
+      // 髓鞘圆柱体管壁
       ctx.beginPath();
-      ctx.arc(pAx.x, pAx.y, 14 * pAx.pers, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(236, 72, 153, 0.55)';
+      ctx.moveTo(p1x + nx, p1y + ny);
+      ctx.lineTo(p2x + nx, p2y + ny);
+      ctx.lineTo(p2x - nx, p2y - ny);
+      ctx.lineTo(p1x - nx, p1y - ny);
+      ctx.closePath();
+
+      var shGrad = ctx.createLinearGradient(p1x + nx, p1y + ny, p1x - nx, p1y - ny);
+      shGrad.addColorStop(0, 'rgba(236, 72, 153, 0.88)');
+      shGrad.addColorStop(0.3, 'rgba(244, 114, 182, 0.95)'); // 高光脊线
+      shGrad.addColorStop(0.7, 'rgba(219, 39, 119, 0.85)');
+      shGrad.addColorStop(1, 'rgba(157, 23, 77, 0.75)');
+      ctx.fillStyle = shGrad;
       ctx.fill();
-      ctx.strokeStyle = '#ec4899';
-      ctx.lineWidth = 1.5;
+      ctx.strokeStyle = '#f472b6';
+      ctx.lineWidth = 1.4;
       ctx.stroke();
+
+      // 两端圆角封头
+      ctx.beginPath();
+      ctx.ellipse(p1x, p1y, sheathR, sheathR * 0.45, Math.atan2(dy, dx), 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(251, 113, 133, 0.9)';
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.ellipse(p2x, p2y, sheathR, sheathR * 0.45, Math.atan2(dy, dx), 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(244, 63, 94, 0.9)';
+      ctx.fill();
+      ctx.stroke();
+
+      // 爆炸导线
+      if (exp > 0.05) {
+        ctx.beginPath();
+        ctx.setLineDash([2, 3]);
+        ctx.moveTo(pStart.x, pStart.y);
+        ctx.lineTo(p1x, p1y);
+        ctx.moveTo(pEnd.x, pEnd.y);
+        ctx.lineTo(p2x, p2y);
+        ctx.strokeStyle = 'rgba(236, 72, 153, 0.45)';
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+      ctx.restore();
+    });
+
+    // F. 朗飞氏结 (Nodes of Ranvier - 裸露节间，超高密度电压门控 Na+ 通道，跳跃传导火花)
+    var ranvierT = [0.285, 0.525, 0.765];
+    ranvierT.forEach(function(rT, rIdx) {
+      var rIdxNode = Math.floor(rT * axonSegCount);
+      var pR = axonPoints[rIdxNode];
+
+      // 检查当前动作电位是否正经过该节点 (触发剧烈电火花与离子放电)
+      var isFiring = Math.abs(pulseCycle - (0.15 + rIdx * 0.25)) < 0.07;
+
+      ctx.save();
+      // 裸露环形电极
+      ctx.beginPath();
+      ctx.arc(pR.x, pR.y, Math.max(3, (isFiring ? 8 : 4.5) * pR.pers), 0, Math.PI * 2);
+      ctx.fillStyle = isFiring ? '#ffffff' : 'rgba(250, 204, 21, 0.85)';
+      ctx.fill();
+      ctx.strokeStyle = isFiring ? '#fef08a' : '#facc15';
+      ctx.lineWidth = isFiring ? 3.5 : 2;
+      ctx.stroke();
+
+      if (isFiring) {
+        // 放电辐射电芒火花
+        for (var spark = 0; spark < 6; spark++) {
+          var spAng = (spark / 6) * Math.PI * 2 + now * 0.01;
+          var spR = 14 * pR.pers;
+          ctx.beginPath();
+          ctx.moveTo(pR.x, pR.y);
+          ctx.lineTo(pR.x + Math.cos(spAng) * spR, pR.y + Math.sin(spAng) * spR);
+          ctx.strokeStyle = 'rgba(254, 240, 138, 0.85)';
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+        }
+      }
+      ctx.restore();
+    });
+
+    // G. 轴突末梢分支与突触终扣群 (Axon Terminal Arbor & Synaptic Boutons & Synaptic Cleft)
+    var terminalBranches = [
+      { end: { x: 0.98, y: -0.16, z: 0.05 }, targetSpine: { x: 1.06, y: -0.18, z: 0.06 } },
+      { end: { x: 1.02, y: 0.02, z: -0.10 }, targetSpine: { x: 1.10, y: 0.04, z: -0.11 } },
+      { end: { x: 0.95, y: -0.29, z: 0.14 }, targetSpine: { x: 1.02, y: -0.34, z: 0.16 } },
+      { end: { x: 1.05, y: -0.08, z: 0.20 }, targetSpine: { x: 1.13, y: -0.09, z: 0.22 } }
+    ];
+
+    ctx.save();
+    terminalBranches.forEach(function(tb, bIdx) {
+      // 爆炸模式末梢展开
+      var expTb = 1.0 + exp * 0.30;
+      var tbEnd = { x: axonDistal.x + (tb.end.x - axonDistal.x) * expTb, y: axonDistal.y + (tb.end.y - axonDistal.y) * expTb, z: tb.end.z * expTb };
+      var pTbEnd = project(tbEnd, cx, cy, scale);
+
+      var pLastAxon = axonPoints[axonPoints.length - 1];
+
+      // 末梢微细分支
+      ctx.beginPath();
+      ctx.moveTo(pLastAxon.x, pLastAxon.y);
+      ctx.lineTo(pTbEnd.x, pTbEnd.y);
+      ctx.strokeStyle = '#f43f5e';
+      ctx.lineWidth = Math.max(1.2, 2.2 * pTbEnd.pers);
+      ctx.stroke();
+
+      // 突触终扣膨大体 (Synaptic Bouton / 终纽)
+      var boutonR = Math.max(4.5, 9.0 * pTbEnd.pers);
+      var isBoutonActive = pulseCycle > 0.80; // 动作电位抵达末端释放囊泡
+
+      ctx.beginPath();
+      ctx.arc(pTbEnd.x, pTbEnd.y, boutonR, 0, Math.PI * 2);
+      var bGrad = ctx.createRadialGradient(pTbEnd.x - 2, pTbEnd.y - 2, 1, pTbEnd.x, pTbEnd.y, boutonR);
+      bGrad.addColorStop(0, isBoutonActive ? '#fecdd3' : '#f43f5e');
+      bGrad.addColorStop(0.6, isBoutonActive ? '#f43f5e' : '#be123c');
+      bGrad.addColorStop(1, '#881337');
+      ctx.fillStyle = bGrad;
+      ctx.fill();
+      ctx.strokeStyle = isBoutonActive ? '#ffe4e6' : '#fb7185';
+      ctx.lineWidth = 1.8;
+      ctx.stroke();
+
+      // 终扣内部突触小泡 (Synaptic Vesicles 储藏囊泡)
+      for (var v = 0; v < 4; v++) {
+        var vAng = v * 1.5 + (now * 0.002);
+        var vDist = boutonR * 0.45;
+        ctx.beginPath();
+        ctx.arc(pTbEnd.x + Math.cos(vAng) * vDist, pTbEnd.y + Math.sin(vAng) * vDist, Math.max(0.8, 1.4 * pTbEnd.pers), 0, Math.PI * 2);
+        ctx.fillStyle = '#ffffff';
+        ctx.fill();
+      }
+
+      // 突触后膜靶位 (Postsynaptic Target Membrane)
+      var targetPt = { x: axonDistal.x + (tb.targetSpine.x - axonDistal.x) * expTb, y: axonDistal.y + (tb.targetSpine.y - axonDistal.y) * expTb, z: tb.targetSpine.z * expTb };
+      var pTarget = project(targetPt, cx, cy, scale);
+
+      // 突触间隙 (20nm Cleft) 后膜弧形接收板
+      var cleftAng = Math.atan2(pTarget.y - pTbEnd.y, pTarget.x - pTbEnd.x);
+      var postR = boutonR * 1.35;
+      ctx.beginPath();
+      ctx.arc(pTarget.x, pTarget.y, postR, cleftAng + Math.PI / 2.2, cleftAng - Math.PI / 2.2, true);
+      ctx.strokeStyle = '#38bdf8';
+      ctx.lineWidth = Math.max(2, 3.5 * pTarget.pers);
+      ctx.stroke();
+
+      // 突触间隙飞渡囊泡量子 (Neurotransmitter Exocytosis)
+      if (isBoutonActive) {
+        for (var q = 1; q <= 3; q++) {
+          var qProgress = ((now * 0.005 + q * 0.33) % 1.0);
+          var qX = pTbEnd.x + (pTarget.x - pTbEnd.x) * (0.3 + qProgress * 0.6);
+          var qY = pTbEnd.y + (pTarget.y - pTbEnd.y) * (0.3 + qProgress * 0.6);
+          ctx.beginPath();
+          ctx.arc(qX, qY, Math.max(1, 1.8 * pTbEnd.pers), 0, Math.PI * 2);
+          ctx.fillStyle = q % 2 === 0 ? '#38bdf8' : '#fb7185';
+          ctx.fill();
+        }
+      }
+    });
+    ctx.restore();
+
+    // H. 动作电位动态高能脉冲流 (Action Potential Wave) 沿轴突如闪电疾驰
+    if (pulseCycle < 0.85) {
+      var apProgress = pulseCycle / 0.85;
+      var curIdx = Math.floor(apProgress * (axonPoints.length - 1));
+      var pPulse = axonPoints[curIdx];
+
+      ctx.save();
+      // 高能等离子脉冲光球
+      ctx.beginPath();
+      ctx.arc(pPulse.x, pPulse.y, Math.max(3, 8 * pPulse.pers), 0, Math.PI * 2);
+      ctx.fillStyle = '#ffffff';
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(pPulse.x, pPulse.y, Math.max(6, 16 * pPulse.pers), 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(250, 204, 21, 0.45)';
+      ctx.fill();
+      ctx.strokeStyle = '#fef08a';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.restore();
     }
   }
 
@@ -1994,7 +2344,7 @@ function isLightTheme() {
       for (var j = 0; j <= gridSize; j++) {
         var y = -0.8 + j * step;
         var z = (x * x - y * y) * (0.6 + exp * 0.4);
-        row.push(project({ x: x, y: y, z: z }, cx, cy, scale, rX, rY));
+        row.push(project({ x: x, y: y, z: z }, cx, cy, scale));
       }
       lines.push(row);
     }
@@ -2024,10 +2374,10 @@ function isLightTheme() {
     }
 
     // 坐标原点切线十字
-    var origin = project({ x: 0, y: 0, z: 0 }, cx, cy, scale, rX, rY);
-    var axisX = project({ x: 0.9, y: 0, z: 0 }, cx, cy, scale, rX, rY);
-    var axisY = project({ x: 0, y: 0.9, z: 0 }, cx, cy, scale, rX, rY);
-    var axisZ = project({ x: 0, y: 0, z: 0.9 }, cx, cy, scale, rX, rY);
+    var origin = project({ x: 0, y: 0, z: 0 }, cx, cy, scale);
+    var axisX = project({ x: 0.9, y: 0, z: 0 }, cx, cy, scale);
+    var axisY = project({ x: 0, y: 0.9, z: 0 }, cx, cy, scale);
+    var axisZ = project({ x: 0, y: 0, z: 0.9 }, cx, cy, scale);
 
     ctx.lineWidth = 1.8;
     ctx.beginPath(); ctx.moveTo(origin.x, origin.y); ctx.lineTo(axisX.x, axisX.y); ctx.strokeStyle = '#ef4444'; ctx.stroke();
@@ -2035,26 +2385,26 @@ function isLightTheme() {
     ctx.beginPath(); ctx.moveTo(origin.x, origin.y); ctx.lineTo(axisZ.x, axisZ.y); ctx.strokeStyle = '#38bdf8'; ctx.stroke();
   }
 
-  // 6. 热点标签光晕与投影
+  // 6. 热点标签光晕与投影 (确保 pers 绝对不会为 NaN)
   function drawHotspots(ctx, cx, cy, scale, rX, rY, exp) {
     projectedHotspots = [];
     currentModel.hotspots.forEach(function(h) {
       var expX = h.x * (1 + exp * 0.35);
       var expY = h.y * (1 + exp * 0.35);
-      var p = project({ x: expX, y: expY, z: h.z }, cx, cy, scale, rX, rY);
-      projectedHotspots.push({ data: h, x: p.x, y: p.y, r: 14 * p.pers });
+      var p = project({ x: expX, y: expY, z: h.z }, cx, cy, scale);
+      projectedHotspots.push({ data: h, x: p.x, y: p.y, r: Math.max(8, 14 * p.pers) });
 
       var isSel = selectedHotspot && selectedHotspot.num === h.num;
       ctx.save();
       // 外层光晕
       ctx.beginPath();
-      ctx.arc(p.x, p.y, (isSel ? 18 : 13) * p.pers, 0, Math.PI * 2);
+      ctx.arc(p.x, p.y, Math.max(10, (isSel ? 18 : 13) * p.pers), 0, Math.PI * 2);
       ctx.fillStyle = isSel ? 'rgba(229, 168, 85, 0.35)' : 'rgba(56, 189, 248, 0.2)';
       ctx.fill();
 
       // 内层实体圆点
       ctx.beginPath();
-      ctx.arc(p.x, p.y, (isSel ? 13 : 10) * p.pers, 0, Math.PI * 2);
+      ctx.arc(p.x, p.y, Math.max(8, (isSel ? 13 : 10) * p.pers), 0, Math.PI * 2);
       ctx.fillStyle = isSel ? '#e5a855' : 'rgba(10, 15, 29, 0.85)';
       ctx.fill();
       ctx.strokeStyle = isSel ? '#fef3c7' : h.color;
@@ -2071,6 +2421,7 @@ function isLightTheme() {
     });
   }
 
+  // 主渲染循环
   function render() {
     requestAnimationFrame(render);
     var w = canvas.width;
@@ -2118,7 +2469,7 @@ function isLightTheme() {
     if (annoEl) annoEl.textContent = h.desc || currentModel.annotation;
     if (srcEl) srcEl.textContent = currentModel.source;
 
-    // 更新 4 项 Meta
+    // 更新 4 组微观参数指标
     for (var m = 1; m <= 4; m++) {
       var kEl = document.getElementById('dissMetaK' + m);
       var vEl = document.getElementById('dissMetaV' + m);
@@ -2126,7 +2477,7 @@ function isLightTheme() {
       if (vEl && h.meta && h.meta[m - 1]) vEl.textContent = h.meta[m - 1];
     }
 
-    // 更新双链标签
+    // 更新双链芯片
     if (chipsEl && h.chips) {
       chipsEl.innerHTML = '';
       h.chips.forEach(function(c) {
@@ -2138,7 +2489,7 @@ function isLightTheme() {
     }
   }
 
-  // 鼠标/触控交互
+  // 鼠标与触控坐标转换
   function getCanvasCoords(e) {
     var rect = canvas.getBoundingClientRect();
     var dpr = window.devicePixelRatio || 1;
@@ -2215,7 +2566,10 @@ function isLightTheme() {
     orbitBtn.addEventListener('click', function() {
       autoRotate = !autoRotate;
       if (orbitIcon) orbitIcon.textContent = autoRotate ? '⏸' : '▶';
-      if (orbitText) orbitText.textContent = autoRotate ? '暂停自转' : '自动旋转';
+      if (orbitText) {
+        var isEn = document.documentElement.lang === 'en' || window.location.pathname.indexOf('.en') !== -1;
+        orbitText.textContent = autoRotate ? (isEn ? 'Pause Orbit' : '暂停自转') : (isEn ? 'Auto Rotate' : '自动旋转');
+      }
       orbitBtn.classList.toggle('active', autoRotate);
     });
   }
