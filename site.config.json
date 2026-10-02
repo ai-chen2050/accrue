@@ -191,6 +191,34 @@
     },
     {
       "name": {
+        "zh-CN": "3D 空间数学与立体几何工作室",
+        "en": "3D Spatial Math & Geometric Graphing Studio"
+      },
+      "summary": {
+        "zh-CN": "交互式三维函数曲面与切面计算器，支持动态旋转调谐，一键无损插入双链笔记与心流日记。",
+        "en": "Interactive 3D mathematical surfaces and tangent planes calculator with real-time tuning, embedding directly into notes."
+      },
+      "detail": {
+        "zh-CN": "专为数理学习与量化研究打造的 3D 空间图形工作室。支持双曲抛物面（马鞍面）、高斯球面、环面等复杂三维代数曲面实时渲染与自由旋转；可调节网格密度与切面切线；支持一键将三维函数图谱作为原生交互节点插入个人笔记与学术综述，让抽象数学直观具象化。",
+        "en": "Built for mathematical modeling and quantitative analysis. Render and rotate 3D algebraic surfaces including hyperbolic paraboloids, Gaussian spheres, and tori. Tune mesh resolutions, observe tangent planes, and insert interactive 3D math figures directly into personal notes."
+      }
+    },
+    {
+      "name": {
+        "zh-CN": "3D 空间剖析与全息数字孪生",
+        "en": "3D Spatial Dissection & Holographic Digital Twin"
+      },
+      "summary": {
+        "zh-CN": "超越扁平二维文本，微观解剖人脑神经元、DNA超螺旋复合体与地球圈层，支持全息爆炸拆解与实物 LiDAR 扫描建模。",
+        "en": "Transcend flat 2D text into interactive 3D anatomy for neurons, DNA supercoils, and Earth layers, featuring holographic exploded views and LiDAR scanning."
+      },
+      "detail": {
+        "zh-CN": "内置原生 3D 高精几何网格引擎。支持人脑神经元突触、DNA组蛋白八聚体超螺旋复合体与地球内部地质圈层等微观剖析模型；支持径向全息爆炸拆解、1-6 号多级部位数字光晕点击溯源与双链卡片联动；支持 iPhone Pro 激光雷达 (LiDAR) 实物点云扫描及自定义 GLB / OBJ 外部模型导入，让知识以真实三维孪生结构沉淀。",
+        "en": "Powered by a native 3D geometry engine. Explore detailed digital twins of neurons, DNA nucleosome supercoils, and Earth geological crust layers. Features radial exploded dismantling, interactive 1-6 hotspot inspection with wiki-linking, iPhone Pro LiDAR scanning, and custom GLB/OBJ model imports."
+      }
+    },
+    {
+      "name": {
         "zh-CN": "AI 认知镜像与白盒对话",
         "en": "AI Cognitive Mirror & White-box Q&A"
       },
@@ -351,6 +379,20 @@
           "zh-CN": "动辄按月收取高昂订阅费（$20+/月），且数据强制存云端，取消订阅后无法查看或导出个人笔记",
           "en": "Expensive monthly recurring subscriptions ($20+/mo) with mandatory cloud lock-in; losing access to your own data upon cancellation"
         }
+      },
+      {
+        "axis": {
+          "zh-CN": "3D 空间孪生与数学",
+          "en": "3D Spatial Dissection & Math"
+        },
+        "ours": {
+          "zh-CN": "内置原生 3D 空间剖析（DNA/地质/神经元）、全息爆炸拆解、LiDAR 实物扫描与 3D 立体曲面计算器",
+          "en": "Native 3D spatial dissection (DNA/Geology/Neuron), holographic exploded views, LiDAR scanning & 3D math studio"
+        },
+        "others": {
+          "zh-CN": "仅支持二维静态文本与图片，无任何 3D 空间解剖与立体数学建模能力",
+          "en": "Flat 2D text and images only, zero 3D spatial dissection or 3D mathematical modeling"
+        }
       }
     ]
   },
@@ -411,8 +453,8 @@
         "en": "What does Accrue Notes Pro include, and how does Annual vs Monthly billing and cancellation work?"
       },
       "a": {
-        "zh-CN": "Accrue Notes 基础功能永久免费（含 50 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能提供两种灵活的订阅选项：超值年度订阅（¥168/年，折合仅 ¥14/月，立省 >30%，最受欢迎）与灵活月度订阅（¥19.9/月）。订阅即可解锁突破 50 篇限制的无限笔记、3D 全景心智星网、无限次 AI 专属 Agent 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由对应应用商店（Apple App Store / Google Play / 华为应用市场）官方安全扣费，你可以随时在系统应用商店的「订阅管理」中自主取消续订，已有数据永久属于你，终身不锁死。",
-        "en": "Accrue Notes core features are free forever (with 50 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are available in two flexible options: the best-value Annual Plan at ¥168/year (~¥14/month, save >30%, most popular) and the flexible Monthly Plan at ¥19.9/month. Pro unlocks unlimited notes, the 3D mindscape constellation, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are securely processed by official app stores (Apple App Store / Google Play / Huawei AppGallery) and can be cancelled anytime in your store account settings with zero data lock-in."
+        "zh-CN": "Accrue Notes 基础功能永久免费（含 50 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能提供两种灵活的订阅选项：超值年度订阅（¥168/年，折合仅 ¥14/月，立省 >30%，最受欢迎）与灵活月度订阅（¥19.9/月）。订阅即可解锁突破 50 篇限制的无限笔记、3D 全景心智星网、3D 空间剖析高级模型库（DNA/地质/医学）、iPhone Pro LiDAR 激光雷达实物扫描建模与自定义 3D (GLB/OBJ) 导入、3D 数学曲面无限插入笔记、无限次 AI 专属 Agent 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由对应应用商店（Apple App Store / Google Play / 华为应用市场）官方安全扣费，你可以随时在系统应用商店的「订阅管理」中自主取消续订，已有数据永久属于你，终身不锁死。",
+        "en": "Accrue Notes core features are free forever (with 50 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are available in two flexible options: the best-value Annual Plan at ¥168/year (~¥14/month, save >30%, most popular) and the flexible Monthly Plan at ¥19.9/month. Pro unlocks unlimited notes, 3D mindscape cosmos, the 3D spatial dissection pro library (DNA/Geology/Medical), iPhone Pro LiDAR physical scanning & custom GLB/OBJ model import, unlimited 3D math surface note insertion, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are securely processed by official app stores (Apple App Store / Google Play / Huawei AppGallery) and can be cancelled anytime in your store account settings with zero data lock-in."
       }
     }
   ],
@@ -447,7 +489,11 @@
       "知识图谱",
       "LaTeX公式",
       "思维模型",
-      "Accrue Notes"
+      "Accrue Notes",
+      "3D空间剖析",
+      "数字孪生",
+      "LiDAR扫描",
+      "3D数学计算器"
     ],
     "en": [
       "Accrue Notes",
@@ -459,7 +505,11 @@
       "BYOK",
       "LaTeX notes",
       "mental models",
-      "knowledge compounding"
+      "knowledge compounding",
+      "3D spatial dissection",
+      "digital twin",
+      "LiDAR scanning",
+      "3D math calculator"
     ]
   }
 }

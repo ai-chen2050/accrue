@@ -1179,3 +1179,232 @@ footer a:hover { color: var(--brand-deep); }
   }
 }
 
+
+
+/* ── 3D 空间剖析与全息数字孪生舱 ── */
+.dissection-wrapper {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+  margin-top: 36px;
+}
+.dissection-viewport {
+  position: relative;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--constellation-border);
+  background: radial-gradient(circle at 50% 50%, #0c1527 0%, #060913 70%, #020408 100%);
+  box-shadow: var(--constellation-shadow);
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.dissection-canvas {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: block;
+  cursor: grab;
+  touch-action: none;
+}
+.dissection-canvas:active {
+  cursor: grabbing;
+}
+.dissection-hud-top {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dissection-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--constellation-badge-bg);
+  border: 1px solid var(--constellation-badge-border);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--constellation-badge-color);
+  backdrop-filter: blur(8px);
+}
+.dissection-presets {
+  display: flex;
+  gap: 6px;
+  pointer-events: auto;
+  flex-wrap: wrap;
+}
+.dissection-btn {
+  background: var(--constellation-btn-bg);
+  border: 1px solid var(--constellation-btn-border);
+  color: var(--constellation-btn-color);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+.dissection-btn:hover, .dissection-btn.active {
+  background: var(--brand-deep);
+  border-color: var(--brand-deep);
+  color: #ffffff;
+}
+.dissection-hud-bottom {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 15, 29, 0.78);
+  border: 1px solid rgba(71, 85, 105, 0.35);
+  border-radius: 12px;
+  padding: 8px 14px;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  gap: 12px;
+}
+.dissection-slider-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+.dissection-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 120px;
+  height: 5px;
+  border-radius: 4px;
+  background: #334155;
+  outline: none;
+  cursor: pointer;
+}
+.dissection-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 6px #38bdf8;
+  cursor: pointer;
+}
+.slider-val {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: #38bdf8;
+  min-width: 32px;
+}
+.hud-square-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(30, 41, 59, 0.65);
+  border: 1px solid rgba(71, 85, 105, 0.45);
+  color: #f1f5f9;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.hud-square-btn:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.6);
+  color: #38bdf8;
+}
+
+/* 右侧全息解剖控制台 */
+.dissection-telemetry {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: 0 16px 36px var(--shadow);
+}
+.part-num-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(229, 168, 85, 0.18);
+  border: 1.5px solid #e5a855;
+  color: #e5a855;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 0 8px rgba(229, 168, 85, 0.4);
+}
+.pro-pill-badge {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #b45309;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+.dissection-annotation-box {
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  margin: 14px 0;
+}
+.annotation-text {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.annotation-source {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--sub);
+  margin-top: 8px;
+  letter-spacing: 0.4px;
+}
+.dissection-pro-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.feature-tag {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--brand-deep);
+  background: var(--brand-subtle);
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+@media (max-width: 1024px) {
+  .dissection-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .dissection-viewport {
+    min-height: 420px;
+  }
+}

@@ -13,11 +13,13 @@
 ## Core Features
 
 1. **Local-First Bi-directional Linking & 3D Mindscape Constellation**: Interconnect fragmented notes like neural synapses and cosmic constellations, navigating your lifelong knowledge brain in 3D.
-2. **AI Cognitive Mirror & White-box Q&A**: A private cognitive assistant grounded in your notes, zero hallucinations, with transparent reasoning chains.
-3. **10-Dimensional Deep Research Matrix**: Synthesize notes into multi-angle panoramic research reports from scattered ideas to structured decisions.
-4. **Mental Models & Red Team Challenge**: Apply Charlie Munger's mental model latticework; AI acts as an intellectual sparring partner.
-5. **LaTeX Formula & Academic Export**: Pixel-perfect KaTeX equation rendering with direct export to publication-ready PDF and Word (.docx).
-6. **Absolute Privacy & Bring Your Own Key**: 100% on-device operation, zero middleman servers. Core features free; Pro offers discounted Annual (¥168/yr) and Monthly (¥19.9/mo) plans.
+2. **3D Spatial Math & Geometric Graphing Studio**: Interactive 3D mathematical surfaces and tangent planes calculator with real-time tuning, embedding directly into notes.
+3. **3D Spatial Dissection & Holographic Digital Twin**: Transcend flat 2D text into interactive 3D anatomy for neurons, DNA supercoils, and Earth layers, featuring holographic exploded views and LiDAR scanning.
+4. **AI Cognitive Mirror & White-box Q&A**: A private cognitive assistant grounded in your notes, zero hallucinations, with transparent reasoning chains.
+5. **10-Dimensional Deep Research Matrix**: Synthesize notes into multi-angle panoramic research reports from scattered ideas to structured decisions.
+6. **Mental Models & Red Team Challenge**: Apply Charlie Munger's mental model latticework; AI acts as an intellectual sparring partner.
+7. **LaTeX Formula & Academic Export**: Pixel-perfect KaTeX equation rendering with direct export to publication-ready PDF and Word (.docx).
+8. **Absolute Privacy & Bring Your Own Key**: 100% on-device operation, zero middleman servers. Core features free; Pro offers discounted Annual (¥168/yr) and Monthly (¥19.9/mo) plans.
 
 ## LLM Citation Guide
 

@@ -24,7 +24,7 @@
 <!-- GEO:AUTO START -->
 <title>复利笔记 · 知识随时间产生复利。本地优先的双链知识库与 AI 认知镜像</title>
 <meta name="description" content="Accrue Notes 官网：本地优先的双链笔记与知识图谱工具，基础功能免费，Pro 月度订阅，纯本地存储，BYOK 自带 Key。">
-<meta name="keywords" content="双链笔记, 复利笔记, 知识库, 第二大脑, 本地优先, BYOK, 知识图谱, LaTeX公式, 思维模型, Accrue Notes">
+<meta name="keywords" content="双链笔记, 复利笔记, 知识库, 第二大脑, 本地优先, BYOK, 知识图谱, LaTeX公式, 思维模型, Accrue Notes, 3D空间剖析, 数字孪生, LiDAR扫描, 3D数学计算器">
 <link rel="canonical" href="https://fulibiji.top/index.html">
 <link rel="alternate" hreflang="zh-CN" href="https://fulibiji.top/index.html">
 <link rel="alternate" hreflang="en" href="https://fulibiji.top/index.en.html">
@@ -68,6 +68,8 @@
       },
       "featureList": [
         "本地优先、双链与 3D 全景心智星网",
+        "3D 空间数学与立体几何工作室",
+        "3D 空间剖析与全息数字孪生",
         "AI 认知镜像与白盒对话",
         "十维专业深度研报矩阵",
         "思维模型沙盘与红队对抗",
@@ -125,7 +127,7 @@
           "name": "Accrue Notes Pro 包含什么？年度与月度订阅如何收费与取消？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Accrue Notes 基础功能永久免费（含 50 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能提供两种灵活的订阅选项：超值年度订阅（¥168/年，折合仅 ¥14/月，立省 >30%，最受欢迎）与灵活月度订阅（¥19.9/月）。订阅即可解锁突破 50 篇限制的无限笔记、3D 全景心智星网、无限次 AI 专属 Agent 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由对应应用商店（Apple App Store / Google Play / 华为应用市场）官方安全扣费，你可以随时在系统应用商店的「订阅管理」中自主取消续订，已有数据永久属于你，终身不锁死。"
+            "text": "Accrue Notes 基础功能永久免费（含 50 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能提供两种灵活的订阅选项：超值年度订阅（¥168/年，折合仅 ¥14/月，立省 >30%，最受欢迎）与灵活月度订阅（¥19.9/月）。订阅即可解锁突破 50 篇限制的无限笔记、3D 全景心智星网、3D 空间剖析高级模型库（DNA/地质/医学）、iPhone Pro LiDAR 激光雷达实物扫描建模与自定义 3D (GLB/OBJ) 导入、3D 数学曲面无限插入笔记、无限次 AI 专属 Agent 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由对应应用商店（Apple App Store / Google Play / 华为应用市场）官方安全扣费，你可以随时在系统应用商店的「订阅管理」中自主取消续订，已有数据永久属于你，终身不锁死。"
           }
         }
       ]
@@ -148,6 +150,7 @@
     <a href="#features" class="hide-sm">核心能力</a>
     <a href="#playground" class="hide-sm">双链沙盒</a>
     <a href="#constellation" class="hide-sm">全景星网</a>
+    <a href="#spatial-dissection" class="hide-sm">3D 空间剖析</a>
     <a href="#pricing" class="hide-sm">方案定价</a>
     <a href="devlog.html" class="hide-sm">开发日记</a>
     <a href="#faq" class="hide-sm">常见问题</a>
@@ -366,6 +369,113 @@
   </div>
 </div></section>
 
+
+<!-- 交互演示舱: 3D 空间剖析与全息数字孪生舱 -->
+<section id="spatial-dissection" class="reveal" style="background:var(--bg2)"><div class="wrap">
+  <div class="section-header">
+    <h2>3D 空间剖析：超越平面文本的微观数字孪生</h2>
+    <p class="section-lead">人脑神经元、DNA超螺旋与地球圈层微观解剖。支持全息爆炸拆解、可点击序号溯源、iPhone LiDAR 实物扫描与 3D 空间数学曲面</p>
+  </div>
+
+  <div class="dissection-wrapper">
+    <div class="dissection-viewport">
+      <div class="dissection-hud-top">
+        <div class="dissection-badge">
+          <span class="pulse-dot"></span>
+          <span>3D Spatial Dissection · 全息数字孪生</span>
+        </div>
+        <div class="dissection-presets" id="dissectionPresets">
+          <button type="button" class="dissection-btn active" data-model="earth">🌍 地球圈层剖切</button>
+          <button type="button" class="dissection-btn" data-model="dna">🧬 DNA 组蛋白超螺旋</button>
+          <button type="button" class="dissection-btn" data-model="neuron">🧠 神经元轴突突触</button>
+          <button type="button" class="dissection-btn" data-model="math">🧮 3D 双曲抛物面</button>
+        </div>
+      </div>
+
+      <canvas id="dissectionCanvas" class="dissection-canvas"></canvas>
+
+      <div class="dissection-hud-bottom">
+        <div class="dissection-slider-group">
+          <span class="slider-label">💥 爆炸拆解</span>
+          <input type="range" id="explodeSlider" min="0" max="100" value="30" class="dissection-slider" title="调节爆炸拆解间距">
+          <span id="explodeVal" class="slider-val">30%</span>
+        </div>
+        <div class="dissection-controls">
+          <button type="button" id="dissectionOrbitBtn" class="hud-square-btn" title="自动旋转开关">
+            <span id="dissectionOrbitIcon">⏸</span>
+            <span id="dissectionOrbitText">暂停自转</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右侧全息解剖与遥测面板 -->
+    <div class="dissection-telemetry">
+      <div class="telemetry-header">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <span class="telemetry-tag" id="dissTag">地质物理 · 地球圈层</span>
+          <span class="pro-pill-badge" id="dissProBadge">PRO 教学精选</span>
+        </div>
+        <h3 class="telemetry-title" id="dissTitle">
+          <span id="dissNum" class="part-num-bubble">6</span>
+          <span id="dissName">固态铁镍内地核</span>
+        </h3>
+        <div class="telemetry-en" id="dissEn">Solid Iron-Nickel Inner Core</div>
+      </div>
+
+      <div class="telemetry-meta-grid" id="dissMetaGrid">
+        <div class="telemetry-meta-item">
+          <span class="telemetry-meta-k" id="dissMetaK1">深度范围</span>
+          <span class="telemetry-meta-v" id="dissMetaV1">5150 - 6371 km</span>
+        </div>
+        <div class="telemetry-meta-item">
+          <span class="telemetry-meta-k" id="dissMetaK2">核心温度</span>
+          <span class="telemetry-meta-v" id="dissMetaV2">5500 - 6000 K</span>
+        </div>
+        <div class="telemetry-meta-item">
+          <span class="telemetry-meta-k" id="dissMetaK3">物质晶相</span>
+          <span class="telemetry-meta-v" id="dissMetaV3">六方密排 (hcp) 固态铁</span>
+        </div>
+        <div class="telemetry-meta-item">
+          <span class="telemetry-meta-k" id="dissMetaK4">压强量级</span>
+          <span class="telemetry-meta-v" id="dissMetaV4">330 - 360 万大气压</span>
+        </div>
+      </div>
+
+      <div class="dissection-annotation-box">
+        <div class="annotation-text" id="dissAnnotation">
+          深度 5150-6371km 的地球几何物理重心，半径约 1220km。尽管中心温度高达 5500-6000K，但在 330-360 万个大气压下结晶为固态六方密排 (hcp) 铁晶核，具有微弱超速自转与地磁发电机锚定效应。
+        </div>
+        <div class="annotation-source" id="dissSource">
+          🌐 ORIGINAL ANNOTATION (USGS / NASA Geodynamics / Sketchfab)
+        </div>
+      </div>
+
+      <div class="telemetry-links">
+        <h5>关联双链知识词条 (Bi-directional Wiki Links)</h5>
+        <div class="synapse-chip-group" id="dissChips">
+          <span class="synapse-chip">[[地球动力学]]</span>
+          <span class="synapse-chip">[[地磁发电机假说]]</span>
+          <span class="synapse-chip">[[核幔边界]]</span>
+          <span class="synapse-chip">[[地震波各向异性]]</span>
+        </div>
+      </div>
+
+      <div class="dissection-pro-features">
+        <span class="feature-tag">📡 iPhone Pro LiDAR 空间扫描</span>
+        <span class="feature-tag">📦 自定义 GLB/OBJ 导入</span>
+        <span class="feature-tag">🧮 3D 函数曲面插入笔记</span>
+      </div>
+
+      <div class="telemetry-footer-cta">
+        <a href="https://apps.apple.com/app/id6810539038" class="cta" style="width:100%; justify-content:center; padding:10px 18px; font-size:14px">
+          在 App 中体验 3D 全息空间剖析 →
+        </a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
 <!-- 交互演示舱 2: 白盒 AI 思考流演播舱 -->
 <section id="whitebox" class="reveal"><div class="wrap">
   <div class="section-header">
@@ -536,6 +646,7 @@
       <tr><td><strong>知识连接深度</strong></td><td><span class="check-icon">✓</span> Markdown 双向链接 + 实体抽取 + 交互式知识图谱 + 语义实体混合检索</td><td><span class="cross-icon">✕</span> 传统单向文件夹层级结构，或仅提供简单关键词字面匹配搜索</td></tr>
       <tr><td><strong>深度思考辅助</strong></td><td><span class="check-icon">✓</span> 十维专业深度研报矩阵、思维模型沙盘与批判性红队对抗质询</td><td><span class="cross-icon">✕</span> 浅层通用对话聊天，或仅支持简单的语法润色与粗略摘要</td></tr>
       <tr><td><strong>公式与学术导出</strong></td><td><span class="check-icon">✓</span> KaTeX 像素级原生渲染，独创公式光栅化管道，高清无损导出 PDF 与 Word</td><td><span class="cross-icon">✕</span> 仅支持纯文本，数学公式无法排版或导出时乱码、公式丢失变形</td></tr>
+      <tr><td><strong>3D 空间孪生与数学</strong></td><td><span class="check-icon">✓</span> 原生内置 3D 空间剖析（DNA/地质/神经元）、全息爆炸拆解、LiDAR 实物扫描与 3D 立体曲面计算器</td><td><span class="cross-icon">✕</span> 仅支持扁平 2D 文本图片，无任何 3D 空间建模与微观解剖能力</td></tr>
       <tr><td><strong>商业与收费模式</strong></td><td><span class="check-icon">✓</span> 基础功能免费（50 篇额度+次月起每月赠送 5 次），Pro 高级功能提供超值年付（¥168/年，立省 >30%）与灵活月付（¥19.9/月），全包含所有知识母体，终身不锁死数据</td><td><span class="cross-icon">✕</span> 动辄按月收取高昂订阅费（$20+/月），且数据强制存云端，取消订阅后无法查看或导出个人笔记</td></tr>
     </tbody>
   </table></div>
@@ -584,6 +695,8 @@
         <li><span class="check">✓</span> <span>标准 Markdown 格式无损导出</span></li>
         <li class="dim"><span>✕</span> <span>突破 50 篇限制的无限笔记库</span></li>
         <li class="dim"><span>✕</span> <span>3D 全景心智星网拓扑漫游</span></li>
+        <li class="dim"><span>✕</span> <span>3D 空间剖析高级模型库与 LiDAR 扫描</span></li>
+        <li class="dim"><span>✕</span> <span>3D 数学曲面工作室插入笔记</span></li>
         <li class="dim"><span>✕</span> <span>全部 6 套精选高价值知识母体</span></li>
         <li class="dim"><span>✕</span> <span>KaTeX 像素级公式渲染与 PDF/Word 导出</span></li>
       </ul>
@@ -607,6 +720,9 @@
       <ul class="pricing-features-list">
         <li><span class="check">✓</span> <span><strong>无限笔记篇数</strong>：彻底破除 50 篇额度限制</span></li>
         <li><span class="check">✓</span> <span><strong>3D 全景心智星网</strong>：全局三维漫游与聚类</span></li>
+        <li><span class="check">✓</span> <span><strong>3D 空间剖析高级模型库</strong>（DNA/地质/神经元全息拆解）</span></li>
+        <li><span class="check">✓</span> <span><strong>iPhone Pro LiDAR 激光雷达扫描</strong>与自定义 3D (GLB/OBJ) 导入</span></li>
+        <li><span class="check">✓</span> <span><strong>3D 空间数学曲面工作室</strong>：立体函数图形直接插入笔记</span></li>
         <li><span class="check">✓</span> <span><strong>全套 6 大专业知识母体</strong>（商业/芒格/产品/投资等）</span></li>
         <li><span class="check">✓</span> <span><strong>十维专业深度研报矩阵</strong>：一键全景综述</span></li>
         <li><span class="check">✓</span> <span><strong>思维模型沙盘与红队对抗</strong>：批判性质询</span></li>
@@ -635,6 +751,8 @@
         <li><span class="check">✓</span> <span>享有与年度版<strong>完全一致</strong>的全部 Pro 特权</span></li>
         <li><span class="check">✓</span> <span>无限笔记与无上限实体知识图谱</span></li>
         <li><span class="check">✓</span> <span>3D 全景心智星网与局部突触雷达</span></li>
+        <li><span class="check">✓</span> <span>3D 空间剖析高级模型库与 LiDAR 扫描导入</span></li>
+        <li><span class="check">✓</span> <span>3D 空间数学曲面工作室与笔记插入</span></li>
         <li><span class="check">✓</span> <span>全套 6 大专业知识母体全包含</span></li>
         <li><span class="check">✓</span> <span>十维研报矩阵与思维模型红队质询</span></li>
         <li><span class="check">✓</span> <span>学术级 KaTeX 渲染与 PDF/Word 导出</span></li>
@@ -693,7 +811,7 @@
     </details>
     <details>
       <summary>Accrue Notes Pro 包含什么？年度与月度订阅如何收费与取消？</summary>
-      <p>Accrue Notes 基础功能永久免费（含 50 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能提供两种灵活选择：超值年度订阅（¥168/年，折合仅 ¥14/月，立省 >30%，最受欢迎）与灵活月度订阅（¥19.9/月）。订阅即可解锁突破 50 篇限制的无限笔记、3D 全景心智星网、无限次 AI 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由应用商店官方安全处理，可在系统设置中随时自主取消，终身不锁死任何数据。</p>
+      <p>Accrue Notes 基础功能永久免费（含 50 篇笔记基础额度，额度用尽后次月起每个月赠送 5 次记录）。Pro 高级功能提供两种灵活选择：超值年度订阅（¥168/年，折合仅 ¥14/月，立省 >30%，最受欢迎）与灵活月度订阅（¥19.9/月）。订阅即可解锁突破 50 篇限制的无限笔记、3D 全景心智星网、3D 空间剖析高级模型库（DNA/地质/医学）、iPhone Pro LiDAR 激光雷达实物扫描建模与自定义 3D (GLB/OBJ) 导入、3D 数学曲面无限插入笔记、无限次 AI 专属 Agent 深度剖析、包含全部 6 套精选专业知识母体、数据私有备份同步及学术级无损导出。所有购买均由应用商店官方安全处理，可在系统设置中随时自主取消，终身不锁死任何数据。</p>
     </details>
   </div>
   <p style="margin-top:28px;text-align:center"><a href="geo.html" style="font-weight:700">更完整的知识库与机制说明 →</a></p>
@@ -1526,6 +1644,602 @@ function isLightTheme() {
       cardAnnual.classList.remove('featured');
     }
   });
+})();
+
+
+// ── 9. 3D 空间剖析与全息数字孪生舱交互引擎 ──
+(function() {
+  var canvas = document.getElementById('dissectionCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  var models = {
+    earth: {
+      tag: '地质物理 · 地球圈层',
+      proBadge: 'PRO 教学精选',
+      title: '固态铁镍内地核',
+      num: '6',
+      en: 'Solid Iron-Nickel Inner Core',
+      metaK: ['深度范围', '核心温度', '物质晶相', '压强量级'],
+      metaV: ['5150 - 6371 km', '5500 - 6000 K', '六方密排 (hcp) 固态铁', '330 - 360 万大气压'],
+      annotation: '深度 5150-6371km 的地球几何物理重心，半径约 1220km。尽管中心温度高达 5500-6000K，但在 330-360 万个大气压下结晶为固态六方密排 (hcp) 铁晶核，具有微弱超速自转与地磁发电机锚定效应。',
+      source: '🌐 ORIGINAL ANNOTATION (USGS / NASA Geodynamics / Sketchfab)',
+      chips: ['[[地球动力学]]', '[[地磁发电机假说]]', '[[核幔边界]]', '[[地震波各向异性]]'],
+      hotspots: [
+        { num: 1, name: '岩石圈与地壳', en: 'Lithosphere & Crust', x: 0.88, y: 0.22, z: 0.05, color: '#38bdf8', meta: ['0 - 100 km', '室温 - 800 ℃', '硅铝质固态岩石圈', '0 - 3 GPa'], desc: '由刚性岩石构成的地球最外表层，包含硅铝质大陆地壳与硅镁质大洋地壳。', chips: ['[[板块构造论]]', '[[莫霍界面]]', '[[岩石圈增厚]]'] },
+        { num: 2, name: '软流圈与上地幔', en: 'Asthenosphere & Upper Mantle', x: 0.70, y: 0.18, z: 0.04, color: '#f59e0b', meta: ['100 - 410 km', '1000 - 1400 ℃', '橄榄岩部分熔融塑性体', '3 - 14 GPa'], desc: '岩石处于部分熔融塑性状态的软流圈，具有流变特性，是全球板块运移俯冲的动力学滑脱层。', chips: ['[[地幔柱假说]]', '[[软流圈流变]]', '[[俯冲带]]'] },
+        { num: 3, name: '下地幔对流区', en: 'Lower Mantle Convection', x: 0.52, y: 0.13, z: 0.03, color: '#d97706', meta: ['660 - 2900 km', '1500 - 3000 K', '布氏岩与铁方镁石', '24 - 136 GPa'], desc: '占地球总体积约55%的主体深部地幔，在高压下结晶为钙钛矿相（布氏岩），驱动全地幔对流。', chips: ['[[全地幔对流]]', '[[下地幔剪切波]]', '[[相变界面]]'] },
+        { num: 4, name: '古登堡面与D"层', en: 'Gutenberg & D" Layer', x: 0.38, y: 0.09, z: 0.02, color: '#ea580c', meta: ['2700 - 2900 km', '2800 - 3800 K', '超低速带 (ULVZ)', '130 - 136 GPa'], desc: '地幔固态硅酸盐与地核液态铁镍的强热边界层，存在剧烈热交换与地震波超低速带。', chips: ['[[古登堡界面]]', '[[热边界层]]', '[[地核散热]]'] },
+        { num: 5, name: '液态铁镍外地核', en: 'Liquid Iron-Nickel Outer Core', x: 0.25, y: 0.06, z: 0.01, color: '#dc2626', meta: ['2900 - 5150 km', '4000 - 5500 K', '低粘度液态铁镍流体', '136 - 330 GPa'], desc: '剧烈涡流对流的导电液态金属流体，在科里奥利力作用下形成自激地磁自生发电机。', chips: ['[[地磁场]]', '[[磁流体动力学]]', '[[科氏力导电]]'] },
+        { num: 6, name: '固态铁镍内地核', en: 'Solid Iron-Nickel Inner Core', x: 0.0, y: 0.0, z: 0.0, color: '#fbbf24', meta: ['5150 - 6371 km', '5500 - 6000 K', '六方密排 (hcp) 固态铁晶核', '330 - 360 GPa'], desc: '深度 5150-6371km 的地球几何物理重心，尽管中心温度高达 5500-6000K，但在极高压下结晶为固态，具有微弱超速自转与地磁发电机锚定效应。', chips: ['[[地球动力学]]', '[[地磁发电机假说]]', '[[超速自转]]'] }
+      ]
+    },
+    dna: {
+      tag: '分子生物学 · 染色质微观解剖',
+      proBadge: 'PRO 教学精选',
+      title: '组蛋白八聚体核心',
+      num: '1',
+      en: 'Histone Octamer Core Complex',
+      metaK: ['缠绕长度', '圆柱直径', '八聚体亚基', '超螺旋手性'],
+      metaV: ['147 碱基对环绕', '2.5 nm 直径圆柱', '8 亚基 (2xH2A/B/H3/H4)', '1.65 圈左手超螺旋'],
+      annotation: '染色质的基本重复亚基结构（核小体核心粒子）。由两个 H2A-H2B 二聚体与一个 H3-H4 四聚体组装成圆柱状八聚体核心，147bp 的双螺旋 DNA 紧密缠绕 1.65 圈，实现基因组的第一级紧凑折叠。',
+      source: '🌐 PDB ID: 1AOI / RCSB Protein Data Bank / NIH 3D Print Exchange',
+      chips: ['[[核小体装配]]', '[[表观遗传修饰]]', '[[染色质重塑]]', '[[组蛋白密码]]'],
+      hotspots: [
+        { num: 1, name: '组蛋白八聚体核心', en: 'Histone Octamer Core', x: 0, y: 0, z: 0, color: '#ec4899', meta: ['2.5 nm 核心', '生理微环境', '碱性八聚体球蛋白', '分子间范德华力'], desc: '由两套 H2A、H2B、H3、H4 构成的正电荷圆柱核心，静电吸附带负电荷的磷酸骨架。', chips: ['[[组蛋白折叠]]', '[[核小体核心]]'] },
+        { num: 2, name: 'DNA 双螺旋大沟', en: 'DNA Major Groove', x: 0.65, y: 0.1, z: 0.35, color: '#10b981', meta: ['宽 2.2 nm', '生理微环境', '右手 B-DNA 双螺旋', '双链氢键稳定'], desc: '蛋白质识别特定碱基序列的主要相互作用结合位点，暴露丰富的氢键供体与受体原子。', chips: ['[[转录因子识别]]', '[[大沟结合]]'] },
+        { num: 3, name: 'DNA 双螺旋小沟', en: 'DNA Minor Groove', x: -0.32, y: -0.45, z: -0.35, color: '#38bdf8', meta: ['宽 1.2 nm', '生理微环境', '右手 B-DNA 双螺旋', '双链氢键稳定'], desc: '富含 AT 序列的紧窄小沟区域，组蛋白精氨酸残基（Arg hook）插入小沟锚定八聚体。', chips: ['[[小沟结合]]', '[[精氨酸锚定]]'] },
+        { num: 4, name: '互补碱基对阶梯', en: 'Complementary Base Pairs', x: 0.1, y: 0.62, z: -0.38, color: '#f59e0b', meta: ['0.34 nm 堆积层距', '生理微环境', 'A-T / G-C 碱基对', 'π-π 芳香堆积力'], desc: '双螺旋内部嘌呤与嘧啶的沃森-克里克配对阶梯，紧密的碱基芳香环疏水堆积稳定双链。', chips: ['[[沃森-克里克配对]]', '[[碱基堆积]]'] },
+        { num: 5, name: 'N端柔性组蛋白尾', en: 'N-terminal Histone Tails', x: -0.72, y: 0.40, z: -0.22, color: '#a855f7', meta: ['无规卷曲多肽', '生理微环境', '高电荷富赖氨酸尾', '构象动态涨落'], desc: '从核小体圆柱侧向伸出的非结构化柔性肽段，乙酰化与甲基化等表观遗传修饰的关键靶点。', chips: ['[[组蛋白乙酰化]]', '[[表观遗传锁]]'] },
+        { num: 6, name: '连接区DNA与H1', en: 'Linker DNA & Histone H1', x: 0.88, y: -0.46, z: -0.15, color: '#6366f1', meta: ['约 20-80 bp', '生理微环境', '接头双链复合体', '高级折叠力'], desc: '连接相邻两个核小体的暴露 DNA 片段，与连接组蛋白 H1 结合促进 30nm 染色质高级纤维折叠。', chips: ['[[连接组蛋白H1]]', '[[染色质纤维]]'] }
+      ]
+    },
+    neuron: {
+      tag: '神经科学 · 细胞微观解剖',
+      proBadge: '随包赠送 · 免费体验',
+      title: '神经元胞体与细胞核',
+      num: '1',
+      en: 'Soma (Cell Body) & Nucleus',
+      metaK: ['胞体尺寸', '亚细胞器', '信号中枢', '静息膜电位'],
+      metaV: ['20 μm 胞体直径', '尼氏体与微管骨架', '动作电位整合中心', '静息电位 -70 mV'],
+      annotation: '锥体神经元的代谢与信号整合核心。接收成千上万个树突输入的兴奋性与抑制性突触后电位 (EPSP/IPSP)，并在轴突起始段 (AIS) 判定是否触发全或无的动作电位脉冲。',
+      source: '🌐 Versal Neuroscience 3D / Allen Brain Institute',
+      chips: ['[[神经元动作电位]]', '[[膜电位动力学]]', '[[突触可塑性]]', '[[赫布定律]]'],
+      hotspots: [
+        { num: 1, name: '胞体与细胞核', en: 'Soma & Nucleus', x: 0, y: 0, z: 0, color: '#38bdf8', meta: ['20 μm 核心', '37 ℃ 生理温标', '细胞质网与胞核', '渗透压平稳'], desc: '神经元代谢与基因转录调控中枢，高密度分布粗面内质网与尼氏体。', chips: ['[[胞体]]', '[[尼氏体]]'] },
+        { num: 2, name: '神经轴突主干', en: 'Axon Shaft', x: 0.45, y: -0.18, z: 0.1, color: '#f59e0b', meta: ['可达 1 米长', '37 ℃ 生理温标', '微管定向运输管道', '轴浆流输送'], desc: '单向高效传递高频动作电位冲动的轴突通道，也是轴浆顺行与逆行运输的主干线。', chips: ['[[动作电位传导]]', '[[轴突]]'] },
+        { num: 3, name: '树突复杂网络', en: 'Dendritic Arbor', x: -0.55, y: 0.35, z: -0.15, color: '#10b981', meta: ['高密度分枝', '37 ℃ 生理温标', '棘突微囊泡突触', '突触受体开放'], desc: '茂密分枝的树突棘网络，富含谷氨酸受体（AMPA/NMDA），是学习记忆突触可塑性的物理载体。', chips: ['[[长时程增强LTP]]', '[[树突棘]]'] },
+        { num: 4, name: '髓鞘绝缘节段', en: 'Myelin Sheaths', x: 0.82, y: -0.38, z: 0.2, color: '#ec4899', meta: ['寡突胶质细胞包裹', '37 ℃ 生理温标', '高电阻多层脂膜', '跳跃式传导'], desc: '高阻抗同心脂质绝缘层，极大降低轴突膜电容，使冲动传导速率提升数十倍（达 120 m/s）。', chips: ['[[髓鞘化]]', '[[跳跃式传导]]'] },
+        { num: 5, name: '郎飞氏结', en: 'Node of Ranvier', x: 0.64, y: -0.28, z: 0.15, color: '#fbbf24', meta: ['1 μm 无髓裸露段', '37 ℃ 生理温标', '超密集电压门控Na+', '毫秒级离子泵'], desc: '髓鞘节段之间的微小间隙，密集排列电压门控钠通道（>1000/μm²），实现动作电位的跳跃中继再生。', chips: ['[[郎飞结]]', '[[钠通道]]'] }
+      ]
+    },
+    math: {
+      tag: '几何拓扑 · 三维空间微积分',
+      proBadge: 'PRO 空间数学',
+      title: '双曲抛物面（马鞍面）',
+      num: '1',
+      en: 'Hyperbolic Paraboloid Surface',
+      metaK: ['代数方程', '曲面几何特征', '高斯曲率', '笔记插入'],
+      metaV: ['z = x² - y²', '双重直纹曲面', '高斯曲率 K < 0', '无损插入双链笔记'],
+      annotation: '微积分与微分几何中的经典非欧曲面。原点为临界鞍点（梯度为零但非极值点）。每个横截面呈现双曲线或抛物线，具有奇妙的“双重直纹”特性，直观呈现空间梯度的几何形态。',
+      source: '🌐 Accrue 3D Spatial Math Studio Engine',
+      chips: ['[[多变量微积分]]', '[[鞍点与海森矩阵]]', '[[直纹曲面]]', '[[梯度下降法]]'],
+      hotspots: [
+        { num: 1, name: '临界鞍点 (Saddle Point)', en: 'Critical Saddle Point', x: 0, y: 0, z: 0, color: '#38bdf8', meta: ['(0, 0, 0) 原点', '梯度 ∇f = (0, 0)', '不定海森矩阵', 'Det(H) = -4 < 0'], desc: '沿 X 方向为局部极小值，沿 Y 方向为局部极大值。一阶导数为零，二阶海森矩阵行列式为负。', chips: ['[[海森矩阵]]', '[[鞍点]]'] },
+        { num: 2, name: '正曲率抛物线切弧', en: 'Positive Curvature Parabola', x: 0.55, y: 0, z: 0.32, color: '#10b981', meta: ['Y=0 切面', 'd²z/dx² = +2 > 0', '凹向上抛物线', '局部极小方向'], desc: '取 y=0 切面得到 z = x²，沿 x 轴方向呈现向上的极小值势阱。', chips: ['[[方向导数]]', '[[主曲率]]'] },
+        { num: 3, name: '负曲率抛物线切弧', en: 'Negative Curvature Parabola', x: 0, y: 0.55, z: -0.32, color: '#ef4444', meta: ['X=0 切面', 'd²z/dy² = -2 < 0', '凸向下抛物线', '局部极大方向'], desc: '取 x=0 切面得到 z = -y²，沿 y 轴方向呈现向下的极大值坡度。', chips: ['[[高斯曲率]]', '[[双曲几何]]'] },
+        { num: 4, name: '渐近直线直纹轨线', en: 'Ruling Generator Lines', x: 0.45, y: 0.45, z: 0, color: '#f59e0b', meta: ['z = 0 等高截线', 'x = ±y 直线对', '退化双曲线渐近线', '直纹生成元'], desc: '虽然曲面整体弯曲，但在其上存在完全由直线构成的族群（直纹曲面），建筑工程学常借此构建高强度薄壳。', chips: ['[[直纹面]]', '[[建筑空间拓扑]]'] }
+      ]
+    }
+  };
+
+  var currentKey = 'earth';
+  var currentModel = models.earth;
+  var selectedHotspot = currentModel.hotspots[currentModel.hotspots.length - 1];
+  var rotX = 0.28;
+  var rotY = 0.42;
+  var autoRotate = true;
+  var explodeRatio = 0.30;
+  var isDragging = false;
+  var lastX = 0, lastY = 0;
+  var lastTouchTime = 0;
+  var projectedHotspots = [];
+
+  function resize() {
+    var rect = canvas.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  function project(p, cx, cy, scale, rX, rY) {
+    // 3D 欧拉旋转 (Yaw & Pitch)
+    var cosY = Math.cos(rY), sinY = Math.sin(rY);
+    var x1 = p.x * cosY - p.z * sinY;
+    var z1 = p.x * sinY + p.z * cosY;
+
+    var cosX = Math.cos(rX), sinX = Math.sin(rX);
+    var y2 = p.y * cosX - z1 * sinX;
+    var z2 = p.y * sinX + z1 * cosX;
+
+    var fov = 3.2;
+    var pers = fov / (fov + z2);
+    return {
+      x: cx + x1 * scale * pers,
+      y: cy - y2 * scale * pers,
+      z: z2,
+      pers: pers
+    };
+  }
+
+  // 1. 全息深空背景
+  function drawBackground(ctx, w, h, cx, cy) {
+    var grad = ctx.createRadialGradient(cx, cy, 20, cx, cy, Math.max(w, h) * 0.7);
+    grad.addColorStop(0, '#0d172a');
+    grad.addColorStop(0.5, '#070b14');
+    grad.addColorStop(1, '#020408');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, w, h);
+
+    // 遥测轨道同心环
+    var baseR = Math.min(w, h) * 0.36;
+    ctx.lineWidth = 1;
+    [0.35, 0.65, 0.95, 1.18].forEach(function(rf) {
+      ctx.beginPath();
+      ctx.arc(cx, cy, baseR * rf, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.09)';
+      ctx.stroke();
+    });
+
+    // 极坐标十字雷达线与四角刻度
+    ctx.beginPath();
+    ctx.moveTo(cx - baseR * 1.25, cy); ctx.lineTo(cx + baseR * 1.25, cy);
+    ctx.moveTo(cx, cy - baseR * 1.25); ctx.lineTo(cx, cy + baseR * 1.25);
+    ctx.strokeStyle = 'rgba(56, 189, 248, 0.05)';
+    ctx.stroke();
+
+    // 45°/135° 标尺刻度
+    [Math.PI / 4, 3 * Math.PI / 4, 5 * Math.PI / 4, 7 * Math.PI / 4].forEach(function(ang) {
+      var r1 = baseR * 0.92, r2 = baseR * 0.98;
+      ctx.beginPath();
+      ctx.moveTo(cx + Math.cos(ang) * r1, cy + Math.sin(ang) * r1);
+      ctx.lineTo(cx + Math.cos(ang) * r2, cy + Math.sin(ang) * r2);
+      ctx.strokeStyle = 'rgba(229, 168, 85, 0.25)';
+      ctx.stroke();
+    });
+  }
+
+  // 2. 地球圈层剖切渲染
+  function drawEarth(ctx, cx, cy, scale, rX, rY, exp) {
+    var layers = [
+      { r: 1.0, color: 'rgba(56, 189, 248, 0.22)', stroke: '#38bdf8' },
+      { r: 0.82, color: 'rgba(245, 158, 11, 0.25)', stroke: '#f59e0b' },
+      { r: 0.64, color: 'rgba(217, 119, 6, 0.35)', stroke: '#d97706' },
+      { r: 0.46, color: 'rgba(234, 88, 12, 0.45)', stroke: '#ea580c' },
+      { r: 0.30, color: 'rgba(220, 38, 38, 0.55)', stroke: '#dc2626' },
+      { r: 0.15, color: 'rgba(251, 191, 36, 0.85)', stroke: '#fbbf24' }
+    ];
+
+    layers.forEach(function(l, i) {
+      var expOffset = (5 - i) * exp * 0.12;
+      var offsetVector = { x: expOffset * 0.8, y: expOffset * 0.4, z: 0 };
+      var centerProj = project(offsetVector, cx, cy, scale, rX, rY);
+      var radius = l.r * scale * centerProj.pers;
+
+      // 绘制球体线框圆环与截面
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(centerProj.x, centerProj.y, radius, 0, Math.PI * 2);
+      ctx.fillStyle = l.color;
+      ctx.fill();
+      ctx.strokeStyle = l.stroke;
+      ctx.lineWidth = i === 0 || i === 5 ? 2 : 1;
+      ctx.stroke();
+
+      // 剖切面楔形高光线
+      ctx.beginPath();
+      ctx.moveTo(centerProj.x, centerProj.y);
+      ctx.lineTo(centerProj.x + radius * 0.85, centerProj.y - radius * 0.2);
+      ctx.lineTo(centerProj.x + radius * 0.4, centerProj.y + radius * 0.7);
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.06)';
+      ctx.fill();
+      ctx.restore();
+
+      // 爆炸导引虚线
+      if (exp > 0.05 && i < 5) {
+        var originProj = project({ x: 0, y: 0, z: 0 }, cx, cy, scale, rX, rY);
+        ctx.beginPath();
+        ctx.setLineDash([3, 3]);
+        ctx.moveTo(originProj.x, originProj.y);
+        ctx.lineTo(centerProj.x, centerProj.y);
+        ctx.strokeStyle = 'rgba(56, 189, 248, 0.3)';
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+    });
+  }
+
+  // 3. DNA 组蛋白超螺旋渲染
+  function drawDna(ctx, cx, cy, scale, rX, rY, exp) {
+    // 组蛋白八聚体核心圆柱
+    var coreRadius = 0.38 + exp * 0.08;
+    var coreHeight = 0.48;
+    for (var a = 0; a < 8; a++) {
+      var ang1 = (a / 8) * Math.PI * 2;
+      var ang2 = ((a + 1) / 8) * Math.PI * 2;
+      var pTop1 = project({ x: Math.cos(ang1) * coreRadius, y: coreHeight / 2, z: Math.sin(ang1) * coreRadius }, cx, cy, scale, rX, rY);
+      var pTop2 = project({ x: Math.cos(ang2) * coreRadius, y: coreHeight / 2, z: Math.sin(ang2) * coreRadius }, cx, cy, scale, rX, rY);
+      var pBot1 = project({ x: Math.cos(ang1) * coreRadius, y: -coreHeight / 2, z: Math.sin(ang1) * coreRadius }, cx, cy, scale, rX, rY);
+      var pBot2 = project({ x: Math.cos(ang2) * coreRadius, y: -coreHeight / 2, z: Math.sin(ang2) * coreRadius }, cx, cy, scale, rX, rY);
+
+      ctx.beginPath();
+      ctx.moveTo(pTop1.x, pTop1.y);
+      ctx.lineTo(pTop2.x, pTop2.y);
+      ctx.lineTo(pBot2.x, pBot2.y);
+      ctx.lineTo(pBot1.x, pBot1.y);
+      ctx.closePath();
+      ctx.fillStyle = a % 2 === 0 ? 'rgba(236, 72, 153, 0.45)' : 'rgba(219, 39, 119, 0.35)';
+      ctx.fill();
+      ctx.strokeStyle = '#ec4899';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    // DNA 双螺旋环绕带
+    var helixRadius = 0.65 + exp * 0.35;
+    var steps = 40;
+    var strand1 = [];
+    var strand2 = [];
+    for (var i = 0; i <= steps; i++) {
+      var t = (i / steps) * (Math.PI * 3.3);
+      var y = -0.45 + (i / steps) * 0.9;
+      var p1 = project({ x: Math.cos(t) * helixRadius, y: y + Math.sin(t * 3) * 0.08, z: Math.sin(t) * helixRadius }, cx, cy, scale, rX, rY);
+      var p2 = project({ x: Math.cos(t + 0.5) * helixRadius, y: y + Math.sin(t * 3 + 0.5) * 0.08, z: Math.sin(t + 0.5) * helixRadius }, cx, cy, scale, rX, rY);
+      strand1.push(p1);
+      strand2.push(p2);
+
+      // 碱基对横档
+      if (i % 3 === 0) {
+        ctx.beginPath();
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.strokeStyle = '#f59e0b';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+    }
+
+    // 绘制链 1
+    ctx.beginPath();
+    ctx.moveTo(strand1[0].x, strand1[0].y);
+    for (var j = 1; j < strand1.length; j++) ctx.lineTo(strand1[j].x, strand1[j].y);
+    ctx.strokeStyle = '#10b981';
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    // 绘制链 2
+    ctx.beginPath();
+    ctx.moveTo(strand2[0].x, strand2[0].y);
+    for (var k = 1; k < strand2.length; k++) ctx.lineTo(strand2[k].x, strand2[k].y);
+    ctx.strokeStyle = '#38bdf8';
+    ctx.lineWidth = 2.5;
+    ctx.stroke();
+  }
+
+  // 4. 神经元突触模型渲染
+  function drawNeuron(ctx, cx, cy, scale, rX, rY, exp) {
+    var pSoma = project({ x: 0, y: 0, z: 0 }, cx, cy, scale, rX, rY);
+    var somaR = 26 * pSoma.pers;
+
+    // 胞体
+    ctx.beginPath();
+    ctx.arc(pSoma.x, pSoma.y, somaR, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(56, 189, 248, 0.4)';
+    ctx.fill();
+    ctx.strokeStyle = '#38bdf8';
+    ctx.lineWidth = 2.5;
+    ctx.stroke();
+
+    // 细胞核
+    ctx.beginPath();
+    ctx.arc(pSoma.x, pSoma.y, somaR * 0.4, 0, Math.PI * 2);
+    ctx.fillStyle = '#f59e0b';
+    ctx.fill();
+
+    // 树突分枝
+    for (var d = 0; d < 6; d++) {
+      var dAng = (d / 6) * Math.PI * 2 + 0.3;
+      var dEndX = Math.cos(dAng) * (0.6 + exp * 0.2);
+      var dEndY = Math.sin(dAng) * (0.6 + exp * 0.2);
+      var pDend = project({ x: dEndX, y: dEndY, z: Math.sin(dAng * 2) * 0.15 }, cx, cy, scale, rX, rY);
+      ctx.beginPath();
+      ctx.moveTo(pSoma.x, pSoma.y);
+      ctx.lineTo(pDend.x, pDend.y);
+      ctx.strokeStyle = '#10b981';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+
+    // 轴突主干与髓鞘节段
+    var axonSegments = 4;
+    for (var s = 1; s <= axonSegments; s++) {
+      var axX = (s / axonSegments) * (1.2 + exp * 0.3);
+      var axY = -(s / axonSegments) * 0.6;
+      var pAx = project({ x: axX, y: axY, z: 0.1 }, cx, cy, scale, rX, rY);
+
+      // 髓鞘胶囊
+      ctx.beginPath();
+      ctx.arc(pAx.x, pAx.y, 14 * pAx.pers, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(236, 72, 153, 0.55)';
+      ctx.fill();
+      ctx.strokeStyle = '#ec4899';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+  }
+
+  // 5. 3D 数学曲面 (双曲抛物面马鞍面 z = x² - y²)
+  function drawMathSurface(ctx, cx, cy, scale, rX, rY, exp) {
+    var gridSize = 14;
+    var lines = [];
+    var step = 1.6 / gridSize;
+
+    for (var i = 0; i <= gridSize; i++) {
+      var x = -0.8 + i * step;
+      var row = [];
+      for (var j = 0; j <= gridSize; j++) {
+        var y = -0.8 + j * step;
+        var z = (x * x - y * y) * (0.6 + exp * 0.4);
+        row.push(project({ x: x, y: y, z: z }, cx, cy, scale, rX, rY));
+      }
+      lines.push(row);
+    }
+
+    // 绘制曲面网格与高程颜色
+    for (var r = 0; r < gridSize; r++) {
+      for (var c = 0; c < gridSize; c++) {
+        var p00 = lines[r][c];
+        var p10 = lines[r + 1][c];
+        var p11 = lines[r + 1][c + 1];
+        var p01 = lines[r][c + 1];
+
+        ctx.beginPath();
+        ctx.moveTo(p00.x, p00.y);
+        ctx.lineTo(p10.x, p10.y);
+        ctx.lineTo(p11.x, p11.y);
+        ctx.lineTo(p01.x, p01.y);
+        ctx.closePath();
+
+        var avgZ = (p00.z + p10.z + p11.z + p01.z) / 4;
+        ctx.fillStyle = avgZ > 0 ? 'rgba(245, 158, 11, 0.22)' : 'rgba(56, 189, 248, 0.22)';
+        ctx.fill();
+        ctx.strokeStyle = avgZ > 0 ? 'rgba(245, 158, 11, 0.6)' : 'rgba(56, 189, 248, 0.6)';
+        ctx.lineWidth = 0.8;
+        ctx.stroke();
+      }
+    }
+
+    // 坐标原点切线十字
+    var origin = project({ x: 0, y: 0, z: 0 }, cx, cy, scale, rX, rY);
+    var axisX = project({ x: 0.9, y: 0, z: 0 }, cx, cy, scale, rX, rY);
+    var axisY = project({ x: 0, y: 0.9, z: 0 }, cx, cy, scale, rX, rY);
+    var axisZ = project({ x: 0, y: 0, z: 0.9 }, cx, cy, scale, rX, rY);
+
+    ctx.lineWidth = 1.8;
+    ctx.beginPath(); ctx.moveTo(origin.x, origin.y); ctx.lineTo(axisX.x, axisX.y); ctx.strokeStyle = '#ef4444'; ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(origin.x, origin.y); ctx.lineTo(axisY.x, axisY.y); ctx.strokeStyle = '#10b981'; ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(origin.x, origin.y); ctx.lineTo(axisZ.x, axisZ.y); ctx.strokeStyle = '#38bdf8'; ctx.stroke();
+  }
+
+  // 6. 热点标签光晕与投影
+  function drawHotspots(ctx, cx, cy, scale, rX, rY, exp) {
+    projectedHotspots = [];
+    currentModel.hotspots.forEach(function(h) {
+      var expX = h.x * (1 + exp * 0.35);
+      var expY = h.y * (1 + exp * 0.35);
+      var p = project({ x: expX, y: expY, z: h.z }, cx, cy, scale, rX, rY);
+      projectedHotspots.push({ data: h, x: p.x, y: p.y, r: 14 * p.pers });
+
+      var isSel = selectedHotspot && selectedHotspot.num === h.num;
+      ctx.save();
+      // 外层光晕
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, (isSel ? 18 : 13) * p.pers, 0, Math.PI * 2);
+      ctx.fillStyle = isSel ? 'rgba(229, 168, 85, 0.35)' : 'rgba(56, 189, 248, 0.2)';
+      ctx.fill();
+
+      // 内层实体圆点
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, (isSel ? 13 : 10) * p.pers, 0, Math.PI * 2);
+      ctx.fillStyle = isSel ? '#e5a855' : 'rgba(10, 15, 29, 0.85)';
+      ctx.fill();
+      ctx.strokeStyle = isSel ? '#fef3c7' : h.color;
+      ctx.lineWidth = isSel ? 2.5 : 1.5;
+      ctx.stroke();
+
+      // 标号文字
+      ctx.fillStyle = isSel ? '#0a0f1d' : '#ffffff';
+      ctx.font = 'bold ' + Math.max(9, Math.round(11 * p.pers)) + 'px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(h.num, p.x, p.y);
+      ctx.restore();
+    });
+  }
+
+  function render() {
+    requestAnimationFrame(render);
+    var w = canvas.width;
+    var h = canvas.height;
+    if (w <= 0 || h <= 0) return;
+
+    ctx.clearRect(0, 0, w, h);
+
+    if (autoRotate && !isDragging && (Date.now() - lastTouchTime > 2000)) {
+      rotY += 0.007;
+    }
+
+    var cx = w / 2;
+    var cy = h / 2;
+    var scale = Math.min(w, h) * 0.35;
+
+    drawBackground(ctx, w, h, cx, cy);
+
+    if (currentKey === 'earth') drawEarth(ctx, cx, cy, scale, rotX, rotY, explodeRatio);
+    else if (currentKey === 'dna') drawDna(ctx, cx, cy, scale, rotX, rotY, explodeRatio);
+    else if (currentKey === 'neuron') drawNeuron(ctx, cx, cy, scale, rotX, rotY, explodeRatio);
+    else if (currentKey === 'math') drawMathSurface(ctx, cx, cy, scale, rotX, rotY, explodeRatio);
+
+    drawHotspots(ctx, cx, cy, scale, rotX, rotY, explodeRatio);
+  }
+  requestAnimationFrame(render);
+
+  // 遥测面板更新函数
+  function updateTelemetry(h) {
+    selectedHotspot = h;
+    var tagEl = document.getElementById('dissTag');
+    var proEl = document.getElementById('dissProBadge');
+    var numEl = document.getElementById('dissNum');
+    var nameEl = document.getElementById('dissName');
+    var enEl = document.getElementById('dissEn');
+    var annoEl = document.getElementById('dissAnnotation');
+    var srcEl = document.getElementById('dissSource');
+    var chipsEl = document.getElementById('dissChips');
+
+    if (tagEl) tagEl.textContent = currentModel.tag;
+    if (proEl) proEl.textContent = currentModel.proBadge;
+    if (numEl) numEl.textContent = h.num;
+    if (nameEl) nameEl.textContent = h.name;
+    if (enEl) enEl.textContent = h.en;
+    if (annoEl) annoEl.textContent = h.desc || currentModel.annotation;
+    if (srcEl) srcEl.textContent = currentModel.source;
+
+    // 更新 4 项 Meta
+    for (var m = 1; m <= 4; m++) {
+      var kEl = document.getElementById('dissMetaK' + m);
+      var vEl = document.getElementById('dissMetaV' + m);
+      if (kEl && currentModel.metaK[m - 1]) kEl.textContent = currentModel.metaK[m - 1];
+      if (vEl && h.meta && h.meta[m - 1]) vEl.textContent = h.meta[m - 1];
+    }
+
+    // 更新双链标签
+    if (chipsEl && h.chips) {
+      chipsEl.innerHTML = '';
+      h.chips.forEach(function(c) {
+        var chip = document.createElement('span');
+        chip.className = 'synapse-chip';
+        chip.textContent = c;
+        chipsEl.appendChild(chip);
+      });
+    }
+  }
+
+  // 鼠标/触控交互
+  function getCanvasCoords(e) {
+    var rect = canvas.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    var clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    return {
+      x: (clientX - rect.left) * dpr,
+      y: (clientY - rect.top) * dpr
+    };
+  }
+
+  function findHotspot(cx, cy) {
+    for (var i = projectedHotspots.length - 1; i >= 0; i--) {
+      var h = projectedHotspots[i];
+      var dist = Math.hypot(h.x - cx, h.y - cy);
+      if (dist <= Math.max(22, h.r * 1.5)) return h.data;
+    }
+    return null;
+  }
+
+  canvas.addEventListener('pointerdown', function(e) {
+    isDragging = true;
+    lastTouchTime = Date.now();
+    var c = getCanvasCoords(e);
+    lastX = c.x;
+    lastY = c.y;
+    canvas.setPointerCapture(e.pointerId);
+  });
+
+  canvas.addEventListener('pointermove', function(e) {
+    var c = getCanvasCoords(e);
+    if (isDragging) {
+      lastTouchTime = Date.now();
+      var dx = c.x - lastX;
+      var dy = c.y - lastY;
+      rotY += dx * 0.008;
+      rotX += dy * 0.008;
+      rotX = Math.max(-1.4, Math.min(1.4, rotX));
+      lastX = c.x;
+      lastY = c.y;
+    } else {
+      var hovered = findHotspot(c.x, c.y);
+      canvas.style.cursor = hovered ? 'pointer' : 'grab';
+    }
+  });
+
+  window.addEventListener('pointerup', function(e) {
+    if (isDragging) isDragging = false;
+  });
+
+  canvas.addEventListener('click', function(e) {
+    var c = getCanvasCoords(e);
+    var clicked = findHotspot(c.x, c.y);
+    if (clicked) {
+      updateTelemetry(clicked);
+    }
+  });
+
+  // 爆炸拆解滑块
+  var slider = document.getElementById('explodeSlider');
+  var sliderVal = document.getElementById('explodeVal');
+  if (slider) {
+    slider.addEventListener('input', function() {
+      explodeRatio = parseInt(this.value, 10) / 100.0;
+      if (sliderVal) sliderVal.textContent = this.value + '%';
+    });
+  }
+
+  // 自转切换按钮
+  var orbitBtn = document.getElementById('dissectionOrbitBtn');
+  var orbitIcon = document.getElementById('dissectionOrbitIcon');
+  var orbitText = document.getElementById('dissectionOrbitText');
+  if (orbitBtn) {
+    orbitBtn.addEventListener('click', function() {
+      autoRotate = !autoRotate;
+      if (orbitIcon) orbitIcon.textContent = autoRotate ? '⏸' : '▶';
+      if (orbitText) orbitText.textContent = autoRotate ? '暂停自转' : '自动旋转';
+      orbitBtn.classList.toggle('active', autoRotate);
+    });
+  }
+
+  // 模型切换按钮
+  var presetBtns = document.querySelectorAll('.dissection-btn');
+  presetBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      presetBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      var mKey = this.getAttribute('data-model');
+      if (models[mKey]) {
+        currentKey = mKey;
+        currentModel = models[mKey];
+        selectedHotspot = currentModel.hotspots[0];
+        updateTelemetry(selectedHotspot);
+        rotX = 0.28;
+        rotY = 0.42;
+      }
+    });
+  });
+
+  // 默认初始化首个热点
+  updateTelemetry(selectedHotspot);
 })();
 
 </script>

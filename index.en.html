@@ -17,7 +17,7 @@
 <!-- GEO:AUTO START -->
 <title>Accrue · Accrue Notes — Where knowledge accrues over time.</title>
 <meta name="description" content="Accrue Notes official site: local-first bi-directional linking and knowledge graph tool with transparent AI reasoning, Pro monthly subscription, and BYOK privacy.">
-<meta name="keywords" content="Accrue Notes, bi-directional linking, second brain, local-first, mind mapping, knowledge base, BYOK, LaTeX notes, mental models, knowledge compounding">
+<meta name="keywords" content="Accrue Notes, bi-directional linking, second brain, local-first, mind mapping, knowledge base, BYOK, LaTeX notes, mental models, knowledge compounding, 3D spatial dissection, digital twin, LiDAR scanning, 3D math calculator">
 <link rel="canonical" href="https://fulibiji.top/index.en.html">
 <link rel="alternate" hreflang="zh-CN" href="https://fulibiji.top/index.html">
 <link rel="alternate" hreflang="en" href="https://fulibiji.top/index.en.html">
@@ -61,6 +61,8 @@
       },
       "featureList": [
         "Local-First Bi-directional Linking & 3D Mindscape Constellation",
+        "3D Spatial Math & Geometric Graphing Studio",
+        "3D Spatial Dissection & Holographic Digital Twin",
         "AI Cognitive Mirror & White-box Q&A",
         "10-Dimensional Deep Research Matrix",
         "Mental Models & Red Team Challenge",
@@ -118,7 +120,7 @@
           "name": "What does Accrue Notes Pro include, and how does Annual vs Monthly billing and cancellation work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Accrue Notes core features are free forever (with 50 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are available in two flexible options: the best-value Annual Plan at ¥168/year (~¥14/month, save >30%, most popular) and the flexible Monthly Plan at ¥19.9/month. Pro unlocks unlimited notes, the 3D mindscape constellation, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are securely processed by official app stores (Apple App Store / Google Play / Huawei AppGallery) and can be cancelled anytime in your store account settings with zero data lock-in."
+            "text": "Accrue Notes core features are free forever (with 50 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are available in two flexible options: the best-value Annual Plan at ¥168/year (~¥14/month, save >30%, most popular) and the flexible Monthly Plan at ¥19.9/month. Pro unlocks unlimited notes, 3D mindscape cosmos, the 3D spatial dissection pro library (DNA/Geology/Medical), iPhone Pro LiDAR physical scanning & custom GLB/OBJ model import, unlimited 3D math surface note insertion, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are securely processed by official app stores (Apple App Store / Google Play / Huawei AppGallery) and can be cancelled anytime in your store account settings with zero data lock-in."
           }
         }
       ]
@@ -140,6 +142,7 @@
   <div class="nav-actions">
     <a href="#features" class="hide-sm">Features</a>
     <a href="#playground" class="hide-sm">Playground</a>
+    <a href="#spatial-dissection" class="hide-sm">3D Dissection</a>
     <a href="#matrix" class="hide-sm">10D Matrix</a>
     <a href="#math" class="hide-sm">LaTeX Export</a>
     <a href="devlog.en.html" class="hide-sm">Devlog</a>
@@ -356,6 +359,112 @@
   </div>
 </div></section>
 
+<!-- Showcase: 3D Spatial Dissection & Digital Twin -->
+<section id="spatial-dissection" class="reveal" style="background:var(--bg2)"><div class="wrap">
+  <div class="section-header">
+    <h2>3D Spatial Dissection: Microscopic Digital Twins Beyond Flat Text</h2>
+    <p class="section-lead">Explore neurons, DNA supercoils, and Earth's geosphere. Features radial exploded dismantling, numbered hotspot inspection, iPhone LiDAR physical scanning, and 3D mathematical surfaces</p>
+  </div>
+
+  <div class="dissection-wrapper">
+    <div class="dissection-viewport">
+      <div class="dissection-hud-top">
+        <div class="dissection-badge">
+          <span class="pulse-dot"></span>
+          <span>3D Spatial Dissection · Digital Twin</span>
+        </div>
+        <div class="dissection-presets" id="dissectionPresets">
+          <button type="button" class="dissection-btn active" data-model="earth">🌍 Earth Crust Layers</button>
+          <button type="button" class="dissection-btn" data-model="dna">🧬 DNA Supercoil Octamer</button>
+          <button type="button" class="dissection-btn" data-model="neuron">🧠 Neuron Synaptic Arbor</button>
+          <button type="button" class="dissection-btn" data-model="math">🧮 3D Hyperbolic Paraboloid</button>
+        </div>
+      </div>
+
+      <canvas id="dissectionCanvas" class="dissection-canvas"></canvas>
+
+      <div class="dissection-hud-bottom">
+        <div class="dissection-slider-group">
+          <span class="slider-label">💥 Exploded View</span>
+          <input type="range" id="explodeSlider" min="0" max="100" value="30" class="dissection-slider" title="Adjust exploded view separation">
+          <span id="explodeVal" class="slider-val">30%</span>
+        </div>
+        <div class="dissection-controls">
+          <button type="button" id="dissectionOrbitBtn" class="hud-square-btn" title="Toggle Auto-Rotation">
+            <span id="dissectionOrbitIcon">⏸</span>
+            <span id="dissectionOrbitText">Pause Orbit</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Telemetry Panel -->
+    <div class="dissection-telemetry">
+      <div class="telemetry-header">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <span class="telemetry-tag" id="dissTag">Geophysics · Earth Layers</span>
+          <span class="pro-pill-badge" id="dissProBadge">PRO Academic Showcase</span>
+        </div>
+        <h3 class="telemetry-title" id="dissTitle">
+          <span id="dissNum" class="part-num-bubble">6</span>
+          <span id="dissName">Solid Iron-Nickel Inner Core</span>
+        </h3>
+        <div class="telemetry-en" id="dissEn">Solid Iron-Nickel Inner Core</div>
+      </div>
+
+      <div class="telemetry-meta-grid" id="dissMetaGrid">
+        <div class="telemetry-meta-item">
+          <span class="telemetry-meta-k" id="dissMetaK1">Depth Range</span>
+          <span class="telemetry-meta-v" id="dissMetaV1">5150 - 6371 km</span>
+        </div>
+        <div class="telemetry-meta-item">
+          <span class="telemetry-meta-k" id="dissMetaK2">Core Temp</span>
+          <span class="telemetry-meta-v" id="dissMetaV2">5500 - 6000 K</span>
+        </div>
+        <div class="telemetry-meta-item">
+          <span class="telemetry-meta-k" id="dissMetaK3">Crystal Phase</span>
+          <span class="telemetry-meta-v" id="dissMetaV3">hcp Solid Iron-Nickel</span>
+        </div>
+        <div class="telemetry-meta-item">
+          <span class="telemetry-meta-k" id="dissMetaK4">Pressure</span>
+          <span class="telemetry-meta-v" id="dissMetaV4">3.3 - 3.6 Mbar</span>
+        </div>
+      </div>
+
+      <div class="dissection-annotation-box">
+        <div class="annotation-text" id="dissAnnotation">
+          At depths of 5,150–6,371 km lies the geodynamic center of Earth with a radius of ~1,220 km. Despite extreme temperatures (5,500–6,000 K), pressures exceeding 3.3 million atmospheres force iron-nickel into a solid hexagonal close-packed (hcp) crystal lattice.
+        </div>
+        <div class="annotation-source" id="dissSource">
+          🌐 ORIGINAL ANNOTATION (USGS / NASA Geodynamics / Sketchfab)
+        </div>
+      </div>
+
+      <div class="telemetry-links">
+        <h5>Bi-directional Wiki Links</h5>
+        <div class="synapse-chip-group" id="dissChips">
+          <span class="synapse-chip">[[Geodynamics]]</span>
+          <span class="synapse-chip">[[Geodynamo Hypothesis]]</span>
+          <span class="synapse-chip">[[Core-Mantle Boundary]]</span>
+          <span class="synapse-chip">[[Seismic Anisotropy]]</span>
+        </div>
+      </div>
+
+      <div class="dissection-pro-features">
+        <span class="feature-tag">📡 iPhone Pro LiDAR Scanning</span>
+        <span class="feature-tag">📦 Custom GLB/OBJ Import</span>
+        <span class="feature-tag">🧮 3D Math Surfaces in Notes</span>
+      </div>
+
+      <div class="telemetry-footer-cta">
+        <a href="https://apps.apple.com/app/id6810539038" class="cta" style="width:100%; justify-content:center; padding:10px 18px; font-size:14px">
+          Experience 3D Holographic Dissection in App →
+        </a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
 <!-- Playground 2: White-Box AI Reasoning -->
 <section id="whitebox" class="reveal"><div class="wrap">
   <div class="section-header">
@@ -526,6 +635,7 @@
       <tr><td><strong>Connection Depth</strong></td><td><span class="check-icon">✓</span> Bi-directional links + automated entity graphs + hybrid vector/semantic search</td><td><span class="cross-icon">✕</span> Rigid hierarchical folders or primitive keyword-matching search engines</td></tr>
       <tr><td><strong>Thinking Assistance</strong></td><td><span class="check-icon">✓</span> 10D deep research matrix, mental model sandboxes, and critical red-teaming</td><td><span class="cross-icon">✕</span> Superficial generic conversational chat, basic spelling fixes, or shallow summaries</td></tr>
       <tr><td><strong>Academic LaTeX Export</strong></td><td><span class="check-icon">✓</span> KaTeX pixel-accurate math rendering and vector pipeline for lossless PDF/Word exports</td><td><span class="cross-icon">✕</span> Plain text only; formulas fail to render or become garbled and missing upon export</td></tr>
+      <tr><td><strong>3D Spatial Dissection & Math</strong></td><td><span class="check-icon">✓</span> Native 3D spatial dissection (DNA/Geology/Neuron), holographic exploded views, LiDAR physical scanning & 3D math studio</td><td><span class="cross-icon">✕</span> Flat 2D text and images only, zero 3D spatial dissection or 3D mathematical modeling</td></tr>
       <tr><td><strong>Business Model</strong></td><td><span class="check-icon">✓</span> Core free (50 notes + 5 bonus notes every month); Pro monthly subscription at ¥19.9/mo with cancel-anytime freedom; data never locked</td><td><span class="cross-icon">✕</span> Heavy recurring fees with cloud lock-in; cancellation locks you out of reading or exporting your own notes</td></tr>
     </tbody>
   </table></div>
@@ -574,6 +684,8 @@
         <li><span class="check">✓</span> <span>Standard Markdown lossless export</span></li>
         <li class="dim"><span>✕</span> <span>Unlimited notes beyond 50 limit</span></li>
         <li class="dim"><span>✕</span> <span>3D Mindscape Cosmos roaming</span></li>
+        <li class="dim"><span>✕</span> <span>3D Spatial Dissection Pro Library & LiDAR Scanning</span></li>
+        <li class="dim"><span>✕</span> <span>3D Math Surface Studio & note embedding</span></li>
         <li class="dim"><span>✕</span> <span>All 6 pre-loaded professional knowledge packs</span></li>
         <li class="dim"><span>✕</span> <span>KaTeX math formula rendering & PDF/Word export</span></li>
       </ul>
@@ -597,6 +709,9 @@
       <ul class="pricing-features-list">
         <li><span class="check">✓</span> <span><strong>Unlimited notes & entities</strong>: Zero artificial limits</span></li>
         <li><span class="check">✓</span> <span><strong>3D Mindscape Cosmos</strong>: 3D interactive knowledge roaming</span></li>
+        <li><span class="check">✓</span> <span><strong>3D Spatial Dissection Pro Library</strong> (DNA/Geology/Neuron)</span></li>
+        <li><span class="check">✓</span> <span><strong>iPhone Pro LiDAR Scanning</strong> & custom GLB/OBJ 3D import</span></li>
+        <li><span class="check">✓</span> <span><strong>3D Math Surface Studio</strong>: Embed 3D algebraic surfaces in notes</span></li>
         <li><span class="check">✓</span> <span><strong>All 6 Premium Knowledge Packs</strong> (Munger, Strategy, Growth, etc.)</span></li>
         <li><span class="check">✓</span> <span><strong>10-Dimensional Deep Research Matrix</strong>: Instant synthesis</span></li>
         <li><span class="check">✓</span> <span><strong>Mental Models & Red Team Challenge</strong>: Sparring partner</span></li>
@@ -625,6 +740,8 @@
         <li><span class="check">✓</span> <span>Enjoy <strong>identical Pro privileges</strong> to Annual plan</span></li>
         <li><span class="check">✓</span> <span>Unlimited notes & uncapped knowledge graph</span></li>
         <li><span class="check">✓</span> <span>3D Mindscape Cosmos & synaptic radar</span></li>
+        <li><span class="check">✓</span> <span>3D Spatial Dissection Pro Library & LiDAR Scanning</span></li>
+        <li><span class="check">✓</span> <span>3D Math Surface Studio with interactive note embedding</span></li>
         <li><span class="check">✓</span> <span>All 6 pre-loaded professional knowledge packs</span></li>
         <li><span class="check">✓</span> <span>10D research matrix & red team sparring</span></li>
         <li><span class="check">✓</span> <span>KaTeX math rendering & PDF/Word export</span></li>
@@ -1515,6 +1632,260 @@ function isLightTheme() {
       cardAnnual.classList.remove('featured');
     }
   });
+})();
+
+
+// ── 9. 3D Spatial Dissection & Digital Twin Engine ──
+(function() {
+  var canvas = document.getElementById('dissectionCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  var models = {
+    earth: {
+      tag: 'Geophysics · Earth Layers',
+      proBadge: 'PRO Academic Showcase',
+      title: 'Solid Iron-Nickel Inner Core',
+      num: '6',
+      en: 'Solid Iron-Nickel Inner Core',
+      metaK: ['Depth Range', 'Core Temp', 'Crystal Phase', 'Pressure'],
+      metaV: ['5150 - 6371 km', '5500 - 6000 K', 'hcp Solid Iron-Nickel', '3.3 - 3.6 Mbar'],
+      annotation: 'At depths of 5,150–6,371 km lies the geodynamic center of Earth with a radius of ~1,220 km. Despite extreme temperatures (5,500–6,000 K), pressures exceeding 3.3 million atmospheres force iron-nickel into a solid hexagonal close-packed (hcp) crystal lattice with weak super-rotation.',
+      source: '🌐 ORIGINAL ANNOTATION (USGS / NASA Geodynamics / Sketchfab)',
+      chips: ['[[Geodynamics]]', '[[Geodynamo Hypothesis]]', '[[Core-Mantle Boundary]]', '[[Seismic Anisotropy]]'],
+      hotspots: [
+        { num: 1, name: 'Lithosphere & Crust', en: 'Lithosphere & Crust', x: 0.88, y: 0.22, z: 0.05, color: '#38bdf8', meta: ['0 - 100 km', 'Ambient - 800 ℃', 'Brittle Rock Lithosphere', '0 - 3 GPa'], desc: 'The rigid, outermost rocky shell of Earth comprising continental sialic and oceanic simatic crust.', chips: ['[[Plate Tectonics]]', '[[Moho Discontinuity]]', '[[Crustal Thickening]]'] },
+        { num: 2, name: 'Asthenosphere & Upper Mantle', en: 'Asthenosphere & Upper Mantle', x: 0.70, y: 0.18, z: 0.04, color: '#f59e0b', meta: ['100 - 410 km', '1000 - 1400 ℃', 'Ductile Peridotite', '3 - 14 GPa'], desc: 'A semi-fluid ductile zone of partially molten rock that allows tectonic plates to glide and subduct.', chips: ['[[Mantle Plumes]]', '[[Asthenosphere Rheology]]', '[[Subduction Zones]]'] },
+        { num: 3, name: 'Lower Mantle Convection', en: 'Lower Mantle Convection', x: 0.52, y: 0.13, z: 0.03, color: '#d97706', meta: ['660 - 2900 km', '1500 - 3000 K', 'Bridgmanite & Ferropericlase', '24 - 136 GPa'], desc: 'Constitutes ~55% of Earth volume; crystallizes under intense pressure to drive global thermal convection.', chips: ['[[Whole-Mantle Convection]]', '[[Lower Mantle S-Waves]]', '[[Phase Boundary]]'] },
+        { num: 4, name: 'Gutenberg & D" Layer', en: 'Gutenberg & D" Layer', x: 0.38, y: 0.09, z: 0.02, color: '#ea580c', meta: ['2700 - 2900 km', '2800 - 3800 K', 'Ultra-Low Velocity Zone', '130 - 136 GPa'], desc: 'Sharp thermal boundary where S-waves vanish, serving as the launchpad for mega mantle plumes.', chips: ['[[Core-Mantle Boundary]]', '[[ULVZ]]', '[[Gutenberg Boundary]]'] },
+        { num: 5, name: 'Liquid Iron Outer Core', en: 'Liquid Iron Outer Core', x: 0.25, y: 0.06, z: 0.01, color: '#f97316', meta: ['2890 - 5150 km', '4000 - 5500 K', 'Fluid Fe-Ni Alloy', '136 - 330 GPa'], desc: 'A vigorously convecting liquid metal ocean whose Coriolis-driven helical flows generate Earth geodynamo and magnetic shield.', chips: ['[[Geodynamo]]', '[[Coriolis Force]]', '[[Planetary Shield]]'] },
+        { num: 6, name: 'Solid Iron Inner Core', en: 'Solid Iron Inner Core', x: 0.0, y: 0.0, z: 0.0, color: '#e5a855', meta: ['5150 - 6371 km', '5500 - 6000 K', 'hcp Solid Iron Crystal', '3.3 - 3.6 Mbar'], desc: 'The solid inner core at Earth center, crystallized under 3.3-3.6 million atmospheres with seismic anisotropy.', chips: ['[[Geodynamics]]', '[[Inner Core Super-rotation]]', '[[Geodynamo Anchor]]'] }
+      ]
+    },
+    dna: {
+      tag: 'Biophysics · Molecular Machine',
+      proBadge: 'PRO Biochemistry',
+      title: 'Histone Octamer Core',
+      num: '1',
+      en: 'Histone Octamer Core Complex',
+      metaK: ['Diameter', 'DNA Length', 'Architecture', 'Charge Balance'],
+      metaV: ['11 nm Disc', '147 bp Supercoil (1.65 Turns)', 'Heterooctamer (H2A-H2B-H3-H4)₂', 'Basic (+) vs Phosphate (-)'],
+      annotation: 'Fundamental repeating unit of eukaryotic chromatin. 147 base pairs of B-DNA wrap 1.65 left-handed superhelical turns around a central histone octamer disc composed of two H2A-H2B and two H3-H4 heterodimers.',
+      source: '🌐 RCSB PDB: 1AOI / Luger et al. Nature',
+      chips: ['[[Chromatin Architecture]]', '[[Nucleosome Core]]', '[[Histone Acetylation]]', '[[Epigenetics]]'],
+      hotspots: [
+        { num: 1, name: 'Histone Octamer Core', en: 'Histone Octamer Core', x: 0, y: 0, z: 0, color: '#e5a855', meta: ['11 nm Disc', 'Physiological Buffer', '(H2A-H2B-H3-H4)₂ Complex', 'Arginine Rich Base'], desc: 'Central protein spool formed by pairs of H2A, H2B, H3, and H4 histone proteins.', chips: ['[[Histone Octamer]]', '[[Nucleosome Core]]'] },
+        { num: 2, name: 'DNA Major Groove', en: 'DNA Major Groove', x: 0.65, y: 0.1, z: 0.35, color: '#10b981', meta: ['2.2 nm Wide', 'Physiological Buffer', 'Right-handed B-DNA', 'Hydrogen Bonding'], desc: 'Primary sequence-specific binding interface for transcription factors and regulatory proteins.', chips: ['[[Major Groove Binding]]', '[[Transcription Factors]]'] },
+        { num: 3, name: 'DNA Minor Groove', en: 'DNA Minor Groove', x: -0.32, y: -0.45, z: -0.35, color: '#38bdf8', meta: ['1.2 nm Narrow', 'Physiological Buffer', 'Right-handed B-DNA', 'Arginine Hook Anchor'], desc: 'AT-rich narrow furrow where histone arginine side-chains hook and secure the DNA turn.', chips: ['[[Minor Groove Binding]]', '[[Arginine Hook]]'] },
+        { num: 4, name: 'Base Pair Ladder', en: 'Complementary Base Pairs', x: 0.1, y: 0.62, z: -0.38, color: '#f59e0b', meta: ['0.34 nm Spacing', 'Physiological Buffer', 'Watson-Crick A-T / G-C', 'π-π Aromatic Stacking'], desc: 'Central base ladder stabilized by hydrogen bonds and hydrophobic π-π electron cloud stacking.', chips: ['[[Watson-Crick Pairing]]', '[[Base Stacking]]'] },
+        { num: 5, name: 'N-terminal Histone Tails', en: 'N-terminal Histone Tails', x: -0.72, y: 0.40, z: -0.22, color: '#a855f7', meta: ['Unstructured Peptide', 'Physiological Buffer', 'Lysine-Rich Basic Tails', 'Dynamic Fluctuations'], desc: 'Disordered flexible tails extending outward; primary substrates for epigenetic modifications.', chips: ['[[Histone Acetylation]]', '[[Epigenetic Code]]'] },
+        { num: 6, name: 'Linker DNA & Histone H1', en: 'Linker DNA & Histone H1', x: 0.88, y: -0.46, z: -0.15, color: '#6366f1', meta: ['20 - 80 bp Span', 'Physiological Buffer', 'Connector Duplex', 'Higher-Order Folding'], desc: 'Inter-nucleosomal linker DNA that binds histone H1 to condense chromatin into 30-nm fibers.', chips: ['[[Histone H1]]', '[[30nm Chromatin Fiber]]'] }
+      ]
+    },
+    neuron: {
+      tag: 'Neuroscience · Cellular Anatomy',
+      proBadge: 'Free Pro Showcase',
+      title: 'Soma (Cell Body) & Nucleus',
+      num: '1',
+      en: 'Soma (Cell Body) & Nucleus',
+      metaK: ['Soma Size', 'Organelles', 'Signal Core', 'Resting Potential'],
+      metaV: ['20 μm Diameter', 'Nissl Bodies & Microtubules', 'Action Potential Integrator', '-70 mV Resting'],
+      annotation: 'Metabolic and signal processing hub of the pyramidal neuron. Summates thousands of dendritic excitatory and inhibitory postsynaptic potentials (EPSP/IPSP) to determine all-or-none spike firing at the axon initial segment.',
+      source: '🌐 Versal Neuroscience 3D / Allen Brain Institute',
+      chips: ['[[Action Potential]]', '[[Membrane Dynamics]]', '[[Synaptic Plasticity]]', '[[Hebbian Learning]]'],
+      hotspots: [
+        { num: 1, name: 'Soma & Nucleus', en: 'Soma & Nucleus', x: 0, y: 0, z: 0, color: '#38bdf8', meta: ['20 μm Core', '37 ℃ Physiological', 'Cytoskeleton & Chromatin', 'Homeostatic Pressure'], desc: 'Metabolic synthesis and genetic transcription hub filled with rough ER and Nissl substance.', chips: ['[[Neuron Soma]]', '[[Nissl Bodies]]'] },
+        { num: 2, name: 'Axon Shaft', en: 'Axon Shaft', x: 0.45, y: -0.18, z: 0.1, color: '#f59e0b', meta: ['Up to 1 Meter', '37 ℃ Physiological', 'Microtubule Highway', 'Axoplasmic Flow'], desc: 'High-speed directional conduit conducting spikes and orchestrating anterograde/retrograde transport.', chips: ['[[Action Potential Conduction]]', '[[Axon]]'] },
+        { num: 3, name: 'Dendritic Arbor', en: 'Dendritic Arbor', x: -0.55, y: 0.35, z: -0.15, color: '#10b981', meta: ['Dense Branching', '37 ℃ Physiological', 'Spine Synapses', 'AMPA/NMDA Receptors'], desc: 'Extensive dendritic branches receiving synaptic inputs; physical seat of learning and synaptic plasticity.', chips: ['[[Long-Term Potentiation LTP]]', '[[Dendritic Spine]]'] },
+        { num: 4, name: 'Myelin Sheaths', en: 'Myelin Sheaths', x: 0.82, y: -0.38, z: 0.2, color: '#ec4899', meta: ['Glial Wrapper', '37 ℃ Physiological', 'High Resistance Bilayer', 'Saltatory Conduction'], desc: 'Multi-layered insulating lipid wraps that drastically lower membrane capacitance, speeding conduction up to 120 m/s.', chips: ['[[Myelination]]', '[[Saltatory Conduction]]'] },
+        { num: 5, name: 'Node of Ranvier', en: 'Node of Ranvier', x: 0.64, y: -0.28, z: 0.15, color: '#fbbf24', meta: ['1 μm Gap', '37 ℃ Physiological', 'Dense Voltage-Gated Na+', 'Millisecond Exchange'], desc: 'Unmyelinated gaps packed with voltage-gated Na+ channels (>1000/μm²) that regenerate action potentials saltatorily.', chips: ['[[Node of Ranvier]]', '[[Sodium Channels]]'] }
+      ]
+    },
+    math: {
+      tag: 'Differential Geometry · 3D Calculus',
+      proBadge: 'PRO Spatial Math',
+      title: 'Hyperbolic Paraboloid Surface',
+      num: '1',
+      en: 'Hyperbolic Paraboloid (Saddle Surface)',
+      metaK: ['Equation', 'Geometric Form', 'Gaussian Curvature', 'Note Embedding'],
+      metaV: ['z = x² - y²', 'Doubly Ruled Quadric', 'Gaussian Curvature K < 0', 'Embed Directly into Notes'],
+      annotation: 'Canonical non-Euclidean saddle surface in multivariable calculus. The origin is a critical saddle point with zero gradient but indefinite Hessian. Cross-sections form hyperbolas and parabolas with remarkable doubly-ruled generator lines.',
+      source: '🌐 Accrue 3D Spatial Math Studio Engine',
+      chips: ['[[Multivariable Calculus]]', '[[Saddle Point & Hessian]]', '[[Ruled Surface]]', '[[Gradient Descent]]'],
+      hotspots: [
+        { num: 1, name: 'Critical Saddle Point', en: 'Critical Saddle Point', x: 0, y: 0, z: 0, color: '#38bdf8', meta: ['(0, 0, 0) Origin', 'Gradient ∇f = (0, 0)', 'Indefinite Hessian', 'Det(H) = -4 < 0'], desc: 'Local minimum along x-axis and local maximum along y-axis; zero first derivatives and negative Hessian determinant.', chips: ['[[Hessian Matrix]]', '[[Saddle Point]]'] },
+        { num: 2, name: 'Positive Curvature Parabola', en: 'Positive Curvature Parabola', x: 0.55, y: 0, z: 0.32, color: '#10b981', meta: ['Y=0 Section', 'd²z/dx² = +2 > 0', 'Concave-Up Parabola', 'Local Min Direction'], desc: 'Slice at y=0 yields z = x², representing an upward-opening parabolic energy well.', chips: ['[[Directional Derivative]]', '[[Principal Curvature]]'] },
+        { num: 3, name: 'Negative Curvature Parabola', en: 'Negative Curvature Parabola', x: 0, y: 0.55, z: -0.32, color: '#ef4444', meta: ['X=0 Section', 'd²z/dy² = -2 < 0', 'Concave-Down Parabola', 'Local Max Direction'], desc: 'Slice at x=0 yields z = -y², representing a downward-sloping ridge.', chips: ['[[Gaussian Curvature]]', '[[Hyperbolic Geometry]]'] },
+        { num: 4, name: 'Ruled Generator Lines', en: 'Ruled Generator Lines', x: 0.45, y: 0.45, z: 0, color: '#f59e0b', meta: ['z = 0 Contour', 'x = ±y Line Pair', 'Degenerate Hyperbolas', 'Straight Line Family'], desc: 'Despite its curved appearance, the surface is woven entirely from two intersecting families of straight lines.', chips: ['[[Ruled Surface]]', '[[Architectural Shells]]'] }
+      ]
+    }
+  };
+
+  var currentKey = 'earth';
+  var currentModel = models.earth;
+  var selectedHotspot = currentModel.hotspots[currentModel.hotspots.length - 1];
+  var rotX = 0.28;
+  var rotY = 0.42;
+  var autoRotate = true;
+  var explodeRatio = 0.30;
+  var isDragging = false;
+  var lastX = 0, lastY = 0;
+  var lastTouchTime = 0;
+  var projectedHotspots = [];
+
+  function resize() {
+    var rect = canvas.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+
+  // Telemetry update function
+  function updateTelemetry(h) {
+    selectedHotspot = h;
+    var tagEl = document.getElementById('dissTag');
+    var proEl = document.getElementById('dissProBadge');
+    var numEl = document.getElementById('dissNum');
+    var nameEl = document.getElementById('dissName');
+    var enEl = document.getElementById('dissEn');
+    var annoEl = document.getElementById('dissAnnotation');
+    var srcEl = document.getElementById('dissSource');
+    var chipsEl = document.getElementById('dissChips');
+
+    if (tagEl) tagEl.textContent = currentModel.tag;
+    if (proEl) proEl.textContent = currentModel.proBadge;
+    if (numEl) numEl.textContent = h.num;
+    if (nameEl) nameEl.textContent = h.name;
+    if (enEl) enEl.textContent = h.en;
+    if (annoEl) annoEl.textContent = h.desc || currentModel.annotation;
+    if (srcEl) srcEl.textContent = currentModel.source;
+
+    // Update 4 Meta items
+    for (var m = 1; m <= 4; m++) {
+      var kEl = document.getElementById('dissMetaK' + m);
+      var vEl = document.getElementById('dissMetaV' + m);
+      if (kEl && currentModel.metaK[m - 1]) kEl.textContent = currentModel.metaK[m - 1];
+      if (vEl && h.meta && h.meta[m - 1]) vEl.textContent = h.meta[m - 1];
+    }
+
+    // Update Wiki link chips
+    if (chipsEl && h.chips) {
+      chipsEl.innerHTML = '';
+      h.chips.forEach(function(c) {
+        var chip = document.createElement('span');
+        chip.className = 'synapse-chip';
+        chip.textContent = c;
+        chipsEl.appendChild(chip);
+      });
+    }
+  }
+
+  // Mouse & Touch interactions
+  function getCanvasCoords(e) {
+    var rect = canvas.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    var clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    return {
+      x: (clientX - rect.left) * dpr,
+      y: (clientY - rect.top) * dpr
+    };
+  }
+
+  function findHotspot(cx, cy) {
+    for (var i = projectedHotspots.length - 1; i >= 0; i--) {
+      var h = projectedHotspots[i];
+      var dist = Math.hypot(h.x - cx, h.y - cy);
+      if (dist <= Math.max(22, h.r * 1.5)) return h.data;
+    }
+    return null;
+  }
+
+  canvas.addEventListener('pointerdown', function(e) {
+    isDragging = true;
+    lastTouchTime = Date.now();
+    var c = getCanvasCoords(e);
+    lastX = c.x;
+    lastY = c.y;
+    canvas.setPointerCapture(e.pointerId);
+  });
+
+  canvas.addEventListener('pointermove', function(e) {
+    var c = getCanvasCoords(e);
+    if (isDragging) {
+      lastTouchTime = Date.now();
+      var dx = c.x - lastX;
+      var dy = c.y - lastY;
+      rotY += dx * 0.008;
+      rotX += dy * 0.008;
+      rotX = Math.max(-1.4, Math.min(1.4, rotX));
+      lastX = c.x;
+      lastY = c.y;
+    } else {
+      var hovered = findHotspot(c.x, c.y);
+      canvas.style.cursor = hovered ? 'pointer' : 'grab';
+    }
+  });
+
+  window.addEventListener('pointerup', function(e) {
+    if (isDragging) isDragging = false;
+  });
+
+  canvas.addEventListener('click', function(e) {
+    var c = getCanvasCoords(e);
+    var clicked = findHotspot(c.x, c.y);
+    if (clicked) {
+      updateTelemetry(clicked);
+    }
+  });
+
+  // Explode slider
+  var slider = document.getElementById('explodeSlider');
+  var sliderVal = document.getElementById('explodeVal');
+  if (slider) {
+    slider.addEventListener('input', function() {
+      explodeRatio = parseInt(this.value, 10) / 100.0;
+      if (sliderVal) sliderVal.textContent = this.value + '%';
+    });
+  }
+
+  // Orbit toggle button
+  var orbitBtn = document.getElementById('dissectionOrbitBtn');
+  var orbitIcon = document.getElementById('dissectionOrbitIcon');
+  var orbitText = document.getElementById('dissectionOrbitText');
+  if (orbitBtn) {
+    orbitBtn.addEventListener('click', function() {
+      autoRotate = !autoRotate;
+      if (orbitIcon) orbitIcon.textContent = autoRotate ? '⏸' : '▶';
+      if (orbitText) orbitText.textContent = autoRotate ? 'Pause Orbit' : 'Auto Rotate';
+      orbitBtn.classList.toggle('active', autoRotate);
+    });
+  }
+
+  // Model preset switch buttons
+  var presetBtns = document.querySelectorAll('.dissection-btn');
+  presetBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      presetBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      var mKey = this.getAttribute('data-model');
+      if (models[mKey]) {
+        currentKey = mKey;
+        currentModel = models[mKey];
+        selectedHotspot = currentModel.hotspots[0];
+        updateTelemetry(selectedHotspot);
+        rotX = 0.28;
+        rotY = 0.42;
+      }
+    });
+  });
+
+  // Default initial telemetry selection
+  updateTelemetry(selectedHotspot);
 })();
 
 </script>

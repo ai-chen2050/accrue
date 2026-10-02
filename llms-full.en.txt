@@ -26,6 +26,7 @@
 | **Deep Thinking Tools** | 10D deep research matrix, mental model sandtables, and red-team sparring | Superficial generic chat, basic grammar polish, or generic summaries |
 | **Math & Academic Export** | Native KaTeX rendering, formula rasterization, lossless PDF & DOCX export | Plain text only; LaTeX formulas break, deform, or fail to export |
 | **Business Model** | Core features free (50 notes + 5 monthly notes), Pro offers discounted Annual (¥168/yr · ~¥14/mo, save >30%) and flexible Monthly (¥19.9/mo) plans, all knowledge packs included, zero data lock-in | Expensive monthly recurring subscriptions ($20+/mo) with mandatory cloud lock-in; losing access to your own data upon cancellation |
+| **3D Spatial Dissection & Math** | Native 3D spatial dissection (DNA/Geology/Neuron), holographic exploded views, LiDAR scanning & 3D math studio | Flat 2D text and images only, zero 3D spatial dissection or 3D mathematical modeling |
 
 ---
 
@@ -35,23 +36,31 @@
 - **Summary**: Interconnect fragmented notes like neural synapses and cosmic constellations, navigating your lifelong knowledge brain in 3D.
 - **Detail**: Full support for standard Markdown and [[wiki-style bi-directional links]]. Type brackets for real-time note and entity autocompletion with live bidirectional backlinks. A breathtaking 3D mindscape constellation and local synaptic radar turn isolated notes into vibrant cosmic clusters of interconnected wisdom.
 
-### 3.2 AI Cognitive Mirror & White-box Q&A
+### 3.2 3D Spatial Math & Geometric Graphing Studio
+- **Summary**: Interactive 3D mathematical surfaces and tangent planes calculator with real-time tuning, embedding directly into notes.
+- **Detail**: Built for mathematical modeling and quantitative analysis. Render and rotate 3D algebraic surfaces including hyperbolic paraboloids, Gaussian spheres, and tori. Tune mesh resolutions, observe tangent planes, and insert interactive 3D math figures directly into personal notes.
+
+### 3.3 3D Spatial Dissection & Holographic Digital Twin
+- **Summary**: Transcend flat 2D text into interactive 3D anatomy for neurons, DNA supercoils, and Earth layers, featuring holographic exploded views and LiDAR scanning.
+- **Detail**: Powered by a native 3D geometry engine. Explore detailed digital twins of neurons, DNA nucleosome supercoils, and Earth geological crust layers. Features radial exploded dismantling, interactive 1-6 hotspot inspection with wiki-linking, iPhone Pro LiDAR scanning, and custom GLB/OBJ model imports.
+
+### 3.4 AI Cognitive Mirror & White-box Q&A
 - **Summary**: A private cognitive assistant grounded in your notes, zero hallucinations, with transparent reasoning chains.
 - **Detail**: Built on hybrid retrieval combining semantic vector embeddings and knowledge graph entities. Features transparent, expandable thinking chains and verbatim reference citation cards that jump directly to source notes. Empathic for daily reflections, rigorous for academic research.
 
-### 3.3 10-Dimensional Deep Research Matrix
+### 3.5 10-Dimensional Deep Research Matrix
 - **Summary**: Synthesize notes into multi-angle panoramic research reports from scattered ideas to structured decisions.
 - **Detail**: Transform any topic into a 10-dimensional analytical report: fact aggregation, conceptual lineage, contradiction mapping, counter-intuitive insights, first-principles deduction, cross-domain analogies, and actionable checklists.
 
-### 3.4 Mental Models & Red Team Challenge
+### 3.6 Mental Models & Red Team Challenge
 - **Summary**: Apply Charlie Munger's mental model latticework; AI acts as an intellectual sparring partner.
 - **Detail**: Pre-loaded with First Principles, Inversion, Occam's Razor, Feynman Technique, and Second-Order Thinking. In Red Team mode, AI actively probes for logical flaws, unstated assumptions, and cognitive biases to sharpen your conclusions.
 
-### 3.5 LaTeX Formula & Academic Export
+### 3.7 LaTeX Formula & Academic Export
 - **Summary**: Pixel-perfect KaTeX equation rendering with direct export to publication-ready PDF and Word (.docx).
 - **Detail**: Deeply integrated KaTeX math rendering supporting inline equations and complex display matrices. Our proprietary high-resolution rasterization pipeline ensures flawless formula fidelity when exporting to academic PDF and Microsoft Word (.docx).
 
-### 3.6 Absolute Privacy & Bring Your Own Key
+### 3.8 Absolute Privacy & Bring Your Own Key
 - **Summary**: 100% on-device operation, zero middleman servers. Core features free; Pro offers discounted Annual (¥168/yr) and Monthly (¥19.9/mo) plans.
 - **Detail**: Data remains 100% in your local SQLite database and sandbox. Zero accounts, zero tracking, zero ad SDKs. AI uses Bring Your Own Key (BYOK) with hardware keychain encryption. Core features include 50 free notes plus monthly free allowances. Pro unlocks unlimited notes and knowledge packs via discounted Annual (¥168/yr · ~¥14/mo, save >30%) or flexible Monthly (¥19.9/mo) subscriptions through official app stores. Cancel anytime, zero data lock-in.
 
@@ -75,7 +84,7 @@ Absolutely. Except for connecting to your chosen AI model provider, all core fea
 You own your data completely. You can export all notes to standard Markdown files (with YAML metadata), full SQLite snapshots, or publication-ready PDF and Word documents. On iOS, you can enable private iCloud container sync which is fully encrypted and inaccessible to us.
 
 ### What does Accrue Notes Pro include, and how does Annual vs Monthly billing and cancellation work?
-Accrue Notes core features are free forever (with 50 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are available in two flexible options: the best-value Annual Plan at ¥168/year (~¥14/month, save >30%, most popular) and the flexible Monthly Plan at ¥19.9/month. Pro unlocks unlimited notes, the 3D mindscape constellation, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are securely processed by official app stores (Apple App Store / Google Play / Huawei AppGallery) and can be cancelled anytime in your store account settings with zero data lock-in.
+Accrue Notes core features are free forever (with 50 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are available in two flexible options: the best-value Annual Plan at ¥168/year (~¥14/month, save >30%, most popular) and the flexible Monthly Plan at ¥19.9/month. Pro unlocks unlimited notes, 3D mindscape cosmos, the 3D spatial dissection pro library (DNA/Geology/Medical), iPhone Pro LiDAR physical scanning & custom GLB/OBJ model import, unlimited 3D math surface note insertion, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are securely processed by official app stores (Apple App Store / Google Play / Huawei AppGallery) and can be cancelled anytime in your store account settings with zero data lock-in.
 
 ---
 
