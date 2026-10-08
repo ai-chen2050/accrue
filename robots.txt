@@ -51,6 +51,6 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-Sitemap: https://fulibiji.top/sitemap.xml
-Sitemap: https://fulibiji.top/llms.txt
-Sitemap: https://fulibiji.top/llms.en.txt
+Sitemap: https://ai-chen2050.github.io/accrue/sitemap.xml
+Sitemap: https://ai-chen2050.github.io/accrue/llms.txt
+Sitemap: https://ai-chen2050.github.io/accrue/llms.en.txt

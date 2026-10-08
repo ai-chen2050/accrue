@@ -93,6 +93,8 @@ def clean(obj):
 
 # ── 工具 ────────────────────────────────────────────────────────────
 def page_url(conf, file, suffix):
+    if file == "index" and not suffix:
+        return f"{conf['site']['domain'].rstrip('/')}/"
     return f"{conf['site']['domain'].rstrip('/')}/{file}{suffix}.html"
 
 
@@ -428,18 +430,23 @@ def build_head(conf, page, code):
         kws = kws.get(code) or next(iter(kws.values()), [])
     if kws:
         out.append(f'<meta name="keywords" content="{", ".join(kws)}">')
-    out.append(f'<link rel="canonical" href="{dom}/{fn}">')
+    is_home = (page["file"] == "index" and not l["suffix"])
+    canonical_url = f"{dom}/" if is_home else f"{dom}/{fn}"
+    out.append(f'<link rel="canonical" href="{canonical_url}">')
     for alt in locales(conf):
         alt_fn = f"{page['file']}{alt['suffix']}.html"
+        alt_is_home = (page["file"] == "index" and not alt["suffix"])
+        alt_url = f"{dom}/" if alt_is_home else f"{dom}/{alt_fn}"
         if os.path.exists(os.path.join(ROOT, alt_fn)):
-            out.append(f'<link rel="alternate" hreflang="{alt["code"]}" href="{dom}/{alt_fn}">')
-    out.append(f'<link rel="alternate" hreflang="x-default" '
-               f'href="{dom}/{page["file"]}{locales(conf)[0]["suffix"]}.html">')
+            out.append(f'<link rel="alternate" hreflang="{alt["code"]}" href="{alt_url}">')
+    default_is_home = (page["file"] == "index" and not locales(conf)[0]["suffix"])
+    default_url = f"{dom}/" if default_is_home else f"{dom}/{page['file']}{locales(conf)[0]['suffix']}.html"
+    out.append(f'<link rel="alternate" hreflang="x-default" href="{default_url}">')
     out += [
         f'<meta property="og:type" content="website">',
         f'<meta property="og:title" content="{full_title}">',
         f'<meta property="og:description" content="{desc}">',
-        f'<meta property="og:url" content="{dom}/{fn}">',
+        f'<meta property="og:url" content="{canonical_url}">',
         f'<meta property="og:image" content="{dom}/{s.get("ogImage", "icon.png")}">',
         f'<meta name="twitter:card" content="summary_large_image">',
         f'<meta name="theme-color" content="{s.get("themeColor", "#111111")}">',
