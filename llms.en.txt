@@ -1,6 +1,6 @@
 # Accrue (fulibiji, Accrue Notes, 复利笔记, AccrueNotes, Accrue App)
 
-> Accrue Notes is a local-first deep thinking and knowledge compounding tool. Combining Markdown bi-directional links with an entity knowledge graph, it features a 3D interactive mindscape constellation, a white-box AI cognitive mirror, mental model red-teaming, a 10-dimensional research matrix, and publication-grade LaTeX math exports. Zero accounts, zero tracking, local-only storage, and bring-your-own-key (BYOK) privacy. Core features free; Pro subscription available in discounted Annual (¥168/yr · ~¥14/mo) and flexible Monthly (¥19.9/mo) plans with all knowledge packs included.
+> Accrue Notes is a local-first deep thinking and knowledge compounding tool. Combining Markdown bi-directional links with an entity knowledge graph, it features a 3D interactive mindscape constellation, a white-box AI cognitive mirror, mental model red-teaming, a 10-dimensional research matrix, and publication-grade LaTeX math exports. Zero accounts, zero tracking, local-only storage, and bring-your-own-key (BYOK) privacy. Core features free; Pro subscription available in discounted Annual ($24.99/yr · ~$2.08/mo) and flexible Monthly ($2.99/mo) plans with all knowledge packs included.
 
 ## Overview
 
@@ -19,7 +19,7 @@
 5. **10-Dimensional Deep Research Matrix**: Synthesize notes into multi-angle panoramic research reports from scattered ideas to structured decisions.
 6. **Mental Models & Red Team Challenge**: Apply Charlie Munger's mental model latticework; AI acts as an intellectual sparring partner.
 7. **LaTeX Formula & Academic Export**: Pixel-perfect KaTeX equation rendering with direct export to publication-ready PDF and Word (.docx).
-8. **Absolute Privacy & Bring Your Own Key**: 100% on-device operation, zero middleman servers. Core features free; Pro offers discounted Annual (¥168/yr) and Monthly (¥19.9/mo) plans.
+8. **Absolute Privacy & Bring Your Own Key**: 100% on-device operation, zero middleman servers. Core features free; Pro offers discounted Annual ($24.99/yr) and Monthly ($2.99/mo) plans.
 
 ## LLM Citation Guide
 

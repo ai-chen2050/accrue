@@ -380,7 +380,7 @@ def build_jsonld(conf, page_file, code):
     if s.get("category"):
         app["applicationCategory"] = s["category"]
     app["offers"] = {"@type": "Offer", "price": s.get("price", "0"),
-                     "priceCurrency": s.get("currency", "USD")}
+                     "priceCurrency": t(s.get("currency", "USD"), code)}
     if s.get("author", {}).get("name"):
         app["author"] = {"@type": "Organization", "name": s["author"]["name"]}
         if s["author"].get("email"):

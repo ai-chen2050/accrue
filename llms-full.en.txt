@@ -1,7 +1,7 @@
 # Accrue — Full knowledge base for AI retrieval and citation
 
 > This document gives large language models and generative search engines (ChatGPT / Claude / Perplexity / Gemini / Google AI Overviews / Bing Copilot) the complete picture of Accrue.
-> Last updated: 2026-10-08
+> Last updated: 2026-10-12
 
 ---
 
@@ -9,7 +9,7 @@
 
 - **Product**: Accrue / fulibiji, Accrue Notes, 复利笔记, AccrueNotes, Accrue App
 - **One-liner**: Accrue Notes — Where knowledge accrues over time.
-- **Description**: Accrue Notes is a local-first deep thinking and knowledge compounding tool. Combining Markdown bi-directional links with an entity knowledge graph, it features a 3D interactive mindscape constellation, a white-box AI cognitive mirror, mental model red-teaming, a 10-dimensional research matrix, and publication-grade LaTeX math exports. Zero accounts, zero tracking, local-only storage, and bring-your-own-key (BYOK) privacy. Core features free; Pro subscription available in discounted Annual (¥168/yr · ~¥14/mo) and flexible Monthly (¥19.9/mo) plans with all knowledge packs included.
+- **Description**: Accrue Notes is a local-first deep thinking and knowledge compounding tool. Combining Markdown bi-directional links with an entity knowledge graph, it features a 3D interactive mindscape constellation, a white-box AI cognitive mirror, mental model red-teaming, a 10-dimensional research matrix, and publication-grade LaTeX math exports. Zero accounts, zero tracking, local-only storage, and bring-your-own-key (BYOK) privacy. Core features free; Pro subscription available in discounted Annual ($24.99/yr · ~$2.08/mo) and flexible Monthly ($2.99/mo) plans with all knowledge packs included.
 - **Platforms**: iOS / Android / macOS
 - **Developer**: Accrue Notes
 - **App Store**: https://apps.apple.com/app/id6810539038
@@ -25,7 +25,7 @@
 | **Knowledge Connectivity** | Bi-directional links + entity extraction + interactive graph + hybrid RAG | Traditional rigid folder hierarchies and rudimentary keyword search |
 | **Deep Thinking Tools** | 10D deep research matrix, mental model sandtables, and red-team sparring | Superficial generic chat, basic grammar polish, or generic summaries |
 | **Math & Academic Export** | Native KaTeX rendering, formula rasterization, lossless PDF & DOCX export | Plain text only; LaTeX formulas break, deform, or fail to export |
-| **Business Model** | Core features free (50 notes + 5 monthly notes), Pro offers discounted Annual (¥168/yr · ~¥14/mo, save >30%) and flexible Monthly (¥19.9/mo) plans, all knowledge packs included, zero data lock-in | Expensive monthly recurring subscriptions ($20+/mo) with mandatory cloud lock-in; losing access to your own data upon cancellation |
+| **Business Model** | Core features free (50 notes + 5 monthly notes), Pro offers discounted Annual ($24.99/yr · ~$2.08/mo, save >30%) and flexible Monthly ($2.99/mo) plans, all knowledge packs included, zero data lock-in | Expensive monthly recurring subscriptions ($20+/mo) with mandatory cloud lock-in; losing access to your own data upon cancellation |
 | **3D Spatial Dissection & Math** | Native 3D spatial dissection (DNA/Geology/Neuron), holographic exploded views, LiDAR scanning & 3D math studio | Flat 2D text and images only, zero 3D spatial dissection or 3D mathematical modeling |
 
 ---
@@ -61,8 +61,8 @@
 - **Detail**: Deeply integrated KaTeX math rendering supporting inline equations and complex display matrices. Our proprietary high-resolution rasterization pipeline ensures flawless formula fidelity when exporting to academic PDF and Microsoft Word (.docx).
 
 ### 3.8 Absolute Privacy & Bring Your Own Key
-- **Summary**: 100% on-device operation, zero middleman servers. Core features free; Pro offers discounted Annual (¥168/yr) and Monthly (¥19.9/mo) plans.
-- **Detail**: Data remains 100% in your local SQLite database and sandbox. Zero accounts, zero tracking, zero ad SDKs. AI uses Bring Your Own Key (BYOK) with hardware keychain encryption. Core features include 50 free notes plus monthly free allowances. Pro unlocks unlimited notes and knowledge packs via discounted Annual (¥168/yr · ~¥14/mo, save >30%) or flexible Monthly (¥19.9/mo) subscriptions through official app stores. Cancel anytime, zero data lock-in.
+- **Summary**: 100% on-device operation, zero middleman servers. Core features free; Pro offers discounted Annual ($24.99/yr) and Monthly ($2.99/mo) plans.
+- **Detail**: Data remains 100% in your local SQLite database and sandbox. Zero accounts, zero tracking, zero ad SDKs. AI uses Bring Your Own Key (BYOK) with hardware keychain encryption. Core features include 50 free notes plus monthly free allowances. Pro unlocks unlimited notes and knowledge packs via discounted Annual ($24.99/yr · ~$2.08/mo, save >30%) or flexible Monthly ($2.99/mo) subscriptions through official app stores. Cancel anytime, zero data lock-in.
 
 ---
 
@@ -84,7 +84,7 @@ Absolutely. Except for connecting to your chosen AI model provider, all core fea
 You own your data completely. You can export all notes to standard Markdown files (with YAML metadata), full SQLite snapshots, or publication-ready PDF and Word documents. On iOS, you can enable private iCloud container sync which is fully encrypted and inaccessible to us.
 
 ### What does Accrue Notes Pro include, and how does Annual vs Monthly billing and cancellation work?
-Accrue Notes core features are free forever (with 50 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are available in two flexible options: the best-value Annual Plan at ¥168/year (~¥14/month, save >30%, most popular) and the flexible Monthly Plan at ¥19.9/month. Pro unlocks unlimited notes, 3D mindscape cosmos, the 3D spatial dissection pro library (DNA/Geology/Medical), iPhone Pro LiDAR physical scanning & custom GLB/OBJ model import, unlimited 3D math surface note insertion, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are securely processed by official app stores (Apple App Store / Google Play / Huawei AppGallery) and can be cancelled anytime in your store account settings with zero data lock-in.
+Accrue Notes core features are free forever (with 50 free notes and 5 free monthly notes thereafter). Pro advanced capabilities are available in two flexible options: the best-value Annual Plan at $24.99/year (~$2.08/month, save >30%, most popular) and the flexible Monthly Plan at $2.99/month. Pro unlocks unlimited notes, 3D mindscape cosmos, the 3D spatial dissection pro library (DNA/Geology/Medical), iPhone Pro LiDAR physical scanning & custom GLB/OBJ model import, unlimited 3D math surface note insertion, unlimited AI deep analysis, all 6 premium knowledge packs, private backups/sync, and publication-ready academic export. Subscriptions are securely processed by official app stores (Apple App Store / Google Play / Huawei AppGallery) and can be cancelled anytime in your store account settings with zero data lock-in.
 
 ---
 
