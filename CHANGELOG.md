@@ -4,6 +4,13 @@
 > 这份文件是解释"某个数字为什么长这样"的第一去处，CLAUDE.md 会指向它。
 > 用 `/devlog` 让 Claude 自动追加。
 
+## 2026-10-20
+
+- **接入 Google Analytics 4 (`G-1CQNQNPK1Y`) + 百度统计 (`b3a7b6fedcba22d39897693d6f716035`) 全站追踪与 SPA 路由切换上报**：
+  - `site.config.json`: 新增 `site.ga4: "G-1CQNQNPK1Y"` 与 `site.baidu: "b3a7b6fedcba22d39897693d6f716035"`，解决 GitHub Pages 子项目仓库（`/accrue/`）独立 HTML 不继承主站统计代码的问题。
+  - `tools/gen_geo.py` & `tools/build_devlog.py`: 新增双引擎 `build_ga4()`，向全站 24 个 HTML 页面（含中英双语、华为渠道合规页、`devlog.html` / `devlog.en.html` 及 `devlog/*.html` 全部 8 篇中英开发日记详情页）自动注入 `gtag.js`、`hm.baidu.com/hm.js` 与 SPA 前端路由切换 `page_view` + `_trackPageview` 追踪代码。
+  - `tools/geo_check.py`: 增加全站（含 `devlog/*.html`）GA4、百度统计代码与 SPA 路由追踪一致性校验。
+
 ## 2026-10-03
 
 - 更新官网主 Logo 为最新版 App 默认图标（替换此前旧版树形图标）：
