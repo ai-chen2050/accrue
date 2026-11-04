@@ -4,6 +4,15 @@
 > 这份文件是解释"某个数字为什么长这样"的第一去处，CLAUDE.md 会指向它。
 > 用 `/devlog` 让 Claude 自动追加。
 
+## 2026-11-04
+
+- **整合 78 秒 1080P 官方产品宣传片与交互式章节快跳剧场 (`#video`)**：
+  - `promo.mp4` / `cover.png` / `promo-en.mp4` / `cover-en.png`: 从视频工程 (`fulibiji-video`) 同步最新渲染的中英双语 78 秒 1080P 宣传片与封面图（含万宝龙拟物钢笔书写、3D 天体星网引擎、iPad/iPhone 双屏双链激光贯穿、复利飞轮、芒格红队沙盘、本地 BYOK 硬件钥匙直连与 A4 学术研报导出）。
+  - `index.html` & `index.en.html`:
+    - 顶部导航栏新增「宣传片 / Film」锚点与首屏 Hero 区域「🎬 78 秒官方宣传片 / 🎬 Watch 78s Film」按钮（点击平滑滚动至剧场并自动播放）；
+    - 首屏下方新增 `#video` 官方宣传片剧场区块，内嵌 HTML5 `<video>` 播放器（配置 `controls preload="metadata" playsinline poster`）及 8 幕时间戳交互胶囊（`00:00` 随心记录 → `00:10` 3D星网 → `00:20` 双链联动 → `00:30` 数据大屏 → `00:40` 芒格沙盘 → `00:50` 本地优先 → `01:00` 研报导出 → `01:10` 品牌终章），支持点击秒级跳播与播放进度实时高亮同步。
+  - `style.css`: 新增 `.promo-video-sec`、`.video-stage`、`.video-bar`、`.video-frame`、`.video-chapters`、`.chapter-pill` 等响应式暗黑/浅色双主题自适应样式。
+
 ## 2026-10-20
 
 - **接入 Google Analytics 4 (`G-1CQNQNPK1Y`) + 百度统计 (`b3a7b6fedcba22d39897693d6f716035`) 全站追踪与 SPA 路由切换上报**：

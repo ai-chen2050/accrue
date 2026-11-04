@@ -203,6 +203,7 @@
   </a>
   
   <div class="nav-actions">
+    <a href="#video" class="hide-sm">宣传片</a>
     <a href="#features" class="hide-sm">核心能力</a>
     <a href="#playground" class="hide-sm">双链沙盒</a>
     <a href="#constellation" class="hide-sm">全景星网</a>
@@ -230,6 +231,9 @@
       <a class="cta" href="https://apps.apple.com/app/id6810539038" id="dl-appstore">
         <span>⚡️ App Store 官方下载</span>
       </a>
+      <a class="cta-secondary" href="#video" id="heroWatchBtn">
+        <span>🎬 78 秒官方宣传片</span>
+      </a>
       <a class="cta-secondary" href="#playground">
         <span>体验交互演练舱 ↓</span>
       </a>
@@ -254,6 +258,48 @@
     </div>
   </div>
 </header>
+
+<!-- 官方产品宣传片 (#video) -->
+<section id="video" class="promo-video-sec reveal"><div class="wrap">
+  <div class="section-header" style="margin-bottom: 32px;">
+    <div class="pulse-badge" style="margin-bottom: 14px;">
+      <span class="pulse-dot"></span>
+      <span>Official Product Film · 1080p</span>
+    </div>
+    <h2>78 秒全景看懂「复利笔记」终身认知系统</h2>
+    <p class="section-lead">拟物墨迹随心记录、3D 宇宙心智星网、iPad/iPhone 双屏激光联动、认知复利飞轮、芒格红队沙盘、本地 BYOK 直连与出版级研报导出</p>
+  </div>
+  <div class="video-stage">
+    <div class="video-bar">
+      <div class="window-dots-row">
+        <span class="window-dot r"></span>
+        <span class="window-dot y"></span>
+        <span class="window-dot g"></span>
+        <span class="window-title">Accrue Notes · 复利笔记 — 本地优先双链知识库与 AI 认知镜像 官方宣传片</span>
+      </div>
+      <div class="video-badge-row">
+        <span class="video-pill-tag">🎸 原声木吉他与纸张拟音</span>
+        <span class="video-pill-tag">HD 1080P</span>
+      </div>
+    </div>
+    <div class="video-frame">
+      <video id="promoVideo" class="promo-video-player" controls preload="metadata" playsinline poster="cover.png">
+        <source src="promo.mp4" type="video/mp4">
+        您的浏览器不支持 HTML5 视频播放，请直接下载观看。
+      </video>
+    </div>
+    <div class="video-chapters" aria-label="宣传片章节快跳">
+      <button class="chapter-pill active" type="button" data-seek="0"><time>00:00</time><span>01 随心记录</span></button>
+      <button class="chapter-pill" type="button" data-seek="10"><time>00:10</time><span>02 3D星网</span></button>
+      <button class="chapter-pill" type="button" data-seek="20"><time>00:20</time><span>03 双链联动</span></button>
+      <button class="chapter-pill" type="button" data-seek="30"><time>00:30</time><span>04 数据大屏</span></button>
+      <button class="chapter-pill" type="button" data-seek="40"><time>00:40</time><span>05 芒格沙盘</span></button>
+      <button class="chapter-pill" type="button" data-seek="50"><time>00:50</time><span>06 本地优先</span></button>
+      <button class="chapter-pill" type="button" data-seek="60"><time>01:00</time><span>07 研报导出</span></button>
+      <button class="chapter-pill" type="button" data-seek="70"><time>01:10</time><span>品牌终章</span></button>
+    </div>
+  </div>
+</div></section>
 
 <!-- 核心特性卡片网格 -->
 <section id="features" class="reveal"><div class="wrap">
@@ -2650,6 +2696,55 @@ function isLightTheme() {
 
   // 默认初始化首个热点
   updateTelemetry(selectedHotspot);
+})();
+
+// 官方实机宣传片章节快跳与联动控制 (#promoVideo)
+(function() {
+  var vid = document.getElementById('promoVideo');
+  var pills = document.querySelectorAll('.chapter-pill[data-seek]');
+  var watchBtn = document.getElementById('heroWatchBtn');
+  if (!vid) return;
+
+  var times = [];
+  pills.forEach(function(btn, idx) {
+    var t = parseFloat(btn.getAttribute('data-seek')) || 0;
+    times.push({ btn: btn, t: t, idx: idx });
+    btn.addEventListener('click', function() {
+      pills.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      try {
+        vid.currentTime = t;
+        var p = vid.play();
+        if (p && typeof p.catch === 'function') p.catch(function() {});
+      } catch (e) {}
+    });
+  });
+
+  vid.addEventListener('timeupdate', function() {
+    var cur = vid.currentTime || 0;
+    var activeIdx = 0;
+    for (var i = 0; i < times.length; i++) {
+      if (cur >= times[i].t - 0.25) activeIdx = i;
+    }
+    times.forEach(function(item, idx) {
+      item.btn.classList.toggle('active', idx === activeIdx);
+    });
+  });
+
+  if (watchBtn) {
+    watchBtn.addEventListener('click', function(e) {
+      var sec = document.getElementById('video');
+      if (!sec) return;
+      e.preventDefault();
+      sec.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(function() {
+        try {
+          var p = vid.play();
+          if (p && typeof p.catch === 'function') p.catch(function() {});
+        } catch (_) {}
+      }, 350);
+    });
+  }
 })();
 
 </script>

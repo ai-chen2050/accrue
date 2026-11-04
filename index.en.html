@@ -196,6 +196,7 @@
   </a>
 
   <div class="nav-actions">
+    <a href="#video" class="hide-sm">Film</a>
     <a href="#features" class="hide-sm">Features</a>
     <a href="#playground" class="hide-sm">Playground</a>
     <a href="#spatial-dissection" class="hide-sm">3D Dissection</a>
@@ -223,6 +224,9 @@
       <a class="cta" href="https://apps.apple.com/app/id6810539038" id="dl-appstore">
         <span>⚡️ Download on App Store</span>
       </a>
+      <a class="cta-secondary" href="#video" id="heroWatchBtn">
+        <span>🎬 Watch 78s Film</span>
+      </a>
       <a class="cta-secondary" href="#playground">
         <span>Explore Interactive Demos ↓</span>
       </a>
@@ -244,6 +248,48 @@
     </div>
   </div>
 </header>
+
+<!-- Official Product Film (#video) -->
+<section id="video" class="promo-video-sec reveal"><div class="wrap">
+  <div class="section-header" style="margin-bottom: 32px;">
+    <div class="pulse-badge" style="margin-bottom: 14px;">
+      <span class="pulse-dot"></span>
+      <span>Official Product Film · 1080p</span>
+    </div>
+    <h2>See Accrue Notes in Action in 78 Seconds</h2>
+    <p class="section-lead">Tactile fountain-pen capture, 3D celestial constellation, dual-screen laser backlinks, compounding flywheel, Munger Red-Team sandbox, on-device BYOK &amp; academic report export</p>
+  </div>
+  <div class="video-stage">
+    <div class="video-bar">
+      <div class="window-dots-row">
+        <span class="window-dot r"></span>
+        <span class="window-dot y"></span>
+        <span class="window-dot g"></span>
+        <span class="window-title">Accrue Notes — Local-First Bi-directional Knowledge Vault &amp; AI Cognitive Mirror Official Film</span>
+      </div>
+      <div class="video-badge-row">
+        <span class="video-pill-tag">🎸 Acoustic &amp; Paper Foley</span>
+        <span class="video-pill-tag">HD 1080P</span>
+      </div>
+    </div>
+    <div class="video-frame">
+      <video id="promoVideo" class="promo-video-player" controls preload="metadata" playsinline poster="cover-en.png">
+        <source src="promo-en.mp4" type="video/mp4">
+        Your browser does not support HTML5 video playback.
+      </video>
+    </div>
+    <div class="video-chapters" aria-label="Product Film Chapter Navigation">
+      <button class="chapter-pill active" type="button" data-seek="0"><time>00:00</time><span>01 Flow Capture</span></button>
+      <button class="chapter-pill" type="button" data-seek="10"><time>00:10</time><span>02 3D Galaxy</span></button>
+      <button class="chapter-pill" type="button" data-seek="20"><time>00:20</time><span>03 Wiki Links</span></button>
+      <button class="chapter-pill" type="button" data-seek="30"><time>00:30</time><span>04 Pro Dashboard</span></button>
+      <button class="chapter-pill" type="button" data-seek="40"><time>00:40</time><span>05 Mental Models</span></button>
+      <button class="chapter-pill" type="button" data-seek="50"><time>00:50</time><span>06 Local BYOK</span></button>
+      <button class="chapter-pill" type="button" data-seek="60"><time>01:00</time><span>07 Research Export</span></button>
+      <button class="chapter-pill" type="button" data-seek="70"><time>01:10</time><span>Brand Finale</span></button>
+    </div>
+  </div>
+</div></section>
 
 <!-- Features Grid -->
 <section id="features" class="reveal"><div class="wrap">
@@ -2638,6 +2684,55 @@ function isLightTheme() {
 
   // 默认初始化首个热点
   updateTelemetry(selectedHotspot);
+})();
+
+// Official Product Film Chapter Seeking & Hero CTA Control (#promoVideo)
+(function() {
+  var vid = document.getElementById('promoVideo');
+  var pills = document.querySelectorAll('.chapter-pill[data-seek]');
+  var watchBtn = document.getElementById('heroWatchBtn');
+  if (!vid) return;
+
+  var times = [];
+  pills.forEach(function(btn, idx) {
+    var t = parseFloat(btn.getAttribute('data-seek')) || 0;
+    times.push({ btn: btn, t: t, idx: idx });
+    btn.addEventListener('click', function() {
+      pills.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      try {
+        vid.currentTime = t;
+        var p = vid.play();
+        if (p && typeof p.catch === 'function') p.catch(function() {});
+      } catch (e) {}
+    });
+  });
+
+  vid.addEventListener('timeupdate', function() {
+    var cur = vid.currentTime || 0;
+    var activeIdx = 0;
+    for (var i = 0; i < times.length; i++) {
+      if (cur >= times[i].t - 0.25) activeIdx = i;
+    }
+    times.forEach(function(item, idx) {
+      item.btn.classList.toggle('active', idx === activeIdx);
+    });
+  });
+
+  if (watchBtn) {
+    watchBtn.addEventListener('click', function(e) {
+      var sec = document.getElementById('video');
+      if (!sec) return;
+      e.preventDefault();
+      sec.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(function() {
+        try {
+          var p = vid.play();
+          if (p && typeof p.catch === 'function') p.catch(function() {});
+        } catch (_) {}
+      }, 350);
+    });
+  }
 })();
 
 </script>
