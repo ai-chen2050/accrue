@@ -4,6 +4,12 @@
 > 这份文件是解释"某个数字为什么长这样"的第一去处，CLAUDE.md 会指向它。
 > 用 `/devlog` 让 Claude 自动追加。
 
+## 2026-11-05
+
+- **新增海外宣发英文专栏矩阵与 Medium 一键导入控制台 (`articles/`)**：
+  - `articles/01-stop-digital-waste.html` ~ `07-pkm-tools-comparison-2026.html`: 部署 7 篇独立英文深度文章 HTML 页与 21 张全英文界面高清实机图（`cover.png` / `img1.png` / `img2.png`），全面适配 Medium 官方 `medium.com/p/import` 自动解析规范（含 `<article>`、`<h1>`、`<figure>` 与 `https://` 绝对路径配图）。
+  - `articles/index.html`: 提供可视化「Medium 一键导入/带图富文本粘贴控制台」，支持一键复制导入链接跳转 `medium.com/p/import` 或将整篇图文作为 `text/html` 写入剪贴板直贴 `medium.com/new-story`。
+
 ## 2026-11-04
 
 - **整合 78 秒 1080P 官方产品宣传片与交互式章节快跳剧场 (`#video`)**：

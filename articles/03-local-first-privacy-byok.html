@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>No Cloud Lock-In, No Subscription Hostage: Why We Built a Local-First + White-Box BYOK AI Note App</title>
+<meta name="description" content="Why does a simple note app demand your phone number, upload your private journals to a black-box server, and charge $20/month for marked-up AI wrappers? Inside the architecture of Accrue Note.">
+<meta name="author" content="Accrue Note Team">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No Cloud Lock-In, No Subscription Hostage: Why We Built a Local-First + White-Box BYOK AI Note App">
+<meta property="og:description" content="Why does a simple note app demand your phone number, upload your private journals to a black-box server, and charge $20/month for marked-up AI wrappers? Inside the architecture of Accrue Note.">
+<meta property="og:image" content="https://ai-chen2050.github.io/accrue/articles/03-local-first-privacy-byok/cover.png">
+<link rel="canonical" href="https://ai-chen2050.github.io/accrue/articles/03-local-first-privacy-byok.html">
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif; max-width: 740px; margin: 40px auto; padding: 0 20px; line-height: 1.75; color: #1a1a1a; background: #fff; }
+  h1 { font-size: 34px; line-height: 1.25; margin-bottom: 12px; }
+  .subtitle { font-size: 20px; color: #555; margin-bottom: 28px; line-height: 1.5; }
+  h2 { font-size: 26px; margin-top: 36px; margin-bottom: 14px; }
+  h3 { font-size: 20px; margin-top: 28px; margin-bottom: 10px; }
+  p, li { font-size: 18px; margin-bottom: 18px; }
+  figure { margin: 32px 0; text-align: center; }
+  figure img { max-width: 100%; height: auto; border-radius: 12px; }
+  figcaption { font-size: 14px; color: #666; margin-top: 8px; }
+  blockquote { border-left: 3px solid #10c877; padding-left: 18px; margin: 24px 0; font-style: italic; color: #333; }
+  code { background: #f4f6f8; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 36px 0; }
+</style>
+</head>
+<body>
+<article id="story-content">
+<h1>No Cloud Lock-In, No Subscription Hostage: Why We Built a Local-First + White-Box BYOK AI Note App</h1>
+<p class="subtitle">Why does a simple note app demand your phone number, upload your private journals to a black-box server, and charge $20/month for marked-up AI wrappers? Inside the architecture of Accrue Note.</p>
+<p>Somewhere along the way, modern productivity software lost its mind.</p>
+<p>To jot down a private note, you're forced to create an account and hand over your email.</p>
+<p>To edit a document on your own laptop, every keystroke is synced to someone else's proprietary cloud database.</p>
+<p>And then comes the <strong>Subscription Trap</strong>: stop paying your monthly rent, and your own knowledge base becomes read-only—or worse, locked inside a proprietary export format that breaks your links and formatting.</p>
+<p>With the rise of AI note-taking apps, the privacy trade-off has grown even darker.</p>
+<p>Dozens of "AI-powered" wrappers quietly ship your private journals, proprietary source code, and strategic memos to third-party servers, charging you a $20/month markup on pennies of API tokens while giving you zero visibility into where your data lives.</p>
+<p><strong>Do you actually own your Second Brain—or are you just renting it?</strong></p>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles/03-local-first-privacy-byok/cover.png" alt="Local-First, Plain Markdown &amp; Zero Cloud Backdoors" /><figcaption>Local-First, Plain Markdown &amp; Zero Cloud Backdoors</figcaption></figure>
+<hr />
+<h2>1. The Local-First Renaissance</h2>
+<p>Across systems engineering and the indie developer community, <strong>Local-First Software</strong> has become a non-negotiable movement. Its principles are simple and uncompromising:</p>
+<p>1. <strong>The Disk Is the Single Source of Truth</strong>: Your files live on your local filesystem first—not in a remote multi-tenant database.</p>
+<p>2. <strong>Plain Text Forever (<code>Future-Proof</code>)</strong>: No proprietary binary blobs. Thirty years from now, even if every software vendor today disappears, your standard <code>.md</code> files remain 100% readable with any text editor.</p>
+<p>3. <strong>Offline by Default</strong>: At 35,000 feet on a plane or completely disconnected from Wi-Fi, search, graph traversal, and LaTeX rendering happen in sub-milliseconds on your device.</p>
+<p>That ethos is the foundation of <strong>Accrue Note</strong>.</p>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles/03-local-first-privacy-byok/img1.png" alt="Plain-Text Markdown &amp; Self-Sovereign Sync on iPad" /><figcaption>Plain-Text Markdown &amp; Self-Sovereign Sync on iPad</figcaption></figure>
+<hr />
+<h2>2. Inside Accrue Note's Zero-Trust Privacy Architecture</h2>
+<h3>1) 100% Local Markdown & SQLite—Zero Central Servers</h3>
+<p>Open Accrue Note and you'll notice something refreshing: <strong>there is no sign-up screen.</strong> We don't even operate a backend server capable of storing your notes.</p>
+<ul>
+<li>Every note is a standard Markdown (<code>.md</code>) file on your device, indexed locally for instant full-text and vector retrieval.</li>
+<li>Open the exact same folder simultaneously in <strong>Obsidian, VS Code, Cursor, or Typora</strong>—zero lock-in.</li>
+<li>Sync on your own terms: use your private <strong>iCloud Drive</strong> container, your own <strong>WebDAV</strong> server (Synology NAS, Nextcloud), or pure <code>git push</code>.</li>
+</ul>
+<h3>2) White-Box BYOK (Bring Your Own Key) + Local Ollama</h3>
+<p>We despise black-box AI wrappers that hide their prompts and mark up token costs by 10x. Accrue Note implements pure <strong>White-Box BYOK</strong>:</p>
+<ul>
+<li>Plug in your own API keys for <strong>Anthropic Claude, OpenAI, Google Gemini, or DeepSeek</strong>—stored exclusively in your hardware-encrypted <strong>iOS Keychain / macOS Secure Enclave</strong>.</li>
+<li>Want <strong>100% air-gapped AI</strong>? Point Accrue Note at your local <strong>Ollama</strong> instance (running Llama 3, Qwen, or Gemma on Apple Silicon) so zero bytes ever leave your local network.</li>
+<li><strong>Radical Transparency</strong>: Inspect the exact system prompt, retrieved note citations, thinking chain, and token usage for every single AI query.</li>
+</ul>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles/03-local-first-privacy-byok/img2.png" alt="On-Device Keychain Security &amp; Direct BYOK Pipeline" /><figcaption>On-Device Keychain Security &amp; Direct BYOK Pipeline</figcaption></figure>
+<h3>3) Fair Pricing: Free Core + Optional Lifetime Ownership</h3>
+<p>We believe software tools should respect their users' wallets:</p>
+<ul>
+<li><strong>Generous Free Tier</strong>: Local Markdown editing, bi-directional <code>[[Wikilinks]]</code>, local search, and offline storage are free.</li>
+<li><strong>No Subscription Hostage</strong>: Alongside ultra-affordable monthly ($2.99/mo) and annual ($24.99/yr) Pro options, we offer a <strong>one-time Lifetime Pro unlock</strong>—pay once, own the 3D Constellation, Mental Model Sandbox, and academic export engine forever.</li>
+</ul>
+<hr />
+<h2>3. Data Sovereignty Is Worth Protecting</h2>
+<p>In an era where tech giants build taller walled gardens around your personal data, choosing <strong>Local-First + BYOK</strong> isn't just a technical preference—it's a declaration of digital independence.</p>
+<p>Keep your thoughts on your own disk. Keep your keys in your own keychain. Build a Second Brain that truly belongs to you for life.</p>
+<hr />
+<blockquote>💡 <strong>Experience Pure Local-First PKM</strong>:</blockquote>
+<blockquote><strong>Accrue Note</strong> is available now on the Apple App Store for <strong>macOS, iPadOS, and iOS</strong>.</blockquote>
+<blockquote>Search <strong>"Accrue Note"</strong> or <strong>"Accrue"</strong> on the <a href=\"https://apps.apple.com/app/id6810539038\">App Store</a> or inspect our technical architecture at <a href=\"https://ai-chen2050.github.io/accrue/index.en.html\">ai-chen2050.github.io/accrue</a>.</blockquote>
+</article>
+</body>
+</html>

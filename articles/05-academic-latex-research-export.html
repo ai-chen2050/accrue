@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Ultimate STEM &amp; Research Note Workflow: Native LaTeX Math, Smart Tables, and Publication-Grade PDF/DOCX Export</title>
+<meta name="description" content="Clipped matrices, broken multi-page code blocks, and amateurish PDF exports? Here is how Accrue Note solves the hardest typography and export pain points for engineers and researchers.">
+<meta name="author" content="Accrue Note Team">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Ultimate STEM &amp; Research Note Workflow: Native LaTeX Math, Smart Tables, and Publication-Grade PDF/DOCX Export">
+<meta property="og:description" content="Clipped matrices, broken multi-page code blocks, and amateurish PDF exports? Here is how Accrue Note solves the hardest typography and export pain points for engineers and researchers.">
+<meta property="og:image" content="https://ai-chen2050.github.io/accrue/articles/05-academic-latex-research-export/cover.png">
+<link rel="canonical" href="https://ai-chen2050.github.io/accrue/articles/05-academic-latex-research-export.html">
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif; max-width: 740px; margin: 40px auto; padding: 0 20px; line-height: 1.75; color: #1a1a1a; background: #fff; }
+  h1 { font-size: 34px; line-height: 1.25; margin-bottom: 12px; }
+  .subtitle { font-size: 20px; color: #555; margin-bottom: 28px; line-height: 1.5; }
+  h2 { font-size: 26px; margin-top: 36px; margin-bottom: 14px; }
+  h3 { font-size: 20px; margin-top: 28px; margin-bottom: 10px; }
+  p, li { font-size: 18px; margin-bottom: 18px; }
+  figure { margin: 32px 0; text-align: center; }
+  figure img { max-width: 100%; height: auto; border-radius: 12px; }
+  figcaption { font-size: 14px; color: #666; margin-top: 8px; }
+  blockquote { border-left: 3px solid #10c877; padding-left: 18px; margin: 24px 0; font-style: italic; color: #333; }
+  code { background: #f4f6f8; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 36px 0; }
+</style>
+</head>
+<body>
+<article id="story-content">
+<h1>The Ultimate STEM &amp; Research Note Workflow: Native LaTeX Math, Smart Tables, and Publication-Grade PDF/DOCX Export</h1>
+<p class="subtitle">Clipped matrices, broken multi-page code blocks, and amateurish PDF exports? Here is how Accrue Note solves the hardest typography and export pain points for engineers and researchers.</p>
+<p>If you are a systems engineer, ML researcher, quantitative analyst, or STEM graduate student, you already know how painful mainstream note-taking apps are for serious technical writing:</p>
+<ul>
+<li><strong>Broken Math Rendering</strong>: Drop a partial differential equation inline, and line heights jump erratically; put a matrix inside a table cell, and half the equation gets clipped off;</li>
+<li><strong>Sliced Code Blocks in PDFs</strong>: Export a technical design doc to PDF, and long code blocks get chopped awkwardly across page breaks with giant blank gaps;</li>
+<li><strong>Naive Equal-Width Tables</strong>: A 4-character register name gets wrapped into three vertical lines while a 200-word description column is squished into an unreadable strip;</li>
+<li><strong>Unprofessional Watermarks</strong>: When you finally export a report for your advisor, client, or investment committee, the PDF footer screams <em>"Created with [App Name]"</em>—making it unusable as a formal deliverable.</li>
+</ul>
+<p><strong>For hardcore technical thinkers, typography and export rigor aren't cosmetic nice-to-haves—they are the last mile of intellectual work.</strong></p>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles/05-academic-latex-research-export/cover.png" alt="Multi-Column Technical Workbench &amp; Precision Typography" /><figcaption>Multi-Column Technical Workbench &amp; Precision Typography</figcaption></figure>
+<hr />
+<h2>1. Engineering-Grade Typography Inside Accrue Note</h2>
+<p>Many of us on the <strong>Accrue Note</strong> team come from compiler, graphics, and systems engineering backgrounds. We built the technical rendering pipeline we always wished existed:</p>
+<h3>1) Native KaTeX Math + Content-Aware Table Layout</h3>
+<p>In Accrue Note, mathematical notation is a first-class citizen:</p>
+<ul>
+<li><strong>Crisp Inline & Display LaTeX</strong>: Full support for <code>$E=mc^2$</code> and multi-line <code>$$\begin{aligned}...\end{aligned}$$</code> environments, rendered at retina resolution without layout jitter;</li>
+<li><strong>Smart Anti-Overflow Table Algorithm</strong>: When a table contains both short identifiers and complex LaTeX equations or prose, our layout engine measures the intrinsic unwrapped width of each column first—allocating exact room for compact columns while proportionally flexing prose columns and scaling oversized formulas gracefully. Zero horizontal clipping.</li>
+</ul>
+<h3>2) Zero-Dependency Syntax Highlighting & Line-by-Line Page Continuation</h3>
+<p>Code deserves the same typographic respect as prose:</p>
+<ul>
+<li><strong>Multi-Language Semantic Highlighting</strong>: Native highlighting across C, C++, Rust, Go, Python, TypeScript, Swift, Dart, SQL, Shell, JSON, and YAML;</li>
+<li><strong>Streamed Cross-Page Code Pagination</strong>: Instead of rasterizing code blocks into rigid images that leave half a page blank before a page break, Accrue Note streams code line-by-line across page boundaries with clean continuation headers.</li>
+</ul>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles/05-academic-latex-research-export/img1.png" alt="LaTeX Equations &amp; Structured Reasoning Workbench on iPad" /><figcaption>LaTeX Equations &amp; Structured Reasoning Workbench on iPad</figcaption></figure>
+<hr />
+<h2>2. From Private Vault to Client-Ready Deliverable: Publication-Grade Export</h2>
+<p>Great notes shouldn't be trapped inside your app. When it's time to share an architecture RFC, academic pre-print, or investment memo, Accrue Note compiles your Markdown into <strong>publication-grade deliverables</strong>:</p>
+<h3>1) Vector-Sharp, Watermark-Free PDF Export</h3>
+<p>Compile any note—complete with LaTeX equations, Mermaid diagrams, syntax-highlighted code, and callout blocks—into a crisp, journal-ready A4 PDF in seconds.</p>
+<h3>2) Native Microsoft Word (<code>.docx</code>) Generation</h3>
+<p>Collaborating with colleagues or journals that require Word files? Export directly to standard <code>.docx</code> with preserved heading hierarchies, styled tables, and high-DPI embedded equations.</p>
+<h3>3) Custom Dynamic Footers & White-Label Mode (Pro)</h3>
+<p>Designed specifically for analysts, consultants, and researchers:</p>
+<ul>
+<li><strong>Zero-Branding Mode</strong>: Strip out all app watermarks and leave only a minimalist page number badge;</li>
+<li><strong>Dynamic Macro Interpolation</strong>: Inject live placeholders like <code>{date}</code> and <code>{vault name}</code> straight into your running footer—for example:</li>
+</ul>
+<p><code>CONFIDENTIAL · QUANT RESEARCH VAULT · 2026-11-05</code></p>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles/05-academic-latex-research-export/img2.png" alt="Seamless Multi-Device Sync &amp; Technical Writing" /><figcaption>Seamless Multi-Device Sync &amp; Technical Writing</figcaption></figure>
+<hr />
+<h2>3. Tools That Respect Your Rigor</h2>
+<p>Deep technical work is built equation by equation, benchmark by benchmark, and proof by proof. Your note-taking environment should match that precision.</p>
+<hr />
+<blockquote>💡 <strong>Upgrade Your Technical Workflow</strong>:</blockquote>
+<blockquote><strong>Accrue Note</strong> is available on the Apple App Store for <strong>macOS, iPadOS, and iOS</strong> (optimized natively for Apple Silicon).</blockquote>
+<blockquote>Search <strong>"Accrue Note"</strong> or <strong>"Accrue"</strong> on the <a href=\"https://apps.apple.com/app/id6810539038\">App Store</a> or test our live LaTeX export demo at <a href=\"https://ai-chen2050.github.io/accrue/index.en.html\">ai-chen2050.github.io/accrue</a>.</blockquote>
+</article>
+</body>
+</html>
