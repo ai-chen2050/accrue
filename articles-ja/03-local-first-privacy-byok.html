@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>クラウド強制とサブスク疲れに終止符を：ローカルファースト＋ホワイトボックスBYOK AIという選択</title>
+<meta name="description" content="メモを取るだけなのにアカウント登録を強いられ、大切なデータが他社サーバーに送られる時代。『Accrue Note』が貫く100%ローカルMarkdownと透明なAI設計。">
+<meta name="author" content="Accrue Note Team">
+<meta property="og:type" content="article">
+<meta property="og:title" content="クラウド強制とサブスク疲れに終止符を：ローカルファースト＋ホワイトボックスBYOK AIという選択">
+<meta property="og:description" content="メモを取るだけなのにアカウント登録を強いられ、大切なデータが他社サーバーに送られる時代。『Accrue Note』が貫く100%ローカルMarkdownと透明なAI設計。">
+<meta property="og:image" content="https://ai-chen2050.github.io/accrue/articles-ja/03-local-first-privacy-byok/cover.jpg">
+<link rel="canonical" href="https://ai-chen2050.github.io/accrue/articles-ja/03-local-first-privacy-byok.html">
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; max-width: 740px; margin: 40px auto; padding: 0 20px; line-height: 1.8; color: #1a1a1a; background: #fff; }
+  h1 { font-size: 32px; line-height: 1.35; margin-bottom: 12px; }
+  .subtitle { font-size: 19px; color: #555; margin-bottom: 28px; line-height: 1.6; }
+  h2 { font-size: 24px; margin-top: 36px; margin-bottom: 14px; }
+  h3 { font-size: 20px; margin-top: 28px; margin-bottom: 10px; }
+  p, li { font-size: 17px; margin-bottom: 18px; }
+  figure { margin: 32px 0; text-align: center; }
+  figure img { max-width: 100%; height: auto; border-radius: 12px; }
+  figcaption { font-size: 14px; color: #666; margin-top: 8px; }
+  blockquote { border-left: 3px solid #10c877; padding-left: 18px; margin: 24px 0; color: #333; }
+  code { background: #f4f6f8; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 36px 0; }
+</style>
+</head>
+<body>
+<article id="story-content">
+<h1>クラウド強制とサブスク疲れに終止符を：ローカルファースト＋ホワイトボックスBYOK AIという選択</h1>
+<p class="subtitle">メモを取るだけなのにアカウント登録を強いられ、大切なデータが他社サーバーに送られる時代。『Accrue Note』が貫く100%ローカルMarkdownと透明なAI設計。</p>
+<p>いつの間にか、現代のソフトウェアはおかしな方向へ進んでしまいました。</p>
+<p>ちょっとしたメモを取るだけなのに、メールアドレスや電話番号でのアカウント登録を強制される。</p>
+<p>自分のPCで書いている文章が、リアルタイムで他社の商用クラウドデータベースへ送信される。</p>
+<p>そして何より疲弊するのが<strong>「サブスクリプションの人質化」</strong>です。毎月の支払いを止めた途端、過去に自分が書いたノートの閲覧やエクスポートすら制限されてしまいます。</p>
+<p>さらに近年の「AI搭載ノートアプリ」の流行により、リスクはより深刻になりました。</p>
+<p>プライベートな日記、未公開のソースコード、社外秘の企画書がサードパーティのブラックボックスなサーバーにアップロードされ、高額な月額料金を取られるだけでなく、AIモデルの学習データに流用される懸念が絶えません。</p>
+<p><strong>あなたのデジタル資産は、本当に「あなたのもの」と言えるでしょうか？</strong></p>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles-ja/03-local-first-privacy-byok/cover.jpg" alt="ローカルファースト、純粋なMarkdown、クラウドバックドアなし" /><figcaption>ローカルファースト、純粋なMarkdown、クラウドバックドアなし</figcaption></figure>
+<hr />
+<h2>1. 「Local-First（ローカルファースト）」への回帰</h2>
+<p>いま、世界中のエンジニアや知識労働者の間で、<strong>Local-First（ローカルファースト）</strong>という思想が強く支持されています。その原則は極めて明確です。</p>
+<ol>
+<li><strong>ディスクこそが唯一の真実（Disk is the single source of truth）</strong>：データは遠隔サーバーではなく、まず手元のデバイスのファイルシステムに保存されるべきである。</li>
+<li><strong>プレーンテキストの永続性（Plain Text Forever）</strong>：独自バイナリ形式による囲い込みを拒否する。30年後に開発会社が消滅しても、標準の <code>.md</code> ファイルならあらゆるテキストエディタで開ける。</li>
+<li><strong>オフラインで100%完結（Offline by Default）</strong>：飛行機の上でも通信障害時でも、検索・双方向リンク・グラフ描画がミリ秒単位で動作する。</li>
+</ol>
+<p>この哲学を一切の妥協なく形にしたのが、<strong>『Accrue Note（複利ノート）』</strong>です。</p>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles-ja/03-local-first-privacy-byok/img1.jpg" alt="iPadでのプレーンテキストMarkdownと自己主権型同期" /><figcaption>iPadでのプレーンテキストMarkdownと自己主権型同期</figcaption></figure>
+<hr />
+<h2>2. 『Accrue Note』の徹底したプライバシー設計</h2>
+<h3>① アカウント登録不要・自社クラウドサーバーゼロ</h3>
+<p>Accrue Noteを起動しても、ログイン画面は存在しません。私たちはユーザーのノートを保存するクラウドサーバー自体を運用していないからです。</p>
+<ul>
+<li>すべてのノートは、端末内のクリーンな <code>.md</code> ファイルとして保存されます。</li>
+<li>同じフォルダを <strong>Obsidian、VS Code、Cursor、Typora</strong> で同時に開いて編集しても完全に互換性があります。</li>
+<li>同期はあなた自身が管理できる手段（個人のプライベート <strong>iCloud Drive</strong>、自宅NASなどの <strong>WebDAV</strong>、または <strong>Git</strong>）を選べます。</li>
+</ul>
+<h3>② ホワイトボックス BYOK（Bring Your Own Key）＋ローカル Ollama 対応</h3>
+<p>ブラックボックスなAIラッパーに毎月数千円を払う必要はありません。Accrue Noteは徹底した <strong>BYOK</strong> を採用しています。</p>
+<ul>
+<li>ご自身の <strong>Anthropic Claude、OpenAI、Google Gemini、DeepSeek</strong> の公式APIキーを直接設定可能。キーはOSのハードウェア暗号化領域（<strong>iOS Keychain / macOS キーチェーン</strong>）にのみ厳重に保管されます。</li>
+<li><strong>完全オフラインAI</strong>：ローカルネットワーク上の <strong>Ollama</strong>（Llama 3、Qwen、Gemmaなど）に接続すれば、1バイトたりとも外部インターネットに通信せずAI機能を利用できます。</li>
+<li><strong>100%の透明性</strong>：送信されるシステムプロンプト、参照されたノートの引用元、推論プロセス（Thinking Process）、消費トークン数がすべて画面上で確認できます。</li>
+</ul>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles-ja/03-local-first-privacy-byok/img2.jpg" alt="端末内キーチェーン保護とダイレクトBYOKパイプライン" /><figcaption>端末内キーチェーン保護とダイレクトBYOKパイプライン</figcaption></figure>
+<h3>③ 基本無料 ＋ 誠実な「買い切り（Lifetime Pro）」プラン</h3>
+<ul>
+<li><strong>基本機能は永久無料</strong>：ローカルMarkdown執筆、双方向リンク、検索、オフライン保存は無料で使い続けられます。</li>
+<li><strong>買い切りオプションを用意</strong>：手頃な月額・年額プランに加え、一度の支払いで3D星座グラフや思考モデルサンドボックス、学術レベルのエクスポート機能を永久に解放できる<strong>「Lifetime Pro（買い切り版）」</strong>を提供しています。</li>
+</ul>
+<hr />
+<h2>3. データの主権を自分の手に取り戻そう</h2>
+<p>自分の思考は、自分のディスクに。AIの鍵は、自分の手元に。</p>
+<p>一生付き合える本当の「第二の脳」を、Accrue Noteで始めませんか？</p>
+<hr />
+<blockquote>💡 <strong>ダウンロード</strong>：</blockquote>
+<blockquote><strong>『Accrue Note（複利ノート）』</strong>はApp Store（macOS / iPadOS / iOS）で配信中です。</blockquote>
+<blockquote><a href="https://apps.apple.com/app/id6810539038">App Store</a>で<strong>「Accrue Note」</strong>と検索、または<a href="https://ai-chen2050.github.io/accrue/index.en.html">公式サイト</a>をご覧ください。</blockquote>
+</article>
+</body>
+</html>

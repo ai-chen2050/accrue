@@ -4,6 +4,11 @@
 > 这份文件是解释"某个数字为什么长这样"的第一去处，CLAUDE.md 会指向它。
 > 用 `/devlog` 让 Claude 自动追加。
 
+## 2026-11-06
+
+- **新增海外宣发日文专栏矩阵 (`articles-ja/`)**：
+  - `articles-ja/01-stop-digital-waste.html` ~ `07-pkm-tools-comparison-2026.html`: 部署 7 篇独立日文深度文章 HTML 页与 21 张全日文界面高清实机图（`cover.png` / `img1.png` / `img2.png`），全面适配 Medium 官方 `medium.com/p/import` 自动解析规范。
+
 ## 2026-11-05
 
 - **新增海外宣发英文专栏矩阵与 Medium 一键导入控制台 (`articles/`)**：

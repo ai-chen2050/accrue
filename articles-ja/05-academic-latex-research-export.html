@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>理系・研究者・エンジニアのための究極のノート環境：ネイティブLaTeX数式、自動列幅テーブル、論文品質のPDF/Word出力</title>
+<meta name="description" content="数式の見切れ、ページをまたぐコードブロックの崩れ、透かし入りのPDF出力……技術文書や研究ノートのストレスを『Accrue Note』がどう解決したか。">
+<meta name="author" content="Accrue Note Team">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理系・研究者・エンジニアのための究極のノート環境：ネイティブLaTeX数式、自動列幅テーブル、論文品質のPDF/Word出力">
+<meta property="og:description" content="数式の見切れ、ページをまたぐコードブロックの崩れ、透かし入りのPDF出力……技術文書や研究ノートのストレスを『Accrue Note』がどう解決したか。">
+<meta property="og:image" content="https://ai-chen2050.github.io/accrue/articles-ja/05-academic-latex-research-export/cover.jpg">
+<link rel="canonical" href="https://ai-chen2050.github.io/accrue/articles-ja/05-academic-latex-research-export.html">
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; max-width: 740px; margin: 40px auto; padding: 0 20px; line-height: 1.8; color: #1a1a1a; background: #fff; }
+  h1 { font-size: 32px; line-height: 1.35; margin-bottom: 12px; }
+  .subtitle { font-size: 19px; color: #555; margin-bottom: 28px; line-height: 1.6; }
+  h2 { font-size: 24px; margin-top: 36px; margin-bottom: 14px; }
+  h3 { font-size: 20px; margin-top: 28px; margin-bottom: 10px; }
+  p, li { font-size: 17px; margin-bottom: 18px; }
+  figure { margin: 32px 0; text-align: center; }
+  figure img { max-width: 100%; height: auto; border-radius: 12px; }
+  figcaption { font-size: 14px; color: #666; margin-top: 8px; }
+  blockquote { border-left: 3px solid #10c877; padding-left: 18px; margin: 24px 0; color: #333; }
+  code { background: #f4f6f8; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 36px 0; }
+</style>
+</head>
+<body>
+<article id="story-content">
+<h1>理系・研究者・エンジニアのための究極のノート環境：ネイティブLaTeX数式、自動列幅テーブル、論文品質のPDF/Word出力</h1>
+<p class="subtitle">数式の見切れ、ページをまたぐコードブロックの崩れ、透かし入りのPDF出力……技術文書や研究ノートのストレスを『Accrue Note』がどう解決したか。</p>
+<p>理工系の学生、アルゴリズムエンジニア、研究者、あるいはアナリストの方なら、一般的なノートアプリで技術メモや数式を書くときのストレスを嫌というほど味わってきたはずです。</p>
+<ul>
+<li><strong>数式レンダリングの崩れ</strong>：インラインで微分方程式を書くと行間がガタガタになり、テーブル（表）の中に行列を書くと右半分が見切れてしまう。</li>
+<li><strong>PDF出力時のコードブロック問題</strong>：長いソースコードを含むノートをPDFに出力すると、ページの途中で不自然に切断されたり、改ページ前に巨大な空白ができたりする。</li>
+<li><strong>不格好な均等割り付けテーブル</strong>：短い変数名の列が3行に折り返される一方で、長い説明文の列が窮屈に押し潰される。</li>
+<li><strong>ビジネスや学会で使えない透かし（ウォーターマーク）</strong>：せっかくまとめたレポートをPDF書き出しすると、フッターに大きくアプリ名の宣伝ロゴが入り、そのままクライアントや教授に提出できない。</li>
+</ul>
+<p><strong>緻密な論理を組み立てるプロフェッショナルにとって、組版（タイポグラフィ）の美しさと出力品質は思考の生命線です。</strong></p>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles-ja/05-academic-latex-research-export/cover.jpg" alt="デスクトップのマルチカラム・ワークベンチと精密な組版" /><figcaption>デスクトップのマルチカラム・ワークベンチと精密な組版</figcaption></figure>
+<hr />
+<h2>1. エンジニアリング品質で磨き上げた組版パイプライン</h2>
+<p><strong>『Accrue Note（複利ノート）』</strong>の開発チームは、数式・テーブル・コードのレンダリングをゼロから徹底的に作り込みました。</p>
+<h3>① ネイティブKaTeX数式 ＆ コンテンツ認識型テーブルレイアウト</h3>
+<ul>
+<li><strong>インライン＆ブロック数式の美しい混植</strong>：標準的なLaTeX記法（<code>$E=mc^2$</code> や <code>$$...$$</code>）をRetina解像度でシャープに描画します。</li>
+<li><strong>数式見切れゼロの自動列幅アルゴリズム</strong>：表の中に短い識別子と複雑な数式・長文が混在していても、各列の自然幅を自動計算して最適な比率を割り当てます。長大な数式も自動でスマートにスケーリングされ、文字欠けを起こしません。</li>
+</ul>
+<h3>② 多言語シンタックスハイライト ＆ 行単位の改ページ連続出力</h3>
+<ul>
+<li><strong>主要言語を網羅</strong>：C、C++、Rust、Go、Python、TypeScript、Swift、Dart、SQL、Shell、JSON、YAMLなどを意味論ベースで色分け表示。</li>
+<li><strong>改ページで途切れないコード出力</strong>：コードを単なる画像として貼り付けるのではなく、PDF書き出し時にページ末尾の残り行数に合わせて行単位で流し込み、次ページへ自然に継続させます。</li>
+</ul>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles-ja/05-academic-latex-research-export/img1.jpg" alt="数式と構造化推論のワークベンチ" /><figcaption>数式と構造化推論のワークベンチ</figcaption></figure>
+<hr />
+<h2>2. 個人のメモから「そのまま提出できる成果物」へ</h2>
+<h3>① 透かしなし・高精細PDF ＆ ネイティブWord（<code>.docx</code>）出力</h3>
+<p>ワンクリックで、見出し階層・引用ブロック・Mermaid図表・数式・テーブルを保ったまま出版品質のA4 PDFや、Microsoft Wordで直接編集可能な <code>.docx</code> ファイルを生成します。</p>
+<h3>② Pro限定：動的マクロ対応のカスタムフッター</h3>
+<ul>
+<li><strong>完全ブランド非表示（ホワイトレーベル）モード</strong>：アプリのロゴや透かしを完全に消し、ミニマルなページ番号のみを印字可能。</li>
+<li><strong>動的プレースホルダー</strong>：<code>{date}</code>（出力日）や <code>{vault name}</code>（知識ベース名）をフッターに自動挿入できます（例：<code>CONFIDENTIAL · アルゴリズム研究室 · 2026-11-05</code>）。</li>
+</ul>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles-ja/05-academic-latex-research-export/img2.jpg" alt="マルチデバイス同期とシームレスな執筆環境" /><figcaption>マルチデバイス同期とシームレスな執筆環境</figcaption></figure>
+<hr />
+<blockquote>💡 <strong>プロフェッショナルな執筆体験を</strong>：</blockquote>
+<blockquote><strong>『Accrue Note（複利ノート）』</strong>はApp Store（macOS / iPadOS / iOS・Apple Siliconネイティブ最適化）にて配信中です。</blockquote>
+<blockquote><a href="https://apps.apple.com/app/id6810539038">App Store</a>で<strong>「Accrue Note」</strong>と検索、または<a href="https://ai-chen2050.github.io/accrue/index.en.html">公式サイト</a>をご覧ください。</blockquote>
+</article>
+</body>
+</html>

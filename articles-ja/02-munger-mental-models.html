@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>チャーリー・マンガーの「多元的思考モデル」を日常の意思決定に実装する方法</title>
+<meta name="description" content="『マンガーの投資術』を何度読んでも、いざという時に直感に頼ってしまうのはなぜか？100の思考モデルを実践的な「意思決定サンドボックス」に変える方法。">
+<meta name="author" content="Accrue Note Team">
+<meta property="og:type" content="article">
+<meta property="og:title" content="チャーリー・マンガーの「多元的思考モデル」を日常の意思決定に実装する方法">
+<meta property="og:description" content="『マンガーの投資術』を何度読んでも、いざという時に直感に頼ってしまうのはなぜか？100の思考モデルを実践的な「意思決定サンドボックス」に変える方法。">
+<meta property="og:image" content="https://ai-chen2050.github.io/accrue/articles-ja/02-munger-mental-models/cover.jpg">
+<link rel="canonical" href="https://ai-chen2050.github.io/accrue/articles-ja/02-munger-mental-models.html">
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; max-width: 740px; margin: 40px auto; padding: 0 20px; line-height: 1.8; color: #1a1a1a; background: #fff; }
+  h1 { font-size: 32px; line-height: 1.35; margin-bottom: 12px; }
+  .subtitle { font-size: 19px; color: #555; margin-bottom: 28px; line-height: 1.6; }
+  h2 { font-size: 24px; margin-top: 36px; margin-bottom: 14px; }
+  h3 { font-size: 20px; margin-top: 28px; margin-bottom: 10px; }
+  p, li { font-size: 17px; margin-bottom: 18px; }
+  figure { margin: 32px 0; text-align: center; }
+  figure img { max-width: 100%; height: auto; border-radius: 12px; }
+  figcaption { font-size: 14px; color: #666; margin-top: 8px; }
+  blockquote { border-left: 3px solid #10c877; padding-left: 18px; margin: 24px 0; color: #333; }
+  code { background: #f4f6f8; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 36px 0; }
+</style>
+</head>
+<body>
+<article id="story-content">
+<h1>チャーリー・マンガーの「多元的思考モデル」を日常の意思決定に実装する方法</h1>
+<p class="subtitle">『マンガーの投資術』を何度読んでも、いざという時に直感に頼ってしまうのはなぜか？100の思考モデルを実践的な「意思決定サンドボックス」に変える方法。</p>
+<p>投資とビジネスの歴史において、ウォーレン・バフェットの盟友<strong>チャーリー・マンガー（Charlie Munger）</strong>は伝説的な存在です。</p>
+<p>彼が最も重視した哲学が、<strong>「多元的思考モデル（Latticework of Mental Models）」</strong>です。</p>
+<blockquote><em>「頭の中にいくつもの思考モデルを持たなければならない。もし1つか2つのモデルしか持っていなければ、現実をねじ曲げてそのモデルに当てはめようとするだろう。『ハンマーしか持たない人には、すべての問題が釘に見える』ということわざ通りだ。」</em></blockquote>
+<p>多くの勉強熱心なビジネスパーソンが、第一原理思考、逆転の発想（Inversion）、安全域（Margin of Safety）、アンチフラジャイル、二次的思考といったフレームワークをノートにまとめています。</p>
+<p>しかし、実際のプロジェクト判断やキャリアの岐路に立たされた瞬間、ほとんどの人は再び「直感」と「思い込み」に頼ってしまいます。</p>
+<p><strong>なぜ多くの思考モデルを学んでも、実際の意思決定で使えないのでしょうか？</strong></p>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles-ja/02-munger-mental-models/cover.jpg" alt="チャーリー・マンガー多元的思考モデル意思決定ラボ" /><figcaption>チャーリー・マンガー多元的思考モデル意思決定ラボ</figcaption></figure>
+<hr />
+<h2>1. 知識が定着しない3つの認知的トラップ</h2>
+<h3>① 静的なリストは緊急時に機能しない</h3>
+<p>フォルダの奥に眠る「思考モデル一覧」は、ただの死んだテキストです。プレッシャーのかかる意思決定の場面で、脳は静的な辞書をわざわざ検索してはくれません。</p>
+<h3>② 自分自身に対する「確証バイアス」</h3>
+<p>人間には、自分が気に入った企画や仮説を裏付ける証拠ばかりを集めてしまう<strong>確証バイアス（Confirmation Bias）</strong>が備わっています。たとえノートに「逆転の発想」と書いてあっても、自分のアイデアを自ら否定するのは心理的に極めて困難です。</p>
+<h3>③ 分野を超えた「格子（ラティスワーク）」の欠如</h3>
+<p>物理学の法則1つ、心理学のバイアス1つだけでは複雑な現実は解けません。複数の学問領域のモデルが交差してこそ、本質的な突破口が見えてきます。</p>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles-ja/02-munger-mental-models/img1.jpg" alt="iPadでのレッドチーム対戦＆メンタルモデル・サンドボックス" /><figcaption>iPadでのレッドチーム対戦＆メンタルモデル・サンドボックス</figcaption></figure>
+<hr />
+<h2>2. 『Accrue Note』の解決策：ノートアプリを「思考のサンドボックス」へ進化させる</h2>
+<p><strong>『Accrue Note（複利ノート）』</strong>では、メンタルモデルを単なる読み物ではなく、アプリの<strong>コアエンジン</strong>として設計しました。</p>
+<h3>① 100以上の学際的メンタルモデルを標準搭載</h3>
+<p>物理学、工学、進化生物学、行動経済学、軍事戦略から厳選された100以上のコアモデルをプリセット収録しています。</p>
+<ul>
+<li><strong>物理学・数学</strong>：臨界質量、第一原理、エントロピー増大、ベイズ更新</li>
+<li><strong>システム工学</strong>：安全域（Margin of Safety）、冗長化設計、サーキットブレーカー、フィードバックループ</li>
+<li><strong>投資・戦略</strong>：逆転の発想（Invert）、バーベル戦略、アンチフラジャイル、二次的効果</li>
+<li><strong>心理学</strong>：損失回避、社会的証明、保有効果、生存者バイアス</li>
+</ul>
+<p>すべてのモデルに、適用条件・失敗事例・セルフチェックリストが付属しています。</p>
+<h3>② ホワイトボックスAIによる「レッドチーム演習（Red Team Simulation）」</h3>
+<p>事業計画、投資メモ、システム設計書を書いたあと、ワンタップで<strong>「メンタルモデル・サンドボックス」</strong>を起動できます。</p>
+<p>Accrue NoteのAIは、あなたを無批判に褒める一般的なチャットボットとは異なり、<strong>冷徹な「レッドチーム（反対派の検証役）」</strong>として振る舞います。</p>
+<ul>
+<li><strong>逆転の発想を適用</strong>：「このプロジェクトが半年以内に大失敗するとしたら、最も致命的な単一障害点（SPOF）は何か？」</li>
+<li><strong>二次的効果を適用</strong>：「短期的には売上が伸びるとしても、競合他社や顧客がどう反応し、半年後にどんな副作用が生じるか？」</li>
+<li><strong>安全域を適用</strong>：「コストが予想の2倍に膨らんだ場合でも、現在のバッファで耐えられるか？」</li>
+</ul>
+<p>すべての検証プロセスは透明化され、あなたのノートの横に「認知防衛スコア」とともに視覚化されます。</p>
+<figure><img src="https://ai-chen2050.github.io/accrue/articles-ja/02-munger-mental-models/img2.jpg" alt="iPhoneでいつでも思考モデルを呼び出しアイデアを検証" /><figcaption>iPhoneでいつでも思考モデルを呼び出しアイデアを検証</figcaption></figure>
+<h3>③ 双方向リンクで「自分だけの知恵の格子」を育てる</h3>
+<p>レッドチーム検証を経た意思決定の記録は、<code>[[損失回避]]</code> や <code>[[安全域]]</code> といった双方向リンクでナレッジベースに蓄積されます。半年後に新しい企画を書くとき、3D星座グラフが過去の教訓を自動的に目の前に引き出してくれます。</p>
+<hr />
+<h2>3. ハンマーだけでなく「道具箱」を持って考えよう</h2>
+<p>思考モデルは本棚に飾るためのものではなく、重大なミスを避けるための実戦ツールです。毎日の執筆と意思決定の中に、チャーリー・マンガーの知恵を組み込みましょう。</p>
+<hr />
+<blockquote>💡 <strong>今すぐ体験する</strong>：</blockquote>
+<blockquote><strong>『Accrue Note（複利ノート）』</strong>はApp Storeで無料ダウンロード可能です（iPhone / iPad / Mac対応）。</blockquote>
+<blockquote><a href="https://apps.apple.com/app/id6810539038">App Store</a>で<strong>「Accrue Note」</strong>と検索、または<a href="https://ai-chen2050.github.io/accrue/index.en.html">公式サイト</a>でインタラクティブデモをお試しください。</blockquote>
+</article>
+</body>
+</html>
