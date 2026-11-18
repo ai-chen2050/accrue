@@ -9,6 +9,7 @@
 - **Positioning**: Accrue Notes — Where knowledge accrues over time.
 - **Platforms**: iOS / Android / macOS
 - **App Store**: https://apps.apple.com/app/id6810539038
+- **Telegram Community**: https://t.me/+ejHpOSvmaUo4NWNl
 
 ## Core Features
 

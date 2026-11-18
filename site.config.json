@@ -44,7 +44,7 @@
     "themeColor": "#10c877",
     "ga4": "G-1CQNQNPK1Y",
     "baidu": "b3a7b6fedcba22d39897693d6f716035",
-    "updated": "2026-10-02"
+    "updated": "2026-11-18"
   },
   "locales": {
     "default": "zh-CN",
@@ -178,6 +178,24 @@
     "web": "",
     "github": "",
     "contact": "mailto:blake.chen94@gmail.com"
+  },
+  "community": {
+    "wechat": {
+      "enabled": true,
+      "id": "ai-chen2050",
+      "qrImage": "wechat-qr.png",
+      "remark": "复利笔记"
+    },
+    "telegram": {
+      "topicTitle": "Accrue Notes",
+      "groupName": "Accrue Community",
+      "inviteUrl": "https://t.me/+ejHpOSvmaUo4NWNl",
+      "qrImage": "telegram-qr.svg",
+      "topicId": 16,
+      "topicEmoji": "🧠",
+      "iconCustomEmojiId": "5237889595894414384",
+      "topicUrl": ""
+    }
   },
   "features": [
     {

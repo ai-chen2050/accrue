@@ -4,6 +4,14 @@
 > 这份文件是解释"某个数字为什么长这样"的第一去处，CLAUDE.md 会指向它。
 > 用 `/devlog` 让 Claude 自动追加。
 
+## 2026-11-18
+
+- **接入双区售后与用户社群体系 (`index.html`, `index.en.html`, `support.html`, `support.en.html`, `style.css`, `site.config.json`, `tools/{gen_geo.py,geo_check.py,setup_community.py,qr_svg.py}`)**:
+  - 中文站点 (`index.html`, `support.html`) 与 `.huawei` 渠道页严格隔离 `t.me/` 链接，展示开发者个人微信号 `ai-chen2050`、名片二维码 `wechat-qr.png` 及备注「复利笔记」一键复制按钮；
+  - 英文站点 (`index.en.html`, `support.en.html`)、英文档案 (`llms.en.txt`, `llms-full.en.txt`) 接入 `BK Labs` 专属英文 Topic `Accrue Notes`（`topicId=16`，`https://t.me/+ejHpOSvmaUo4NWNl`）及矢量二维码 `telegram-qr.svg`；
+  - 在保持 `tools/gen_geo.py` 原有根域名尾斜杠 canonical 逻辑的前提下同步 Bento 社群展示舱 (`in oklab` 霓虹祖母绿光晕 + 点阵背景 + Scan Pass 取景框 + 无障碍微信复制交互)、`site.updated` 联动及 `geo_check.py` 双区合规检查，并为 Topic 绑定官方 3D 图标 `🧠` (`iconCustomEmojiId: 5237889595894414384`)；
+  - 升级 `tools/qr_svg.py` 将 `telegram-qr.svg` 渲染为圆角 Finder + Squircle 模块。
+
 ## 2026-11-06
 
 - **新增海外宣发日文专栏矩阵 (`articles-ja/`)**：
